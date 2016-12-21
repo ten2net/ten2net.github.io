@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.18" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>机器学习</title>
+  
+
+  
+  <link rel="stylesheet" href="http://ten2net.github.io/css/poole.css">
+  <link rel="stylesheet" href="http://ten2net.github.io/css/syntax.css">
+  <link rel="stylesheet" href="http://ten2net.github.io/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="http://ten2net.github.io/index.xml" rel="alternate" type="application/rss+xml" title="机器学习" />
+</head>
+
+<body class=" ">
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://ten2net.github.io/"><h1>机器学习</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      
+    </ul>
+
+    <p>&copy; 2016. All rights reserved. </p>
+  </div>
+</div>
+
+
+    <div class="content container">
+<div class="posts">
+
+      
+  <div class="post">
+    <h1 class="post-title">
+      <a href="http://ten2net.github.io/2016/12/21/opencv%E5%9C%A8ubuntu%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B/">
+        Opencv在Ubuntu上的安装过程
+      </a>
+    </h1>
+
+    <span class="post-date">Wed, Dec 21, 2016</span>
+
+    
+
+<h1 id="一-阅读-https-www-raben-com-content-opencv-installation-ubuntu-1204">一、<a href="https://www.raben.com/content/opencv-installation-ubuntu-1204">阅读</a></h1>
+
+<h1 id="二-安装依赖">二、安装依赖</h1>
+
+<ul>
+<li>To install OpenCV 2.4.2 or 2.4.3 on the Ubuntu 12.04 operating system, first install a developer environment to build OpenCV.
+apt-get -y install build-essential cmake pkg-config</li>
+<li>Install Image I/O libraries
+apt-get -y install libjpeg62-dev
+apt-get -y install libtiff4-dev libjasper-dev</li>
+<li>Install the GTK dev library
+apt-get -y install  libgtk2.0-dev</li>
+<li>Install Video I/O libraries
+apt-get -y install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev</li>
+<li>Optional - install support for Firewire video cameras
+apt-get -y install libdc1394-22-dev</li>
+<li>Optional - install video streaming libraries
+apt-get -y install libxine-dev libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev</li>
+<li>Optional - install the Python development environment and the Python Numerical library
+apt-get -y install python-dev python-numpy</li>
+<li>Optional - install the parallel code processing library (the Intel tbb library)
+apt-get -y install libtbb-dev</li>
+
+<li><p>Optional - install the Qt dev library
+apt-get -y install libqt4-dev</p>
+
+<h1 id="三-安装opencv">三、安装opencv</h1></li>
+
+<li><p>wget <a href="https://sourceforge.net/projects/opencvlibrary/files/opencv-unix/2.4.13/opencv-2.4.13.zip">https://sourceforge.net/projects/opencvlibrary/files/opencv-unix/2.4.13/opencv-2.4.13.zip</a></p></li>
+
+<li><p>unzip opencv-2.4.13.zip</p></li>
+
+<li><p>cd opencv-2.4.13</p></li>
+
+<li><p>#（可选，若出现list_filterout错误）修改samples/gpu/CMakeLists.txt 文件的106、109、110、111、112五行代码如下：</p>
+
+<pre><code class="language-python">	 if(NOT HAVE_OPENGL)
+	 #   list_filterout(install_list &quot;.*opengl.cpp&quot;)
+	  endif()
+	  if(NOT HAVE_CUDA)
+	 #   list_filterout(install_list &quot;.*opticalflow_nvidia_api.cpp&quot;)
+	 #   list_filterout(install_list &quot;.*cascadeclassifier_nvidia_api.cpp&quot;)
+	 #   list_filterout(install_list &quot;.*driver_api_multi.cpp&quot;)
+	 #   list_filterout(install_list &quot;.*driver_api_stereo_multi.cpp&quot;)
+	  endif()
+</code></pre></li>
+
+<li><p>mkdir build</p></li>
+
+<li><p>cd build</p></li>
+
+<li><p>cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local  -D WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D WITH_V4L=ON -D WITH_FFMPEG=OFF    -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON     -D BUILD_EXAMPLES=OFF -D WITH_QT=OFF -D WITH_OPENGL=OFF ..</p></li>
+
+<li><p>make</p></li>
+
+<li><p>make install</p></li>
+</ul>
+
+<h1 id="四-问题">四、问题</h1>
+
+<pre><code>### 解决1394问题
+ln /dev/null /dev/raw1394
+</code></pre>
+
+<h1 id="五-测试">五、测试</h1>
+
+<ul>
+<li>python</li>
+<li>&gt;&gt;&gt;import cv2</li>
+<li>不报错即表示安装成功</li>
+</ul>
+
+<p>附：安装gnome后出现中文乱码的问题
+  apt-get install gnome-language-selector
+  然后在Xterm中执行
+  #gnome-language-selector</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="http://ten2net.github.io/about/">
+        个人介绍
+      </a>
+    </h1>
+
+    <span class="post-date">Wed, Dec 21, 2016</span>
+
+    
+
+<h1 id="基本信息">基本信息</h1>
+
+<blockquote>
+<ul>
+<li>网名：ten2net  性别：男</li>
+<li>出生日期：1968-10-31</li>
+<li>公司：西安长城数字软件有限公司</li>
+<li>技术领域：大数据 机器学习 VR&amp;AR 虚拟战场环境生成</li>
+</ul>
+</blockquote>
+
+  </div>
+  
+</div>
+</div>
+
+  </body>
+</html>
