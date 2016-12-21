@@ -99,26 +99,5 @@ ln /dev/null /dev/raw1394
 </description>
     </item>
     
-    <item>
-      <title>个人介绍</title>
-      <link>http://192.168.200.24:1313/about/</link>
-      <pubDate>Wed, 21 Dec 2016 09:51:15 +0800</pubDate>
-      <author>wangf@e-u.cn (wangf)</author>
-      <guid>http://192.168.200.24:1313/about/</guid>
-      <description>
-
-&lt;h1 id=&#34;基本信息&#34;&gt;基本信息&lt;/h1&gt;
-
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;网名：ten2net  性别：男&lt;/li&gt;
-&lt;li&gt;出生日期：1968-10-31&lt;/li&gt;
-&lt;li&gt;公司：西安长城数字软件有限公司&lt;/li&gt;
-&lt;li&gt;技术领域：大数据 机器学习 VR&amp;amp;AR 虚拟战场环境生成&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-</description>
-    </item>
-    
   </channel>
 </rss>
