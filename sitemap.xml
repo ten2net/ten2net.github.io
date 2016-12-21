@@ -2,18 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://192.168.200.24:1313/2016/12/21/opencv%E5%9C%A8ubuntu%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B/</loc>
+    <loc>https://ten2net.github.io/2016/12/21/opencv%E5%9C%A8ubuntu%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B/</loc>
     <lastmod>2016-12-21T09:52:09+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://192.168.200.24:1313/post/</loc>
+    <loc>https://ten2net.github.io/post/</loc>
     <lastmod>2016-12-21T09:52:09+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://192.168.200.24:1313/</loc>
+    <loc>https://ten2net.github.io/</loc>
     <lastmod>2016-12-21T09:52:09+08:00</lastmod>
     <priority>0</priority>
   </url>
