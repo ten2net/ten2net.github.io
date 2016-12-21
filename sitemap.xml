@@ -2,19 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ten2net.github.io/2016/12/21/%E4%BD%BF%E7%94%A8digits%E8%BF%9B%E8%A1%8Cfinetune/</loc>
+    <lastmod>2016-12-21T17:45:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ten2net.github.io/2016/12/21/opencv%E5%9C%A8ubuntu%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B/</loc>
     <lastmod>2016-12-21T09:52:09+08:00</lastmod>
   </url>
   
   <url>
+    <loc>https://ten2net.github.io/tags/caffe/</loc>
+    <lastmod>2016-12-21T17:45:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ten2net.github.io/tags/digits/</loc>
+    <lastmod>2016-12-21T17:45:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ten2net.github.io/post/</loc>
-    <lastmod>2016-12-21T09:52:09+08:00</lastmod>
+    <lastmod>2016-12-21T17:45:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ten2net.github.io/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ten2net.github.io/topics/topic-1/</loc>
+    <lastmod>2016-12-21T17:45:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ten2net.github.io/topics/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ten2net.github.io/</loc>
-    <lastmod>2016-12-21T09:52:09+08:00</lastmod>
+    <lastmod>2016-12-21T17:45:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   

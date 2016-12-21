@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Caffe on 机器学习</title>
+    <link>https://ten2net.github.io/tags/caffe/index.xml</link>
+    <description>Recent content in Caffe on 机器学习</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>wangf@e-u.cn (wangf)</managingEditor>
+    <webMaster>wangf@e-u.cn (wangf)</webMaster>
+    <copyright>(c) 2017 ten2net 西安长城数字软件有限公司.</copyright>
+    <atom:link href="https://ten2net.github.io/tags/caffe/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>使用digits进行finetune</title>
+      <link>https://ten2net.github.io/2016/12/21/%E4%BD%BF%E7%94%A8digits%E8%BF%9B%E8%A1%8Cfinetune/</link>
+      <pubDate>Wed, 21 Dec 2016 17:45:00 +0800</pubDate>
+      <author>wangf@e-u.cn (wangf)</author>
+      <guid>https://ten2net.github.io/2016/12/21/%E4%BD%BF%E7%94%A8digits%E8%BF%9B%E8%A1%8Cfinetune/</guid>
+      <description>
+
+&lt;h1 id=&#34;一-下载model参数&#34;&gt;一、下载model参数&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;可以直接在浏览器里输入地址下载，也可以运行脚本文件下载。下载地址为：&lt;a href=&#34;http://dl.caffe.berkeleyvision.org/bvlc_reference_caffenet.caffemodel&#34;&gt;http://dl.caffe.berkeleyvision.org/bvlc_reference_caffenet.caffemodel&lt;/a&gt;
+文件名称为：bvlc_reference_caffenet.caffemodel，文件大小为230M左右，为了代码的统一，将这个caffemodel文件下载到caffe根目录下的 models/bvlc_reference_caffenet/ 文件夹下面。也可以运行脚本文件进行下载：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# sudo ./scripts/download_model_binary.py models/bvlc_reference_caffenet
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;二-准备数据&#34;&gt;二、准备数据&lt;/h1&gt;
+
+&lt;p&gt;将训练数据放在一个文件夹内。比如我在当前用户根目录下创建了一个data文件夹，专门用来存放数据，因此我的训练图片路径为：/home/xxx/data/re/train
+打开浏览器，运行digits，新建一个classification dataset,设置如下图：&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

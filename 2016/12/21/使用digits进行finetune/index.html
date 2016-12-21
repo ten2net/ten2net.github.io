@@ -5,31 +5,37 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>Opencv在Ubuntu上的安装过程  &middot; 机器学习</title>
+  <title>使用digits进行finetune  &middot; 机器学习</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="description" content="" />
+<meta name="description" content="description" />
 
-<meta name="keywords" content="">
+<meta name="keywords" content="key, words, ">
 
 <link rel="author" href="http://plus.google.com/+ten2net@gmail.com">
 
 
-<meta property="og:title" content="Opencv在Ubuntu上的安装过程  &middot; 机器学习 ">
+<meta property="og:title" content="使用digits进行finetune  &middot; 机器学习 ">
 <meta property="og:site_name" content="机器学习"/>
-<meta property="og:url" content="https://ten2net.github.io/2016/12/21/opencv%E5%9C%A8ubuntu%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B/" />
+<meta property="og:url" content="https://ten2net.github.io/2016/12/21/%E4%BD%BF%E7%94%A8digits%E8%BF%9B%E8%A1%8Cfinetune/" />
 <meta property="og:locale" content="zh-CN">
 
 
 <meta property="og:type" content="article" />
-<meta property="og:description" content=""/>
-<meta property="og:article:published_time" content="2016-12-21T09:52:09&#43;08:00" />
-<meta property="og:article:modified_time" content="2016-12-21T09:52:09&#43;08:00" />
+<meta property="og:description" content="description"/>
+<meta property="og:article:published_time" content="2016-12-21T17:45:00&#43;08:00" />
+<meta property="og:article:modified_time" content="2016-12-21T17:45:00&#43;08:00" />
 
+  
+    
+<meta property="og:article:tag" content="key">
+    
+<meta property="og:article:tag" content="words">
+    
   
 
   
@@ -38,20 +44,20 @@
   {
     "@context": "http://schema.org",
     "@type": "Article",
-    "headline": "Opencv在Ubuntu上的安装过程",
+    "headline": "使用digits进行finetune",
     "author": {
       "@type": "Person",
       "name": "http://profiles.google.com/+ten2net@gmail.com?rel=author"
     },
     "datePublished": "2016-12-21",
-    "description": "",
-    "wordCount":  207 
+    "description": "description",
+    "wordCount":  13 
   }
 </script>
 
 
 
-<link rel="canonical" href="https://ten2net.github.io/2016/12/21/opencv%E5%9C%A8ubuntu%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B/" />
+<link rel="canonical" href="https://ten2net.github.io/2016/12/21/%E4%BD%BF%E7%94%A8digits%E8%BF%9B%E8%A1%8Cfinetune/" />
 
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ten2net.github.io/touch-icon-144-precomposed.png">
 <link href="https://ten2net.github.io/favicon.png" rel="icon">
@@ -157,7 +163,7 @@
 
 <article id="main-content" class="container main_content single">
   <header class="container hat">
-  <h1>Opencv在Ubuntu上的安装过程
+  <h1>使用digits进行finetune
 </h1>
 
   <div class="metas">
@@ -165,10 +171,16 @@
 
 
   
+    &middot; by author
+  
   &middot; Read in about 1 min
-  &middot; (207 Words)
+  &middot; (13 Words)
   <br>
   
+<a class="label" href="https://ten2net.github.io/tags/digits">digits</a>
+
+<a class="label" href="https://ten2net.github.io/tags/caffe">caffe</a>
+
 
 
 </div>
@@ -178,82 +190,20 @@
   <div class="container content">
   
 
-<h1 id="一-阅读-https-www-raben-com-content-opencv-installation-ubuntu-1204">一、<a href="https://www.raben.com/content/opencv-installation-ubuntu-1204">阅读</a></h1>
+<h1 id="一-下载model参数">一、下载model参数</h1>
 
-<h1 id="二-安装依赖">二、安装依赖</h1>
+<blockquote>
+<p>可以直接在浏览器里输入地址下载，也可以运行脚本文件下载。下载地址为：<a href="http://dl.caffe.berkeleyvision.org/bvlc_reference_caffenet.caffemodel">http://dl.caffe.berkeleyvision.org/bvlc_reference_caffenet.caffemodel</a>
+文件名称为：bvlc_reference_caffenet.caffemodel，文件大小为230M左右，为了代码的统一，将这个caffemodel文件下载到caffe根目录下的 models/bvlc_reference_caffenet/ 文件夹下面。也可以运行脚本文件进行下载：</p>
 
-<ul>
-<li>To install OpenCV 2.4.2 or 2.4.3 on the Ubuntu 12.04 operating system, first install a developer environment to build OpenCV.
-apt-get -y install build-essential cmake pkg-config</li>
-<li>Install Image I/O libraries
-apt-get -y install libjpeg62-dev
-apt-get -y install libtiff4-dev libjasper-dev</li>
-<li>Install the GTK dev library
-apt-get -y install  libgtk2.0-dev</li>
-<li>Install Video I/O libraries
-apt-get -y install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev</li>
-<li>Optional - install support for Firewire video cameras
-apt-get -y install libdc1394-22-dev</li>
-<li>Optional - install video streaming libraries
-apt-get -y install libxine-dev libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev</li>
-<li>Optional - install the Python development environment and the Python Numerical library
-apt-get -y install python-dev python-numpy</li>
-<li>Optional - install the parallel code processing library (the Intel tbb library)
-apt-get -y install libtbb-dev</li>
-
-<li><p>Optional - install the Qt dev library
-apt-get -y install libqt4-dev</p>
-
-<h1 id="三-安装opencv">三、安装opencv</h1></li>
-
-<li><p>wget <a href="https://sourceforge.net/projects/opencvlibrary/files/opencv-unix/2.4.13/opencv-2.4.13.zip">https://sourceforge.net/projects/opencvlibrary/files/opencv-unix/2.4.13/opencv-2.4.13.zip</a></p></li>
-
-<li><p>unzip opencv-2.4.13.zip</p></li>
-
-<li><p>cd opencv-2.4.13</p></li>
-
-<li><p>#（可选，若出现list_filterout错误）修改samples/gpu/CMakeLists.txt 文件的106、109、110、111、112五行代码如下：</p>
-
-<pre><code class="language-cpp">	 if(NOT HAVE_OPENGL)
-	 #   list_filterout(install_list &quot;.*opengl.cpp&quot;)
-	  endif()
-	  if(NOT HAVE_CUDA)
-	 #   list_filterout(install_list &quot;.*opticalflow_nvidia_api.cpp&quot;)
-	 #   list_filterout(install_list &quot;.*cascadeclassifier_nvidia_api.cpp&quot;)
-	 #   list_filterout(install_list &quot;.*driver_api_multi.cpp&quot;)
-	 #   list_filterout(install_list &quot;.*driver_api_stereo_multi.cpp&quot;)
-	  endif()
-</code></pre></li>
-
-<li><p>mkdir build</p></li>
-
-<li><p>cd build</p></li>
-
-<li><p>cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local  -D WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D WITH_V4L=ON -D WITH_FFMPEG=OFF    -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON     -D BUILD_EXAMPLES=OFF -D WITH_QT=OFF -D WITH_OPENGL=OFF ..</p></li>
-
-<li><p>make</p></li>
-
-<li><p>make install</p></li>
-</ul>
-
-<h1 id="四-问题">四、问题</h1>
-
-<pre><code>### 解决1394问题
-ln /dev/null /dev/raw1394
+<pre><code class="language-sh"># sudo ./scripts/download_model_binary.py models/bvlc_reference_caffenet
 </code></pre>
 
-<h1 id="五-测试">五、测试</h1>
+<h1 id="二-准备数据">二、准备数据</h1>
 
-<ul>
-<li>python</li>
-<li>&gt;&gt;&gt;import cv2</li>
-<li>不报错即表示安装成功</li>
-</ul>
-
-<p>附：安装gnome后出现中文乱码的问题
-  apt-get install gnome-language-selector
-  然后在Xterm中执行
-  #gnome-language-selector</p>
+<p>将训练数据放在一个文件夹内。比如我在当前用户根目录下创建了一个data文件夹，专门用来存放数据，因此我的训练图片路径为：/home/xxx/data/re/train
+打开浏览器，运行digits，新建一个classification dataset,设置如下图：</p>
+</blockquote>
 
 </div>
 
@@ -265,11 +215,11 @@ ln /dev/null /dev/raw1394
   
 
     
-
-    
-    <a class="next" href="https://ten2net.github.io/2016/12/21/%E4%BD%BF%E7%94%A8digits%E8%BF%9B%E8%A1%8Cfinetune/" title="使用digits进行finetune">
-      Next
+    <a class="prev" href="https://ten2net.github.io/2016/12/21/opencv%E5%9C%A8ubuntu%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B/" title="Opencv在Ubuntu上的安装过程">
+      Previous
     </a>
+    
+
     
 
   
