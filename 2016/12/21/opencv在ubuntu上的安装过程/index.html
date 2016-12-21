@@ -214,7 +214,7 @@ apt-get -y install libqt4-dev</p>
 
 <li><p>#（可选，若出现list_filterout错误）修改samples/gpu/CMakeLists.txt 文件的106、109、110、111、112五行代码如下：</p>
 
-<pre><code class="language-python">	 if(NOT HAVE_OPENGL)
+<pre><code class="language-cpp">	 if(NOT HAVE_OPENGL)
 	 #   list_filterout(install_list &quot;.*opengl.cpp&quot;)
 	  endif()
 	  if(NOT HAVE_CUDA)
