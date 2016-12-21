@@ -27,9 +27,11 @@
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# sudo ./scripts/download_model_binary.py models/bvlc_reference_caffenet
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
 
 &lt;h1 id=&#34;二-准备数据&#34;&gt;二、准备数据&lt;/h1&gt;
 
+&lt;blockquote&gt;
 &lt;p&gt;将训练数据放在一个文件夹内。比如我在当前用户根目录下创建了一个data文件夹，专门用来存放数据，因此我的训练图片路径为：/home/xxx/data/re/train
 打开浏览器，运行digits，新建一个classification dataset,设置如下图：&lt;/p&gt;
 &lt;/blockquote&gt;
