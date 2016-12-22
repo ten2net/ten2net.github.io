@@ -66,6 +66,19 @@ git config --global https.proxy socks5://127.0.0.1:1080
 &lt;pre&gt;&lt;code&gt;git config --global http.proxy &amp;quot;&amp;quot;
 git config --global https.proxy &amp;quot;&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;也可以试试这个站点&#34;&gt;也可以试试这个站点&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://asm.ca.com/zh_cn/ping.php&#34;&gt;https://asm.ca.com/zh_cn/ping.php&lt;/a&gt;
+  例如：为了加速github访问速度，我修改我的hosts文件如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;151.101.56.133 ten2net.github.io
+23.235.33.133 github.io
+192.30.253.112 github.com
+192.30.253.113 github.com
+151.101.56.133 assets-cdn.github.com
+151.101.56.249 github.global.ssl.fastly.net
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
