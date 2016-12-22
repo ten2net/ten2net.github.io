@@ -179,9 +179,9 @@ Saved model to disk
 dict_keys([&#39;val_acc&#39;, &#39;val_loss&#39;, &#39;loss&#39;, &#39;acc&#39;])
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;index-readme_files/index-readme_4_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ten2net.github.io/post/index-readme_files/index-readme_4_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;index-readme_files/index-readme_4_2.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ten2net.github.io/post/index-readme_files/index-readme_4_2.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;使用正则化和dropout&#34;&gt;使用正则化和Dropout&lt;/h1&gt;
 
@@ -266,9 +266,9 @@ Saved model to disk
 dict_keys([&#39;val_acc&#39;, &#39;val_loss&#39;, &#39;loss&#39;, &#39;acc&#39;])
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;index-readme_files/index-readme_6_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ten2net.github.io/post/index-readme_files/index-readme_6_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;index-readme_files/index-readme_6_2.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ten2net.github.io/post/index-readme_files/index-readme_6_2.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;使用sgd优化器&#34;&gt;使用SGD优化器&lt;/h1&gt;
 
@@ -355,9 +355,9 @@ Saved model to disk
 dict_keys([&#39;val_acc&#39;, &#39;val_loss&#39;, &#39;loss&#39;, &#39;acc&#39;])
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;index-readme_files/index-readme_8_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ten2net.github.io/post/index-readme_files/index-readme_8_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;index-readme_files/index-readme_8_2.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ten2net.github.io/post/index-readme_files/index-readme_8_2.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;%matplotlib inline
 from matplotlib import pyplot as plt
@@ -468,9 +468,9 @@ Saved model to disk
 dict_keys([&#39;val_acc&#39;, &#39;val_loss&#39;, &#39;loss&#39;, &#39;acc&#39;])
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;index-readme_files/index-readme_9_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ten2net.github.io/post/index-readme_files/index-readme_9_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;index-readme_files/index-readme_9_2.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ten2net.github.io/post/index-readme_files/index-readme_9_2.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;loss, accuracy = model.evaluate(X_test,Y_test, verbose=0)
 predicted_classes = model.predict_classes(X_test)
