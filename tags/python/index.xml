@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pip on 学习之心</title>
-    <link>https://ten2net.github.io/tags/pip/index.xml</link>
-    <description>Recent content in Pip on 学习之心</description>
+    <title>Python on 学习之心</title>
+    <link>https://ten2net.github.io/tags/python/index.xml</link>
+    <description>Recent content in Python on 学习之心</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <managingEditor>wangf@e-u.cn (wangf)</managingEditor>
     <webMaster>wangf@e-u.cn (wangf)</webMaster>
     <copyright>(c) 2017 ten2net 西安长城数字软件有限公司.</copyright>
-    <atom:link href="https://ten2net.github.io/tags/pip/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ten2net.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>使用豆瓣镜像站点加速pip安装python软件包的方法</title>
