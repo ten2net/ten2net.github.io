@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Keras笔记  &middot; 学习之心</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="这是我个人制作的一个Keras快速入门的立即。" />
+
+<meta name="keywords" content="Keras, Deep Learning, ">
+
+<link rel="author" href="http://plus.google.com/+ten2net@gmail.com">
+
+
+<meta property="og:title" content="Keras笔记  &middot; 学习之心 ">
+<meta property="og:site_name" content="学习之心"/>
+<meta property="og:url" content="https://ten2net.github.io/2016/12/22/keras%E7%AC%94%E8%AE%B0/" />
+<meta property="og:locale" content="zh-CN">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="这是我个人制作的一个Keras快速入门的立即。"/>
+<meta property="og:article:published_time" content="2016-12-22T11:15:53&#43;08:00" />
+<meta property="og:article:modified_time" content="2016-12-22T11:15:53&#43;08:00" />
+
+  
+    
+<meta property="og:article:tag" content="Keras">
+    
+<meta property="og:article:tag" content="Deep Learning">
+    
+  
+
+  
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Keras笔记",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+ten2net@gmail.com?rel=author"
+    },
+    "datePublished": "2016-12-22",
+    "description": "这是我个人制作的一个Keras快速入门的立即。",
+    "wordCount":  1963 
+  }
+</script>
+
+
+
+<link rel="canonical" href="https://ten2net.github.io/2016/12/22/keras%E7%AC%94%E8%AE%B0/" />
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ten2net.github.io/touch-icon-144-precomposed.png">
+<link href="https://ten2net.github.io/favicon.png" rel="icon">
+
+<meta name="generator" content="Hugo 0.18" />
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link href='https://fonts.googleapis.com/css?family=Merriweather:300%7CRaleway%7COpen+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://ten2net.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://ten2net.github.io/css/style.css">
+<link rel="stylesheet" href="https://ten2net.github.io/css/highlight/default.css">
+
+  
+</head>
+<body>
+  <main id="main-wrapper" class="container main_wrapper has-sidebar">
+    <header id="main-header" class="container main_header">
+  <div class="container brand">
+  <div class="container title h1-like">
+  <a class="baselink" href="https://ten2net.github.io/">
+  学习之心
+
+</a>
+
+</div>
+
+  
+<div class="container topline">
+  
+  Digits Deepdetect
+
+
+</div>
+
+
+</div>
+
+  <nav class="container nav primary no-print">
+  
+
+<a class="homelink" href="https://ten2net.github.io/">首页</a>
+
+
+  
+<a href="https://ten2net.github.io/about">关于我</a>
+
+<a href="https://ten2net.github.io/post" title="显示文章列表">文章</a>
+
+<a href="https://ten2net.github.io/tags" title="显示标签列表">标签</a>
+
+
+</nav>
+
+<div class="container nav secondary no-print">
+  
+<a id="contact-link-email" class="contact_link" href="mailto:wangf@e-u.cn">
+  <span class="fa fa-envelope-square"></span><span>email</span></a>
+
+
+
+<a id="contact-link-github" class="contact_link" href="https://github.com/ten2net">
+  <span class="fa fa-github-square"></span><span>github</span></a>
+
+
+
+
+
+<a id="contact-link-linkedin" class="contact_link" href="https://www.linkedin.com/in/ten2net@163.com">
+  <span class="fa fa-linkedin-square"></span><span>linkedin</span></a>
+
+
+
+<a id="contact-link-googleplus" class="contact_link" href="https://plus.google.com/u/0/+ten2net@gmail.com">
+  <span class="fa fa-google-plus-square"></span><span>google+</span></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+  
+
+</header>
+
+
+<article id="main-content" class="container main_content single">
+  <header class="container hat">
+  <h1>Keras笔记
+</h1>
+
+  <div class="metas">
+<time datetime="2016-12-22">22 Dec, 2016</time>
+
+
+  
+    &middot; by wangf
+  
+  &middot; Read in about 10 min
+  &middot; (1963 Words)
+  <br>
+  
+<a class="label" href="https://ten2net.github.io/tags/keras">Keras</a>
+
+<a class="label" href="https://ten2net.github.io/tags/deep-learning">Deep Learning</a>
+
+
+
+</div>
+
+</header>
+
+  <div class="container content">
+  
+
+<h1 id="如何开始">如何开始</h1>
+
+<h2 id="1-光标移动到下面的-import-keras-cell中">1、光标移动到下面的 import keras   Cell中；</h2>
+
+<h2 id="2-shift-enter或点击上面的运行按钮-类似播放">2、Shift+Enter或点击上面的运行按钮（类似播放）</h2>
+
+<pre><code>  出现Using Theano backend.那么Keras就已经成功安装了
+</code></pre>
+
+<pre><code class="language-python">import keras
+</code></pre>
+
+<pre><code class="language-python">#查看mnist数据集
+%matplotlib inline
+from keras.datasets import mnist
+from matplotlib import pyplot as plt
+# load data
+(X_train, y_train), (X_test, y_test) = mnist.load_data(&quot;/notebook/datasets/mnist.pkl&quot;)
+# create a grid of 3x3 images
+for i in range(0, 9):
+    plt.subplot(330 + 1 + i)
+    plt.imshow(X_train[i], cmap=plt.get_cmap('gray'))
+# show the plot
+plt.show()
+</code></pre>
+
+<pre><code class="language-python">%matplotlib inline
+from matplotlib import pyplot as plt
+
+from keras.models import Sequential
+from keras.layers import Dense,Dropout
+from keras.models import model_from_json
+import numpy
+import os
+# 为了多次执行再现结果，这只一个固定的随机数   fix random seed for reproducibility
+seed = 7
+numpy.random.seed(seed)
+# 加载数据集 load pima indians dataset
+dataset = numpy.loadtxt(&quot;pima-indians-diabetes.csv&quot;, delimiter=&quot;,&quot;)
+# 分开数据集为输入和输出两部分  split into input (X) and output (Y) variables
+X = dataset[:,0:8]
+Y = dataset[:,8]
+
+print (X.shape,Y.shape)
+print (Y)
+
+</code></pre>
+
+<pre><code>(768, 8) (768,)
+[ 1.  0.  1.  0.  1.  0.  1.  0.  1.  1.  0.  1.  0.  1.  1.  1.  1.  1.
+  0.  1.  0.  0.  1.  1.  1.  1.  1.  0.  0.  0.  0.  1.  0.  0.  0.  0.
+  0.  1.  1.  1.  0.  0.  0.  1.  0.  1.  0.  0.  1.  0.  0.  0.  0.  1.
+  0.  0.  1.  0.  0.  0.  0.  1.  0.  0.  1.  0.  1.  0.  0.  0.  1.  0.
+  1.  0.  0.  0.  0.  0.  1.  0.  0.  0.  0.  0.  1.  0.  0.  0.  1.  0.
+  0.  0.  0.  1.  0.  0.  0.  0.  0.  1.  1.  0.  0.  0.  0.  0.  0.  0.
+  0.  1.  1.  1.  0.  0.  1.  1.  1.  0.  0.  0.  1.  0.  0.  0.  1.  1.
+  0.  0.  1.  1.  1.  1.  1.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  1.
+  0.  0.  0.  0.  0.  0.  0.  0.  1.  0.  1.  1.  0.  0.  0.  1.  0.  0.
+  0.  0.  1.  1.  0.  0.  0.  0.  1.  1.  0.  0.  0.  1.  0.  1.  0.  1.
+  0.  0.  0.  0.  0.  1.  1.  1.  1.  1.  0.  0.  1.  1.  0.  1.  0.  1.
+  1.  1.  0.  0.  0.  0.  0.  0.  1.  1.  0.  1.  0.  0.  0.  1.  1.  1.
+  1.  0.  1.  1.  1.  1.  0.  0.  0.  0.  0.  1.  0.  0.  1.  1.  0.  0.
+  0.  1.  1.  1.  1.  0.  0.  0.  1.  1.  0.  1.  0.  0.  0.  0.  0.  0.
+  0.  0.  1.  1.  0.  0.  0.  1.  0.  1.  0.  0.  1.  0.  1.  0.  0.  1.
+  1.  0.  0.  0.  0.  0.  1.  0.  0.  0.  1.  0.  0.  1.  1.  0.  0.  1.
+  0.  0.  0.  1.  1.  1.  0.  0.  1.  0.  1.  0.  1.  1.  0.  1.  0.  0.
+  1.  0.  1.  1.  0.  0.  1.  0.  1.  0.  0.  1.  0.  1.  0.  1.  1.  1.
+  0.  0.  1.  0.  1.  0.  0.  0.  1.  0.  0.  0.  0.  1.  1.  1.  0.  0.
+  0.  0.  0.  0.  0.  0.  0.  1.  0.  0.  0.  0.  0.  1.  1.  1.  0.  1.
+  1.  0.  0.  1.  0.  0.  1.  0.  0.  1.  1.  0.  0.  0.  0.  1.  0.  0.
+  1.  0.  0.  0.  0.  0.  0.  0.  1.  1.  1.  0.  0.  1.  0.  0.  1.  0.
+  0.  1.  0.  1.  1.  0.  1.  0.  1.  0.  1.  0.  1.  1.  0.  0.  0.  0.
+  1.  1.  0.  1.  0.  1.  0.  0.  0.  0.  1.  1.  0.  1.  0.  1.  0.  0.
+  0.  0.  0.  1.  0.  0.  0.  0.  1.  0.  0.  1.  1.  1.  0.  0.  1.  0.
+  0.  1.  0.  0.  0.  1.  0.  0.  1.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+  1.  0.  0.  0.  0.  0.  0.  0.  1.  0.  0.  0.  1.  0.  0.  0.  1.  1.
+  0.  0.  0.  0.  0.  0.  0.  1.  0.  0.  0.  0.  1.  0.  0.  0.  1.  0.
+  0.  0.  1.  0.  0.  0.  1.  0.  0.  0.  0.  1.  1.  0.  0.  0.  0.  0.
+  0.  1.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  1.  0.  0.  0.  1.
+  1.  1.  1.  0.  0.  1.  1.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+  0.  0.  1.  1.  0.  0.  0.  0.  0.  0.  0.  1.  0.  0.  0.  0.  0.  0.
+  0.  1.  0.  1.  1.  0.  0.  0.  1.  0.  1.  0.  1.  0.  1.  0.  1.  0.
+  0.  1.  0.  0.  1.  0.  0.  0.  0.  1.  1.  0.  1.  0.  0.  0.  0.  1.
+  1.  0.  1.  0.  0.  0.  1.  1.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+  1.  0.  0.  0.  0.  1.  0.  0.  1.  0.  0.  0.  1.  0.  0.  0.  1.  1.
+  1.  0.  0.  0.  0.  0.  0.  1.  0.  0.  0.  1.  0.  1.  1.  1.  1.  0.
+  1.  1.  0.  0.  0.  0.  0.  0.  0.  1.  1.  0.  1.  0.  0.  1.  0.  1.
+  0.  0.  0.  0.  0.  1.  0.  1.  0.  1.  0.  1.  1.  0.  0.  0.  0.  1.
+  1.  0.  0.  0.  1.  0.  1.  1.  0.  0.  1.  0.  0.  1.  1.  0.  0.  1.
+  0.  0.  1.  0.  0.  0.  0.  0.  0.  0.  1.  1.  1.  0.  0.  0.  0.  0.
+  0.  1.  1.  0.  0.  1.  0.  0.  1.  0.  1.  1.  1.  0.  0.  1.  1.  1.
+  0.  1.  0.  1.  0.  1.  0.  0.  0.  0.  1.  0.]
+</code></pre>
+
+<pre><code class="language-python">%matplotlib inline
+from matplotlib import pyplot as plt
+
+from keras.models import Sequential
+from keras.layers import Dense,Dropout
+from keras.models import model_from_json
+import numpy
+import os
+# 为了多次执行再现结果，这只一个固定的随机数   fix random seed for reproducibility
+seed = 7
+numpy.random.seed(seed)
+# 加载数据集 load pima indians dataset
+dataset = numpy.loadtxt(&quot;pima-indians-diabetes.csv&quot;, delimiter=&quot;,&quot;)
+# 分开数据集为输入和输出两部分  split into input (X) and output (Y) variables
+X = dataset[:,0:8]
+Y = dataset[:,8]
+
+# 创建模型 create model
+model = Sequential()
+model.add(Dense(12, input_dim=8, init='uniform', activation='relu'))
+model.add(Dense(8, init='uniform', activation='relu'))
+model.add(Dense(1, init='uniform', activation='sigmoid'))
+# 编译模型 Compile model
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+# 训练模型  Fit the model
+history= model.fit(X, Y,validation_split=0.25, nb_epoch=300, batch_size=10, verbose=0)
+
+# 评估模型 evaluate the model
+scores = model.evaluate(X, Y, verbose=0)
+print(&quot;%s: %.2f%%&quot; % (model.metrics_names[1], scores[1]*100))
+ 
+# 保存模型 serialize model to JSON
+model_json = model.to_json()
+with open(&quot;./models/diabetes-model.json&quot;, &quot;w&quot;) as json_file:
+    json_file.write(model_json)
+# 保存权重 serialize weights to HDF5
+model.save_weights(&quot;./models/diabetes-model.h5&quot;)
+print(&quot;Saved model to disk&quot;)
+
+#训练过程可视化
+# list all data in history
+print(history.history.keys())
+# summarize history for accuracy
+plt.plot(history.history['acc'])
+plt.plot(history.history['val_acc'])
+plt.title('model accuracy')
+plt.ylabel('accuracy')
+plt.xlabel('epoch')
+plt.legend(['train', 'test'], loc='upper left')
+plt.show()
+# summarize history for loss
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('model loss')
+plt.ylabel('loss')
+plt.xlabel('epoch')
+plt.legend(['train', 'test'], loc='upper left')
+plt.show()
+
+</code></pre>
+
+<pre><code>acc: 80.08%
+Saved model to disk
+dict_keys(['val_acc', 'val_loss', 'loss', 'acc'])
+</code></pre>
+
+<p><img src="index-readme_files/index-readme_4_1.png" alt="png" /></p>
+
+<p><img src="index-readme_files/index-readme_4_2.png" alt="png" /></p>
+
+<h1 id="使用正则化和dropout">使用正则化和Dropout</h1>
+
+<pre><code class="language-python">%matplotlib inline
+from matplotlib import pyplot as plt
+
+from keras.models import Sequential
+from keras.layers import Dense,Dropout,Activation
+from keras.models import model_from_json
+import numpy
+import os
+#正则化
+# import BatchNormalization
+from keras.layers.normalization import BatchNormalization
+
+# 为了多次执行再现结果，这只一个固定的随机数   fix random seed for reproducibility
+seed = 7
+numpy.random.seed(seed)
+# 加载数据集 load pima indians dataset
+dataset = numpy.loadtxt(&quot;pima-indians-diabetes.csv&quot;, delimiter=&quot;,&quot;)
+# 分开数据集为输入和输出两部分  split into input (X) and output (Y) variables
+X = dataset[:,0:8]
+Y = dataset[:,8]
+
+# 创建模型 create model
+model = Sequential()
+model.add(Dense(12, input_dim=8, init='uniform'))
+model.add(BatchNormalization())
+model.add(Activation('relu'))
+model.add(Dropout(0.5))
+
+model.add(Dense(8, init='uniform'))
+model.add(BatchNormalization())
+model.add(Activation('relu'))
+model.add(Dropout(0.5))
+
+model.add(Dense(1, init='uniform'))
+model.add(BatchNormalization())
+model.add(Activation('sigmoid'))
+
+# 编译模型 Compile model
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+# 训练模型  Fit the model
+history= model.fit(X, Y,validation_split=0.25, nb_epoch=300, batch_size=10, verbose=0)
+
+# 评估模型 evaluate the model
+scores = model.evaluate(X, Y, verbose=0)
+print(&quot;%s: %.2f%%&quot; % (model.metrics_names[1], scores[1]*100))
+ 
+# 保存模型 serialize model to JSON
+model_json = model.to_json()
+with open(&quot;./models/diabetes-model.json&quot;, &quot;w&quot;) as json_file:
+    json_file.write(model_json)
+# 保存权重 serialize weights to HDF5
+model.save_weights(&quot;./models/diabetes-model.h5&quot;)
+print(&quot;Saved model to disk&quot;)
+
+#训练过程可视化
+# list all data in history
+print(history.history.keys())
+# summarize history for accuracy
+plt.plot(history.history['acc'])
+plt.plot(history.history['val_acc'])
+plt.title('model accuracy')
+plt.ylabel('accuracy')
+plt.xlabel('epoch')
+plt.legend(['train', 'test'], loc='upper left')
+plt.show()
+# summarize history for loss
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('model loss')
+plt.ylabel('loss')
+plt.xlabel('epoch')
+plt.legend(['train', 'test'], loc='upper left')
+plt.show()
+
+</code></pre>
+
+<pre><code>acc: 76.69%
+Saved model to disk
+dict_keys(['val_acc', 'val_loss', 'loss', 'acc'])
+</code></pre>
+
+<p><img src="index-readme_files/index-readme_6_1.png" alt="png" /></p>
+
+<p><img src="index-readme_files/index-readme_6_2.png" alt="png" /></p>
+
+<h1 id="使用sgd优化器">使用SGD优化器</h1>
+
+<pre><code class="language-python">%matplotlib inline
+from matplotlib import pyplot as plt
+
+from keras.models import Sequential
+from keras.optimizers import SGD
+from keras.layers import Dense,Dropout,Activation
+from keras.models import model_from_json
+import numpy
+import os
+#正则化
+# import BatchNormalization
+from keras.layers.normalization import BatchNormalization
+
+# 为了多次执行再现结果，这只一个固定的随机数   fix random seed for reproducibility
+seed = 7
+numpy.random.seed(seed)
+# 加载数据集 load pima indians dataset
+dataset = numpy.loadtxt(&quot;pima-indians-diabetes.csv&quot;, delimiter=&quot;,&quot;)
+# 分开数据集为输入和输出两部分  split into input (X) and output (Y) variables
+X = dataset[:,0:8]
+Y = dataset[:,8]
+
+# 创建模型 create model
+model = Sequential()
+model.add(Dense(12, input_dim=8, init='uniform'))
+model.add(BatchNormalization())
+model.add(Activation('relu'))
+model.add(Dropout(0.5))
+
+model.add(Dense(8, init='uniform'))
+model.add(BatchNormalization())
+model.add(Activation('relu'))
+model.add(Dropout(0.5))
+
+model.add(Dense(1, init='uniform'))
+model.add(BatchNormalization())
+model.add(Activation('sigmoid'))
+
+# 编译模型 Compile model
+sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
+model.compile(loss='binary_crossentropy', optimizer=sgd, metrics=['accuracy'])
+# 训练模型  Fit the model
+history= model.fit(X, Y,validation_split=0.25, nb_epoch=300, batch_size=10, verbose=0)
+
+# 评估模型 evaluate the model
+scores = model.evaluate(X, Y, verbose=0)
+print(&quot;%s: %.2f%%&quot; % (model.metrics_names[1], scores[1]*100))
+ 
+# 保存模型 serialize model to JSON
+model_json = model.to_json()
+with open(&quot;./models/diabetes-model.json&quot;, &quot;w&quot;) as json_file:
+    json_file.write(model_json)
+# 保存权重 serialize weights to HDF5
+model.save_weights(&quot;./models/diabetes-model.h5&quot;)
+print(&quot;Saved model to disk&quot;)
+
+#训练过程可视化
+# list all data in history
+print(history.history.keys())
+# summarize history for accuracy
+plt.plot(history.history['acc'])
+plt.plot(history.history['val_acc'])
+plt.title('model accuracy')
+plt.ylabel('accuracy')
+plt.xlabel('epoch')
+plt.legend(['train', 'test'], loc='upper left')
+plt.show()
+# summarize history for loss
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('model loss')
+plt.ylabel('loss')
+plt.xlabel('epoch')
+plt.legend(['train', 'test'], loc='upper left')
+plt.show()
+
+</code></pre>
+
+<pre><code>acc: 76.69%
+Saved model to disk
+dict_keys(['val_acc', 'val_loss', 'loss', 'acc'])
+</code></pre>
+
+<p><img src="index-readme_files/index-readme_8_1.png" alt="png" /></p>
+
+<p><img src="index-readme_files/index-readme_8_2.png" alt="png" /></p>
+
+<pre><code class="language-python">%matplotlib inline
+from matplotlib import pyplot as plt
+from keras.callbacks import EarlyStopping,ModelCheckpoint
+from keras.models import Sequential
+from keras.layers import Dense,Dropout
+from keras.models import model_from_json
+import numpy as np
+import os
+# 为了多次执行再现结果，这只一个固定的随机数   fix random seed for reproducibility
+seed = 7
+np.random.seed(seed)
+# 加载数据集 load pima indians dataset
+dataset = numpy.loadtxt(&quot;pima-indians-diabetes.csv&quot;, delimiter=&quot;,&quot;)
+# 分开数据集为输入和输出两部分  split into input (X) and output (Y) variables
+X = dataset[:,0:8]
+Y = dataset[:,8]
+
+# 创建模型 create model
+model = Sequential()
+model.add(Dense(12, input_dim=8, init='uniform', activation='relu'))
+model.add(Dense(8, init='uniform', activation='relu'))
+model.add(Dense(1, init='uniform', activation='sigmoid'))
+# 编译模型 Compile model
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+
+#--早停 和检查点-callback---
+filepath=&quot;./temp/diabetes-weights-improvement-{epoch:02d}-{val_acc:.2f}.hdf5&quot;
+checkpoint = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True, mode='max')
+checkpoint2=ModelCheckpoint(&quot;./temp/diabetes-weights.{epoch:02d}-{val_loss:.2f}.h5&quot;, monitor='val_loss', verbose=0, save_best_only=False, mode='auto')
+#当监测值不再改善时，该回调函数将中止训练
+   # patience：当early stop被激活（如发现loss相比上一个epoch训练没有下降），
+    # 则经过patience个epoch后停止训练。
+estop = EarlyStopping(monitor='val_loss', patience=5, verbose=0, mode='auto')
+#--------------------------------------
+
+# 训练模型  Fit the model
+history= model.fit(X, Y,validation_split=0.5, nb_epoch=150, batch_size=10, verbose=0,callbacks=[checkpoint,checkpoint2,estop])
+
+# 评估模型 evaluate the model
+scores = model.evaluate(X, Y, verbose=0)
+print(&quot;%s: %.2f%%&quot; % (model.metrics_names[1], scores[1]*100))
+ 
+# 保存模型 serialize model to JSON
+model_json = model.to_json()
+with open(&quot;./models/diabetes-model.json&quot;, &quot;w&quot;) as json_file:
+    json_file.write(model_json)
+# 保存权重 serialize weights to HDF5
+model.save_weights(&quot;./models/diabetes-model.h5&quot;)
+print(&quot;Saved model to disk&quot;)
+
+#训练过程可视化
+# list all data in history
+print(history.history.keys())
+# summarize history for accuracy
+plt.plot(history.history['acc'])
+plt.plot(history.history['val_acc'])
+plt.title('model accuracy')
+plt.ylabel('accuracy')
+plt.xlabel('epoch')
+plt.legend(['train', 'test'], loc='upper left')
+plt.show()
+# summarize history for loss
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('model loss')
+plt.ylabel('loss')
+plt.xlabel('epoch')
+plt.legend(['train', 'test'], loc='upper left')
+plt.show()
+
+</code></pre>
+
+<pre><code>Epoch 00000: val_acc improved from -inf to 0.68490, saving model to ./temp/diabetes-weights-improvement-00-0.68.hdf5
+Epoch 00001: val_acc did not improve
+Epoch 00002: val_acc did not improve
+Epoch 00003: val_acc did not improve
+Epoch 00004: val_acc did not improve
+Epoch 00005: val_acc did not improve
+Epoch 00006: val_acc improved from 0.68490 to 0.69010, saving model to ./temp/diabetes-weights-improvement-06-0.69.hdf5
+Epoch 00007: val_acc did not improve
+Epoch 00008: val_acc did not improve
+Epoch 00009: val_acc did not improve
+Epoch 00010: val_acc did not improve
+Epoch 00011: val_acc improved from 0.69010 to 0.69010, saving model to ./temp/diabetes-weights-improvement-11-0.69.hdf5
+Epoch 00012: val_acc did not improve
+Epoch 00013: val_acc did not improve
+Epoch 00014: val_acc did not improve
+Epoch 00015: val_acc did not improve
+Epoch 00016: val_acc did not improve
+Epoch 00017: val_acc did not improve
+Epoch 00018: val_acc did not improve
+Epoch 00019: val_acc did not improve
+Epoch 00020: val_acc did not improve
+Epoch 00021: val_acc did not improve
+Epoch 00022: val_acc did not improve
+Epoch 00023: val_acc did not improve
+Epoch 00024: val_acc did not improve
+Epoch 00025: val_acc did not improve
+Epoch 00026: val_acc did not improve
+Epoch 00027: val_acc did not improve
+Epoch 00028: val_acc did not improve
+Epoch 00029: val_acc did not improve
+Epoch 00030: val_acc did not improve
+Epoch 00031: val_acc did not improve
+acc: 69.01%
+Saved model to disk
+dict_keys(['val_acc', 'val_loss', 'loss', 'acc'])
+</code></pre>
+
+<p><img src="index-readme_files/index-readme_9_1.png" alt="png" /></p>
+
+<p><img src="index-readme_files/index-readme_9_2.png" alt="png" /></p>
+
+<pre><code class="language-python">loss, accuracy = model.evaluate(X_test,Y_test, verbose=0)
+predicted_classes = model.predict_classes(X_test)
+correct_classified_indices = np.nonzero(predicted_classes == y_test)[0]
+incorrect_classified_indices = np.nonzero(predicted_classes != y_test)[0]
+correct_classified_indices
+array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 14, 15, 16])
+incorrect_classified_indices
+array([ 0, 13])
+</code></pre>
+
+</div>
+
+
+  <footer class="container">
+  <div class="container navigation no-print">
+  <h2>Navigation</h2>
+  
+  
+
+    
+    <a class="prev" href="https://ten2net.github.io/2016/12/22/%E6%88%91%E7%9A%84docker%E7%AC%94%E8%AE%B0/" title="我的docker笔记">
+      Previous
+    </a>
+    
+
+    
+    <a class="next" href="https://ten2net.github.io/2016/12/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%89%E7%BB%B4%E4%BB%BF%E7%9C%9F%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/" title="计算机三维仿真常用软件">
+      Next
+    </a>
+    
+
+  
+
+
+</div>
+
+  <div class="container comments">
+  <h2>Comments</h2>
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//ten2net.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+</footer>
+
+</article>
+      <footer id="main-footer" class="container main_footer">
+  
+
+  <div class="container nav foot no-print">
+  
+<a href="http://www.e-u.cn">我的公司</a>
+
+
+  <a class="toplink" href="#">back to top</a>
+
+</div>
+
+  <div class="container credits">
+  
+<div class="container footline">
+  
+  制作 <i class='fa fa-heart'>ten2net</i>
+
+
+</div>
+
+
+  
+<div class="container copyright">
+  
+  &copy; 2017 ten2net 西安长城数字软件有限公司.
+
+
+</div>
+
+
+</div>
+
+</footer>
+
+    </main>
+    
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//ten2net.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+<script src="https://ten2net.github.io/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'Your Google Analytics tracking code', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+    
+  </body>
+</html>
+
