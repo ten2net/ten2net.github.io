@@ -22,20 +22,16 @@
 
 &lt;h1 id=&#34;一-下载model参数&#34;&gt;一、下载model参数&lt;/h1&gt;
 
-&lt;blockquote&gt;
 &lt;p&gt;可以直接在浏览器里输入地址下载，也可以运行脚本文件下载。下载地址为：&lt;a href=&#34;http://dl.caffe.berkeleyvision.org/bvlc_reference_caffenet.caffemodel&#34;&gt;http://dl.caffe.berkeleyvision.org/bvlc_reference_caffenet.caffemodel&lt;/a&gt;
 文件名称为：bvlc_reference_caffenet.caffemodel，文件大小为230M左右，为了代码的统一，将这个caffemodel文件下载到caffe根目录下的 models/bvlc_reference_caffenet/ 文件夹下面。也可以运行脚本文件进行下载：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# sudo ./scripts/download_model_binary.py models/bvlc_reference_caffenet
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
 
 &lt;h1 id=&#34;二-准备数据&#34;&gt;二、准备数据&lt;/h1&gt;
 
-&lt;blockquote&gt;
 &lt;p&gt;将训练数据放在一个文件夹内。比如我在当前用户根目录下创建了一个data文件夹，专门用来存放数据，因此我的训练图片路径为：/home/xxx/data/re/train
 打开浏览器，运行digits，新建一个classification dataset,设置如下图：&lt;/p&gt;
-&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://ten2net.github.io/post/images/digits/image001.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
@@ -47,9 +43,7 @@
 
 &lt;h1 id=&#34;三-设置model&#34;&gt;三、设置model&lt;/h1&gt;
 
-&lt;blockquote&gt;
 &lt;p&gt;回到digits根目录，新建一个classification model， 选中你的dataset, 开始设置最重要的network.&lt;/p&gt;
-&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://ten2net.github.io/post/images/digits/image005.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 

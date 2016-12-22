@@ -209,20 +209,16 @@
 
 <h1 id="一-下载model参数">一、下载model参数</h1>
 
-<blockquote>
 <p>可以直接在浏览器里输入地址下载，也可以运行脚本文件下载。下载地址为：<a href="http://dl.caffe.berkeleyvision.org/bvlc_reference_caffenet.caffemodel">http://dl.caffe.berkeleyvision.org/bvlc_reference_caffenet.caffemodel</a>
 文件名称为：bvlc_reference_caffenet.caffemodel，文件大小为230M左右，为了代码的统一，将这个caffemodel文件下载到caffe根目录下的 models/bvlc_reference_caffenet/ 文件夹下面。也可以运行脚本文件进行下载：</p>
 
 <pre><code class="language-sh"># sudo ./scripts/download_model_binary.py models/bvlc_reference_caffenet
 </code></pre>
-</blockquote>
 
 <h1 id="二-准备数据">二、准备数据</h1>
 
-<blockquote>
 <p>将训练数据放在一个文件夹内。比如我在当前用户根目录下创建了一个data文件夹，专门用来存放数据，因此我的训练图片路径为：/home/xxx/data/re/train
 打开浏览器，运行digits，新建一个classification dataset,设置如下图：</p>
-</blockquote>
 
 <p><img src="/post/images/digits/image001.png" alt="" /></p>
 
@@ -234,9 +230,7 @@
 
 <h1 id="三-设置model">三、设置model</h1>
 
-<blockquote>
 <p>回到digits根目录，新建一个classification model， 选中你的dataset, 开始设置最重要的network.</p>
-</blockquote>
 
 <p><img src="/post/images/digits/image005.png" alt="" /></p>
 
