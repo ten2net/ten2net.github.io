@@ -49,13 +49,13 @@
   </url>
   
   <url>
-    <loc>https://ten2net.github.io/topics/deep-learning/</loc>
+    <loc>https://ten2net.github.io/tags/deep-learning/</loc>
     <lastmod>2016-12-22T11:15:53+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ten2net.github.io/tags/deep-learning/</loc>
+    <loc>https://ten2net.github.io/topics/deep-learning/</loc>
     <lastmod>2016-12-22T11:15:53+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -67,13 +67,13 @@
   </url>
   
   <url>
-    <loc>https://ten2net.github.io/topics/docker/</loc>
+    <loc>https://ten2net.github.io/tags/docker/</loc>
     <lastmod>2016-12-22T11:15:53+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ten2net.github.io/tags/docker/</loc>
+    <loc>https://ten2net.github.io/topics/docker/</loc>
     <lastmod>2016-12-22T11:15:53+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -91,13 +91,13 @@
   </url>
   
   <url>
-    <loc>https://ten2net.github.io/topics/keras/</loc>
+    <loc>https://ten2net.github.io/tags/keras/</loc>
     <lastmod>2016-12-22T11:15:53+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ten2net.github.io/tags/keras/</loc>
+    <loc>https://ten2net.github.io/topics/keras/</loc>
     <lastmod>2016-12-22T11:15:53+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -109,25 +109,25 @@
   </url>
   
   <url>
-    <loc>https://ten2net.github.io/topics/opencv/</loc>
-    <lastmod>2016-12-21T09:52:09+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ten2net.github.io/tags/opencv/</loc>
     <lastmod>2016-12-21T09:52:09+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ten2net.github.io/topics/pandoc/</loc>
-    <lastmod>2016-12-22T12:59:30+08:00</lastmod>
+    <loc>https://ten2net.github.io/topics/opencv/</loc>
+    <lastmod>2016-12-21T09:52:09+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ten2net.github.io/tags/pandoc/</loc>
+    <lastmod>2016-12-22T12:59:30+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ten2net.github.io/topics/pandoc/</loc>
     <lastmod>2016-12-22T12:59:30+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -155,13 +155,13 @@
   </url>
   
   <url>
-    <loc>https://ten2net.github.io/topics/ubuntu/</loc>
+    <loc>https://ten2net.github.io/tags/ubuntu/</loc>
     <lastmod>2016-12-21T09:52:09+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ten2net.github.io/tags/ubuntu/</loc>
+    <loc>https://ten2net.github.io/topics/ubuntu/</loc>
     <lastmod>2016-12-21T09:52:09+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -179,13 +179,13 @@
   </url>
   
   <url>
-    <loc>https://ten2net.github.io/topics/%E4%B8%89%E7%BB%B4/</loc>
+    <loc>https://ten2net.github.io/tags/%E4%B8%89%E7%BB%B4/</loc>
     <lastmod>2016-12-22T12:12:19+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ten2net.github.io/tags/%E4%B8%89%E7%BB%B4/</loc>
+    <loc>https://ten2net.github.io/topics/%E4%B8%89%E7%BB%B4/</loc>
     <lastmod>2016-12-22T12:12:19+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -197,25 +197,25 @@
   </url>
   
   <url>
-    <loc>https://ten2net.github.io/topics/%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/</loc>
-    <lastmod>2016-12-22T12:59:30+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ten2net.github.io/tags/%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/</loc>
     <lastmod>2016-12-22T12:59:30+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ten2net.github.io/topics/%E8%A7%86%E6%99%AF%E4%BB%BF%E7%9C%9F/</loc>
-    <lastmod>2016-12-22T12:12:19+08:00</lastmod>
+    <loc>https://ten2net.github.io/topics/%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/</loc>
+    <lastmod>2016-12-22T12:59:30+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ten2net.github.io/tags/%E8%A7%86%E6%99%AF%E4%BB%BF%E7%9C%9F/</loc>
+    <lastmod>2016-12-22T12:12:19+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ten2net.github.io/topics/%E8%A7%86%E6%99%AF%E4%BB%BF%E7%9C%9F/</loc>
     <lastmod>2016-12-22T12:12:19+08:00</lastmod>
     <priority>0</priority>
   </url>
