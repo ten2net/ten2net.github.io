@@ -68,7 +68,7 @@
     },
     "datePublished": "2016-12-21",
     "description": "description",
-    "wordCount":  209 
+    "wordCount":  206 
   }
 </script>
 
@@ -191,7 +191,7 @@
     &middot; by author
   
   &middot; Read in about 1 min
-  &middot; (209 Words)
+  &middot; (206 Words)
   <br>
   
 <a class="label" href="https://ten2net.github.io/tags/digits">digits</a>
@@ -320,9 +320,9 @@
 <li><p>【注意】新版digits的网络结构是针对所有网络的，即包括的训练的网络结构，测试的网络结构和验证的网络结构，即在一个.prototxt 中包含了train/val/deploy 所有的结构。</p></li>
 
 <li><p>如果使用新版digits，除了上面数据层和最后一个全连接层的改动外，还有以下3处：</p></li>
-</ul>
 
-<p>** （1）修改accuracy层，删除原来phase: TEST修改为stage: &laquo;val&raquo;，下图的-表示删除，+表示增加，后面的均是这样表示。</p>
+<li><p>（1）修改accuracy层，删除原来phase: TEST修改为stage: &laquo;val&raquo;，下图的-表示删除，+表示增加，后面的均是这样表示。</p></li>
+</ul>
 
 <pre><code class="language-json">layer {
 name: &quot;accuracy&quot;
@@ -337,7 +337,9 @@ name: &quot;accuracy&quot;
 }
 </code></pre>
 
-<p>** （2）修改loss层，增加exclude { stage: &laquo;deploy&raquo; }，表示loss只在训练和验证中计算，测试时不计算。</p>
+<ul>
+<li>（2）修改loss层，增加exclude { stage: &laquo;deploy&raquo; }，表示loss只在训练和验证中计算，测试时不计算。</li>
+</ul>
 
 <pre><code class="language-json">layer {
        name: &quot;loss&quot;
@@ -349,7 +351,9 @@ name: &quot;accuracy&quot;
 +}
 </code></pre>
 
-<p>** （3）增加softmax层，该层不在训练和验证中计算，只在测试时计算。</p>
+<ul>
+<li>（3）增加softmax层，该层不在训练和验证中计算，只在测试时计算。</li>
+</ul>
 
 <pre><code class="language-json">+ layer {
 +      name: &quot;softmax&quot;
