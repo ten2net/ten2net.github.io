@@ -68,7 +68,7 @@
     },
     "datePublished": "2016-12-21",
     "description": "description",
-    "wordCount":  196 
+    "wordCount":  209 
   }
 </script>
 
@@ -191,7 +191,7 @@
     &middot; by author
   
   &middot; Read in about 1 min
-  &middot; (196 Words)
+  &middot; (209 Words)
   <br>
   
 <a class="label" href="https://ten2net.github.io/tags/digits">digits</a>
@@ -316,12 +316,13 @@
 <li>看注释的地方，就只有两个地方修改，其它不变。</li>
 <li>设置好后，就可以开始微调了(fine tuning).</li>
 <li>训练结果就是一个新的model，可以用来单张图片和多张图片测试。在此，将别人训练好的model用到我们自己的图片分类上，整个微调过程就是这样了。如果你不用digits，而直接用命令操作，那就更简单，只需要修改一个train_val.prototxt的配置文件就可以了，其它都是一样的操作。</li>
-<li>【注意】新版digits的网络结构是针对所有网络的，即包括的训练的网络结构，测试的网络结构和验证的网络结构，即在一个.prototxt 中包含了train/val/deploy 所有的结构。</li>
+
+<li><p>【注意】新版digits的网络结构是针对所有网络的，即包括的训练的网络结构，测试的网络结构和验证的网络结构，即在一个.prototxt 中包含了train/val/deploy 所有的结构。</p></li>
+
+<li><p>如果使用新版digits，除了上面数据层和最后一个全连接层的改动外，还有以下3处：</p></li>
 </ul>
 
-<p>&ndash; 如果使用新版digits，除了上面数据层和最后一个全连接层的改动外，还有以下3处：</p>
-
-<h3 id="1-修改accuracy层-删除原来phase-test修改为stage-val-下图的-表示删除-表示增加-后面的均是这样表示">（1）修改accuracy层，删除原来phase: TEST修改为stage: &laquo;val&raquo;，下图的-表示删除，+表示增加，后面的均是这样表示。</h3>
+<p>** （1）修改accuracy层，删除原来phase: TEST修改为stage: &laquo;val&raquo;，下图的-表示删除，+表示增加，后面的均是这样表示。</p>
 
 <pre><code class="language-json">layer {
 name: &quot;accuracy&quot;
@@ -329,14 +330,14 @@ name: &quot;accuracy&quot;
      bottom: &quot;output&quot;
      bottom: &quot;label&quot;
      top: &quot;accuracy&quot;
-     include {
-         phase: TEST
-     }
-    include { stage: &quot;val&quot; }
+-     include {
+-         phase: TEST
+-     }
++    include { stage: &quot;val&quot; }
 }
 </code></pre>
 
-<h3 id="2-修改loss层-增加exclude-stage-deploy-表示loss只在训练和验证中计算-测试时不计算">（2）修改loss层，增加exclude { stage: &laquo;deploy&raquo; }，表示loss只在训练和验证中计算，测试时不计算。</h3>
+<p>** （2）修改loss层，增加exclude { stage: &laquo;deploy&raquo; }，表示loss只在训练和验证中计算，测试时不计算。</p>
 
 <pre><code class="language-json">layer {
        name: &quot;loss&quot;
@@ -344,19 +345,19 @@ name: &quot;accuracy&quot;
        bottom: &quot;output&quot;
        bottom: &quot;label&quot;
        top: &quot;loss&quot;
-     exclude { stage: &quot;deploy&quot; }
-}
++     exclude { stage: &quot;deploy&quot; }
++}
 </code></pre>
 
-<h3 id="3-增加softmax层-该层不在训练和验证中计算-只在测试时计算">（3）增加softmax层，该层不在训练和验证中计算，只在测试时计算。</h3>
+<p>** （3）增加softmax层，该层不在训练和验证中计算，只在测试时计算。</p>
 
-<pre><code class="language-json"> layer {
-      name: &quot;softmax&quot;
-      type: &quot;Softmax&quot;
-      bottom: &quot;output&quot;
-      top: &quot;softmax&quot;
-         include { stage: &quot;deploy&quot; }
-}
+<pre><code class="language-json">+ layer {
++      name: &quot;softmax&quot;
++      type: &quot;Softmax&quot;
++      bottom: &quot;output&quot;
++      top: &quot;softmax&quot;
++         include { stage: &quot;deploy&quot; }
++}
 </code></pre>
 
 </div>

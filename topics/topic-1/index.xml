@@ -128,12 +128,13 @@
 &lt;li&gt;看注释的地方，就只有两个地方修改，其它不变。&lt;/li&gt;
 &lt;li&gt;设置好后，就可以开始微调了(fine tuning).&lt;/li&gt;
 &lt;li&gt;训练结果就是一个新的model，可以用来单张图片和多张图片测试。在此，将别人训练好的model用到我们自己的图片分类上，整个微调过程就是这样了。如果你不用digits，而直接用命令操作，那就更简单，只需要修改一个train_val.prototxt的配置文件就可以了，其它都是一样的操作。&lt;/li&gt;
-&lt;li&gt;【注意】新版digits的网络结构是针对所有网络的，即包括的训练的网络结构，测试的网络结构和验证的网络结构，即在一个.prototxt 中包含了train/val/deploy 所有的结构。&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;【注意】新版digits的网络结构是针对所有网络的，即包括的训练的网络结构，测试的网络结构和验证的网络结构，即在一个.prototxt 中包含了train/val/deploy 所有的结构。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;如果使用新版digits，除了上面数据层和最后一个全连接层的改动外，还有以下3处：&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&amp;ndash; 如果使用新版digits，除了上面数据层和最后一个全连接层的改动外，还有以下3处：&lt;/p&gt;
-
-&lt;h3 id=&#34;1-修改accuracy层-删除原来phase-test修改为stage-val-下图的-表示删除-表示增加-后面的均是这样表示&#34;&gt;（1）修改accuracy层，删除原来phase: TEST修改为stage: &amp;laquo;val&amp;raquo;，下图的-表示删除，+表示增加，后面的均是这样表示。&lt;/h3&gt;
+&lt;p&gt;** （1）修改accuracy层，删除原来phase: TEST修改为stage: &amp;laquo;val&amp;raquo;，下图的-表示删除，+表示增加，后面的均是这样表示。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;layer {
 name: &amp;quot;accuracy&amp;quot;
@@ -141,14 +142,14 @@ name: &amp;quot;accuracy&amp;quot;
      bottom: &amp;quot;output&amp;quot;
      bottom: &amp;quot;label&amp;quot;
      top: &amp;quot;accuracy&amp;quot;
-     include {
-         phase: TEST
-     }
-    include { stage: &amp;quot;val&amp;quot; }
+-     include {
+-         phase: TEST
+-     }
++    include { stage: &amp;quot;val&amp;quot; }
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;2-修改loss层-增加exclude-stage-deploy-表示loss只在训练和验证中计算-测试时不计算&#34;&gt;（2）修改loss层，增加exclude { stage: &amp;laquo;deploy&amp;raquo; }，表示loss只在训练和验证中计算，测试时不计算。&lt;/h3&gt;
+&lt;p&gt;** （2）修改loss层，增加exclude { stage: &amp;laquo;deploy&amp;raquo; }，表示loss只在训练和验证中计算，测试时不计算。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;layer {
        name: &amp;quot;loss&amp;quot;
@@ -156,19 +157,19 @@ name: &amp;quot;accuracy&amp;quot;
        bottom: &amp;quot;output&amp;quot;
        bottom: &amp;quot;label&amp;quot;
        top: &amp;quot;loss&amp;quot;
-     exclude { stage: &amp;quot;deploy&amp;quot; }
-}
++     exclude { stage: &amp;quot;deploy&amp;quot; }
++}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;3-增加softmax层-该层不在训练和验证中计算-只在测试时计算&#34;&gt;（3）增加softmax层，该层不在训练和验证中计算，只在测试时计算。&lt;/h3&gt;
+&lt;p&gt;** （3）增加softmax层，该层不在训练和验证中计算，只在测试时计算。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt; layer {
-      name: &amp;quot;softmax&amp;quot;
-      type: &amp;quot;Softmax&amp;quot;
-      bottom: &amp;quot;output&amp;quot;
-      top: &amp;quot;softmax&amp;quot;
-         include { stage: &amp;quot;deploy&amp;quot; }
-}
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;+ layer {
++      name: &amp;quot;softmax&amp;quot;
++      type: &amp;quot;Softmax&amp;quot;
++      bottom: &amp;quot;output&amp;quot;
++      top: &amp;quot;softmax&amp;quot;
++         include { stage: &amp;quot;deploy&amp;quot; }
++}
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
