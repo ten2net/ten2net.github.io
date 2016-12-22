@@ -42,7 +42,7 @@
 &lt;p&gt;下面图片格式选为jpg, 为dataset取一个名字，就开始转换吧。结果如图：&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ten2net.github.io/post/images/digits/image002.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ten2net.github.io/post/images/digits/image003.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;三-设置model&#34;&gt;三、设置model&lt;/h1&gt;
 
@@ -50,7 +50,7 @@
 &lt;p&gt;回到digits根目录，新建一个classification model， 选中你的dataset, 开始设置最重要的network.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ten2net.github.io/post/images/digits/image003.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ten2net.github.io/post/images/digits/image005.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;caffenet的网络配置文件，放在 caffe/models/bvlc_reference_caffenet/ 这个文件夹里面，名字叫train_val.prototxt。打开这个文件，将里面的内容复制到上图的Custom Network文本框里，然后进行修改，主要修改这几个地方：&lt;/li&gt;
@@ -131,10 +131,9 @@
 &lt;li&gt;【注意】新版digits的网络结构是针对所有网络的，即包括的训练的网络结构，测试的网络结构和验证的网络结构，即在一个.prototxt 中包含了train/val/deploy 所有的结构。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;如果使用新版digits，除了上面数据层和最后一个全连接层的改动外，还有以下3处：
-&amp;gt; （1）修改accuracy层，删除原来phase: TEST修改为stage: &amp;laquo;val&amp;raquo;，下图的-表示删除，+表示增加，后面的均是这样表示。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&amp;ndash; 如果使用新版digits，除了上面数据层和最后一个全连接层的改动外，还有以下3处：&lt;/p&gt;
+
+&lt;h3 id=&#34;1-修改accuracy层-删除原来phase-test修改为stage-val-下图的-表示删除-表示增加-后面的均是这样表示&#34;&gt;（1）修改accuracy层，删除原来phase: TEST修改为stage: &amp;laquo;val&amp;raquo;，下图的-表示删除，+表示增加，后面的均是这样表示。&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;layer {
 name: &amp;quot;accuracy&amp;quot;
@@ -149,11 +148,7 @@ name: &amp;quot;accuracy&amp;quot;
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;（2）修改loss层，增加exclude { stage: &amp;laquo;deploy&amp;raquo; }，表示loss只在训练和验证中计算，测试时不计算。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
+&lt;h3 id=&#34;2-修改loss层-增加exclude-stage-deploy-表示loss只在训练和验证中计算-测试时不计算&#34;&gt;（2）修改loss层，增加exclude { stage: &amp;laquo;deploy&amp;raquo; }，表示loss只在训练和验证中计算，测试时不计算。&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;layer {
        name: &amp;quot;loss&amp;quot;
@@ -165,11 +160,7 @@ name: &amp;quot;accuracy&amp;quot;
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;（3）增加softmax层，该层不在训练和验证中计算，只在测试时计算。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
+&lt;h3 id=&#34;3-增加softmax层-该层不在训练和验证中计算-只在测试时计算&#34;&gt;（3）增加softmax层，该层不在训练和验证中计算，只在测试时计算。&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt; layer {
       name: &amp;quot;softmax&amp;quot;
