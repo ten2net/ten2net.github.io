@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>我的docker笔记  &middot; 机器学习</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="不介绍docker的安装，只记录常用的命令和一些小技巧" />
+
+<meta name="keywords" content="docker, ">
+
+<link rel="author" href="http://plus.google.com/+ten2net@gmail.com">
+
+
+<meta property="og:title" content="我的docker笔记  &middot; 机器学习 ">
+<meta property="og:site_name" content="机器学习"/>
+<meta property="og:url" content="https://ten2net.github.io/2016/12/22/%E6%88%91%E7%9A%84docker%E7%AC%94%E8%AE%B0/" />
+<meta property="og:locale" content="zh-CN">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="不介绍docker的安装，只记录常用的命令和一些小技巧"/>
+<meta property="og:article:published_time" content="2016-12-22T11:15:53&#43;08:00" />
+<meta property="og:article:modified_time" content="2016-12-22T11:15:53&#43;08:00" />
+
+  
+    
+<meta property="og:article:tag" content="docker">
+    
+  
+
+  
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "我的docker笔记",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+ten2net@gmail.com?rel=author"
+    },
+    "datePublished": "2016-12-22",
+    "description": "不介绍docker的安装，只记录常用的命令和一些小技巧",
+    "wordCount":  713 
+  }
+</script>
+
+
+
+<link rel="canonical" href="https://ten2net.github.io/2016/12/22/%E6%88%91%E7%9A%84docker%E7%AC%94%E8%AE%B0/" />
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ten2net.github.io/touch-icon-144-precomposed.png">
+<link href="https://ten2net.github.io/favicon.png" rel="icon">
+
+<meta name="generator" content="Hugo 0.18" />
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link href='https://fonts.googleapis.com/css?family=Merriweather:300%7CRaleway%7COpen+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://ten2net.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://ten2net.github.io/css/style.css">
+<link rel="stylesheet" href="https://ten2net.github.io/css/highlight/default.css">
+
+  
+</head>
+<body>
+  <main id="main-wrapper" class="container main_wrapper has-sidebar">
+    <header id="main-header" class="container main_header">
+  <div class="container brand">
+  <div class="container title h1-like">
+  <a class="baselink" href="https://ten2net.github.io/">
+  学习之心
+
+</a>
+
+</div>
+
+  
+<div class="container topline">
+  
+  Digits Deepdetect
+
+
+</div>
+
+
+</div>
+
+  <nav class="container nav primary no-print">
+  
+
+<a class="homelink" href="https://ten2net.github.io/">首页</a>
+
+
+  
+<a href="https://ten2net.github.io/about">关于我</a>
+
+<a href="https://ten2net.github.io/post" title="显示文章列表">文章</a>
+
+<a href="https://ten2net.github.io/tags" title="显示标签列表">标签</a>
+
+
+</nav>
+
+<div class="container nav secondary no-print">
+  
+<a id="contact-link-email" class="contact_link" href="mailto:wangf@e-u.cn">
+  <span class="fa fa-envelope-square"></span><span>email</span></a>
+
+
+
+<a id="contact-link-github" class="contact_link" href="https://github.com/ten2net">
+  <span class="fa fa-github-square"></span><span>github</span></a>
+
+
+
+
+
+<a id="contact-link-linkedin" class="contact_link" href="https://www.linkedin.com/in/ten2net@163.com">
+  <span class="fa fa-linkedin-square"></span><span>linkedin</span></a>
+
+
+
+<a id="contact-link-googleplus" class="contact_link" href="https://plus.google.com/u/0/+ten2net@gmail.com">
+  <span class="fa fa-google-plus-square"></span><span>google+</span></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+  
+
+</header>
+
+
+<article id="main-content" class="container main_content single">
+  <header class="container hat">
+  <h1>我的docker笔记
+</h1>
+
+  <div class="metas">
+<time datetime="2016-12-22">22 Dec, 2016</time>
+
+
+  
+    &middot; by wangf
+  
+  &middot; Read in about 4 min
+  &middot; (713 Words)
+  <br>
+  
+<a class="label" href="https://ten2net.github.io/tags/docker">docker</a>
+
+
+
+</div>
+
+</header>
+
+  <div class="container content">
+  
+
+<h1 id="1-docker命令基础练习">1 Docker命令基础练习</h1>
+
+<pre><code class="language-sh">docker info
+docker images
+docker ps
+docker version
+docker run hello-world
+docker pull busybox
+docker exec -it busybox /bin/bash
+
+docker run -d -p 80:80 --name webserver nginx
+docker run -it alpine env
+</code></pre>
+
+<h1 id="2-dockerfile使用范例">2 Dockerfile使用范例</h1>
+
+<pre><code>FROM tomcat
+ADD helloworld.war /usr/local/tomcat/webapps/
+EXPOSE 8080
+CMD [&quot;catalina.sh&quot;, &quot;run&quot;]
+
+
+docker build -t mytomcat .
+docker run -d -p 9280:8080 mytomcat2
+</code></pre>
+
+<h1 id="3-使用-docker-7-个命令部署一个-mesos-集群">3 使用 Docker， 7 个命令部署一个 Mesos 集群</h1>
+
+<p>参考：<a href="https://segmentfault.com/a/1190000002531072">https://segmentfault.com/a/1190000002531072</a></p>
+
+<pre><code>
+第一步：或者 Docker 服务器的 IP 并导出到环境变量。我们将在随后的 Docker 命令中不断地使用这个 IP。
+set HOST_IP=10.11.31.7
+第二步：启动 ZooKeeper 容器
+docker run -d -p 2181:2181 -p 2888:2888 -p 3888:3888 garland/zookeeper
+第三步：启动 Mesos Master
+docker run --net=&quot;host&quot; -p 5050:5050 -e &quot;MESOS_HOSTNAME=${HOST_IP}&quot; -e &quot;MESOS_IP=${HOST_IP}&quot; -e &quot;MESOS_ZK=zk://${HOST_IP}:2181/mesos&quot; -e &quot;MESOS_PORT=5050&quot; -e &quot;MESOS_LOG_DIR=/var/log/mesos&quot; -e &quot;MESOS_QUORUM=1&quot; -e &quot;MESOS_REGISTRY=in_memory&quot; -e &quot;MESOS_WORK_DIR=/var/lib/mesos&quot; -d garland/mesosphere-docker-mesos-master
+第四步：启动 Marathon
+docker run -d -p 8180:8180 garland/mesosphere-docker-marathon --master zk://${HOST_IP}:2181/mesos --zk zk://${HOST_IP}:2181/marathon
+第五步：在一个容器中启动 Mesos Slave
+docker run -d --name mesos_slave_1 --entrypoint=&quot;mesos-slave&quot; -e &quot;MESOS_MASTER=zk://${HOST_IP}:2181/mesos&quot; -e &quot;MESOS_LOG_DIR=/var/log/mesos&quot; -e &quot;MESOS_LOGGING_LEVEL=INFO&quot; garland/mesosphere-docker-mesos-master:latest
+第六步：进入 Mesos 的 webpage
+http://${HOST_IP}:5050
+第七步：进入 Marathon 的 webpage 启动一个任务
+http://${HOST_IP}:8080
+</code></pre>
+
+<h1 id="4-使用docker-加速器">4 使用Docker 加速器</h1>
+
+<pre><code class="language-sh">echo &quot;DOCKER_OPTS=\&quot;\$DOCKER_OPTS --registry-mirror=https://z5sa40yd.mirror.aliyuncs.com\&quot;&quot; | sudo tee -a /etc/default/docker sudo service docker restart
+</code></pre>
+
+<ul>
+<li><p>阿里云-我的专属加速器地址：<a href="https://z5sa40yd.mirror.aliyuncs.com">https://z5sa40yd.mirror.aliyuncs.com</a></p></li>
+
+<li><p>这个命令的用法忘记了</p>
+
+<pre><code>docker-machine create --virtualbox-no-vtx-check --engine-registry-mirror=https://z5sa40yd.mirror.aliyuncs.com -d virtualbox default
+</code></pre></li>
+</ul>
+
+<h1 id="5-ui-for-docker-可视化管理docker的工具">5 ui-for-docker，可视化管理Docker的工具</h1>
+
+<ul>
+<li>Quickstart ：<a href="https://github.com/kevana/ui-for-docker">https://github.com/kevana/ui-for-docker</a></li>
+</ul>
+
+<pre><code class="language-sh"> docker run -d -p 9000:9000 --privileged -v /var/run/docker.sock:/var/run/docker.sock uifd/ui-for-docker
+</code></pre>
+
+<ul>
+<li>Open your browser to http://<your Host IP>:9000
+==============================================================================================</li>
+</ul>
+
+<h1 id="6-docker-run-命令的常用选项说明">6 Docker Run 命令的常用选项说明</h1>
+
+<ul>
+<li>你的Container会在你结束命令之后自动退出，使用以下的命令选项可以将容器保持在激活状态：</li>
+</ul>
+
+<blockquote>
+<p>-i 即使在没有附着的情况下依然保持STDIN处于开启
+-t 分配一个伪TTY控制台</p>
+</blockquote>
+
+<ul>
+<li><p>所以run命令就变成了：</p>
+
+<pre><code>docker run -it -d shykes/pybuilder bin/bash
+</code></pre>
+
+<h1 id="6-docker-exec-命令可以执行正在运行的docker容器中的shell命令">6 Docker Exec 命令可以执行正在运行的Docker容器中的Shell命令</h1></li>
+
+<li><p>如果希望能够附着到一个已经存在的容器中，则利用exec命令：</p></li>
+</ul>
+
+<pre><code>docker exec -it CONTAINER_ID bash
+</code></pre>
+
+<h1 id="7-常见的docker命令行命令进行详细介绍">7 常见的Docker命令行命令进行详细介绍</h1>
+
+<h2 id="7-1-与容器-container-相关的命令">7.1 与容器（Container）相关的命令</h2>
+
+<ul>
+<li>docker create 会创建一个容器但是不会立刻启动</li>
+<li>docker run 会创建并且启动某个容器</li>
+
+<li><p>如果只是希望有一个暂时性的容器，可以使用 docker run &ndash;rm 将会在容器运行完毕之后删除该容器。</p></li>
+
+<li><p>如果希望在打开某个容器之后能够与其进行交互, docker run -t -i  会创建一个TTY控制台。</p></li>
+
+<li><p>docker stop 会关闭某个容器</p></li>
+
+<li><p>docker start 会启动某个容器</p></li>
+
+<li><p>docker restart 会重新启动某个容器</p></li>
+
+<li><p>docker rm 会删除某个容器</p></li>
+
+<li><p>如果希望能够移除所有与该容器相关的Volume，可以使用-v参数： docker rm -v.</p></li>
+
+<li><p>docker kill 会发送SIGKILL信号量到某个容器</p></li>
+
+<li><p>docker attach 会附着到某个正在运行的容器</p></li>
+
+<li><p>docker wait 会阻塞直到某个容器关闭</p></li>
+</ul>
+
+<h2 id="7-2-与镜像-image-相关的命令">7.2 与镜像（Image）相关的命令</h2>
+
+<ul>
+<li>docker images 会展示所有的镜像</li>
+<li>docker import 会从原始码中创建镜像</li>
+<li>docker build 会从某个Dockfile中创建镜像</li>
+<li>docker commit 会从某个Container中创建镜像</li>
+<li>docker rmi 会移除某个镜像</li>
+<li>docker load 以STDIN的方式从某个tar包中加载镜像</li>
+<li>docker save 以STDOUT的方式将镜像存入到某个tar包中</li>
+</ul>
+
+<h2 id="7-3-查看docker容器状态信息的命令">7.3 查看Docker容器状态信息的命令</h2>
+
+<ul>
+<li>docker ps 会列举出所有正在运行的容器</li>
+<li>docker ps -a 会展示出所有正在运行的和已经停止的容器</li>
+<li>docker logs 从某个容器中获取log日志</li>
+<li>docker inspect 检测关于某个容器的详细信息</li>
+<li>docker events 从某个容器中获取所有的事件</li>
+<li>docker port 获取某个容器的全部的开放端口</li>
+<li>docker top 展示某个容器中运行的全部的进程</li>
+<li>docker stats 展示某个容器中的资源的使用情况的统计信息</li>
+<li>docker diff 展示容器中文件的变化情况</li>
+</ul>
+
+<h2 id="7-4-查看docker镜像-image-状态信息的命令">7.4 查看Docker镜像（Image）状态信息的命令</h2>
+
+<ul>
+<li>docker history 展示镜像的全部历史信息</li>
+<li>docker tag 为某个容器设置标签</li>
+<li>Import&amp;Export</li>
+<li>docker cp 在容器与本地文件系统之间进行文件复制</li>
+<li>docker export 将某个容器中的文件系统的内容输出到某个tar文件中</li>
+</ul>
+
+<h1 id="8-实验machine-learning-过程中练习的命令">8 实验Machine Learning 过程中练习的命令</h1>
+
+<ul>
+<li>docker run  ermaker/keras</li>
+
+<li><p>docker run -d -p 8888:8888 -e KERAS_BACKEND=tensorflow ermaker/keras-jupyter</p></li>
+
+<li><p>docker run -d -p 8888:8888 &ndash;name keraslearning  &ndash;restart=always  -v /notebook:/notebook ermaker/keras-jupyter</p></li>
+
+<li><p>docker run -d -p 8888:8888 &ndash;name keraslearning   &ndash;restart=always -v E:/python-dev-home:/notebook ermaker/keras-jupyter</p></li>
+
+<li><p>docker run -d -p 8888:8888 &ndash;name keraslearning &ndash;restart=always -v E:/python-dev-home:/notebook ermaker/keras-jupyter</p></li>
+
+<li><p>nvidia-docker run  -d -p 5001:5000 -v /dataOne:/opt &ndash;name digits &ndash;restart=always  kaixhin/cuda-digits:8.0</p></li>
+</ul>
+
+<h1 id="9-其它常用命令">9 其它常用命令</h1>
+
+<pre><code class="language-sh">    # 像Docker官方的hello world例子一样，拉取一个叫busybox的镜像
+    docker pull busybox
+    
+    #进入容器bash
+    docker exec -i keraslearning bash
+
+    # 查看本地已经有哪些镜像
+    # 我们可以看到busybox
+    docker images
+
+    # 现在让我们来修改下busybox镜像的容器
+    # 这次，我们创建一个文件夹
+    docker run busybox mkdir /home/test
+
+
+    #从容器keraslearning中复制/notebook目录到当前目录
+    docker cp keraslearning:/notebook .
+
+    #从当前目录复制test子目录到容器keraslearning中/notebook目录下
+    docker cp test keraslearning:/notebook
+
+    # 让我们再看看我们有哪些镜像了。
+    # 注意每条命令执行后容器都会停止
+    # 可以看到有一个busybox容器
+    docker ps -a
+
+    # 现在，可以提交修改了。
+    # 提交后会看到一个新的镜像busybox-1
+    #  &lt;CONTAINER ID&gt; 是刚刚修改容器后得到的ID
+    docker commit &lt;CONTAINER ID&gt; busybox-1
+
+    # 再看看我们有哪些镜像。
+    # 我们现在同时有busybox和busybox-1镜像了。
+    docker images
+
+    # 我们执行以下命令，看看这两个镜像有什么不同
+    docker run busybox [ -d /home/test ] &amp;&amp; echo 'Directory found' || echo 'Directory not found'
+    docker run busybox-1 [ -d /home/test ] &amp;&amp; echo 'Directory found' || echo 'Directory not found'
+
+
+    # 查看所有的容器
+    docker ps -a
+
+    # 删除它们
+    docker rm &lt;CONTAINER ID&gt;
+
+    # 查看所有的镜像
+    docker images
+
+    # 删除它们
+    docker rmi busybox-1
+    docker rmi busybox
+
+    注：可以使用 docker rm $(docker ps -q -a) 一次性删除所有的容器，docker rmi $(docker images -q) 一次性删除所有的镜像。
+
+    #导出容器
+    docker export &lt;CONTAINER ID&gt; -o containers/export123.tar
+
+    #导出镜像
+    docker save -o gds-keras-jupyter.tar gds/keraslearning
+
+    #快照容器的当前状态为一个镜像
+    docker commit 0d8facbc75e2 gds/keraslearning
+
+
+    现在我们创建了两个Tar文件，让我们来看看它们是什么。首先做一下小清理——把所有的容器和镜像都删除：
+
+    # 查看所有的容器
+    sudo docker ps -a
+
+    # 删除它们
+    sudo docker rm &lt;CONTAINER ID&gt;
+
+    # 查看所有的镜像
+    sudo docker images
+
+    # 删除它们
+    sudo docker rmi busybox-1
+    sudo docker rmi busybox
+    注：可以使用 docker rm $(docker ps -q -a) 一次性删除所有的容器，docker rmi $(docker images -q) 一次性删除所有的镜像。
+
+    现在开始导入刚刚导出的容器：
+
+    # 导入export.tar文件
+    cat /home/export.tar | sudo docker import - busybox-1-export:latest
+
+    # 查看镜像
+    sudo docker images
+
+    # 检查是否导入成功，就是启动一个新容器，检查里面是否存在/home/test目录（是存在的）
+    sudo docker run busybox-1-export [ -d /home/test ] &amp;&amp; echo 'Directory found' || echo 'Directory not found'
+    使用类似的步骤导入镜像：
+
+    # 导入save.tar文件
+    docker load &lt; /home/save.tar
+    docker load -i /home/save.tar
+
+    # 查看镜像
+    sudo docker images
+
+    # 检查是否导入成功，就是启动一个新容器，检查里面是否存在/home/test目录（是存在的）
+    sudo docker run busybox-1 [ -d /home/test ] &amp;&amp; echo 'Directory found' || echo 'Directory not found'
+    那，它们之间到底存在什么不同呢？我们发现导出后的版本会比原来的版本稍微小一些。那是因为导出后，会丢失历史和元数据。执行下面的命令就知道了：
+
+    # 显示镜像的所有层(layer)
+    sudo docker images --tree
+     执行命令，显示下面的内容。正你看到的，导出后再导入(exported-imported)的镜像会丢失所有的历史，而保存后再加载（saveed-loaded）的镜像没有丢失历史和层(layer)。这意味着使用导出后再导入的方式，你将无法回滚到之前的层(layer)，同时，使用保存后再加载的方式持久化整个镜像，就可以做到层回滚（可以执行docker tag &lt;LAYER ID&gt; &lt;IMAGE NAME&gt;来回滚之前的层）。
+
+    sudo docker images --tree
+    ├─f502877df6a1 Virtual Size: 2.489 MB Tags: busybox-1-export:latest
+    └─511136ea3c5a Virtual Size: 0 B
+      └─bf747efa0e2f Virtual Size: 0 B
+        └─48e5f45168b9 Virtual Size: 2.489 MB
+          └─769b9341d937 Virtual Size: 2.489 MB
+            └─227516d93162 Virtual Size: 2.489 MB Tags: busybox-1:latest
+
+</code></pre>
+
+</div>
+
+
+  <footer class="container">
+  <div class="container navigation no-print">
+  <h2>Navigation</h2>
+  
+  
+
+    
+    <a class="prev" href="https://ten2net.github.io/2016/12/21/%E4%BD%BF%E7%94%A8digits%E8%BF%9B%E8%A1%8Cfinetune/" title="使用digits进行finetune">
+      Previous
+    </a>
+    
+
+    
+
+  
+
+
+</div>
+
+  <div class="container comments">
+  <h2>Comments</h2>
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//ten2net.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+</footer>
+
+</article>
+      <footer id="main-footer" class="container main_footer">
+  
+
+  <div class="container nav foot no-print">
+  
+<a href="http://www.e-u.cn">我的公司</a>
+
+
+  <a class="toplink" href="#">back to top</a>
+
+</div>
+
+  <div class="container credits">
+  
+<div class="container footline">
+  
+  制作 <i class='fa fa-heart'>ten2net</i>
+
+
+</div>
+
+
+  
+<div class="container copyright">
+  
+  &copy; 2017 ten2net 西安长城数字软件有限公司.
+
+
+</div>
+
+
+</div>
+
+</footer>
+
+    </main>
+    
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//ten2net.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+<script src="https://ten2net.github.io/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'Your Google Analytics tracking code', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+    
+  </body>
+</html>
+
