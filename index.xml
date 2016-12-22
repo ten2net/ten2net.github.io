@@ -9,8 +9,66 @@
     <managingEditor>wangf@e-u.cn (wangf)</managingEditor>
     <webMaster>wangf@e-u.cn (wangf)</webMaster>
     <copyright>(c) 2017 ten2net 西安长城数字软件有限公司.</copyright>
-    <lastBuildDate>Thu, 22 Dec 2016 12:59:30 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 22 Dec 2016 13:41:05 +0800</lastBuildDate>
     <atom:link href="https://ten2net.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>使用http://tool.chinaz.com/dns查找加速github.com访问速度的方法</title>
+      <link>https://ten2net.github.io/2016/12/22/%E4%BD%BF%E7%94%A8http/tool.chinaz.com/dns%E6%9F%A5%E6%89%BE%E5%8A%A0%E9%80%9Fgithub.com%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Thu, 22 Dec 2016 13:41:05 +0800</pubDate>
+      <author>wangf@e-u.cn (wangf)</author>
+      <guid>https://ten2net.github.io/2016/12/22/%E4%BD%BF%E7%94%A8http/tool.chinaz.com/dns%E6%9F%A5%E6%89%BE%E5%8A%A0%E9%80%9Fgithub.com%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <description>
+
+&lt;h1 id=&#34;为什么慢-github的cdn被某墙屏了&#34;&gt;为什么慢？github的CDN被某墙屏了。&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;有vpn服务的可以直接使用vpn，没有vpn的，可以绕过dns解析，在本地直接绑定host。方法如下：&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;打开dns查询工具网站：&lt;a href=&#34;http://tool.chinaz.com/dns&#34;&gt;http://tool.chinaz.com/dns&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;查询域名解析如下：
+……&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;选取一个TTL值最小的ip，直接绑定到hosts文件便可解决，比如我选取第一个ip，绑定域名如下
+&lt;code&gt;103.245.222.133 assets-cdn.github.com&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;多刷几下，访问速度就一切正常了&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;域名映射：（主要是第一个）&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;103.245.222.249 github.global.ssl.fastly.net
+103.245.222.133 assets-cdn.github.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;瞬间从打死也就20K提速到100K左右，最高能达到200多K，低时也有50K。（具体速度和个人网络环境有关，反正快了好几倍）&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;以下来源于网络：&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;github.com 上有两种源码获取方式，一是 git clone，一是直接下载 master.zip，后者明显速度快于前者，可以考虑；&lt;/li&gt;
+&lt;li&gt;1）用 proxychains 这类透明代理，间接走系统中运行的代理工具中转；&lt;/li&gt;
+&lt;li&gt;2）用 git 内置代理，直接走系统中运行的代理工具中转，比如，你的 SS 本地端口是 1080，那么可以如下方式走代理&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;git config --global http.proxy socks5://127.0.0.1:1080
+git config --global https.proxy socks5://127.0.0.1:1080
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;也可以如下方式停走代理&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git config --global http.proxy &amp;quot;&amp;quot;
+git config --global https.proxy &amp;quot;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>使用Pandoc工具转换ms word文件为Markdown格式</title>

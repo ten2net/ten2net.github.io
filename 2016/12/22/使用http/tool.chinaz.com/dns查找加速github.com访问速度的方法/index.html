@@ -22,33 +22,59 @@
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>Posts  &middot; 学习之心</title>
+  <title>使用http://tool.chinaz.com/dns查找加速github.com访问速度的方法  &middot; 学习之心</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="description" content="" />
+<meta name="description" content="description" />
 
-<meta name="keywords" content="">
+<meta name="keywords" content="DNS, Speed, ">
 
 <link rel="author" href="http://plus.google.com/+ten2net@gmail.com">
 
 
-<meta property="og:title" content="Posts  &middot; 学习之心 ">
+<meta property="og:title" content="使用http://tool.chinaz.com/dns查找加速github.com访问速度的方法  &middot; 学习之心 ">
 <meta property="og:site_name" content="学习之心"/>
-<meta property="og:url" content="https://ten2net.github.io/post/" />
+<meta property="og:url" content="https://ten2net.github.io/2016/12/22/%E4%BD%BF%E7%94%A8http/tool.chinaz.com/dns%E6%9F%A5%E6%89%BE%E5%8A%A0%E9%80%9Fgithub.com%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6%E7%9A%84%E6%96%B9%E6%B3%95/" />
 <meta property="og:locale" content="zh-CN">
 
 
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content="description"/>
+<meta property="og:article:published_time" content="2016-12-22T13:41:05&#43;08:00" />
+<meta property="og:article:modified_time" content="2016-12-22T13:41:05&#43;08:00" />
+
+  
+    
+<meta property="og:article:tag" content="DNS">
+    
+<meta property="og:article:tag" content="Speed">
+    
+  
+
+  
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "使用http:\/\/tool.chinaz.com\/dns查找加速github.com访问速度的方法",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+ten2net@gmail.com?rel=author"
+    },
+    "datePublished": "2016-12-22",
+    "description": "description",
+    "wordCount":  51 
+  }
+</script>
 
 
 
-<link href="https://ten2net.github.io/post/index.xml" rel="alternate" type="application/rss+xml" title="Posts" />
-
-<link rel="canonical" href="https://ten2net.github.io/post/" />
+<link rel="canonical" href="https://ten2net.github.io/2016/12/22/%E4%BD%BF%E7%94%A8http/tool.chinaz.com/dns%E6%9F%A5%E6%89%BE%E5%8A%A0%E9%80%9Fgithub.com%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6%E7%9A%84%E6%96%B9%E6%B3%95/" />
 
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ten2net.github.io/touch-icon-144-precomposed.png">
 <link href="https://ten2net.github.io/favicon.png" rel="icon">
@@ -152,104 +178,129 @@
 </header>
 
 
-<section id="main-content" class="container main_content section">
-  <header class="container">
-    <h1>Posts
+<article id="main-content" class="container main_content single">
+  <header class="container hat">
+  <h1>使用http://tool.chinaz.com/dns查找加速github.com访问速度的方法
 </h1>
 
-  </header>
-  
-    <div class="container hat">
-  <h2><a href="https://ten2net.github.io/2016/12/22/%E4%BD%BF%E7%94%A8http/tool.chinaz.com/dns%E6%9F%A5%E6%89%BE%E5%8A%A0%E9%80%9Fgithub.com%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6%E7%9A%84%E6%96%B9%E6%B3%95/">使用http://tool.chinaz.com/dns查找加速github.com访问速度的方法
-</a>
-</h2>
+  <div class="metas">
+<time datetime="2016-12-22">22 Dec, 2016</time>
 
-  <time datetime="2016-12-22">22 Dec, 2016</time>
+
+  
+    &middot; by wangf
+  
+  &middot; Read in about 1 min
+  &middot; (51 Words)
+  <br>
+  
+<a class="label" href="https://ten2net.github.io/tags/dns">DNS</a>
+
+<a class="label" href="https://ten2net.github.io/tags/speed">Speed</a>
+
+
+
+</div>
+
+</header>
+
+  <div class="container content">
+  
+
+<h1 id="为什么慢-github的cdn被某墙屏了">为什么慢？github的CDN被某墙屏了。</h1>
+
+<blockquote>
+<p>有vpn服务的可以直接使用vpn，没有vpn的，可以绕过dns解析，在本地直接绑定host。方法如下：</p>
+</blockquote>
+
+<ul>
+<li>打开dns查询工具网站：<a href="http://tool.chinaz.com/dns">http://tool.chinaz.com/dns</a></li>
+
+<li><p>查询域名解析如下：
+……</p></li>
+
+<li><p>选取一个TTL值最小的ip，直接绑定到hosts文件便可解决，比如我选取第一个ip，绑定域名如下
+<code>103.245.222.133 assets-cdn.github.com</code></p></li>
+
+<li><p>多刷几下，访问速度就一切正常了</p></li>
+
+<li><p>域名映射：（主要是第一个）</p>
+
+<pre><code>103.245.222.249 github.global.ssl.fastly.net
+103.245.222.133 assets-cdn.github.com
+</code></pre></li>
+
+<li><p>瞬间从打死也就20K提速到100K左右，最高能达到200多K，低时也有50K。（具体速度和个人网络环境有关，反正快了好几倍）</p></li>
+</ul>
+
+<hr />
+
+<blockquote>
+<p>以下来源于网络：</p>
+</blockquote>
+
+<ul>
+<li>github.com 上有两种源码获取方式，一是 git clone，一是直接下载 master.zip，后者明显速度快于前者，可以考虑；</li>
+<li>1）用 proxychains 这类透明代理，间接走系统中运行的代理工具中转；</li>
+<li>2）用 git 内置代理，直接走系统中运行的代理工具中转，比如，你的 SS 本地端口是 1080，那么可以如下方式走代理</li>
+</ul>
+
+<pre><code>git config --global http.proxy socks5://127.0.0.1:1080
+git config --global https.proxy socks5://127.0.0.1:1080
+</code></pre>
+
+<p>也可以如下方式停走代理</p>
+
+<pre><code>git config --global http.proxy &quot;&quot;
+git config --global https.proxy &quot;&quot;
+</code></pre>
 
 </div>
 
 
+  <footer class="container">
+  <div class="container navigation no-print">
+  <h2>Navigation</h2>
   
-    <div class="container hat">
-  <h2><a href="https://ten2net.github.io/2016/12/22/%E4%BD%BF%E7%94%A8pandoc%E5%B7%A5%E5%85%B7%E8%BD%AC%E6%8D%A2ms-word%E6%96%87%E4%BB%B6%E4%B8%BAmarkdown%E6%A0%BC%E5%BC%8F/">使用Pandoc工具转换ms word文件为Markdown格式
-</a>
-</h2>
+  
 
-  <time datetime="2016-12-22">22 Dec, 2016</time>
+    
+    <a class="prev" href="https://ten2net.github.io/2016/12/22/%E4%BD%BF%E7%94%A8pandoc%E5%B7%A5%E5%85%B7%E8%BD%AC%E6%8D%A2ms-word%E6%96%87%E4%BB%B6%E4%B8%BAmarkdown%E6%A0%BC%E5%BC%8F/" title="使用Pandoc工具转换ms word文件为Markdown格式">
+      Previous
+    </a>
+    
+
+    
+
+  
+
 
 </div>
 
-
+  <div class="container comments">
+  <h2>Comments</h2>
   
-    <div class="container hat">
-  <h2><a href="https://ten2net.github.io/2016/12/22/%E4%BD%BF%E7%94%A8jupyter-nbconvert%E8%BD%AC%E6%8D%A2jupyter-notebook%E7%AC%94%E8%AE%B0%E4%B8%BAmarkdown%E6%A0%BC%E5%BC%8F/">使用jupyter nbconvert转换jupyter notebook笔记为Markdown格式
-</a>
-</h2>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
 
-  <time datetime="2016-12-22">22 Dec, 2016</time>
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//ten2net.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
 
 </div>
 
+</footer>
 
-  
-    <div class="container hat">
-  <h2><a href="https://ten2net.github.io/2016/12/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%89%E7%BB%B4%E4%BB%BF%E7%9C%9F%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/">计算机三维仿真常用软件
-</a>
-</h2>
-
-  <time datetime="2016-12-22">22 Dec, 2016</time>
-
-</div>
-
-
-  
-    <div class="container hat">
-  <h2><a href="https://ten2net.github.io/2016/12/22/%E6%88%91%E7%9A%84docker%E7%AC%94%E8%AE%B0/">我的docker笔记
-</a>
-</h2>
-
-  <time datetime="2016-12-22">22 Dec, 2016</time>
-
-</div>
-
-
-  
-    <div class="container hat">
-  <h2><a href="https://ten2net.github.io/2016/12/22/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%BA%93keras%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/">深度学习库Keras快速入门笔记
-</a>
-</h2>
-
-  <time datetime="2016-12-22">22 Dec, 2016</time>
-
-</div>
-
-
-  
-    <div class="container hat">
-  <h2><a href="https://ten2net.github.io/2016/12/21/%E4%BD%BF%E7%94%A8digits%E8%BF%9B%E8%A1%8Cfinetune/">使用digits进行finetune
-</a>
-</h2>
-
-  <time datetime="2016-12-21">21 Dec, 2016</time>
-
-</div>
-
-
-  
-    <div class="container hat">
-  <h2><a href="https://ten2net.github.io/2016/12/21/opencv%E5%9C%A8ubuntu%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B/">Opencv在Ubuntu上的安装过程
-</a>
-</h2>
-
-  <time datetime="2016-12-21">21 Dec, 2016</time>
-
-</div>
-
-
-  
-  
-
-</section>
+</article>
       <footer id="main-footer" class="container main_footer">
   
 
