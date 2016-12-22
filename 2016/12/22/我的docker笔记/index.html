@@ -66,7 +66,7 @@
     },
     "datePublished": "2016-12-22",
     "description": "不介绍docker的安装，只记录常用的命令和一些小技巧",
-    "wordCount":  712 
+    "wordCount":  711 
   }
 </script>
 
@@ -189,7 +189,7 @@
     &middot; by wangf
   
   &middot; Read in about 4 min
-  &middot; (712 Words)
+  &middot; (711 Words)
   <br>
   
 <a class="label" href="https://ten2net.github.io/tags/docker">docker</a>
@@ -289,14 +289,18 @@ http://${HOST_IP}:8080
 </blockquote>
 
 <ul>
-<li><p>所以run命令就变成了：</p>
+<li>所以run命令就变成了：
+<code>
+docker run -it -d shykes/pybuilder bin/bash
+</code></li>
+</ul>
 
-<pre><code>docker run -it -d shykes/pybuilder bin/bash
-</code></pre>
+<blockquote>
+<p>Docker Exec 命令可以执行正在运行的Docker容器中的Shell命令</p>
+</blockquote>
 
-<h1 id="6-docker-exec-命令可以执行正在运行的docker容器中的shell命令">6 Docker Exec 命令可以执行正在运行的Docker容器中的Shell命令</h1></li>
-
-<li><p>如果希望能够附着到一个已经存在的容器中，则利用exec命令：</p></li>
+<ul>
+<li>如果希望能够附着到一个已经存在的容器中，则利用exec命令：</li>
 </ul>
 
 <pre><code>docker exec -it CONTAINER_ID bash

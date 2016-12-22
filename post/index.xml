@@ -138,14 +138,18 @@ http://${HOST_IP}:8080
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;所以run命令就变成了：&lt;/p&gt;
+&lt;li&gt;所以run命令就变成了：
+&lt;code&gt;
+docker run -it -d shykes/pybuilder bin/bash
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;pre&gt;&lt;code&gt;docker run -it -d shykes/pybuilder bin/bash
-&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Docker Exec 命令可以执行正在运行的Docker容器中的Shell命令&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;h1 id=&#34;6-docker-exec-命令可以执行正在运行的docker容器中的shell命令&#34;&gt;6 Docker Exec 命令可以执行正在运行的Docker容器中的Shell命令&lt;/h1&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;如果希望能够附着到一个已经存在的容器中，则利用exec命令：&lt;/p&gt;&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;如果希望能够附着到一个已经存在的容器中，则利用exec命令：&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;pre&gt;&lt;code&gt;docker exec -it CONTAINER_ID bash
