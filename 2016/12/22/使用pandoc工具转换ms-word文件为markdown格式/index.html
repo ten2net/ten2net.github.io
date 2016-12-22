@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>使用Pandoc工具转换ms word文件为Markdown格式  &middot; 学习之心</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="pandoc -f docx -t markdown 使用digits进行finetune.docx -o 使用digits进行finetune.md" />
+
+<meta name="keywords" content="Pandoc, 格式转换, ">
+
+<link rel="author" href="http://plus.google.com/+ten2net@gmail.com">
+
+
+<meta property="og:title" content="使用Pandoc工具转换ms word文件为Markdown格式  &middot; 学习之心 ">
+<meta property="og:site_name" content="学习之心"/>
+<meta property="og:url" content="https://ten2net.github.io/2016/12/22/%E4%BD%BF%E7%94%A8pandoc%E5%B7%A5%E5%85%B7%E8%BD%AC%E6%8D%A2ms-word%E6%96%87%E4%BB%B6%E4%B8%BAmarkdown%E6%A0%BC%E5%BC%8F/" />
+<meta property="og:locale" content="zh-CN">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="pandoc -f docx -t markdown 使用digits进行finetune.docx -o 使用digits进行finetune.md"/>
+<meta property="og:article:published_time" content="2016-12-22T12:59:30&#43;08:00" />
+<meta property="og:article:modified_time" content="2016-12-22T12:59:30&#43;08:00" />
+
+  
+    
+<meta property="og:article:tag" content="Pandoc">
+    
+<meta property="og:article:tag" content="格式转换">
+    
+  
+
+  
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "使用Pandoc工具转换ms word文件为Markdown格式",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+ten2net@gmail.com?rel=author"
+    },
+    "datePublished": "2016-12-22",
+    "description": "pandoc -f docx -t markdown 使用digits进行finetune.docx -o 使用digits进行finetune.md",
+    "wordCount":  214 
+  }
+</script>
+
+
+
+<link rel="canonical" href="https://ten2net.github.io/2016/12/22/%E4%BD%BF%E7%94%A8pandoc%E5%B7%A5%E5%85%B7%E8%BD%AC%E6%8D%A2ms-word%E6%96%87%E4%BB%B6%E4%B8%BAmarkdown%E6%A0%BC%E5%BC%8F/" />
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ten2net.github.io/touch-icon-144-precomposed.png">
+<link href="https://ten2net.github.io/favicon.png" rel="icon">
+
+<meta name="generator" content="Hugo 0.18" />
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link href='https://fonts.googleapis.com/css?family=Merriweather:300%7CRaleway%7COpen+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://ten2net.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://ten2net.github.io/css/style.css">
+<link rel="stylesheet" href="https://ten2net.github.io/css/highlight/default.css">
+
+  
+</head>
+<body>
+  <main id="main-wrapper" class="container main_wrapper has-sidebar">
+    <header id="main-header" class="container main_header">
+  <div class="container brand">
+  <div class="container title h1-like">
+  <a class="baselink" href="https://ten2net.github.io/">
+  学习之心
+
+</a>
+
+</div>
+
+  
+<div class="container topline">
+  
+  Digits Deepdetect
+
+
+</div>
+
+
+</div>
+
+  <nav class="container nav primary no-print">
+  
+
+<a class="homelink" href="https://ten2net.github.io/">首页</a>
+
+
+  
+<a href="https://ten2net.github.io/about">关于我</a>
+
+<a href="https://ten2net.github.io/post" title="显示文章列表">文章</a>
+
+<a href="https://ten2net.github.io/tags" title="显示标签列表">标签</a>
+
+
+</nav>
+
+<div class="container nav secondary no-print">
+  
+<a id="contact-link-email" class="contact_link" href="mailto:wangf@e-u.cn">
+  <span class="fa fa-envelope-square"></span><span>email</span></a>
+
+
+
+<a id="contact-link-github" class="contact_link" href="https://github.com/ten2net">
+  <span class="fa fa-github-square"></span><span>github</span></a>
+
+
+
+
+
+<a id="contact-link-linkedin" class="contact_link" href="https://www.linkedin.com/in/ten2net@163.com">
+  <span class="fa fa-linkedin-square"></span><span>linkedin</span></a>
+
+
+
+<a id="contact-link-googleplus" class="contact_link" href="https://plus.google.com/u/0/+ten2net@gmail.com">
+  <span class="fa fa-google-plus-square"></span><span>google+</span></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+  
+
+</header>
+
+
+<article id="main-content" class="container main_content single">
+  <header class="container hat">
+  <h1>使用Pandoc工具转换ms word文件为Markdown格式
+</h1>
+
+  <div class="metas">
+<time datetime="2016-12-22">22 Dec, 2016</time>
+
+
+  
+    &middot; by wangf
+  
+  &middot; Read in about 2 min
+  &middot; (214 Words)
+  <br>
+  
+<a class="label" href="https://ten2net.github.io/tags/pandoc">Pandoc</a>
+
+<a class="label" href="https://ten2net.github.io/tags/%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2">格式转换</a>
+
+
+
+</div>
+
+</header>
+
+  <div class="container content">
+  
+
+<h1 id="markdown-pandoc-最佳写作拍档">Markdown+Pandoc 最佳写作拍档</h1>
+
+<p>###我们为什么写作？
+自从人们开始写作，写作便是记录、抒发、批判、反省的好工具。从石板上的刻印到笔墨纸砚，再到如今的信息时代。从静态的个人主页到托管博客，从个人博客到微博，从wordpress到jekyll。无数投入写作中的人们写作的目的大同，写作的方式越简单越好，这样才能让我们专注于写作而不是为其他格式所困扰。另外现在智能终端快速普及，文件格式的多平台使用也成为了写作的一大问题。</p>
+
+<p>为了更好的写作,今天介绍的 Markdown &amp; Pandoc 便能提供完美的辅助。</p>
+
+<p>###Markdown的用法</p>
+
+<p>####1 .Markdown是什么?</p>
+
+<blockquote>
+<p>Markdown 是一种轻量级标记语言，创始人为John Gruber和Aaron Swartz。它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。 <a href="https://zh.wikipedia.org/wiki/Markdown">[1]</a></p>
+</blockquote>
+
+<p>####2 .为什么要用Markdown?</p>
+
+<p>windows下常用的编辑工具是word,mac上常用的编辑工具是page,linux上常用的编辑工具就是vim了，一份文章编辑完后为了要在不同平台中保存完整的模样时就必需同时准备多种文本格式的文件，这是多么痛苦的一件事。我们写作的初衷是为了写作呀，反而被这些格式烦恼。所以我们要用Markdown,它让你关注内容，格式怎么显示不是要你在写得时候关注的。而在写Markdown时你只需要用一个纯文本的方式进行，不用担心平台与格式的困扰。</p>
+
+<p>####3 .Markdown的语法</p>
+
+<p>Markdown 的语法全由一些符号所组成，这些符号经过精挑细选，其作用一目了然。比如：在文字两旁加上星号，看起来就像*强调*。Markdown 的列表看起来，嗯，就是列表。Markdown 的区块引用看起来就真的像是引用一段文字，就像你曾在电子邮件中见过的那样。</p>
+
+<p><strong>最常用格式</strong></p>
+
+<pre><code> 空一行（两个回车）分段
+ 行末加两个或多个空格才是真正的换行，否则正常的一个回车就像在 HTML 代码中一样，被当作空格处理
+ 插入链接：  [链接文字](url) 
+ 图片跟链接很像，在前面加个叹号：![alt 文字](图片 URL)
+</code></pre>
+
+<p><strong>列表</strong></p>
+
+<pre><code>* 无序(没有编号的)列表中的一项
+* 一个子项，要以一个制表符或者4个空格缩进
+* 无序列表中的另一个项
+1. 有序(排好序，有编号的)列表中的一项
+2. 有序列表中的另一个项
+</code></pre>
+
+<p><strong>标题</strong></p>
+
+<pre><code># 一级标题
+
+#### 四级标题
+
+一级标题
+===================
+
+二级标题
+--------------------
+</code></pre>
+
+<p><strong>代码</strong></p>
+
+<p>代码可以采取两种方法：</p>
+
+<p>一是用（`）将代码包起来</p>
+
+<pre><code>夹杂着`一些代码`的文字内容,
+</code></pre>
+
+<p>二是在代码块前面加上4个空格或者一个TAB</p>
+
+<pre><code>    import random
+
+    class CardGame(object):
+        &quot;&quot;&quot; a sample python class &quot;&quot;&quot;
+        NB_CARDS = 32
+        def __init__(self, cards=5):
+            self.cards = random.sample(range(self.NB_CARDS), 5)
+            print 'ready to play'
+</code></pre>
+
+<p>代码高亮可以由github提供的js实现</p>
+
+<p><strong>分割线</strong></p>
+
+<p>要生成水平分割线，可以在单独一行里输入3个或以上的短横线、星号或者下划线实现。短横线和星号之间可以输入任意空格。以下每一行都产生一条水平分割线。</p>
+
+<pre><code>===========
+************
+_ _ _ _ _
+</code></pre>
+
+<p>Markdown的常用语法差不多就是这些了，详细的介绍请参考<a href="http://wowubuntu.com/markdown/">Markdowm 语法说明</a></p>
+
+<p>####4 .Markdown的常用编辑工具</p>
+
+<ul>
+<li>Mac等平台下推荐<a href="http://mouapp.com/">Mou</a></li>
+<li>Windows平台推荐<a href="http://markdownpad.com/">MarkdownPad</a></li>
+<li><a href="http://www.sublimetext.com/">Sublime Text</a>编辑器是我的最爱，并且它是跨平台的，结合<a href="https://github.com/revolunet/sublimetext-markdown-preview">Markdown preview</a>插件能更好的编辑</li>
+<li><a href="https://github.com/adam-p/markdown-here">markdown-here</a>借助Chrome插件，将gmail、Evernote、Hotmail等写作窗口变为Markdown在线写作窗口</li>
+<li>web版推荐国人<a href="http://jser.me/">草依山</a>写的<a href="http://mahua.jser.me">MaHua</a>,支持vim快捷键和多种主题。</li>
+</ul>
+
+<p>Markdown越来越流行，不是因为它复杂，而是因为它足够简单。尝试过MD后就能体会到单纯的写作带来的快乐，一般Markdown文件保存格式都是以md、mdownx现实。为了文档的分享,多平台的使用，需要对MD进行格式转化。这是就更体现了它的方便之处，它是本身是一个结构标记语言，能对多种格式文档进行转换，这里介绍一款强大的格式转换工具 <strong>Pandoc</strong> 。</p>
+
+<p>###Pandoc 格式转换的瑞士军刀</p>
+
+<p>####1 .Pandoc的介绍</p>
+
+<blockquote>
+<p>Pandoc是一个用于从一种标记格式转换为另一种的Haskell库，它的功能是在多种常见的标记语言进行相互转换。</p>
+</blockquote>
+
+<p>其中包括 Markdown, reStructuredText, Textilte, HTML, PDF,LaTeX 等。利用它，你可以用简单的 Markdown 语法生成pdf文档，还可以写 Beamer 演示文稿。更强大的是，它还能将以上提到的这些语言所写文件转换成 xdoc 文档。下面这张图展示了 Pandoc 让人吃惊 的功能集，不愧为文件转换中的瑞士军刀：</p>
+
+<p><img src="http://iout.in/demo/pic/pandoc.jpg" alt=" pandoc " /></p>
+
+<p>####2 .Pandoc的用法</p>
+
+<p>#####2.1 Web版Pandoc
+首先我们可以看下Pandoc的官网 <a href="http://johnmacfarlane.net/pandoc/">http://johnmacfarlane.net/pandoc/</a></p>
+
+<p>在介绍中我们知道Pandoc支持linux,Mac OS,Win多平台，还有简易的web版提供我们在线转换格式。打开web版 <a href="http://johnmacfarlane.net/pandoc/try">http://johnmacfarlane.net/pandoc/try</a>,便可以进行简单的格式转换了。不过网页版的反应速度不是很快，不适合大型文件的格式转换，一两篇文章还是可以的。</p>
+
+<p><img src="http://iout.in/demo/pic/webpandoc.png" alt="webpandoc" /></p>
+
+<p>#####2.2 Linux版Pandoc
+就我自己用的ubuntu下安装Pandoc,还算是非常简单的。以下是ubuntu下的使用步骤:</p>
+
+<pre><code>sudo apt-get install pandoc
+</code></pre>
+
+<p>如果apt-get安装的pandoc功能不齐全，可以如官网上一样先安装cable,再安装pandoc:</p>
+
+<pre><code>sudo apt-get install cabal-install
+cabal update
+cabal install pandoc
+</code></pre>
+
+<p>然后就可以尝试着用一下了：</p>
+
+<pre><code>pandoc demo.md -o demo.html
+</code></pre>
+
+<p>这样便可以简单的将demo的markdown文件转换成html文档了。另外还可以强制格式转换如下：</p>
+
+<pre><code>pandoc demo.txt -o demo.html -f markdown -t html
+</code></pre>
+
+<p>上面的代码便是将demo.txt中的文档以markdown的格式转换成html并存入demo.html中了。</p>
+
+<p>最关键的 <strong>PDF文件</strong> 到了，PDF文档能在不同平台保持一致的表现，是许多文档传输的首选。在转换PDF之前,还需要安装一个texlive的包：</p>
+
+<pre><code> sodu apt-get install texlive
+</code></pre>
+
+<p>然后便可以自如的转换PDF文件了：</p>
+
+<pre><code>pandoc demo.md -o demo.pdf
+</code></pre>
+
+<p>英文文件转换状况良好，中文字体问题请参考<a href="http://www.openfoundry.org/tw/foss-programs/8814-pandoc-">Pandoc 用命令行转换标记语言</a></p>
+
+<p>Markdown与Pandoc的用法也就说到这了，无疑它们搭配起来会让写作变得更加简单专注，这也就是我们的初衷。另外在写作中多结合Git,将文档推到GitHub上会是很好的尝试。</p>
+
+<p>#####参考文档
++ <a href="http://www.yangzhiping.com/tech/r-markdown-knitr.html">Markdown写作浅谈</a> , 阳志平
++ <a href="http://yanping.me/cn/blog/2012/03/13/pandoc/">黑魔法利器pandoc</a> , 雁起平沙
++ <a href="http://www.openfoundry.org/tw/foss-programs/8814-pandoc-">Pandoc 用命令行转换标记语言</a> , 林雪凡
++ <a href="http://johnmacfarlane.net/pandoc">Pandoc 官网</a> , John MacFarlane
++ <a href="http://wowubuntu.com/markdown/">Markdown 语法说明</a> , riku</p>
+
+<p><code>tag</code>: markdown,pandoc</p>
+
+<p><code>author</code>：lv</p>
+
+</div>
+
+
+  <footer class="container">
+  <div class="container navigation no-print">
+  <h2>Navigation</h2>
+  
+  
+
+    
+    <a class="prev" href="https://ten2net.github.io/2016/12/22/%E4%BD%BF%E7%94%A8jupyter-nbconvert%E8%BD%AC%E6%8D%A2jupyter-notebook%E7%AC%94%E8%AE%B0%E4%B8%BAmarkdown%E6%A0%BC%E5%BC%8F/" title="使用jupyter nbconvert转换jupyter notebook笔记为Markdown格式">
+      Previous
+    </a>
+    
+
+    
+
+  
+
+
+</div>
+
+  <div class="container comments">
+  <h2>Comments</h2>
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//ten2net.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+</footer>
+
+</article>
+      <footer id="main-footer" class="container main_footer">
+  
+
+  <div class="container nav foot no-print">
+  
+<a href="http://www.e-u.cn">我的公司</a>
+
+
+  <a class="toplink" href="#">back to top</a>
+
+</div>
+
+  <div class="container credits">
+  
+<div class="container footline">
+  
+  制作 <i class='fa fa-heart'>ten2net</i>
+
+
+</div>
+
+
+  
+<div class="container copyright">
+  
+  &copy; 2017 ten2net 西安长城数字软件有限公司.
+
+
+</div>
+
+
+</div>
+
+</footer>
+
+    </main>
+    
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//ten2net.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+<script src="https://ten2net.github.io/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'Your Google Analytics tracking code', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+    
+  </body>
+</html>
+

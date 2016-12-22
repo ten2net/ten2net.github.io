@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jupyter on 学习之心</title>
+    <link>https://ten2net.github.io/tags/jupyter/index.xml</link>
+    <description>Recent content in Jupyter on 学习之心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>wangf@e-u.cn (wangf)</managingEditor>
+    <webMaster>wangf@e-u.cn (wangf)</webMaster>
+    <copyright>(c) 2017 ten2net 西安长城数字软件有限公司.</copyright>
+    <atom:link href="https://ten2net.github.io/tags/jupyter/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>使用jupyter nbconvert转换jupyter notebook笔记为Markdown格式</title>
+      <link>https://ten2net.github.io/2016/12/22/%E4%BD%BF%E7%94%A8jupyter-nbconvert%E8%BD%AC%E6%8D%A2jupyter-notebook%E7%AC%94%E8%AE%B0%E4%B8%BAmarkdown%E6%A0%BC%E5%BC%8F/</link>
+      <pubDate>Thu, 22 Dec 2016 12:59:11 +0800</pubDate>
+      <author>wangf@e-u.cn (wangf)</author>
+      <guid>https://ten2net.github.io/2016/12/22/%E4%BD%BF%E7%94%A8jupyter-nbconvert%E8%BD%AC%E6%8D%A2jupyter-notebook%E7%AC%94%E8%AE%B0%E4%B8%BAmarkdown%E6%A0%BC%E5%BC%8F/</guid>
+      <description>
+
+&lt;h1 id=&#34;nbconvert&#34;&gt;nbconvert&lt;/h1&gt;
+
+&lt;h3 id=&#34;jupyter-notebook-conversion&#34;&gt;Jupyter Notebook Conversion&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://groups.google.com/forum/#!forum/jupyter&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/-Google%20Group-lightgrey.svg&#34; alt=&#34;Google Group&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://travis-ci.org/jupyter/nbconvert&#34;&gt;&lt;img src=&#34;https://travis-ci.org/jupyter/nbconvert.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://nbconvert.readthedocs.io/en/latest/?badge=latest&#34;&gt;&lt;img src=&#34;https://readthedocs.org/projects/nbconvert/badge/?version=latest&#34; alt=&#34;Documentation Status&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;http://nbconvert.readthedocs.io/en/stable/?badge=stable&#34;&gt;&lt;img src=&#34;https://readthedocs.org/projects/nbconvert/badge/?version=stable&#34; alt=&#34;Documentation Status&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://codecov.io/github/jupyter/nbconvert?branch=master&#34;&gt;&lt;img src=&#34;https://codecov.io/github/jupyter/nbconvert/coverage.svg?branch=master&#34; alt=&#34;codecov.io&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;用法&#34;&gt;用法&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;    $ jupyter nbconvert --to &amp;lt;output format&amp;gt; &amp;lt;input notebook&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;其中：&lt;output format&gt;`可以是下面几种：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;-* HTML
+-* LaTeX
+-* PDF
+-* Reveal JS
+-* Markdown (md)
+-* ReStructured Text (rst)
+-* executable script&lt;/p&gt;
+
+&lt;h3 id=&#34;例子-convert-a-notebook-to-html&#34;&gt;例子: Convert a notebook to HTML&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;    $ jupyter nbconvert --to html mynotebook.ipynb
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This command creates an HTML output file named &lt;code&gt;mynotebook.html&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;资源&#34;&gt;资源&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://nbconvert.readthedocs.io/en/latest/&#34;&gt;Documentation for Jupyter nbconvert&lt;/a&gt;
+[&lt;a href=&#34;https://media.readthedocs.org/pdf/nbconvert/latest/nbconvert.pdf&#34;&gt;PDF&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jupyter/nbconvert-examples&#34;&gt;nbconvert examples on GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jupyter/nbconvert/issues&#34;&gt;Issues&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://groups.google.com/forum/#!forum/jupyter&#34;&gt;Technical support - Jupyter Google Group&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jupyter.org&#34;&gt;Project Jupyter website&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jupyter.readthedocs.io/en/latest/index.html&#34;&gt;Documentation for Project Jupyter&lt;/a&gt;
+[&lt;a href=&#34;https://media.readthedocs.org/pdf/jupyter/latest/jupyter.pdf&#34;&gt;PDF&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
