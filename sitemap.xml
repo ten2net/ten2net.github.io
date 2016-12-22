@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ten2net.github.io/2016/12/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%89%E7%BB%B4%E4%BB%BF%E7%9C%9F%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/</loc>
+    <lastmod>2016-12-22T12:12:19+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ten2net.github.io/2016/12/22/%E6%88%91%E7%9A%84docker%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2016-12-22T11:15:53+08:00</lastmod>
   </url>
@@ -19,6 +24,12 @@
   <url>
     <loc>https://ten2net.github.io/tags/caffe/</loc>
     <lastmod>2016-12-21T17:45:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ten2net.github.io/tags/creator/</loc>
+    <lastmod>2016-12-22T12:12:19+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -41,8 +52,20 @@
   </url>
   
   <url>
+    <loc>https://ten2net.github.io/tags/opencv/</loc>
+    <lastmod>2016-12-21T09:52:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ten2net.github.io/topics/opencv/</loc>
+    <lastmod>2016-12-21T09:52:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ten2net.github.io/post/</loc>
-    <lastmod>2016-12-22T11:15:53+08:00</lastmod>
+    <lastmod>2016-12-22T12:12:19+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -52,13 +75,67 @@
   </url>
   
   <url>
+    <loc>https://ten2net.github.io/tags/terra-vista/</loc>
+    <lastmod>2016-12-22T12:12:19+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ten2net.github.io/topics/</loc>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://ten2net.github.io/tags/ubuntu/</loc>
+    <lastmod>2016-12-21T09:52:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ten2net.github.io/topics/ubuntu/</loc>
+    <lastmod>2016-12-21T09:52:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ten2net.github.io/tags/vega-prime/</loc>
+    <lastmod>2016-12-22T12:12:19+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ten2net.github.io/tags/vr-force/</loc>
+    <lastmod>2016-12-22T12:12:19+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ten2net.github.io/tags/%E4%B8%89%E7%BB%B4/</loc>
+    <lastmod>2016-12-22T12:12:19+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ten2net.github.io/topics/%E4%B8%89%E7%BB%B4/</loc>
+    <lastmod>2016-12-22T12:12:19+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ten2net.github.io/</loc>
-    <lastmod>2016-12-22T11:15:53+08:00</lastmod>
+    <lastmod>2016-12-22T12:12:19+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ten2net.github.io/tags/%E8%A7%86%E6%99%AF%E4%BB%BF%E7%9C%9F/</loc>
+    <lastmod>2016-12-22T12:12:19+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ten2net.github.io/topics/%E8%A7%86%E6%99%AF%E4%BB%BF%E7%9C%9F/</loc>
+    <lastmod>2016-12-22T12:12:19+08:00</lastmod>
     <priority>0</priority>
   </url>
   

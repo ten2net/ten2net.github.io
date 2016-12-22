@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Caffe on 机器学习</title>
+    <title>Caffe on 学习之心</title>
     <link>https://ten2net.github.io/tags/caffe/index.xml</link>
-    <description>Recent content in Caffe on 机器学习</description>
+    <description>Recent content in Caffe on 学习之心</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <managingEditor>wangf@e-u.cn (wangf)</managingEditor>

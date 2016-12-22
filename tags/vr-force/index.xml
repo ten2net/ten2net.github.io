@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vr Force on 学习之心</title>
+    <link>https://ten2net.github.io/tags/vr-force/index.xml</link>
+    <description>Recent content in Vr Force on 学习之心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>wangf@e-u.cn (wangf)</managingEditor>
+    <webMaster>wangf@e-u.cn (wangf)</webMaster>
+    <copyright>(c) 2017 ten2net 西安长城数字软件有限公司.</copyright>
+    <atom:link href="https://ten2net.github.io/tags/vr-force/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>计算机三维仿真常用软件</title>
+      <link>https://ten2net.github.io/2016/12/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%89%E7%BB%B4%E4%BB%BF%E7%9C%9F%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/</link>
+      <pubDate>Thu, 22 Dec 2016 12:12:19 +0800</pubDate>
+      <author>wangf@e-u.cn (wangf)</author>
+      <guid>https://ten2net.github.io/2016/12/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%89%E7%BB%B4%E4%BB%BF%E7%9C%9F%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/</guid>
+      <description>
+
+&lt;ol&gt;
+&lt;li&gt;地图绘制及地形数据处理软件：Global Mapper 16&lt;/li&gt;
+
+&lt;li&gt;&lt;h2 id=&#34;三维交互电子手册制作软件-eon-professional-9-0&#34;&gt;三维交互电子手册制作软件 EON Professional 9.0&lt;/h2&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;加拿大Presagis公司 三维建模软件：Creator 4.2&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;加拿大Presagis公司 地形建模软件：Terra Vista 6.2&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;加拿大Presagis公司 视景仿真软件：Vega Prime 4.1 for VC8&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;h2 id=&#34;美国disti公司-虚拟仪表仿真软件-gl-studio-3-2-for-vc8&#34;&gt;美国DiSTI公司 虚拟仪表仿真软件:GL Studio 3.2  for VC8&lt;/h2&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;美国MAK公司 计算机兵力生成及军事想定编辑与仿真软件：MAK VR_FORCE 3.12.0.2&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;美国MAK公司 实时系统运行支撑软件：MAK_RTI 3.4&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;美国MAK公司 分布式仿真连接软件开发包：VR_LINK 3.11.1&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;美国MAK公司 三维战场态势软件：MAK stealth 6.2 、VR_VANTAGE 1.2.1&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

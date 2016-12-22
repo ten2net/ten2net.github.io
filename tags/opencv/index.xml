@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Opencv on 学习之心</title>
+    <link>https://ten2net.github.io/tags/opencv/index.xml</link>
+    <description>Recent content in Opencv on 学习之心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>wangf@e-u.cn (wangf)</managingEditor>
+    <webMaster>wangf@e-u.cn (wangf)</webMaster>
+    <copyright>(c) 2017 ten2net 西安长城数字软件有限公司.</copyright>
+    <atom:link href="https://ten2net.github.io/tags/opencv/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Opencv在Ubuntu上的安装过程</title>
+      <link>https://ten2net.github.io/2016/12/21/opencv%E5%9C%A8ubuntu%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B/</link>
+      <pubDate>Wed, 21 Dec 2016 09:52:09 +0800</pubDate>
+      <author>wangf@e-u.cn (wangf)</author>
+      <guid>https://ten2net.github.io/2016/12/21/opencv%E5%9C%A8ubuntu%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B/</guid>
+      <description>
+
+&lt;h1 id=&#34;一-阅读-https-www-raben-com-content-opencv-installation-ubuntu-1204&#34;&gt;一、&lt;a href=&#34;https://www.raben.com/content/opencv-installation-ubuntu-1204&#34;&gt;阅读&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;二-安装依赖&#34;&gt;二、安装依赖&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;To install OpenCV 2.4.2 or 2.4.3 on the Ubuntu 12.04 operating system, first install a developer environment to build OpenCV.
+apt-get -y install build-essential cmake pkg-config&lt;/li&gt;
+&lt;li&gt;Install Image I/O libraries
+apt-get -y install libjpeg62-dev
+apt-get -y install libtiff4-dev libjasper-dev&lt;/li&gt;
+&lt;li&gt;Install the GTK dev library
+apt-get -y install  libgtk2.0-dev&lt;/li&gt;
+&lt;li&gt;Install Video I/O libraries
+apt-get -y install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev&lt;/li&gt;
+&lt;li&gt;Optional - install support for Firewire video cameras
+apt-get -y install libdc1394-22-dev&lt;/li&gt;
+&lt;li&gt;Optional - install video streaming libraries
+apt-get -y install libxine-dev libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev&lt;/li&gt;
+&lt;li&gt;Optional - install the Python development environment and the Python Numerical library
+apt-get -y install python-dev python-numpy&lt;/li&gt;
+&lt;li&gt;Optional - install the parallel code processing library (the Intel tbb library)
+apt-get -y install libtbb-dev&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Optional - install the Qt dev library
+apt-get -y install libqt4-dev&lt;/p&gt;
+
+&lt;h1 id=&#34;三-安装opencv&#34;&gt;三、安装opencv&lt;/h1&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;wget &lt;a href=&#34;https://sourceforge.net/projects/opencvlibrary/files/opencv-unix/2.4.13/opencv-2.4.13.zip&#34;&gt;https://sourceforge.net/projects/opencvlibrary/files/opencv-unix/2.4.13/opencv-2.4.13.zip&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;unzip opencv-2.4.13.zip&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;cd opencv-2.4.13&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;#（可选，若出现list_filterout错误）修改samples/gpu/CMakeLists.txt 文件的106、109、110、111、112五行代码如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;	 if(NOT HAVE_OPENGL)
+	 #   list_filterout(install_list &amp;quot;.*opengl.cpp&amp;quot;)
+	  endif()
+	  if(NOT HAVE_CUDA)
+	 #   list_filterout(install_list &amp;quot;.*opticalflow_nvidia_api.cpp&amp;quot;)
+	 #   list_filterout(install_list &amp;quot;.*cascadeclassifier_nvidia_api.cpp&amp;quot;)
+	 #   list_filterout(install_list &amp;quot;.*driver_api_multi.cpp&amp;quot;)
+	 #   list_filterout(install_list &amp;quot;.*driver_api_stereo_multi.cpp&amp;quot;)
+	  endif()
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;mkdir build&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;cd build&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local  -D WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D WITH_V4L=ON -D WITH_FFMPEG=OFF    -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON     -D BUILD_EXAMPLES=OFF -D WITH_QT=OFF -D WITH_OPENGL=OFF ..&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;make&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;make install&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;四-问题&#34;&gt;四、问题&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;### 解决1394问题
+ln /dev/null /dev/raw1394
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;五-测试&#34;&gt;五、测试&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;python&lt;/li&gt;
+&lt;li&gt;&amp;gt;&amp;gt;&amp;gt;import cv2&lt;/li&gt;
+&lt;li&gt;不报错即表示安装成功&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;附：安装gnome后出现中文乱码的问题
+  apt-get install gnome-language-selector
+  然后在Xterm中执行
+  #gnome-language-selector&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
