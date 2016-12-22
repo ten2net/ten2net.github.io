@@ -21,24 +21,25 @@
 
 &lt;h1 id=&#34;markdown-pandoc-最佳写作拍档&#34;&gt;Markdown+Pandoc 最佳写作拍档&lt;/h1&gt;
 
-&lt;p&gt;###我们为什么写作？
-自从人们开始写作，写作便是记录、抒发、批判、反省的好工具。从石板上的刻印到笔墨纸砚，再到如今的信息时代。从静态的个人主页到托管博客，从个人博客到微博，从wordpress到jekyll。无数投入写作中的人们写作的目的大同，写作的方式越简单越好，这样才能让我们专注于写作而不是为其他格式所困扰。另外现在智能终端快速普及，文件格式的多平台使用也成为了写作的一大问题。&lt;/p&gt;
+&lt;h3 id=&#34;我们为什么写作&#34;&gt;我们为什么写作？&lt;/h3&gt;
+
+&lt;p&gt;自从人们开始写作，写作便是记录、抒发、批判、反省的好工具。从石板上的刻印到笔墨纸砚，再到如今的信息时代。从静态的个人主页到托管博客，从个人博客到微博，从wordpress到jekyll。无数投入写作中的人们写作的目的大同，写作的方式越简单越好，这样才能让我们专注于写作而不是为其他格式所困扰。另外现在智能终端快速普及，文件格式的多平台使用也成为了写作的一大问题。&lt;/p&gt;
 
 &lt;p&gt;为了更好的写作,今天介绍的 Markdown &amp;amp; Pandoc 便能提供完美的辅助。&lt;/p&gt;
 
-&lt;p&gt;###Markdown的用法&lt;/p&gt;
+&lt;h3 id=&#34;markdown的用法&#34;&gt;Markdown的用法&lt;/h3&gt;
 
-&lt;p&gt;####1 .Markdown是什么?&lt;/p&gt;
+&lt;h4 id=&#34;1-markdown是什么&#34;&gt;1 .Markdown是什么?&lt;/h4&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Markdown 是一种轻量级标记语言，创始人为John Gruber和Aaron Swartz。它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。 &lt;a href=&#34;https://zh.wikipedia.org/wiki/Markdown&#34;&gt;[1]&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;####2 .为什么要用Markdown?&lt;/p&gt;
+&lt;h4 id=&#34;2-为什么要用markdown&#34;&gt;2 .为什么要用Markdown?&lt;/h4&gt;
 
 &lt;p&gt;windows下常用的编辑工具是word,mac上常用的编辑工具是page,linux上常用的编辑工具就是vim了，一份文章编辑完后为了要在不同平台中保存完整的模样时就必需同时准备多种文本格式的文件，这是多么痛苦的一件事。我们写作的初衷是为了写作呀，反而被这些格式烦恼。所以我们要用Markdown,它让你关注内容，格式怎么显示不是要你在写得时候关注的。而在写Markdown时你只需要用一个纯文本的方式进行，不用担心平台与格式的困扰。&lt;/p&gt;
 
-&lt;p&gt;####3 .Markdown的语法&lt;/p&gt;
+&lt;h4 id=&#34;3-markdown的语法&#34;&gt;3 .Markdown的语法&lt;/h4&gt;
 
 &lt;p&gt;Markdown 的语法全由一些符号所组成，这些符号经过精挑细选，其作用一目了然。比如：在文字两旁加上星号，看起来就像*强调*。Markdown 的列表看起来，嗯，就是列表。Markdown 的区块引用看起来就真的像是引用一段文字，就像你曾在电子邮件中见过的那样。&lt;/p&gt;
 
@@ -106,7 +107,7 @@ _ _ _ _ _
 
 &lt;p&gt;Markdown的常用语法差不多就是这些了，详细的介绍请参考&lt;a href=&#34;http://wowubuntu.com/markdown/&#34;&gt;Markdowm 语法说明&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;####4 .Markdown的常用编辑工具&lt;/p&gt;
+&lt;h4 id=&#34;4-markdown的常用编辑工具&#34;&gt;4 .Markdown的常用编辑工具&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Mac等平台下推荐&lt;a href=&#34;http://mouapp.com/&#34;&gt;Mou&lt;/a&gt;&lt;/li&gt;
@@ -118,9 +119,9 @@ _ _ _ _ _
 
 &lt;p&gt;Markdown越来越流行，不是因为它复杂，而是因为它足够简单。尝试过MD后就能体会到单纯的写作带来的快乐，一般Markdown文件保存格式都是以md、mdownx现实。为了文档的分享,多平台的使用，需要对MD进行格式转化。这是就更体现了它的方便之处，它是本身是一个结构标记语言，能对多种格式文档进行转换，这里介绍一款强大的格式转换工具 &lt;strong&gt;Pandoc&lt;/strong&gt; 。&lt;/p&gt;
 
-&lt;p&gt;###Pandoc 格式转换的瑞士军刀&lt;/p&gt;
+&lt;h3 id=&#34;pandoc-格式转换的瑞士军刀&#34;&gt;Pandoc 格式转换的瑞士军刀&lt;/h3&gt;
 
-&lt;p&gt;####1 .Pandoc的介绍&lt;/p&gt;
+&lt;h4 id=&#34;1-pandoc的介绍&#34;&gt;1 .Pandoc的介绍&lt;/h4&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Pandoc是一个用于从一种标记格式转换为另一种的Haskell库，它的功能是在多种常见的标记语言进行相互转换。&lt;/p&gt;
@@ -128,19 +129,17 @@ _ _ _ _ _
 
 &lt;p&gt;其中包括 Markdown, reStructuredText, Textilte, HTML, PDF,LaTeX 等。利用它，你可以用简单的 Markdown 语法生成pdf文档，还可以写 Beamer 演示文稿。更强大的是，它还能将以上提到的这些语言所写文件转换成 xdoc 文档。下面这张图展示了 Pandoc 让人吃惊 的功能集，不愧为文件转换中的瑞士军刀：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://iout.in/demo/pic/pandoc.jpg&#34; alt=&#34; pandoc &#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;2-pandoc的用法&#34;&gt;2 .Pandoc的用法&lt;/h4&gt;
 
-&lt;p&gt;####2 .Pandoc的用法&lt;/p&gt;
+&lt;h5 id=&#34;2-1-web版pandoc&#34;&gt;2.1 Web版Pandoc&lt;/h5&gt;
 
-&lt;p&gt;#####2.1 Web版Pandoc
-首先我们可以看下Pandoc的官网 &lt;a href=&#34;http://johnmacfarlane.net/pandoc/&#34;&gt;http://johnmacfarlane.net/pandoc/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;首先我们可以看下Pandoc的官网 &lt;a href=&#34;http://johnmacfarlane.net/pandoc/&#34;&gt;http://johnmacfarlane.net/pandoc/&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;在介绍中我们知道Pandoc支持linux,Mac OS,Win多平台，还有简易的web版提供我们在线转换格式。打开web版 &lt;a href=&#34;http://johnmacfarlane.net/pandoc/try&#34;&gt;http://johnmacfarlane.net/pandoc/try&lt;/a&gt;,便可以进行简单的格式转换了。不过网页版的反应速度不是很快，不适合大型文件的格式转换，一两篇文章还是可以的。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://iout.in/demo/pic/webpandoc.png&#34; alt=&#34;webpandoc&#34; /&gt;&lt;/p&gt;
+&lt;h5 id=&#34;2-2-linux版pandoc&#34;&gt;2.2 Linux版Pandoc&lt;/h5&gt;
 
-&lt;p&gt;#####2.2 Linux版Pandoc
-就我自己用的ubuntu下安装Pandoc,还算是非常简单的。以下是ubuntu下的使用步骤:&lt;/p&gt;
+&lt;p&gt;就我自己用的ubuntu下安装Pandoc,还算是非常简单的。以下是ubuntu下的使用步骤:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;sudo apt-get install pandoc
 &lt;/code&gt;&lt;/pre&gt;
@@ -178,12 +177,15 @@ cabal install pandoc
 
 &lt;p&gt;Markdown与Pandoc的用法也就说到这了，无疑它们搭配起来会让写作变得更加简单专注，这也就是我们的初衷。另外在写作中多结合Git,将文档推到GitHub上会是很好的尝试。&lt;/p&gt;
 
-&lt;p&gt;#####参考文档
-+ &lt;a href=&#34;http://www.yangzhiping.com/tech/r-markdown-knitr.html&#34;&gt;Markdown写作浅谈&lt;/a&gt; , 阳志平
-+ &lt;a href=&#34;http://yanping.me/cn/blog/2012/03/13/pandoc/&#34;&gt;黑魔法利器pandoc&lt;/a&gt; , 雁起平沙
-+ &lt;a href=&#34;http://www.openfoundry.org/tw/foss-programs/8814-pandoc-&#34;&gt;Pandoc 用命令行转换标记语言&lt;/a&gt; , 林雪凡
-+ &lt;a href=&#34;http://johnmacfarlane.net/pandoc&#34;&gt;Pandoc 官网&lt;/a&gt; , John MacFarlane
-+ &lt;a href=&#34;http://wowubuntu.com/markdown/&#34;&gt;Markdown 语法说明&lt;/a&gt; , riku&lt;/p&gt;
+&lt;h5 id=&#34;参考文档&#34;&gt;参考文档&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.yangzhiping.com/tech/r-markdown-knitr.html&#34;&gt;Markdown写作浅谈&lt;/a&gt; , 阳志平&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://yanping.me/cn/blog/2012/03/13/pandoc/&#34;&gt;黑魔法利器pandoc&lt;/a&gt; , 雁起平沙&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.openfoundry.org/tw/foss-programs/8814-pandoc-&#34;&gt;Pandoc 用命令行转换标记语言&lt;/a&gt; , 林雪凡&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://johnmacfarlane.net/pandoc&#34;&gt;Pandoc 官网&lt;/a&gt; , John MacFarlane&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wowubuntu.com/markdown/&#34;&gt;Markdown 语法说明&lt;/a&gt; , riku&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;code&gt;tag&lt;/code&gt;: markdown,pandoc&lt;/p&gt;
 
