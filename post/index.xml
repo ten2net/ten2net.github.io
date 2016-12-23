@@ -2209,9 +2209,9 @@ GRANT SELECT ON .V_WORKLOAD_LAST30DAY TO PUBLIC;
 
 &lt;h1 id=&#34;9-java存储过程-用来调用os命令&#34;&gt;9、java存储过程，用来调用os命令&lt;/h1&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;DROP JAVA SOURCE JIRA.&amp;quot;OSCommand&amp;quot;;
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;DROP JAVA SOURCE .&amp;quot;OSCommand&amp;quot;;
 
-CREATE OR REPLACE AND RESOLVE JAVA SOURCE NAMED JIRA.&amp;quot;OSCommand&amp;quot; as import java.io.*;
+CREATE OR REPLACE AND RESOLVE JAVA SOURCE NAMED .&amp;quot;OSCommand&amp;quot; as import java.io.*;
 public class OSCommand{
   public static String Run(String Command){
      try{
@@ -2228,7 +2228,7 @@ public class OSCommand{
 
 /
 
-CREATE OR REPLACE FUNCTION JIRA.OSCommand_Run(Command IN STRING)                      
+CREATE OR REPLACE FUNCTION .OSCommand_Run(Command IN STRING)                      
 RETURN VARCHAR2 IS                                                               
 LANGUAGE JAVA                                                                    
 NAME &#39;OSCommand.Run(java.lang.String) return int&#39;;
@@ -2239,7 +2239,7 @@ NAME &#39;OSCommand.Run(java.lang.String) return int&#39;;
 
 &lt;h1 id=&#34;10-计算日器的函数&#34;&gt;10、计算日器的函数&lt;/h1&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;CREATE OR REPLACE FUNCTION JIRA.F_Getlunar_Date(i_SolarDay DATE) 
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;CREATE OR REPLACE FUNCTION .F_Getlunar_Date(i_SolarDay DATE) 
 RETURN DATE
   -- 功能：计算阳历1900/01/31 - 2050/01/22间某一天对应的阴历是多少
   -- 算法：在一张表中用10进制格式保存某个农历年每月大小,有无闰月,闰月大小信息
@@ -2424,10 +2424,21 @@ END;
 
 &lt;h1 id=&#34;11-md5加密函数&#34;&gt;11、MD5加密函数&lt;/h1&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;CREATE OR REPLACE FUNCTION JIRA.Md5( input VARCHAR2 ) RETURN sys.dbms_obfuscation_toolkit.varchar2_checksum AS
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;CREATE OR REPLACE FUNCTION .Md5( input VARCHAR2 ) RETURN sys.dbms_obfuscation_toolkit.varchar2_checksum AS
 BEGIN 
   RETURN utl_raw.cast_to_raw(dbms_obfuscation_toolkit.Md5(input_string=&amp;gt;utl_raw.cast_to_raw(input)));
 END;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;12-dblink的创建&#34;&gt;12、DBLINK的创建&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;DROP PUBLIC DATABASE LINK &amp;quot;QUERYFORSHARE.US.ORACLE.COM&amp;quot;;
+
+CREATE PUBLIC DATABASE LINK &amp;quot;QUERYFORSHARE.US.ORACLE.COM&amp;quot;
+ CONNECT TO QUERY
+ IDENTIFIED BY &amp;lt;PWD&amp;gt;
+ USING &#39;(DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = 192.100.2.2)(PORT = 1521)) ) (CONNECT_DATA = (SERVICE_NAME = testrep) ) )&#39;;
 
 &lt;/code&gt;&lt;/pre&gt;
 </description>

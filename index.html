@@ -205,7 +205,7 @@
   <p class="container content">
   
   
-    一、计算出差得分的存储过程 CREATE OR REPLACE PROCEDURE QUERY.PR_ONBUSINESSSCORE ( STARTTIMEINS IN varchar, ENDTIMEINS IN varchar ) IS startdata varchar2(80); --出差开始时间 enddata varchar2(80); --出差结束时间 starttimes varchar2(80); --考核开始时间 endtimes varchar2(80); --考核结束时间 outofXIANcity varchar2(80); --判断是否西安市内的出差 scoreStartDate varchar2(80); --用来计算实际出差天数的开始时间 scoreEndDate varchar2(80); --用来计算实际出差天数的结束时间 SCORE_TIME varchar2(80); --分数 isinsert varchar2(80); --插入还是更新的判断条件 truedays varchar2(80); --考核时间内的出差天数 username varchar(32); --出差人员姓名 /****************************************************************************** 计算出差得分的存储过程 计算规则 市外：在考核时间段内的真实出差天数 * 0.3 + 出差次数 * 0.7 市内：在考核时间段内的真实出差天数 * 0.1 + 出差次数 * 0.3 出差次数的计算方法：出差开始时间在考核时间段内，即考核时间段内的出差，次数累加得到。 ******************************************************************************/ CURSOR cur_onbusiness IS select t.
+    这些SQL充分利用了oracle的功能，记下来备查
   
 
 
