@@ -9,8 +9,2429 @@
     <managingEditor>wangf@e-u.cn (wangf)</managingEditor>
     <webMaster>wangf@e-u.cn (wangf)</webMaster>
     <copyright>(c) 2017 ten2net 西安长城数字软件有限公司.</copyright>
-    <lastBuildDate>Thu, 22 Dec 2016 13:55:34 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 23 Dec 2016 09:13:49 +0800</lastBuildDate>
     <atom:link href="https://ten2net.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Sublime Text3的介绍和使用</title>
+      <link>https://ten2net.github.io/2016/12/23/sublime-text3%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Fri, 23 Dec 2016 09:13:49 +0800</pubDate>
+      <author>wangf@e-u.cn (wangf)</author>
+      <guid>https://ten2net.github.io/2016/12/23/sublime-text3%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8/</guid>
+      <description>
+
+&lt;h1 id=&#34;1-安装&#34;&gt;1、安装&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;下载:&lt;a href=&#34;https://download.sublimetext.com/Sublime%20Text%20Build%203126%20x64%20Setup.exe&#34;&gt;https://download.sublimetext.com/Sublime%20Text%20Build%203126%20x64%20Setup.exe&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;注册（Sublime Text 3 3126 注册码）
+&lt;code&gt;
+—– BEGIN LICENSE —–
+Michael Barnes
+Single User License
+EA7E-821385
+8A353C41 872A0D5C DF9B2950 AFF6F667
+C458EA6D 8EA3C286 98D1D650 131A97AB
+AA919AEC EF20E143 B361B1E7 4C8B7F04
+B085E65E 2F5F5360 8489D422 FB8FC1AA
+93F6323C FD7F7544 3F39C318 D95E6480
+FCCC7561 8A4A1741 68FA4223 ADCEDE07
+200C25BE DBBC4855 C4CFB774 C5EC138C
+0FEC1CEF D9DCECEC D3A5DAD1 01316C36
+—— END LICENSE ——
+&lt;/code&gt;
+&lt;code&gt;
+—– BEGIN LICENSE —–
+Free Communities Consultoria em Informática Ltda
+Single User License
+EA7E-801302
+C154C122 4EFA4415 F1AAEBCC 315F3A7D
+2580735A 7955AA57 850ABD88 72A1DDD8
+8D2CE060 CF980C29 890D74F2 53131895
+281E324E 98EA1FEF 7FF69A12 17CA7784
+490862AF 833E133D FD22141D D8C89B94
+4C10A4D2 24693D70 AE37C18F 72EF0BE5
+1ED60704 651BC71F 16CA1B77 496A0B19
+463EDFF9 6BEB1861 CA5BAD96 89D0118E
+—— END LICENSE ——
+&lt;/code&gt;
+&lt;code&gt;
+—– BEGIN LICENSE —–
+Nicolas Hennion
+Single User License
+EA7E-866075
+8A01AA83 1D668D24 4484AEBC 3B04512C
+827B0DE5 69E9B07A A39ACCC0 F95F5410
+729D5639 4C37CECB B2522FB3 8D37FDC1
+72899363 BBA441AC A5F47F08 6CD3B3FE
+CEFB3783 B2E1BA96 71AAF7B4 AFB61B1D
+0CC513E7 52FF2333 9F726D2C CDE53B4A
+810C0D4F E1F419A3 CDA0832B 8440565A
+35BF00F6 4CA9F869 ED10E245 469C233E
+—— END LICENSE ——
+&lt;/code&gt;
+&lt;code&gt;
+—– BEGIN LICENSE —–
+Anthony Sansone
+Single User License
+EA7E-878563
+28B9A648 42B99D8A F2E3E9E0 16DE076E
+E218B3DC F3606379 C33C1526 E8B58964
+B2CB3F63 BDF901BE D31424D2 082891B5
+F7058694 55FA46D8 EFC11878 0868F093
+B17CAFE7 63A78881 86B78E38 0F146238
+BAE22DBB D4EC71A1 0EC2E701 C7F9C648
+5CF29CA3 1CB14285 19A46991 E9A98676
+14FD4777 2D8A0AB6 A444EE0D CA009B54
+—— END LICENSE ——
+&lt;/code&gt;
+&lt;code&gt;
+—– BEGIN LICENSE —–
+Alexey Plutalov
+Single User License
+EA7E-860776
+3DC19CC1 134CDF23 504DC871 2DE5CE55
+585DC8A6 253BB0D9 637C87A2 D8D0BA85
+AAE574AD BA7D6DA9 2B9773F2 324C5DEF
+17830A4E FBCF9D1D 182406E9 F883EA87
+E585BBA1 2538C270 E2E857C2 194283CA
+7234FF9E D0392F93 1D16E021 F1914917
+63909E12 203C0169 3F08FFC8 86D06EA8
+73DDAEF0 AC559F30 A6A67947 B60104C6
+—— END LICENSE ——
+&lt;/code&gt;
+&lt;code&gt;
+—– BEGIN LICENSE —–
+Peter Halliday
+Single User License
+EA7E-855988
+3997BFF0 2856413A 7A555954 67069B78
+06D8CE12 63EAF079 AD039757 79E16D13
+C555AD90 465CBE53 10F6DFC4 D3A3C611
+411106F8 0CFEB15F 0A7BB891 111F5ED2
+C6AA8429 77913528 FA6291A9 B88D4550
+F1D6AB13 BF9153BC 91B4DFFE D296CFE0
+C1D8EB22 13D5F14E 75A699EC 49EDDC23
+D89D0F9B D240B10A A3712467 09DE7870
+—— END LICENSE ——
+&lt;/code&gt;
+&lt;code&gt;
+—– BEGIN LICENSE —–
+Fred Zirdung
+Single User License
+EA7E-844672
+6089C0EC 22936E1A 1EADEBE2 B8654BBA
+5C98FFA6 C0FD1599 0364779B 071C74FB
+EEFE9EAB 92B3D867 CD1B32FE D190269F
+6FC08F8F 8D24191D 32828465 942CE58E
+AECE5307 08B62229 D788560A 6E0AAC4B
+48A2D9EE 24FD8CAA 07BEBDF2 28EA86D4
+CCB96084 6C34CAD2 E8A04F39 3B5A3CBC
+3B668BB7 C94D0B4B 847D6D7F 4BC07375
+—— END LICENSE ——
+&lt;/code&gt;
+&lt;code&gt;
+—– BEGIN LICENSE —–
+Wixel
+Single User License
+EA7E-848235
+103D2969 8700C7ED 8173CF61 537000C0
+EB3C7ECB 5E750F17 6B42B67C A190090B
+7669164F C6F371A8 5A1D88D5 BDD0DA70
+C065892B 7CC1BB2B 1C8B8C7C F08E7789
+7C2A5241 35F86328 4C8F70D9 C023D7C2
+11245C36 59A730DB 72BDB9A7 D5B20304
+90E90E72 9F08CA25 73F49C20 179D938E
+5BC8BEDA 13457A69 39E6265F 233767F9
+—— END LICENSE ——
+&lt;/code&gt;
+&lt;code&gt;
+—– BEGIN LICENSE —–
+Daniel Russel
+Single User License
+EA7E-917420
+9327EC62 44020C2A 45172A68 12FE13F1
+1D22245B 680892EE F551F8EB C183D032
+8B4EDB4B 479CB7E4 07E42EDD A780021D
+56BADF42 AC05238B 023B47B1 EBA1B7DE
+6DF9A383 159F32AE 04EBE100 1278B1D2
+52E81B60 C68AA2E8 F84A20BE FE7990EB
+5D44E4B6 16369263 1DDAACBC 280FF19E
+86CF4319 0B8615A8 4FF0512E B123B8EC
+—— END LICENSE ——
+&lt;/code&gt;
+&lt;code&gt;
+—– BEGIN LICENSE —–
+Peter Eriksson
+Single User License
+EA7E-890068
+8E107C71 3100D6FC 2AC805BF 9E627C77
+72E710D7 43392469 D06A2F5B F9304FBD
+F5AB4DB2 7A95F172 FE68E300 42745819
+E94AB2DF C1893094 ECABADC8 71FEE764
+20224821 3EABF931 745AF882 87AD0A4B
+33C6E377 0210D712 CD2B1178 82601542
+C7FD8098 F45D2824 BC7DFB38 F1EBD38A
+D7A3AFE0 96F938EA 2D90BD72 9E34CDF0
+—— END LICENSE ——
+&lt;/code&gt;
+&lt;code&gt;
+—– BEGIN LICENSE —–
+Ryan Clark
+Single User License
+EA7E-812479
+2158A7DE B690A7A3 8EC04710 006A5EEB
+34E77CA3 9C82C81F 0DB6371B 79704E6F
+93F36655 B031503A 03257CCC 01B20F60
+D304FA8D B1B4F0AF 8A76C7BA 0FA94D55
+56D46BCE 5237A341 CD837F30 4D60772D
+349B1179 A996F826 90CDB73C 24D41245
+FD032C30 AD5E7241 4EAA66ED 167D91FB
+55896B16 EA125C81 F550AF6B A6820916
+—— END LICENSE ——
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;2-sublime-text-3安装插件&#34;&gt;2、Sublime Text 3安装插件&lt;/h1&gt;
+
+&lt;p&gt;Sublime Text的强大就是她拥有强大的可扩展性。您可根据自己的需要安装不同的插件；这使得她变的无比强大的同时又不失轻便。
+- 插件安装方式一：直接安装：
+    安装Sublime text 3插件很方便，可以直接下载安装包解压缩到Packages目录（菜单-&amp;gt;preferences-&amp;gt;packages）。
+- 插件安装方式二：使用Package Control组件安装：
+    按Ctrl+`调出console（注：安装有QQ输入法的这个快捷键会有冲突的，输入法属性设置-输入法管理-取消热键切换至QQ拼音）粘贴以下代码到底部命令行并回车：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import urllib.request,os; pf = &#39;Package Control.sublime-package&#39;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), &#39;wb&#39;).write(urllib.request.urlopen( &#39;http://sublime.wbond.net/&#39; + pf.replace(&#39; &#39;,&#39;%20&#39;)).read())
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;重启Sublime Text 3。如果在Perferences-&amp;gt;package settings中看到package ontrol这一项，则安装成功。&lt;/li&gt;
+&lt;li&gt;按下Ctrl+Shift+P调出命令面板输入install 调出 Install Package 选项并回车，然后在列表中选中要安装的插件。&lt;/li&gt;
+&lt;li&gt;PS：国内使用SublimeText3，经常可能遇到无法安装可用插件问题，可remove掉Package Control重新安装下；如遇到连Package Control也无法安装，则可以在别处拷贝一份关于Package Control的文件－(Package Control.sublime-package)存放于Installed Packages目录之下即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;2-1-markdownediting插件-sublime-text的markdown利器&#34;&gt;2.1、MarkdownEditing插件：Sublime Text的Markdown利器&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Github项目地址：SublimeText-Markdown/MarkdownEditing&lt;/li&gt;
+&lt;li&gt;安装：如果Sublime安装了Package Control,直接Ctrl+Shift+P输入MarkdownEditing，搜索到点击即可自行安装，重启便可使用用。&lt;/li&gt;
+&lt;li&gt;关于特性：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;MarkdownEditing 从视觉和便捷性上针对 Markdown 文档的编辑进行了一系列的优化。具体如下(Mac下)：
+安装后针对 md\mdown\mmd\txt 格式文件启用插件。颜色方案仿 Byword及iA writer。
+自动匹配星号（*）、下划线（_）及反引号（`），选中文本按下以上符号能自动在所选文本前后添加配对的符号，方便粗体、斜体和代码框的输入。
+直接输入配对的符号后按下退格键（backspace），则两个符号都会被删除；直接输入配对的符号后按下空格键，则会自动删除后一个。
+对“选中文字后输入左括号”这一动作进行了调整，以便插入markdown链接。
+拷贝一个链接，选中文本后按下 ⌘⌥V 会自动插入内联链接。
+拷贝一个链接，选中文本后按下 ⌘⌥R 会自动插入引用链接。
+⌘⌥K 插入链接；⌘⇧K 插入图片。
+⌘⇧B 和 ⌘⇧I 分别用于加粗体和斜体。
+⌘^1..6 对于选中的内容前加对应个数#,即对选中内容字体大小设置为h1~h6;
+⌘⇧6插入文档脚注并且跳转到它的定义；具体可参见:Footnotes;
+选中文本后按下 # 会自动在文本前后进行配对，可重复按下来定义标题级别。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;2-2-markdown-preview插件-预览md&#34;&gt;2.2、Markdown Preview插件：预览MD&lt;/h2&gt;
+
+&lt;p&gt;Markdown Preview较常用的功能是preview in browser和Export HTML in Sublime Text，前者可以在浏览器看到预览效果，后者可将markdown保存为html文件。
+preview inbrowser据称是实时的，但是实践上还是需要在st保存，然后浏览器刷新才能看到新的效果，
+好在markdown写得多的话也不需要每敲一行看一次效果。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;markdown preview默认没有快捷键，我们可以自己为preview in browser设置快捷键。
+&amp;gt;
+方法是在Preferences -&amp;gt; Key Bindings User打开的文件的中括号中添加以下代码(可在Key Bindings Default找到格式)：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;{ &amp;quot;keys&amp;quot;: [&amp;quot;alt+m&amp;quot;], &amp;quot;command&amp;quot;: &amp;quot;markdown_preview_select&amp;quot;, &amp;quot;args&amp;quot;: {&amp;quot;target&amp;quot;: &amp;quot;browser&amp;quot;} }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;随时alt+m，即可预览&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>曾经写过的比较好的SQL</title>
+      <link>https://ten2net.github.io/2016/12/23/%E6%9B%BE%E7%BB%8F%E5%86%99%E8%BF%87%E7%9A%84%E6%AF%94%E8%BE%83%E5%A5%BD%E7%9A%84sql/</link>
+      <pubDate>Fri, 23 Dec 2016 08:42:37 +0800</pubDate>
+      <author>wangf@e-u.cn (wangf)</author>
+      <guid>https://ten2net.github.io/2016/12/23/%E6%9B%BE%E7%BB%8F%E5%86%99%E8%BF%87%E7%9A%84%E6%AF%94%E8%BE%83%E5%A5%BD%E7%9A%84sql/</guid>
+      <description>
+
+&lt;h1 id=&#34;一-计算出差得分的存储过程&#34;&gt;一、计算出差得分的存储过程&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;
+CREATE OR REPLACE PROCEDURE QUERY.PR_ONBUSINESSSCORE
+(
+STARTTIMEINS IN varchar, 
+ENDTIMEINS IN varchar
+) IS
+startdata varchar2(80);
+--出差开始时间
+enddata varchar2(80);
+--出差结束时间
+starttimes varchar2(80); 
+--考核开始时间
+endtimes varchar2(80);
+--考核结束时间
+outofXIANcity varchar2(80);
+--判断是否西安市内的出差
+scoreStartDate varchar2(80);
+--用来计算实际出差天数的开始时间
+scoreEndDate varchar2(80);
+--用来计算实际出差天数的结束时间  
+SCORE_TIME varchar2(80);
+--分数
+isinsert varchar2(80);
+--插入还是更新的判断条件
+truedays varchar2(80);
+--考核时间内的出差天数
+username varchar(32);
+--出差人员姓名
+/******************************************************************************
+计算出差得分的存储过程 
+
+计算规则
+市外：在考核时间段内的真实出差天数 * 0.3 + 出差次数 * 0.7
+市内：在考核时间段内的真实出差天数 * 0.1 + 出差次数 * 0.3
+出差次数的计算方法：出差开始时间在考核时间段内，即考核时间段内的出差，次数累加得到。
+******************************************************************************/
+CURSOR cur_onbusiness IS select t.* from V_ONBUSINESS_NEW
+ t where t.duedate is not null;
+--获得全部符合条件的出差记录
+BEGIN
+    delete YWZKH_TRAVELPOINT where STARTTIME = to_date(STARTTIMEINS, &#39;yyyy-mm-dd&#39;);
+    starttimes := STARTTIMEINS;
+    --得到考核开始时间
+    if to_date(ENDTIMEINS, &#39;yyyy-mm-dd&#39;) &amp;gt; sysdate then
+        endtimes := to_char(sysdate, &#39;yyyy-mm-dd&#39;);
+    else
+        endtimes := ENDTIMEINS;
+    end if;
+    --得到考核结束时间
+    for cur_A in cur_onbusiness loop
+    --循环开始，循环整个出差记录表
+        username := cur_A.ASSIGNEE;
+        startdata := to_char(cur_A.duedate, &#39;yyyy-mm-dd&#39;);
+        --获得出差任务的开始时间
+        outofXIANcity := cur_A.ONBUSINESSTYPE;
+        --获得出差任务的名称判断是否是【出差】，若是，则是西安市外的出差，若不是，则是西安市内的出差
+            if startdata &amp;gt;= starttimes then
+                SCORE_TIME := 0.5;
+            else
+                SCORE_TIME := 0;
+            end if;
+            if cur_A.timeestimate is null then
+                --此参数为空即代表出差人还未回来，以考核结束时间作为计算实际出差天数的结束时间
+                scoreEndDate := ENDTIMEINS;
+                enddata := to_char(sysdate, &#39;yyyy-mm-dd&#39;);
+            else
+                --计算出差结束时间
+                select to_char((cur_A.duedate + (case ceil(cur_A.timeestimate) when 0 then 1 else ceil (cur_A.timeestimate) end)), &#39;yyyy-mm-dd&#39;) into enddata from dual;
+                if enddata &amp;gt; endtimes then 
+                    scoreEndDate := endtimes;
+                else
+                    scoreEndDate := enddata;
+                end if;
+                --用较早的结束时间作为计算实际出差天数的结束时间
+            end if;
+            if startdata &amp;gt; starttimes then
+                scoreStartDate := startdata;
+            else
+                scoreStartDate := starttimes;
+            end if;
+            --用较晚的开始时间作为计算实际出差天数的开始时间
+        isinsert := null;
+        if scoreStartDate &amp;lt;= scoreEndDate then 
+            if scoreStartDate &amp;lt;= to_char(sysdate, &#39;yyyy-mm-dd&#39;) then
+                dbms_output.put_line(cur_A.duedate||&#39;!!!!!!&#39;||scoreStartDate||&#39;!!!!!!!!!!!!!!!!&#39;||scoreEndDate);
+                dbms_output.put_line(username);
+                if scoreEndDate &amp;gt; to_char(sysdate, &#39;yyyy-mm-dd&#39;) then
+                    scoreEndDate := to_char(sysdate, &#39;yyyy-mm-dd&#39;);
+                end if;
+                begin
+                    select count(id) into isinsert from YWZKH_TRAVELPOINT where ID = cur_A.pkey and STARTTIME = to_date(STARTTIMEINS, &#39;yyyy-mm-dd&#39;) and endtime=to_date(ENDTIMEINS, &#39;yyyy-mm-dd&#39;);
+                    if isinsert = &#39;0&#39; then
+                        insert into YWZKH_TRAVELPOINT 
+                        (
+                            ID, PrOJECT, REPORTER, ASSIGNEE, SUMMARY, DUEDATE, TIMEESTIMATE, ISSUESTATUS, 
+                            ENDDATE, STARTTIME, ENDTIME, CREATEDATE, SCORE_DAY, SCORE_TIMES, TRUETIME
+                        )
+                        values
+                        (
+                            cur_A.pkey, cur_A.project, cur_A.REPORTER, cur_A.ASSIGNEE, cur_A.SUMMARY, cur_A.DUEDATE, 
+                            cur_A.TIMEESTIMATE, cur_A.ISSUESTATUS, to_date(enddata, &#39;yyyy-mm-dd&#39;), to_date(STARTTIMEINS, &#39;yyyy-mm-dd&#39;), to_date(ENDTIMEINS, &#39;yyyy-mm-dd&#39;), 
+                            sysdate, fun_getbusinessscore(outofXIANcity, scoreStartDate, scoreEndDate, enddata, cur_A.timeestimate), to_number(SCORE_TIME), to_date(to_char(sysdate, &#39;yyyy-mm-dd&#39;), &#39;yyyy-mm-dd&#39;)
+                        ); 
+                        commit;
+                    else
+                        update YWZKH_TRAVELPOINT set SCORE_DAY = fun_getbusinessscore(outofXIANcity, scoreStartDate, scoreEndDate, enddata, cur_A.timeestimate), SCORE_TIMES = to_number(SCORE_TIME) 
+                        where ID = cur_A.pkey and STARTTIME = to_date(STARTTIMEINS, &#39;yyyy-mm-dd&#39;) and endtime=to_date(ENDTIMEINS, &#39;yyyy-mm-dd&#39;);
+                        commit;                        
+                    end if;    
+                end;
+                update YWZKH_TRAVELPOINT set TRUEDAYS = SCORE_DAY / (case outofXIANcity when &#39;市内&#39; then 0.1 else 0.3 end)
+                where ID = cur_A.pkey and STARTTIME = to_date(STARTTIMEINS, &#39;yyyy-mm-dd&#39;) and endtime=to_date(ENDTIMEINS, &#39;yyyy-mm-dd&#39;);
+                end if;
+        end if;
+    end loop;
+    --循环结束
+END PR_ONBUSINESSSCORE;
+/
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;二-给时间维度表插入数据&#34;&gt;二、给时间维度表插入数据&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;CREATE OR REPLACE PROCEDURE Pr_Dw_Dim_Date_Data_Gen
+(
+beginYYYYMMDD NUMBER --开始日期
+)
+AS
+beginDate DATE;  --参数转换为日期后的结果
+currentDate DATE ;--循环日期
+v_CalHalfYear VARCHAR2(6)  ;--在日历上属于“上半年”，还是“下半年”
+v_StatHalfYear VARCHAR2(6)  ;--在统计时属于“上半年”，还是“下半年”
+v_CALQUARTER  NUMBER  ;--日历季度（1|2|3|4）
+v_STATQUARTER  NUMBER  ;--日历季度（1|2|3|4）
+v_CAL10DAYS   VARCHAR2(6)  ;--在日历上属于“上旬”，还是“中旬”、“下旬”
+v_ISHOLIDAY  VARCHAR2(2) :=&#39;否&#39;  ;--是否为节假日，公司规定每个双休日及法定假日为节假日
+v_ISLAWHOLIDAY VARCHAR2(2) :=&#39;否&#39; ;--是否为法定节假日�
+
+i INT ;
+maxRoomsizeLimit INTEGER;  
+curTClassID VARCHAR2(32);    
+v_errcode  INTEGER;
+v_errormsg VARCHAR2(200);
+cc INTEGER :=0;
+
+tmpVar NUMBER;
+/******************************************************************************
+给时间维度表插入数据
+******************************************************************************/
+BEGIN
+    BEGIN
+       beginDate :=TO_DATE(TO_CHAR(beginYYYYMMDD),&#39;YYYY-MM-DD&#39;);
+    EXCEPTION
+       WHEN OTHERS THEN
+          RAISE;
+    END;
+   
+   
+   FOR i IN 0 .. 365*10 LOOP
+       currentDate := beginDate + i;
+       
+       IF TO_NUMBER(TO_CHAR(currentDate,&#39;MMDD&#39;))&amp;lt;701 THEN
+          v_CalHalfYear :=&#39;上半年&#39;;
+       ELSE
+          v_CalHalfYear :=&#39;下半年&#39;;
+       END IF;
+       
+       v_StatHalfYear:=v_CalHalfYear;   ----先让它们相同
+       
+       IF TO_NUMBER(TO_CHAR(currentDate,&#39;MMDD&#39;))&amp;lt;401 THEN    --季度
+          v_CALQUARTER :=1;
+       ELSIF TO_NUMBER(TO_CHAR(currentDate,&#39;MMDD&#39;))&amp;lt;701 THEN
+          v_CALQUARTER :=2;
+       ELSIF TO_NUMBER(TO_CHAR(currentDate,&#39;MMDD&#39;))&amp;lt;1001 THEN
+          v_CALQUARTER :=3;
+       ELSE
+          v_CALQUARTER :=4;       
+       END IF;  
+       v_STATQUARTER:=v_CALQUARTER;
+       
+       IF TO_NUMBER(TO_CHAR(currentDate,&#39;DD&#39;))&amp;lt;10 THEN
+          v_CAL10DAYS :=&#39;上旬&#39;;
+       ELSIF TO_NUMBER(TO_CHAR(currentDate,&#39;DD&#39;))&amp;lt;20 THEN
+          v_CAL10DAYS :=&#39;中旬&#39;;
+       ELSE
+          v_CAL10DAYS :=&#39;下旬&#39;;         
+       END IF;  
+       
+       v_ISHOLIDAY :=&#39;否&#39;  ;--是否为节假日，公司规定每个双休日及法定假日为节假日
+       v_ISLAWHOLIDAY:=&#39;否&#39; ;--是否为法定节假日�    IF TO_NUMBER(TO_CHAR(currentDate,&#39;D&#39;))=1 OR
+          TO_NUMBER(TO_CHAR(currentDate,&#39;D&#39;))=7 THEN
+              v_ISHOLIDAY :=&#39;是&#39;;
+       END IF;        
+    
+       IF TO_NUMBER(TO_CHAR(currentDate,&#39;MMDD&#39;))=501 OR    --五一
+          TO_NUMBER(TO_CHAR(currentDate,&#39;MMDD&#39;))=1001 OR   --国庆节
+          TO_NUMBER(TO_CHAR(currentDate,&#39;MMDD&#39;))=1002 OR   --国庆节
+          TO_NUMBER(TO_CHAR(currentDate,&#39;MMDD&#39;))=1003 OR   --国庆节
+          TO_NUMBER(TO_CHAR(currentDate,&#39;MMDD&#39;))=101  OR   --元旦
+          TO_NUMBER(TO_CHAR(currentDate,&#39;MMDD&#39;))=405  OR   --清明（随是否润2月二不同，先这样写死吧）
+          
+          TO_NUMBER(TO_CHAR(F_Getlunar_Date(currentDate),&#39;MMDD&#39;))=107  OR   --农历春节
+          TO_NUMBER(TO_CHAR(F_Getlunar_Date(currentDate),&#39;MMDD&#39;))=106  OR   --农历春节
+          TO_NUMBER(TO_CHAR(F_Getlunar_Date(currentDate),&#39;MMDD&#39;))=105  OR   --农历春节        
+          TO_NUMBER(TO_CHAR(F_Getlunar_Date(currentDate),&#39;MMDD&#39;))=104  OR   --农历春节
+          TO_NUMBER(TO_CHAR(F_Getlunar_Date(currentDate),&#39;MMDD&#39;))=103  OR   --农历春节
+          TO_NUMBER(TO_CHAR(F_Getlunar_Date(currentDate),&#39;MMDD&#39;))=102  OR   --农历春节
+          TO_NUMBER(TO_CHAR(F_Getlunar_Date(currentDate),&#39;MMDD&#39;))=101  OR   --农历春节
+          TO_NUMBER(TO_CHAR(F_Getlunar_Date(currentDate),&#39;MMDD&#39;))=1230  OR   --农历春节       
+          TO_NUMBER(TO_CHAR(F_Getlunar_Date(currentDate),&#39;MMDD&#39;))=1229  OR   --农历春节
+          TO_NUMBER(TO_CHAR(F_Getlunar_Date(currentDate),&#39;MMDD&#39;))=1228  OR   --农历春节
+          TO_NUMBER(TO_CHAR(F_Getlunar_Date(currentDate),&#39;MMDD&#39;))=1227  OR   --农历春节
+
+          TO_NUMBER(TO_CHAR(F_Getlunar_Date(currentDate),&#39;MMDD&#39;))=815  OR   --农历中秋节
+          TO_NUMBER(TO_CHAR(F_Getlunar_Date(currentDate),&#39;MMDD&#39;))=505  OR   --农历端午节
+          TO_NUMBER(TO_CHAR(F_Getlunar_Date(currentDate),&#39;MMDD&#39;))=1227    --农历春节    
+       THEN
+          v_ISHOLIDAY :=&#39;是&#39;;    
+          v_ISLAWHOLIDAY :=&#39;是&#39;;   
+       END IF;      
+    
+    
+        BEGIN
+                   INSERT INTO DW_DIM_DATE (
+               DATEID, CALDATE, CALYEAR, 
+               CALMONTH, CALDAY, CALHALFYEAR, 
+               CALQUARTER, CALWEEK, CAL10DAYS, 
+               CALYYYYMM, WEEKDAY, STATYEAR, 
+               STATMONTH, STATDAY, STATYYYYMM, 
+               ISSTATDAY, ISHOLIDAY, ISLAWHOLIDAY, 
+               STATHALFYEAR, STATQUARTER) 
+                   VALUES (TO_NUMBER(TO_CHAR(currentDate,&#39;YYYYMMDD&#39;)) ,currentDate ,TO_NUMBER(TO_CHAR(currentDate,&#39;YYYY&#39;)) ,
+               TO_NUMBER(TO_CHAR(currentDate,&#39;MM&#39;)) ,TO_NUMBER(TO_CHAR(currentDate,&#39;DD&#39;)) ,v_CalHalfYear ,
+               v_CALQUARTER ,TO_NUMBER(TO_CHAR(currentDate,&#39;WW&#39;)) ,v_CAL10DAYS ,
+                TO_NUMBER(TO_CHAR(currentDate,&#39;YYYYMM&#39;)),DECODE(TO_NUMBER(TO_CHAR(currentDate,&#39;D&#39;)),2,&#39;星期一&#39;,3,&#39;星期二&#39;,4,&#39;星期三&#39;,5,&#39;星期四&#39;,6,&#39;星期五&#39;,7,&#39;星期六&#39;,&#39;星期日&#39;) ,TO_NUMBER(TO_CHAR(currentDate,&#39;YYYY&#39;)),
+                 TO_NUMBER(TO_CHAR(currentDate,&#39;MM&#39;)) ,TO_NUMBER(TO_CHAR(currentDate,&#39;DD&#39;)) ,TO_NUMBER(TO_CHAR(currentDate,&#39;YYYYMM&#39;)) ,
+                CASE WHEN TO_NUMBER(TO_CHAR(currentDate,&#39;DD&#39;))&amp;lt;&amp;gt;26 THEN &#39;否&#39; ELSE &#39;是&#39; END ,v_ISHOLIDAY , v_ISLAWHOLIDAY  ,
+                v_StatHalfYear, v_STATQUARTER );
+         EXCEPTION
+            WHEN DUP_VAL_ON_INDEX THEN
+                 NULL;
+            WHEN OTHERS THEN
+               RAISE_APPLICATION_ERROR(-20003,SQLERRM);
+         END;
+
+   END LOOP;
+   COMMIT;
+   EXCEPTION
+     WHEN OTHERS THEN
+       ROLLBACK;
+       RAISE_APPLICATION_ERROR(-20003,SQLERRM);
+/*     
+--******************************************************************************
+作者：王峰
+公司：长城数字软件
+发布日期：2005－1-6
+联系电话：887669825-862
+--*******************************************************************************
+*/
+END Pr_Dw_Dim_Date_Data_Gen;
+/
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;二-给工作量事实表插入数据&#34;&gt;二、给工作量事实表插入数据&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;CREATE OR REPLACE PROCEDURE pr_dw_fact_workloadbyday (
+   currentyyyymmdd   NUMBER                                         --开始日期
+)
+AS
+   currentdate              DATE;                                  --循环日期
+   v_projectid              NUMBER;                                  --项目ID
+   v_staffaccount           VARCHAR2 (32);                         --员工帐号
+   v_numberofpage1          NUMBER         := 0;
+   v_numberofpage2          NUMBER         := 0;
+   v_numberofpage3          NUMBER         := 0;
+   v_numberofinterface1     NUMBER         := 0;
+   v_numberofinterface2     NUMBER         := 0;
+   v_numberofinterface3     NUMBER         := 0;
+   v_numbersofalltask       NUMBER         := 0;
+   v_numbersofoverduetask   NUMBER         := 0;
+   v_hoursforplan           NUMBER (10, 2) := 0;
+   v_hoursoffact            NUMBER (10, 2) := 0;
+
+   CURSOR c2
+   IS
+      SELECT staffname, projectname, assignee
+        FROM dw_fact_workload
+       WHERE dateid = TO_NUMBER (TO_CHAR (currentdate - 1, &#39;YYYYMMDD&#39;));
+
+   c1rec                    c2%ROWTYPE;
+/******************************************************************************
+统计工作量
+******************************************************************************/
+BEGIN
+   BEGIN
+      currentdate := TO_DATE (TO_CHAR (currentyyyymmdd), &#39;YYYY-MM-DD&#39;);
+   EXCEPTION
+      WHEN OTHERS
+      THEN
+         RAISE;
+   END;
+
+   BEGIN
+--按天统计2010-3-8以来每个人的D类bug数到 DW_FACT_BUG_D表中  --2011年3月31日，根据小王锋的要求将统计低级bug的方式由统计bug类型为&amp;quot;D类&amp;quot;改为&amp;quot;X类&amp;quot;
+      INSERT INTO dw_fact_bug_d
+                  (dateid, staffname, bugtype, bugnum)
+         SELECT   dateid, NVL (bugcreator, &#39;不详&#39;) bugcreator, bugtype,
+                  COUNT (*) bugnum
+             FROM (SELECT TO_NUMBER (TO_CHAR (currentdate - 1, &#39;YYYYMMDD&#39;)
+                                    ) dateid,
+                          issue.ID issue,
+                          (SELECT NAME
+                             FROM v_gds_user_from_hrmis
+                            WHERE empno = stringvalue) bugcreator,
+                          &#39;D类&#39; bugtype
+                     FROM (SELECT *
+                             FROM customfieldvalue
+                            WHERE customfield = 10061) customfieldvalue,
+                          issue,
+                          (SELECT pkey, os_currentstep.status,
+                                  os_currentstep.start_date
+                             FROM issue, os_currentstep, customfieldvalue
+                            WHERE issuestatus = 6
+                              AND os_currentstep.entry_id =
+                                                         issue.workflow_id
+                              AND issue.ID = customfieldvalue.issue
+                              AND customfieldvalue.customfield = &#39;10060&#39;
+                              AND created &amp;gt;
+                                          TO_DATE (&#39;2010-03-08&#39;, &#39;YYYY-MM-DD&#39;)
+                              AND customfieldvalue.stringvalue = &#39;X类&#39;) hadclosedissue
+                    WHERE issue.pkey = hadclosedissue.pkey
+                      AND hadclosedissue.start_date &amp;gt;=
+                             TO_DATE (   TO_CHAR (currentdate - 1,
+                                                  &#39;YYYY-MM-DD&#39;
+                                                 )
+                                      || &#39; 00:00:00&#39;,
+                                      &#39;YYYY-MM-DD HH24:MI:SS&#39;
+                                     )
+                      AND hadclosedissue.start_date &amp;lt;
+                             TO_DATE (   TO_CHAR (currentdate - 1,
+                                                  &#39;YYYY-MM-DD&#39;
+                                                 )
+                                      || &#39; 23:59:59&#39;,
+                                      &#39;YYYY-MM-DD HH24:MI:SS&#39;
+                                     )
+                      AND issue.ID = customfieldvalue.issue(+))
+            WHERE bugtype IS NOT NULL
+         GROUP BY dateid, bugcreator, bugtype;
+   END;
+
+   BEGIN                         --按天统计每个人的各类bug数到 DW_FACT_BUG表中
+      INSERT INTO dw_fact_bug
+                  (dateid, staffname, bugtype, bugnum)
+         SELECT   dateid, NVL (bugcreator, &#39;不详&#39;) bugcreator, bugtype,
+                  COUNT (*) bugnum
+             FROM (SELECT TO_NUMBER (TO_CHAR (currentdate - 1, &#39;YYYYMMDD&#39;)
+                                    ) dateid,
+                          customfieldvalue.issue,
+                          (SELECT NAME
+                             FROM v_gds_user_from_hrmis
+                            WHERE empno = stringvalue) bugcreator,
+                          (SELECT stringvalue
+                             FROM customfieldvalue
+                            WHERE issue = issue.ID
+                              AND customfieldvalue.customfield = 10060)
+                                                                      bugtype
+                     FROM customfieldvalue,
+                          issue,
+                          (SELECT pkey, os_currentstep.status,
+                                  os_currentstep.start_date
+                             FROM issue, os_currentstep
+                            WHERE issuestatus = 6
+                              AND os_currentstep.entry_id =
+                                                         issue.workflow_id) hadclosedissue
+                    WHERE issue.pkey = hadclosedissue.pkey
+                      AND hadclosedissue.start_date &amp;gt;=
+                             TO_DATE (   TO_CHAR (currentdate - 1,
+                                                  &#39;YYYY-MM-DD&#39;
+                                                 )
+                                      || &#39; 00:00:00&#39;,
+                                      &#39;YYYY-MM-DD HH24:MI:SS&#39;
+                                     )
+                      AND hadclosedissue.start_date &amp;lt;
+                             TO_DATE (   TO_CHAR (currentdate - 1,
+                                                  &#39;YYYY-MM-DD&#39;
+                                                 )
+                                      || &#39; 23:59:59&#39;,
+                                      &#39;YYYY-MM-DD HH24:MI:SS&#39;
+                                     )
+                      AND issue.ID = customfieldvalue.issue
+                      AND customfieldvalue.customfield = 10061)
+            WHERE bugtype IS NOT NULL
+         GROUP BY dateid, bugcreator, bugtype;
+   EXCEPTION
+      WHEN OTHERS
+      THEN
+         NULL;
+   END;                   --end ---按天统计每个人的各类bug数到 DW_FACT_BUG表中
+
+   BEGIN            --按天统计每个项目的各类bug数到 DW_FACT_BUG_BY_PROJECT表中
+      INSERT INTO dw_fact_bug_by_project
+                  (dateid, projectname, bugtype, bugnum)
+         SELECT   dateid, projectname, bugtype, COUNT (*) bugnum
+             FROM (SELECT TO_NUMBER (TO_CHAR (currentdate - 1, &#39;YYYYMMDD&#39;)
+                                    ) dateid,
+                          customfieldvalue.issue,
+                          (SELECT pname
+                             FROM project
+                            WHERE ID = issue.project) projectname,
+                          (SELECT stringvalue
+                             FROM customfieldvalue
+                            WHERE issue = issue.ID
+                              AND customfieldvalue.customfield = 10060)
+                                                                      bugtype
+                     FROM customfieldvalue,
+                          issue,
+                          (SELECT pkey, os_currentstep.status,
+                                  os_currentstep.start_date
+                             FROM issue, os_currentstep
+                            WHERE issuestatus = 6
+                              AND os_currentstep.entry_id =
+                                                         issue.workflow_id) hadclosedissue
+                    WHERE issue.pkey = hadclosedissue.pkey
+                      AND hadclosedissue.start_date &amp;gt;=
+                             TO_DATE (   TO_CHAR (currentdate - 1,
+                                                  &#39;YYYY-MM-DD&#39;
+                                                 )
+                                      || &#39; 00:00:00&#39;,
+                                      &#39;YYYY-MM-DD HH24:MI:SS&#39;
+                                     )
+                      AND hadclosedissue.start_date &amp;lt;
+                             TO_DATE (   TO_CHAR (currentdate - 1,
+                                                  &#39;YYYY-MM-DD&#39;
+                                                 )
+                                      || &#39; 23:59:59&#39;,
+                                      &#39;YYYY-MM-DD HH24:MI:SS&#39;
+                                     )
+                      AND issue.ID = customfieldvalue.issue
+                      AND customfieldvalue.customfield = 10061)
+            WHERE bugtype IS NOT NULL
+         GROUP BY dateid, projectname, bugtype;
+   EXCEPTION
+      WHEN OTHERS
+      THEN
+         NULL;
+   END;    --end -----按天统计每个项目的各类bug数到 DW_FACT_BUG_BY_PROJECT表中
+
+   BEGIN
+      --1、统计任务点数
+      INSERT INTO dw_fact_workload
+                  (dateid, staffname, projectname, staffrole, staffdept,
+                   staffgender, pointnumbersoftask, numberofpage1,
+                   numberofpage2, numberofpage3, umbersofinterface1,
+                   umbersofinterface2, umbersofinterface3, numbersofalltask,
+                   numbersofoverduetask, hoursforplan, hoursoffact,
+                   pointnumbers_businesstrip_task, assignee)
+         SELECT TO_NUMBER (TO_CHAR (currentdate - 1, &#39;YYYYMMDD&#39;)),
+                user.fullname,
+                NVL ((SELECT pname
+                        FROM project
+                       WHERE ID = stat.project), &#39;不详&#39;) pname, &#39;开发人员&#39;,
+                &#39;开发部&#39;, &#39;男&#39;, NVL (stat.workload, 0) nvl_workload, 0, 0, 0,
+                0, 0, 0, 0, 0, 0, 0, NVL (businesstrip_numbervalue, 0),
+                stat.assignee
+           FROM (SELECT   assignee, issue.project,
+                          SUM (numbervalue) workload
+                     FROM (SELECT *
+                             FROM customfieldvalue
+                            WHERE customfield = 10050) customfieldvalue,
+                          issue,
+                          (SELECT pkey, os_currentstep.status,
+                                  os_currentstep.start_date
+                             FROM issue, os_currentstep
+                            WHERE (issuestatus = 6 OR issuestatus = 5)
+                              AND os_currentstep.entry_id =
+                                                         issue.workflow_id) hadclosedissue
+                    WHERE issue.pkey = hadclosedissue.pkey(+)
+                      AND hadclosedissue.start_date &amp;gt;=
+                             TO_DATE (   TO_CHAR (currentdate - 1,
+                                                  &#39;YYYY-MM-DD&#39;
+                                                 )
+                                      || &#39; 00:00:00&#39;,
+                                      &#39;YYYY-MM-DD HH24:MI:SS&#39;
+                                     )
+                      AND hadclosedissue.start_date &amp;lt;
+                             TO_DATE (   TO_CHAR (currentdate - 1,
+                                                  &#39;YYYY-MM-DD&#39;
+                                                 )
+                                      || &#39; 23:59:59&#39;,
+                                      &#39;YYYY-MM-DD HH24:MI:SS&#39;
+                                     )
+                      AND issue.ID = customfieldvalue.issue
+                 GROUP BY assignee, issue.project) stat,
+                
+                ---added by zhangyp 20120409  计算出差点数 运维组考核使用
+                (SELECT   assignee, issue.project,
+                          SUM (numbervalue) businesstrip_numbervalue
+                     FROM customfieldvalue,
+                          issue,
+                          (SELECT pkey, os_currentstep.status,
+                                  os_currentstep.start_date
+                             FROM issue, os_currentstep
+                            WHERE (issuestatus = 6 OR issuestatus = 5)
+                              AND os_currentstep.entry_id =
+                                                         issue.workflow_id) hadclosedissue
+                    WHERE issue.pkey = hadclosedissue.pkey
+                      AND summary LIKE &#39;【出差】%&#39;
+                      AND hadclosedissue.start_date &amp;gt;=
+                             TO_DATE (   TO_CHAR (currentdate - 1,
+                                                  &#39;YYYY-MM-DD&#39;
+                                                 )
+                                      || &#39; 00:00:00&#39;,
+                                      &#39;YYYY-MM-DD HH24:MI:SS&#39;
+                                     )
+                      AND hadclosedissue.start_date &amp;lt;
+                             TO_DATE (   TO_CHAR (currentdate - 1,
+                                                  &#39;YYYY-MM-DD&#39;
+                                                 )
+                                      || &#39; 23:59:59&#39;,
+                                      &#39;YYYY-MM-DD HH24:MI:SS&#39;
+                                     )
+                      AND issue.ID = customfieldvalue.issue
+                      AND customfieldvalue.customfield = 10050
+                 GROUP BY assignee, issue.project) businesstrip_stat,
+                
+                ---added over by zhangyp 20120409  计算出差点数 运维组考核使用
+                (SELECT c.ID, c.username, a.propertyvalue fullname
+                   FROM propertyentry b, propertystring a, userbase c
+                  WHERE a.ID = b.ID
+                    AND b.property_key = &#39;fullName&#39;
+                    AND b.entity_id = c.ID) user
+          WHERE stat.project = businesstrip_stat.project(+)
+            AND stat.assignee = businesstrip_stat.assignee(+)
+            AND stat.assignee = user.username
+            AND stat.project IS NOT NULL;
+   EXCEPTION
+      WHEN OTHERS
+      THEN
+         DBMS_OUTPUT.put_line (SQLERRM);
+   END;
+
+   --2开始统计页面及接口数据
+   BEGIN
+      OPEN c2;
+
+      LOOP
+         FETCH c2
+          INTO c1rec;
+
+         &amp;lt;&amp;lt;nextstep&amp;gt;&amp;gt;
+         EXIT WHEN c2%NOTFOUND;
+
+         BEGIN
+            SELECT ID
+              INTO v_projectid
+              FROM project
+             WHERE pname = c1rec.projectname AND ROWNUM = 1;      --得到项目ID
+
+            SELECT c.username
+              INTO v_staffaccount                               --得到员工帐号
+              FROM propertyentry b, propertystring a, userbase c
+             WHERE a.ID = b.ID
+               AND b.property_key = &#39;fullName&#39;
+               AND b.entity_id = c.ID
+               AND a.propertyvalue = c1rec.staffname
+               AND ROWNUM = 1;
+         EXCEPTION
+            WHEN OTHERS
+            THEN
+               GOTO nextstep;
+         END;
+
+      /*closed by zhangyp 20120409
+            SELECT  SUM(numbervalue) INTO v_numberOFPage1      --1统计某人在某个项目上某天完成的简单页面个数
+            FROM CUSTOMFIELDVALUE ,ISSUE,
+                 (SELECT pKey, OS_CURRENTSTEP.STATUS, OS_CURRENTSTEP.START_DATE
+                  FROM ISSUE, OS_CURRENTSTEP
+                  WHERE ISSUESTATUS = 6 AND
+                        OS_CURRENTSTEP.ENTRY_ID = ISSUE.WORKFLOW_ID
+                  ) hadClosedIssue
+            WHERE ISSUE.pKey=hadClosedIssue.pKey AND
+                  hadClosedIssue.START_DATE&amp;gt;=TO_DATE(TO_CHAR(currentDate -1,&#39;YYYY-MM-DD&#39;)||&#39; 00:00:00&#39;,&#39;YYYY-MM-DD HH24:MI:SS&#39;) AND
+                  hadClosedIssue.START_DATE&amp;lt;TO_DATE(TO_CHAR(currentDate -1,&#39;YYYY-MM-DD&#39;)||&#39; 23:59:59&#39;,&#39;YYYY-MM-DD HH24:MI:SS&#39;) AND
+                  ISSUE.ID=CUSTOMFIELDVALUE.issue AND
+                 ISSUE.PROJECT=V_PROJECTID AND
+                 ISSUE.ASSIGNEE=V_STAFFACCOUNT AND
+                  CUSTOMFIELDVALUE.CUSTOMFIELD=10002;
+
+            SELECT  SUM(numbervalue) INTO v_numberOFPage2     --2统计某人在某个项目上某天完成的普通页面个数
+            FROM CUSTOMFIELDVALUE ,ISSUE,
+                 (SELECT pKey, OS_CURRENTSTEP.STATUS, OS_CURRENTSTEP.START_DATE
+                  FROM ISSUE, OS_CURRENTSTEP
+                  WHERE ISSUESTATUS = 6 AND
+                        OS_CURRENTSTEP.ENTRY_ID = ISSUE.WORKFLOW_ID
+                  ) hadClosedIssue
+            WHERE ISSUE.pKey=hadClosedIssue.pKey AND
+                  hadClosedIssue.START_DATE&amp;gt;=TO_DATE(TO_CHAR(currentDate -1,&#39;YYYY-MM-DD&#39;)||&#39; 00:00:00&#39;,&#39;YYYY-MM-DD HH24:MI:SS&#39;) AND
+                  hadClosedIssue.START_DATE&amp;lt;TO_DATE(TO_CHAR(currentDate -1,&#39;YYYY-MM-DD&#39;)||&#39; 23:59:59&#39;,&#39;YYYY-MM-DD HH24:MI:SS&#39;) AND
+                  ISSUE.ID=CUSTOMFIELDVALUE.issue AND
+                 ISSUE.PROJECT=V_PROJECTID AND
+                 ISSUE.ASSIGNEE=V_STAFFACCOUNT AND
+                  CUSTOMFIELDVALUE.CUSTOMFIELD=10001;
+
+            SELECT  SUM(numbervalue) INTO v_numberOFPage3     --3统计某人在某个项目上某天完成的复杂页面个数
+            FROM CUSTOMFIELDVALUE ,ISSUE,
+                 (SELECT pKey, OS_CURRENTSTEP.STATUS, OS_CURRENTSTEP.START_DATE
+                  FROM ISSUE, OS_CURRENTSTEP
+                  WHERE ISSUESTATUS = 6 AND
+                        OS_CURRENTSTEP.ENTRY_ID = ISSUE.WORKFLOW_ID
+                  ) hadClosedIssue
+            WHERE ISSUE.pKey=hadClosedIssue.pKey AND
+                  hadClosedIssue.START_DATE&amp;gt;=TO_DATE(TO_CHAR(currentDate -1,&#39;YYYY-MM-DD&#39;)||&#39; 00:00:00&#39;,&#39;YYYY-MM-DD HH24:MI:SS&#39;) AND
+                  hadClosedIssue.START_DATE&amp;lt;TO_DATE(TO_CHAR(currentDate -1,&#39;YYYY-MM-DD&#39;)||&#39; 23:59:59&#39;,&#39;YYYY-MM-DD HH24:MI:SS&#39;) AND
+                  ISSUE.ID=CUSTOMFIELDVALUE.issue AND
+                 ISSUE.PROJECT=V_PROJECTID AND
+                 ISSUE.ASSIGNEE=V_STAFFACCOUNT AND
+                  CUSTOMFIELDVALUE.CUSTOMFIELD=10000;
+
+            SELECT  SUM(numbervalue) INTO v_numberOFInterface1      --4统计某人在某个项目上某天完成的简单接口个数
+            FROM CUSTOMFIELDVALUE ,ISSUE,
+                 (SELECT pKey, OS_CURRENTSTEP.STATUS, OS_CURRENTSTEP.START_DATE
+                  FROM ISSUE, OS_CURRENTSTEP
+                  WHERE ISSUESTATUS = 6 AND
+                        OS_CURRENTSTEP.ENTRY_ID = ISSUE.WORKFLOW_ID
+                  ) hadClosedIssue
+            WHERE ISSUE.pKey=hadClosedIssue.pKey AND
+                  hadClosedIssue.START_DATE&amp;gt;=TO_DATE(TO_CHAR(currentDate -1,&#39;YYYY-MM-DD&#39;)||&#39; 00:00:00&#39;,&#39;YYYY-MM-DD HH24:MI:SS&#39;) AND
+                  hadClosedIssue.START_DATE&amp;lt;TO_DATE(TO_CHAR(currentDate -1,&#39;YYYY-MM-DD&#39;)||&#39; 23:59:59&#39;,&#39;YYYY-MM-DD HH24:MI:SS&#39;) AND
+                  ISSUE.ID=CUSTOMFIELDVALUE.issue AND
+                 ISSUE.PROJECT=V_PROJECTID AND
+                 ISSUE.ASSIGNEE=V_STAFFACCOUNT AND
+                  CUSTOMFIELDVALUE.CUSTOMFIELD=10005;
+
+            SELECT  SUM(numbervalue) INTO v_numberOFInterface2     --5统计某人在某个项目上某天完成的普通接口个数
+            FROM CUSTOMFIELDVALUE ,ISSUE,
+                 (SELECT pKey, OS_CURRENTSTEP.STATUS, OS_CURRENTSTEP.START_DATE
+                  FROM ISSUE, OS_CURRENTSTEP
+                  WHERE ISSUESTATUS = 6 AND
+                        OS_CURRENTSTEP.ENTRY_ID = ISSUE.WORKFLOW_ID
+                  ) hadClosedIssue
+            WHERE ISSUE.pKey=hadClosedIssue.pKey AND
+                  hadClosedIssue.START_DATE&amp;gt;=TO_DATE(TO_CHAR(currentDate -1,&#39;YYYY-MM-DD&#39;)||&#39; 00:00:00&#39;,&#39;YYYY-MM-DD HH24:MI:SS&#39;) AND
+                  hadClosedIssue.START_DATE&amp;lt;TO_DATE(TO_CHAR(currentDate -1,&#39;YYYY-MM-DD&#39;)||&#39; 23:59:59&#39;,&#39;YYYY-MM-DD HH24:MI:SS&#39;) AND
+                  ISSUE.ID=CUSTOMFIELDVALUE.issue AND
+                 ISSUE.PROJECT=V_PROJECTID AND
+                 ISSUE.ASSIGNEE=V_STAFFACCOUNT AND
+                  CUSTOMFIELDVALUE.CUSTOMFIELD=10004;
+
+            SELECT  SUM(numbervalue) INTO v_numberOFInterface3     --6统计某人在某个项目上某天完成的复杂接口个数
+            FROM CUSTOMFIELDVALUE ,ISSUE,
+                 (SELECT pKey, OS_CURRENTSTEP.STATUS, OS_CURRENTSTEP.START_DATE
+                  FROM ISSUE, OS_CURRENTSTEP
+                  WHERE ISSUESTATUS = 6 AND
+                        OS_CURRENTSTEP.ENTRY_ID = ISSUE.WORKFLOW_ID
+                  ) hadClosedIssue
+            WHERE ISSUE.pKey=hadClosedIssue.pKey AND
+                  hadClosedIssue.START_DATE&amp;gt;=TO_DATE(TO_CHAR(currentDate -1,&#39;YYYY-MM-DD&#39;)||&#39; 00:00:00&#39;,&#39;YYYY-MM-DD HH24:MI:SS&#39;) AND
+                  hadClosedIssue.START_DATE&amp;lt;TO_DATE(TO_CHAR(currentDate -1,&#39;YYYY-MM-DD&#39;)||&#39; 23:59:59&#39;,&#39;YYYY-MM-DD HH24:MI:SS&#39;) AND
+                  ISSUE.ID=CUSTOMFIELDVALUE.issue AND
+                 ISSUE.PROJECT=V_PROJECTID AND
+                 ISSUE.ASSIGNEE=V_STAFFACCOUNT AND
+                  CUSTOMFIELDVALUE.CUSTOMFIELD=10003;
+
+----closed by zhangyp 20120409*/------------------------------以下四个指标待求-----------------------------------------------------------------
+            --2.1V_NUMBERSOFALLTASK
+         SELECT COUNT (*)
+           INTO v_numbersofalltask
+           --6统计某人在某个项目上某天完成的任务及子任务个数（逾期和按期的都算）
+         FROM   issue,
+                (SELECT pkey, os_currentstep.status,
+                        os_currentstep.start_date
+                   FROM issue, os_currentstep
+                  WHERE (issuestatus = 6 OR issuestatus = 5)
+                    AND os_currentstep.entry_id = issue.workflow_id) hadclosedissue
+          WHERE issue.pkey = hadclosedissue.pkey
+            AND hadclosedissue.start_date &amp;gt;=
+                   TO_DATE (   TO_CHAR (currentdate - 1, &#39;YYYY-MM-DD&#39;)
+                            || &#39; 00:00:00&#39;,
+                            &#39;YYYY-MM-DD HH24:MI:SS&#39;
+                           )
+            AND hadclosedissue.start_date &amp;lt;
+                   TO_DATE (   TO_CHAR (currentdate - 1, &#39;YYYY-MM-DD&#39;)
+                            || &#39; 23:59:59&#39;,
+                            &#39;YYYY-MM-DD HH24:MI:SS&#39;
+                           )
+            AND issue.project = v_projectid
+            AND issue.assignee = v_staffaccount;
+
+         --2.2V_NUMBERSOFOVERDUETASK
+         SELECT COUNT (*)
+           INTO v_numbersofoverduetask
+           --6统计某人在某个项目上某天完成的任务及子任务个数（只算逾期的）
+         FROM   issue,
+                (SELECT pkey, os_currentstep.status,
+                        os_currentstep.start_date
+                   FROM issue, os_currentstep
+                  WHERE (issuestatus = 6 OR issuestatus = 5)
+                    AND os_currentstep.entry_id = issue.workflow_id) hadclosedissue
+          WHERE issue.pkey = hadclosedissue.pkey
+            AND hadclosedissue.start_date &amp;gt;=
+                   TO_DATE (   TO_CHAR (currentdate - 1, &#39;YYYY-MM-DD&#39;)
+                            || &#39; 00:00:00&#39;,
+                            &#39;YYYY-MM-DD HH24:MI:SS&#39;
+                           )
+            AND hadclosedissue.start_date &amp;lt;
+                   TO_DATE (   TO_CHAR (currentdate - 1, &#39;YYYY-MM-DD&#39;)
+                            || &#39; 23:59:59&#39;,
+                            &#39;YYYY-MM-DD HH24:MI:SS&#39;
+                           )
+            AND issue.duedate IS NOT NULL
+            AND hadclosedissue.start_date &amp;gt;
+                   TO_DATE (   TO_CHAR (issue.duedate, &#39;YYYY-MM-DD&#39;)
+                            || &#39; 23:59:59&#39;,
+                            &#39;YYYY-MM-DD HH24:MI:SS&#39;
+                           )
+            AND issue.project = v_projectid
+            AND issue.assignee = v_staffaccount;
+
+         --2.3V_HOURSFORPLAN
+         SELECT ROUND (SUM (timeoriginalestimate) / 3600),
+                ROUND (SUM (timespent) / 3600)
+           INTO v_hoursforplan,
+                v_hoursoffact
+           --6统计某人在某个项目上某天完成的任务及子任务的总计估算时间和实际工作时间
+         FROM   issue,
+                (SELECT pkey, os_currentstep.status,
+                        os_currentstep.start_date
+                   FROM issue, os_currentstep
+                  WHERE (issuestatus = 6 OR issuestatus = 5)
+                    AND os_currentstep.entry_id = issue.workflow_id) hadclosedissue
+          WHERE issue.pkey = hadclosedissue.pkey
+            AND hadclosedissue.start_date &amp;gt;=
+                   TO_DATE (   TO_CHAR (currentdate - 1, &#39;YYYY-MM-DD&#39;)
+                            || &#39; 00:00:00&#39;,
+                            &#39;YYYY-MM-DD HH24:MI:SS&#39;
+                           )
+            AND hadclosedissue.start_date &amp;lt;
+                   TO_DATE (   TO_CHAR (currentdate - 1, &#39;YYYY-MM-DD&#39;)
+                            || &#39; 23:59:59&#39;,
+                            &#39;YYYY-MM-DD HH24:MI:SS&#39;
+                           )
+            AND issue.project = v_projectid
+            AND issue.assignee = v_staffaccount;
+
+-----99更新统计指标---------------------------------------------------------------------------------------------
+         UPDATE dw_fact_workload
+            SET numberofpage1 = NVL (v_numberofpage1, 0),
+                numberofpage2 = NVL (v_numberofpage2, 0),
+                numberofpage3 = NVL (v_numberofpage3, 0),
+                umbersofinterface1 = NVL (v_numberofinterface1, 0),
+                umbersofinterface2 = NVL (v_numberofinterface2, 0),
+                umbersofinterface3 = NVL (v_numberofinterface3, 0),
+                numbersofalltask = NVL (v_numbersofalltask, 0),
+                numbersofoverduetask = NVL (v_numbersofoverduetask, 0),
+                hoursforplan = NVL (v_hoursforplan, 0),
+                hoursoffact = NVL (v_hoursoffact, 0)
+          WHERE dateid = TO_NUMBER (TO_CHAR (currentdate - 1, &#39;YYYYMMDD&#39;))
+            AND staffname = c1rec.staffname
+            AND projectname = c1rec.projectname
+            AND assignee = c1rec.assignee;
+      END LOOP;
+
+      CLOSE c2;
+   END;
+
+   COMMIT;
+   --pr_mail_for_no_worklod;
+EXCEPTION
+   WHEN OTHERS
+   THEN
+      ROLLBACK;
+      raise_application_error (-20003, SQLERRM);
+/*
+--******************************************************************************
+作者：王峰
+公司：长城数字软件
+发布日期：2005－1-6
+联系电话：887669825-862
+
+SELECT SUM(NUMBEROFPAGE1), SUM(NUMBEROFPAGE2),
+   SUM(NUMBEROFPAGE3), SUM(UMBERSOFINTERFACE1), SUM(UMBERSOFINTERFACE2),
+   SUM(UMBERSOFINTERFACE3)
+FROM DW_FACT_WORKLOAD
+--*******************************************************************************
+*/
+END pr_dw_fact_workloadbyday;
+/
+
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;3-利用job来调度该存储过程将任务平台统计数据生成为xml文件&#34;&gt;3、利用job来调度该存储过程将任务平台统计数据生成为xml文件.&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;CREATE OR REPLACE PROCEDURE .Pr_Xml_Data_File_Gen IS
+/******************************************************************************
+利用job来调度该存储过程将任务平台统计数据生成为xml文件，以便门户调用
+作者：王峰
+编写时间：2008-11-21
+******************************************************************************/
+     
+     
+     workload_file_30 VARCHAR2(128) :=&#39;D:\SSSS\ABDGF\OA\StatDate\workload_file_30.xml&#39;;
+     personRow v_workload_last30day%ROWTYPE;      --获取游标的行变量
+     TYPE person_cur IS REF CURSOR; --自定义REF游标
+     cur person_cur;    
+     tempSql VARCHAR2(500) := &#39;SELECT &amp;quot;员工姓名&amp;quot;, &amp;quot;简单页面数&amp;quot;, &amp;quot;普通页面数&amp;quot;,    &amp;quot;复杂页面数&amp;quot;, &amp;quot;简单接口数&amp;quot;, &amp;quot;普通接口数&amp;quot;,    &amp;quot;复杂接口数&amp;quot;, &amp;quot;任务个数&amp;quot;, &amp;quot;逾期任务个数&amp;quot;,    &amp;quot;计划工时&amp;quot;, &amp;quot;实际工时&amp;quot;, &amp;quot;折算后编码工作点数&amp;quot;,   &amp;quot;其它工作点数&amp;quot;, &amp;quot;公司最低&amp;quot;, &amp;quot;公司最高&amp;quot;,   ROUND(&amp;quot;公司平均&amp;quot;) 公司平均, &amp;quot;A类BUG数&amp;quot;, &amp;quot;B类BUG数&amp;quot;,   &amp;quot;C类BUG数&amp;quot;, &amp;quot;D类BUG数&amp;quot;, &amp;quot;E类BUG数&amp;quot;, &amp;quot;应得点数&amp;quot;, &amp;quot;扣除点数&amp;quot;, &amp;quot;合计点数&amp;quot;,&amp;quot;排名&amp;quot; FROM v_workload_last30day &#39;;  
+          --初始的查询语句
+     sqlWhereStr  VARCHAR2(500) :=&#39; &#39;;
+     sqlOrderByStr  VARCHAR2(500) :=&#39; order by &amp;quot;排名&amp;quot;&#39;;
+     doc xmlDom.DOMDocument := xmldom.newDOMDocument;        -- 创建文档对象
+     main_node xmlDom.DOMNode := xmldom.makeNode(doc);       -- 获得文档节点
+     root_elmt xmlDom.DOMElement:= xmldom.createElement(doc, &#39;统计数据&#39;);   -- 创建根元素
+     --==================================================
+     --以下定义元素
+     person_elmt xmlDom.DOMElement;      --定义PERSON元素
+     summary_elmt xmlDom.DOMElement;      --定义summary元素
+     details_elmt xmlDom.DOMElement;      --定义details元素
+     --==================================================
+     --以下定义节点
+     root_node xmlDom.DOMNode;   --定义统计数据节点
+     person_node xmlDom.DOMNode;   --定义PERSON节点
+     summary_node xmlDom.DOMNode;   --定义summary节点
+     details_node xmlDom.DOMNode;   --定义details节点
+     temp_node xmlDom.DOMNode;
+     --统计数据变量
+     v_point_min NUMBER :=0; --公司最低点
+     v_point_max NUMBER :=0; --公司最高点
+     v_point_avg NUMBER :=0; ----公司平均点数
+     v_gzlgsjd NUMBER :=0; ----工作量估算精度
+BEGIN
+     -- 向文档节点加入根节点:&amp;lt;统计数据&amp;gt;&amp;lt;/统计数据&amp;gt;
+     root_node := xmldom.appendChild(main_node, xmldom.makeNode(root_elmt));
+       --===========================================================================--
+       summary_elmt := xmldom.createElement(doc, &#39;摘要&#39;); --创建摘要元素
+       -- 向统计数据节点加入摘要节点&amp;lt;摘要&amp;gt;&amp;lt;/摘要&amp;gt;
+       summary_node := xmldom.appendChild(root_node, xmldom.makeNode(summary_elmt));
+       --===========================================================================--
+       --向摘要节点加入下列属性
+        xmlDom.SETATTRIBUTE(summary_elmt,&#39;标题&#39;,&#39;最近一个月工作量统计排名&#39;);
+        --得到统计摘要数据
+        SELECT &amp;quot;公司最低&amp;quot;,   &amp;quot;公司最高&amp;quot;, ROUND(&amp;quot;公司平均&amp;quot;) 公司平均 INTO v_point_min,v_point_max,v_point_avg FROM v_workload_last30day WHERE ROWNUM=1;
+        --写统计摘要数据到dom
+        xmlDom.SETATTRIBUTE(summary_elmt,&#39;公司最低&#39;,v_point_min);
+        xmlDom.SETATTRIBUTE(summary_elmt,&#39;公司最高&#39;,v_point_max);
+        xmlDom.SETATTRIBUTE(summary_elmt,&#39;公司平均&#39;,v_point_avg);
+        SELECT ROUND((100*(SUM(&amp;quot;实际工时&amp;quot;) - SUM(&amp;quot;计划工时&amp;quot;)))/SUM(&amp;quot;计划工时&amp;quot;)) 工作量估算精度   INTO  v_gzlgsjd FROM v_workload_last30day ;
+        xmlDom.SETATTRIBUTE(summary_elmt,&#39;工作量估算精度&#39;,v_gzlgsjd);
+       --===========================================================================--
+     --附加查询条件,准备得到统计明细数据
+       --===========================================================================--
+       details_elmt := xmldom.createElement(doc, &#39;统计明细&#39;); --创建摘要元素
+       -- 向统计数据节点加入统计明细节点&amp;lt;统计明细&amp;gt;&amp;lt;/统计明细&amp;gt;
+       details_node := xmldom.appendChild(root_node, xmldom.makeNode(details_elmt));
+       --===========================================================================--   
+     tempSql := tempSql||sqlWhereStr||sqlOrderByStr;
+     --打开游标
+     OPEN cur FOR tempSql;
+     --遍历游标
+     LOOP
+       FETCH cur INTO personRow;
+       EXIT WHEN cur%NOTFOUND;
+       --===========================================================================--
+       person_elmt := xmldom.createElement(doc, &#39;员工&#39;); --创建PERSON元素
+       -- 向PEOPLE节点加入PERSON节点&amp;lt;PERSON&amp;gt;&amp;lt;/PERSON&amp;gt;
+       person_node := xmldom.appendChild(details_node, xmldom.makeNode(person_elmt));
+       --===========================================================================--
+       --向PERSON节点加入属性下列属性
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;员工姓名&#39;,personRow.员工姓名);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;简单页面数&#39;,personRow.简单页面数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;普通页面数&#39;,personRow.普通页面数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;复杂页面数&#39;,personRow.复杂页面数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;简单接口数&#39;,personRow.简单接口数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;普通接口数&#39;,personRow.普通接口数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;复杂接口数&#39;,personRow.复杂接口数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;任务个数&#39;,personRow.任务个数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;逾期任务个数&#39;,personRow.逾期任务个数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;计划工时&#39;,personRow.计划工时);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;实际工时&#39;,personRow.实际工时);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;折算后编码工作点数&#39;,personRow.折算后编码工作点数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;其它工作点数&#39;,personRow.其它工作点数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;A类BUG数&#39;,personRow.A类BUG数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;B类BUG数&#39;,personRow.B类BUG数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;C类BUG数&#39;,personRow.C类BUG数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;D类BUG数&#39;,personRow.D类BUG数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;E类BUG数&#39;,personRow.E类BUG数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;应得点数&#39;,personRow.应得点数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;扣除点数&#39;,personRow.扣除点数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;合计点数&#39;,personRow.合计点数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;排名&#39;,personRow.排名); 
+       --===========================================================================--
+--        name_elmt := xmldom.createElement(doc, &#39;NAME&#39;);      --创建NAME元素
+--        --向PERSON节点加入子节点NAME
+--        name_node := xmldom.appendChild(person_node,xmlDom.makeNode(name_elmt));
+--        --向NAME节点加入文本
+--        temp_node := xmldom.appendChild(name_node , xmlDom.makeNode(xmldom.createTextNode(doc,personRow.NAME)));
+       --===========================================================================--
+     END LOOP;
+     CLOSE cur;
+     --写入硬盘
+     xmlDom.writeToFile(doc,workload_file_30,&#39;UTF-8&#39;);
+     
+   EXCEPTION
+    WHEN OTHERS THEN
+      DBMS_OUTPUT.PUT_LINE(SQLERRM);
+END Pr_Xml_Data_File_Gen;
+/
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;4-利用job来调度该存储过程将任务平台统计数据生成为xml文件&#34;&gt;4、利用job来调度该存储过程将任务平台统计数据生成为xml文件.&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;CREATE OR REPLACE PROCEDURE .Pr_Xml_Staff_Status_Today IS
+/******************************************************************************
+利用job来调度该存储过程将任务平台统计数据生成为xml文件
+作者：王峰
+编写时间：2008-11-21
+******************************************************************************/
+     workload_file_30 VARCHAR2(128) :=&#39;D:\WEB7895ll\ABCDE\OA\StatDate\staff_status_today.xml&#39;;
+     personRow v_staff_workstatus_today%ROWTYPE;      --获取游标的行变量
+     TYPE person_cur IS REF CURSOR; --自定义REF游标
+     cur person_cur;    
+     tempSql VARCHAR2(500) := &#39;SELECT &amp;quot;统计日期&amp;quot;, &amp;quot;员工&amp;quot;,&amp;quot;帐号&amp;quot;, &amp;quot;部门&amp;quot;,&amp;quot;部门编号&amp;quot;,&amp;quot;待解决任务数&amp;quot;,   &amp;quot;正在解决任务数&amp;quot;, &amp;quot;待解决的任务逾期天数合计&amp;quot;, &amp;quot;正在解决的任务逾期天数合计&amp;quot;,   &amp;quot;待解决的任务点数合计&amp;quot;, &amp;quot;待解决的任务工时合计&amp;quot;, &amp;quot;正在解决的任务点数合计&amp;quot;,   &amp;quot;正在解决的任务工时合计&amp;quot;, &amp;quot;正在解决的任务已花费工时合计&amp;quot;, &amp;quot;正在解决的任务完成百分比&amp;quot;,   &amp;quot;工作饱和状态&amp;quot; FROM v_staff_workstatus_today&#39;;  
+          --初始的查询语句
+     sqlWhereStr  VARCHAR2(500) :=&#39; &#39;;
+     sqlOrderByStr  VARCHAR2(500) :=&#39; order by 部门编号,排序 DESC ,员工&#39;;
+     doc xmlDom.DOMDocument := xmldom.newDOMDocument;        -- 创建文档对象
+     main_node xmlDom.DOMNode := xmldom.makeNode(doc);       -- 获得文档节点
+     root_elmt xmlDom.DOMElement:= xmldom.createElement(doc, &#39;统计数据&#39;);   -- 创建根元素
+     --==================================================
+     --以下定义元素
+     dep_elmt xmlDom.DOMElement;      --定义部门元素
+     person_elmt xmlDom.DOMElement;      --定义PERSON元素
+     summary_elmt xmlDom.DOMElement;      --定义summary元素
+     details_elmt xmlDom.DOMElement;      --定义details元素
+     --==================================================
+     --以下定义节点
+     root_node xmlDom.DOMNode;   --定义统计数据节点
+     dep_node xmlDom.DOMNode;   --定义部门节点
+     person_node xmlDom.DOMNode;   --定义PERSON节点
+     summary_node xmlDom.DOMNode;   --定义summary节点
+     details_node xmlDom.DOMNode;   --定义details节点
+     temp_node xmlDom.DOMNode;
+     --统计数据变量
+     v_point_min NUMBER :=0; --公司最低点
+     v_point_max NUMBER :=0; --公司最高点
+     v_point_avg NUMBER :=0; ----公司平均点数
+     
+     v_temp_dep varchar2(32) :=&#39;a&#39;;  --临时存放正在写入的人员的部门，主要是为了将同部门的人放到一块
+BEGIN
+     -- 向文档节点加入根节点:&amp;lt;统计数据&amp;gt;&amp;lt;/统计数据&amp;gt;
+     root_node := xmldom.appendChild(main_node, xmldom.makeNode(root_elmt));
+       --===========================================================================--
+       summary_elmt := xmldom.createElement(doc, &#39;摘要&#39;); --创建摘要元素
+       -- 向统计数据节点加入摘要节点&amp;lt;摘要&amp;gt;&amp;lt;/摘要&amp;gt;
+       summary_node := xmldom.appendChild(root_node, xmldom.makeNode(summary_elmt));
+       --===========================================================================--
+       --向摘要节点加入下列属性
+        xmlDom.SETATTRIBUTE(summary_elmt,&#39;标题&#39;,&#39;今日员工工作饱和状态统计&#39;);
+       --===========================================================================--
+     --附加查询条件,准备得到统计明细数据
+       --===========================================================================--
+       details_elmt := xmldom.createElement(doc, &#39;统计明细&#39;); --创建摘要元素
+       -- 向统计数据节点加入统计明细节点&amp;lt;统计明细&amp;gt;&amp;lt;/统计明细&amp;gt;
+       details_node := xmldom.appendChild(root_node, xmldom.makeNode(details_elmt));
+       --===========================================================================--   
+     tempSql := tempSql||sqlWhereStr||sqlOrderByStr;
+     --打开游标
+     OPEN cur FOR tempSql;
+     --遍历游标
+     LOOP
+       FETCH cur INTO personRow;
+       EXIT WHEN cur%NOTFOUND;
+       
+       --写入部门节点
+       if personRow.部门!=v_temp_dep then
+           --===========================================================================--
+           dep_elmt := xmldom.createElement(doc, &#39;部门&#39;); --创建部门元素
+           -- 向部门元素加入部门节点
+           dep_node := xmldom.appendChild(details_node, xmldom.makeNode(dep_elmt));
+           xmlDom.SETATTRIBUTE(dep_elmt,&#39;name&#39;,personRow.部门);
+           --===========================================================================--
+            v_temp_dep:=personRow.部门;
+       end if;
+       
+       --===========================================================================--
+       person_elmt := xmldom.createElement(doc, &#39;员工&#39;); --创建PERSON元素
+       -- 向PEOPLE节点加入PERSON节点&amp;lt;PERSON&amp;gt;&amp;lt;/PERSON&amp;gt;
+       person_node := xmldom.appendChild(dep_node, xmldom.makeNode(person_elmt));
+       --===========================================================================--
+       --向PERSON节点加入属性下列属性
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;员工姓名&#39;,personRow.员工);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;帐号&#39;,personRow.帐号);     
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;待解决任务数&#39;,personRow.待解决任务数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;正在解决任务数&#39;,personRow.正在解决任务数);       
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;待解决的任务逾期天数合计&#39;,personRow.待解决的任务逾期天数合计);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;正在解决的任务逾期天数合计&#39;,personRow.正在解决的任务逾期天数合计);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;待解决的任务点数合计&#39;,personRow.待解决的任务点数合计);         
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;待解决的任务工时合计&#39;,personRow.待解决的任务工时合计);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;正在解决的任务点数合计&#39;,personRow.正在解决的任务点数合计);       
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;正在解决的任务工时合计&#39;,personRow.正在解决的任务工时合计);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;正在解决的任务已花费工时合计&#39;,personRow.正在解决的任务已花费工时合计);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;正在解决的任务完成百分比&#39;,personRow.正在解决的任务完成百分比);             
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;工作饱和状态&#39;,personRow.工作饱和状态);
+     END LOOP;
+     CLOSE cur;
+     --写入硬盘
+     xmlDom.writeToFile(doc,workload_file_30,&#39;UTF-8&#39;);
+   EXCEPTION
+    WHEN OTHERS THEN
+      DBMS_OUTPUT.PUT_LINE(SQLERRM);
+END Pr_Xml_Staff_Status_Today ;
+/
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;4-利用job来调度该存储过程将任务平台项目数据统计生成为xml文件&#34;&gt;4、利用job来调度该存储过程将任务平台项目数据统计生成为xml文件&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;CREATE OR REPLACE PROCEDURE .Pr_Xml_Workload_By_Project IS
+/******************************************************************************
+利用job来调度该存储过程将任务平台项目数据统计生成为xml文件
+作者：王峰
+编写时间：2008-11-21
+******************************************************************************/
+     workload_file_30 VARCHAR2(128) :=&#39;D:\ere\dfgdfg\OA\StatDate\workload_file_30_project.xml&#39;;
+     personRow V_WORKLOAD_BY_PROJECT30%ROWTYPE;      --获取游标的行变量
+     TYPE person_cur IS REF CURSOR; --自定义REF游标
+     cur person_cur;    
+     tempSql VARCHAR2(500) := &#39;SELECT &amp;quot;项目名称&amp;quot;, &amp;quot;任务点数&amp;quot;, &amp;quot;任务个数&amp;quot;,   &amp;quot;逾期任务个数&amp;quot;, a类bug数, b类bug数,   c类bug数, d类bug数, e类bug数,   &amp;quot;工作量占比&amp;quot;, &amp;quot;单点BUG指数&amp;quot; FROM v_workload_by_project30 &#39;;  
+          --初始的查询语句
+     sqlWhereStr  VARCHAR2(500) :=&#39; &#39;;
+     sqlOrderByStr  VARCHAR2(500) :=&#39; order by 任务点数 desc&#39;;
+     v_currentProject VARCHAR2(128); --临时变量，存放当前项目
+     
+     CURSOR c1_personWorkload_In_project IS
+        SELECT 员工姓名,任务点数, ROUND(任务点数*100/SUM(任务点数) OVER(PARTITION BY 项目名称 )) 贡献大小
+        FROM
+         (
+          SELECT projectname 项目名称,STAFFNAME 员工姓名,      
+             SUM(POINTNUMBERSOFTASK) 任务点数
+          FROM .DW_FACT_WORKLOAD
+          WHERE projectName=v_currentProject AND
+                DATEID&amp;gt; TO_NUMBER(TO_CHAR(SYSDATE -30,&#39;YYYYMMDD&#39;))
+          GROUP BY projectname,STAFFNAME
+         )       
+         ORDER BY 贡献大小 DESC;
+     
+     doc xmlDom.DOMDocument := xmldom.newDOMDocument;        -- 创建文档对象
+     main_node xmlDom.DOMNode := xmldom.makeNode(doc);       -- 获得文档节点
+     root_elmt xmlDom.DOMElement:= xmldom.createElement(doc, &#39;统计数据&#39;);   -- 创建根元素
+     --==================================================
+     --以下定义元素
+     person_elmt xmlDom.DOMElement;      --定义PERSON元素
+     summary_elmt xmlDom.DOMElement;      --定义summary元素
+     details_elmt xmlDom.DOMElement;      --定义details元素
+     details_person_elmt xmlDom.DOMElement;      --定义details_person_elmt元素
+     --==================================================
+     --以下定义节点
+     root_node xmlDom.DOMNode;   --定义统计数据节点
+     person_node xmlDom.DOMNode;   --定义PERSON节点
+     summary_node xmlDom.DOMNode;   --定义summary节点
+     details_node xmlDom.DOMNode;   --定义details节点
+     details_person_node  xmlDom.DOMNode;   --定义员工节点
+     temp_node xmlDom.DOMNode;
+     --统计数据变量
+     v_point_min NUMBER :=0; --公司最低点
+     v_point_max NUMBER :=0; --公司最高点
+     v_point_avg NUMBER :=0; ----公司平均点数
+BEGIN
+     -- 向文档节点加入根节点:&amp;lt;统计数据&amp;gt;&amp;lt;/统计数据&amp;gt;
+     root_node := xmldom.appendChild(main_node, xmldom.makeNode(root_elmt));
+       --===========================================================================--
+       summary_elmt := xmldom.createElement(doc, &#39;摘要&#39;); --创建摘要元素
+       -- 向统计数据节点加入摘要节点&amp;lt;摘要&amp;gt;&amp;lt;/摘要&amp;gt;
+       summary_node := xmldom.appendChild(root_node, xmldom.makeNode(summary_elmt));
+       --===========================================================================--
+       --向摘要节点加入下列属性
+        xmlDom.SETATTRIBUTE(summary_elmt,&#39;标题&#39;,&#39;最近一个月项目工作量统计&#39;);
+       --===========================================================================--
+     --附加查询条件,准备得到统计明细数据
+       --===========================================================================--
+       details_elmt := xmldom.createElement(doc, &#39;统计明细&#39;); --创建摘要元素
+       -- 向统计数据节点加入统计明细节点&amp;lt;统计明细&amp;gt;&amp;lt;/统计明细&amp;gt;
+       details_node := xmldom.appendChild(root_node, xmldom.makeNode(details_elmt));
+       --===========================================================================--   
+     tempSql := tempSql||sqlWhereStr||sqlOrderByStr;
+     --打开游标
+     OPEN cur FOR tempSql;
+     --遍历游标
+     LOOP
+       FETCH cur INTO personRow;
+       EXIT WHEN cur%NOTFOUND;
+       --===========================================================================--
+       person_elmt := xmldom.createElement(doc, &#39;项目&#39;); --创建PERSON元素
+       -- 向PEOPLE节点加入PERSON节点&amp;lt;PERSON&amp;gt;&amp;lt;/PERSON&amp;gt;
+       person_node := xmldom.appendChild(details_node, xmldom.makeNode(person_elmt));
+       --===========================================================================--
+       --向PERSON节点加入属性下列属性
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;项目名称&#39;,personRow.项目名称);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;任务点数&#39;,personRow.任务点数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;任务个数&#39;,personRow.任务个数);     
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;逾期任务个数&#39;,personRow.逾期任务个数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;A类BUG数&#39;,personRow.A类BUG数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;B类BUG数&#39;,personRow.B类BUG数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;C类BUG数&#39;,personRow.C类BUG数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;D类BUG数&#39;,personRow.D类BUG数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;E类BUG数&#39;,personRow.E类BUG数);
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;单点BUG指数&#39;,personRow.单点BUG指数);               
+        xmlDom.SETATTRIBUTE(person_elmt,&#39;工作量占比&#39;,personRow.工作量占比);       
+        
+        v_currentProject :=personRow.项目名称;
+        FOR c1_temp IN c1_personWorkload_In_project LOOP
+            --===========================================================================--
+            details_person_elmt := xmldom.createElement(doc, &#39;员工&#39;); --创建员工元素
+            -- 向项目节点加入员工节点&amp;lt;员工&amp;gt;&amp;lt;/员工&amp;gt;
+            details_person_node := xmldom.appendChild(person_node, xmldom.makeNode(details_person_elmt));
+            
+            xmlDom.SETATTRIBUTE(details_person_elmt,&#39;员工姓名&#39;,c1_temp.员工姓名);
+            xmlDom.SETATTRIBUTE(details_person_elmt,&#39;任务点数&#39;,c1_temp.任务点数);
+            xmlDom.SETATTRIBUTE(details_person_elmt,&#39;贡献大小&#39;,c1_temp.贡献大小);       
+           --===========================================================================--      
+        END LOOP;
+                
+     END LOOP;
+     CLOSE cur;
+     --写入硬盘
+     xmlDom.writeToFile(doc,workload_file_30,&#39;UTF-8&#39;);
+   EXCEPTION
+    WHEN OTHERS THEN
+      DBMS_OUTPUT.PUT_LINE(SQLERRM);
+END Pr_Xml_Workload_By_Project;
+/
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;5-任务平台利用存储相互过程发邮件&#34;&gt;5、任务平台利用存储相互过程发邮件&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;CREATE OR REPLACE PROCEDURE .Pr_Mail_For_No_Worklod
+/******************************************************************************
+   NAME:       PR_MAIL_FOR_NO_WORKLOD
+   PURPOSE:    由JOB每天早晨自动调用该过程给没有填写工作日志的用户发送电子邮件
+
+CREATE OR REPLACE PROCEDURE Send_Mail(sender VARCHAR2,receiver VARCHAR2,subject VARCHAR2,contact VARCHAR2) IS
+******************************************************************************/
+IS 
+    conn utl_smtp.connection;
+    username VARCHAR2(256) := &#39;abff&#39;;
+    PASSWORD VARCHAR2(256) := &#39;22223423423&#39;;
+    yestdayIsHoliday VARCHAR2(4); --是否为节假日;
+    
+    CURSOR c1 IS SELECT &amp;quot;帐号&amp;quot;,&amp;quot;姓名&amp;quot; FROM V_WORKLOG_HOURS_STAT WHERE &amp;quot;工作小时&amp;quot; &amp;lt;4  OR &amp;quot;工作小时&amp;quot; &amp;gt;12;  --昨天日志没填写或工作时数异常的员工
+    CURSOR c2 IS SELECT &amp;quot;帐号&amp;quot;,&amp;quot;姓名&amp;quot;,&amp;quot;日志天数&amp;quot; FROM V_WORKLOG_COUNT_LAST7 ;  --最近一周工作日志填写次数不够5天的员工统计（有可能是请假、忘记填写或出差了）
+    V_ACCT VARCHAR2(20);
+    V_NAME VARCHAR2(20);    
+    V_NO_WORKLOG_NAMELIST VARCHAR2(4000):=&#39;&amp;lt;LI&amp;gt;&#39;||TO_CHAR(SYSDATE -1,&#39;YYYY-MM-DD&#39;)||&#39;日没有填写工作日志或填写时间少于4小时或大于12小时的员工有：&#39;||&#39;&amp;lt;BR/&amp;gt;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&#39;;   
+    
+    mesg_body0 VARCHAR2(4000 CHAR) := &#39;&amp;lt;html&amp;gt;&amp;lt;head&amp;gt; &amp;lt;title&amp;gt;任务平台日志填写提醒&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;BODY bgcolor=&amp;quot;#FFFFFF&amp;quot; LINK=&amp;quot;#000080&amp;quot;&amp;gt;&amp;lt;TABLE cellspacing=&amp;quot;0&amp;quot; cellpadding=&amp;quot;0&amp;quot; width=&amp;quot;100%&amp;quot;&amp;gt;&#39;;
+    mesg_body1 VARCHAR2(30000 CHAR) := &#39;&amp;lt;br/&amp;gt;&amp;lt;br/&amp;gt;&#39;;
+    mesg_body2  VARCHAR2(200 CHAR):=&#39;&amp;lt;/font&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;&#39;;
+    crlf          VARCHAR2(15) := &#39;&amp;lt;br/&amp;gt;&#39;;
+    mesg          VARCHAR2(4000 CHAR);  
+    
+    PROCEDURE send_header(NAME IN VARCHAR2, HEADER IN VARCHAR2) AS
+    DATA VARCHAR2(4000);
+    BEGIN
+        DATA := NAME || &#39;:&#39; || HEADER || utl_tcp.crlf;
+        utl_smtp.write_raw_data(conn, utl_raw.cast_to_raw(DATA));
+    END; 
+BEGIN
+    SELECT  isholiday INTO yestdayIsHoliday
+    FROM DW_DIM_DATE 
+    WHERE dateid = TO_NUMBER(TO_CHAR(SYSDATE -1,&#39;YYYYMMDD&#39;)) ;
+    IF yestdayIsHoliday = &#39;否&#39; THEN
+            FOR c1_rec IN c1 LOOP
+               BEGIN
+                    conn := utl_smtp.open_connection(&#39;mail.e-u.cn&#39;);
+                    utl_smtp.EHLO(conn, &#39;mail.e-u.cn&#39;); 
+
+                    --utl_smtp.command(conn, &#39;AUTH LOGIN&#39;);
+                    --utl_smtp.command(conn, username);
+                    --utl_smtp.command(conn, Demo_Base64.encode(utl_raw.cast_to_raw(PASSWORD)));
+                    
+                    utl_smtp.mail(conn, username||&#39;@e-u.cn&#39;);
+                    V_ACCT:=c1_rec.&amp;quot;帐号&amp;quot;||&#39;@e-u.cn&#39;;
+                    utl_smtp.rcpt(conn,V_ACCT );    
+        
+                    utl_smtp.open_data(conn);
+                    send_header(&#39;From&#39;,username||&#39;@e-u.cn&#39;);
+                    send_header(&#39;To&#39;,c1_rec.&amp;quot;帐号&amp;quot;||&#39;@e-u.cn&#39;);
+                    --send_header(&#39;To&#39;,&#39;wangf@e-u.cn&#39;);
+                    send_header(&#39;Subject&#39;,&#39;任务平台提醒：&#39;||c1_rec.&amp;quot;姓名&amp;quot;||&#39;，您前一个工作日（&#39;||TO_CHAR(SYSDATE -1,&#39;YYYY-MM-DD&#39;)||&#39;)忘了填写工作日志或填的不正确。&#39;);
+                    send_header(&#39;Content-type&#39;,&#39;text/html; charset=gbk&#39;);
+                    mesg :=&#39;&#39;|| mesg_body0 ||c1_rec.&amp;quot;姓名&amp;quot;||&#39;: &#39; || crlf || &#39;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;您好。&#39;||&#39;您昨天（&#39;||TO_CHAR(SYSDATE -1,&#39;YYYY-MM-DD&#39;)||&#39;)忘了填写工作日志或填的不正确（少于4小时或多于12小时）。&#39;||crlf;
+                    mesg :=mesg|| &#39;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;请尽快补填!长城数字软件全体员工感谢您的支持与理解。&#39;||crlf;
+                    mesg :=mesg|| &#39;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;lt;a href=http://mail.e-u.cn:8880 target=_blank&amp;gt;进入任务平台填写工作日志&amp;lt;/a&amp;gt;&#39;;
+                    mesg :=mesg|| mesg_body1|| &#39;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp; 卜海峰 &amp;amp;nbsp;&#39;||TO_CHAR(SYSDATE ,&#39;YYYY-MM-DD&#39;)||mesg_body2;
+            
+                    utl_smtp.write_raw_data(conn, utl_raw.cast_to_raw(utl_tcp.CRLF||mesg));
+                    utl_smtp.close_data(conn);
+                    utl_smtp.quit(conn);
+                     DBMS_OUTPUT.PUT_LINE(c1_rec.&amp;quot;姓名&amp;quot;||&#39;-------发送成功！&#39;);
+                    V_NO_WORKLOG_NAMELIST:=V_NO_WORKLOG_NAMELIST ||c1_rec.&amp;quot;姓名&amp;quot;||&#39;，&#39;;
+                EXCEPTION
+                         WHEN OTHERS THEN
+                         DBMS_OUTPUT.PUT_LINE(c1_rec.&amp;quot;姓名&amp;quot;||SQLERRM);
+                        -- utl_smtp.close_data(conn);
+                         utl_smtp.rset(conn);
+                         utl_smtp.quit(conn);                        
+                END;
+            END LOOP;
+            V_NO_WORKLOG_NAMELIST := V_NO_WORKLOG_NAMELIST ||&#39;&amp;lt;BR/&amp;gt;&amp;lt;LI&amp;gt;最近一周工作日志填写次数不够5天的员工名单（有可能是请假、忘记填写或出差了）:&amp;lt;BR/&amp;gt;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&#39;;
+            FOR c2_rec IN c2 LOOP
+               BEGIN
+                    V_NO_WORKLOG_NAMELIST:=V_NO_WORKLOG_NAMELIST ||c2_rec.&amp;quot;姓名&amp;quot;||&#39;(缺&#39;||TO_CHAR(5 - c2_rec.&amp;quot;日志天数&amp;quot;)||&#39;天)，&#39;;
+                EXCEPTION
+                         WHEN OTHERS THEN
+                         NULL;
+                END;
+            END LOOP;   
+            --给管理人员发送日志填写有问题的人员名单
+                conn := utl_smtp.open_connection(&#39;mail.eu3434.cn&#39;);
+                utl_smtp.EHLO(conn, &#39;mail.e-u.cn&#39;);
+                --utl_smtp.command(conn, &#39;AUTH LOGIN&#39;);
+                --utl_smtp.command(conn, demo_base64.encode(utl_raw.cast_to_raw(username)));
+                --utl_smtp.command(conn, demo_base64.encode(utl_raw.cast_to_raw(password)));
+                
+                utl_smtp.mail(conn, username||&#39;@e-u.cn&#39;);
+                utl_smtp.rcpt(conn, &#39;m1@e-u.cn&#39;); 
+                utl_smtp.rcpt(conn, &#39;m2@e-u.cn&#39;); 
+                utl_smtp.rcpt(conn, &#39;m3@e-u.cn&#39;);    
+                utl_smtp.rcpt(conn, &#39;m4@e-u.cn&#39;);                 
+                utl_smtp.open_data(conn);
+                send_header(&#39;From&#39;,username||&#39;@e-u.cn&#39;);
+                send_header(&#39;To&#39;,&#39;m1@e-u.cn&#39;);
+                send_header(&#39;To&#39;,&#39;m2@e-u.cn&#39;);
+                send_header(&#39;To&#39;,&#39;m3@e-u.cn&#39;);
+                send_header(&#39;To&#39;,&#39;m4@e-u.cn&#39;);                
+                send_header(&#39;Subject&#39;,&#39;任务平台提醒：&#39;||&#39;前一个工作日（&#39;||TO_CHAR(SYSDATE -1,&#39;YYYY-MM-DD&#39;)||&#39;)忘了填写工作日志或填的不正确（少于4小时或多于12小时）的员工名单,请督促其尽快补填。&#39;);
+                send_header(&#39;Content-type&#39;,&#39;text/html; charset=gbk&#39;);
+                V_NO_WORKLOG_NAMELIST := V_NO_WORKLOG_NAMELIST ||&#39;&amp;lt;BR/&amp;gt;&amp;lt;BR/&amp;gt;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;lt;FONT COLOR=RED&amp;gt;注：如果有不用再提醒的用户，请告诉管理员！&amp;lt;/FONT&amp;gt;&#39;;
+                utl_smtp.write_raw_data(conn, utl_raw.cast_to_raw(utl_tcp.CRLF||V_NO_WORKLOG_NAMELIST));
+                utl_smtp.close_data(conn);
+                utl_smtp.quit(conn);                    
+    END IF; --节假日判断
+    EXCEPTION 
+        WHEN utl_smtp.transient_error OR utl_smtp.permanent_error THEN 
+        BEGIN
+             utl_smtp.quit(conn);   
+            -- RAISE_APPLICATION_ERROR(-20000,&#39;Failed to send mail due to the following error: &#39; || SQLERRM);
+        EXCEPTION
+        WHEN utl_smtp.transient_error OR utl_smtp.permanent_error THEN
+             utl_smtp.quit(conn);   
+            -- RAISE_APPLICATION_ERROR(-20000,&#39;Failed to send mail due to the following error: &#39; || SQLERRM);
+        END;
+        WHEN OTHERS THEN
+             utl_smtp.quit(conn);           
+             RAISE_APPLICATION_ERROR(-20000,&#39;Failed to send mail due to the following error: &#39; || SQLERRM);
+END Pr_Mail_For_No_Worklod;
+/
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;6-工作量统计视图&#34;&gt;6、工作量统计视图&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;DROP VIEW V_WORKLOAD_ALL;
+
+/* Formatted on 2016/12/23 11:23:06 (QP5 v5.227.12220.39754) */
+CREATE OR REPLACE FORCE VIEW V_WORKLOAD_ALL
+(
+   &amp;quot;员工姓名&amp;quot;,
+   &amp;quot;简单页面数&amp;quot;,
+   &amp;quot;普通页面数&amp;quot;,
+   &amp;quot;复杂页面数&amp;quot;,
+   &amp;quot;简单接口数&amp;quot;,
+   &amp;quot;普通接口数&amp;quot;,
+   &amp;quot;复杂接口数&amp;quot;,
+   &amp;quot;任务个数&amp;quot;,
+   &amp;quot;逾期任务个数&amp;quot;,
+   &amp;quot;计划工时&amp;quot;,
+   &amp;quot;实际工时&amp;quot;,
+   &amp;quot;折算后编码工作点数&amp;quot;,
+   &amp;quot;其它工作点数&amp;quot;,
+   &amp;quot;合计点数&amp;quot;,
+   &amp;quot;公司最低&amp;quot;,
+   &amp;quot;公司最高&amp;quot;,
+   &amp;quot;公司平均&amp;quot;,
+   &amp;quot;排名&amp;quot;
+)
+AS
+   SELECT 员工姓名,
+          简单页面数,
+          普通页面数,
+          复杂页面数,
+          简单接口数,
+          普通接口数,
+          复杂接口数,
+          任务个数,
+          逾期任务个数,
+          计划工时,
+          实际工时,
+            简单页面数 * 1
+          + 普通页面数 * 5
+          + 复杂页面数 * 15
+          + 简单接口数 * 1
+          + 普通接口数 * 4
+          + 复杂接口数 * 12
+             折算后编码工作点数,
+          任务点数 其它工作点数,
+          (  任务点数
+           + 简单页面数 * 1
+           + 普通页面数 * 5
+           + 复杂页面数 * 15
+           + 简单接口数 * 1
+           + 普通接口数 * 4
+           + 复杂接口数 * 12)
+             合计点数,
+          MIN (
+             (  任务点数
+              + 简单页面数 * 1
+              + 普通页面数 * 5
+              + 复杂页面数 * 15
+              + 简单接口数 * 1
+              + 普通接口数 * 4
+              + 复杂接口数 * 12))
+          OVER ()
+             公司最低,
+          MAX (
+             (  任务点数
+              + 简单页面数 * 1
+              + 普通页面数 * 5
+              + 复杂页面数 * 15
+              + 简单接口数 * 1
+              + 普通接口数 * 4
+              + 复杂接口数 * 12))
+          OVER ()
+             公司最高,
+          AVG (
+             (  任务点数
+              + 简单页面数 * 1
+              + 普通页面数 * 5
+              + 复杂页面数 * 15
+              + 简单接口数 * 1
+              + 普通接口数 * 4
+              + 复杂接口数 * 12))
+          OVER ()
+             公司平均,
+          DENSE_RANK ()
+          OVER (
+             ORDER BY
+                (  任务点数
+                 + 简单页面数 * 1
+                 + 普通页面数 * 5
+                 + 复杂页面数 * 15
+                 + 简单接口数 * 1
+                 + 普通接口数 * 4
+                 + 复杂接口数 * 12) DESC)
+             排名
+     FROM (  SELECT STAFFNAME 员工姓名,
+                    SUM (POINTNUMBERSOFTASK) 任务点数,
+                    SUM (NUMBEROFPAGE1) 简单页面数,
+                    SUM (NUMBEROFPAGE2) 普通页面数,
+                    SUM (NUMBEROFPAGE3) 复杂页面数,
+                    SUM (UMBERSOFINTERFACE1) 简单接口数,
+                    SUM (UMBERSOFINTERFACE2) 普通接口数,
+                    SUM (UMBERSOFINTERFACE3) 复杂接口数,
+                    SUM (NUMBERSOFALLTASK) 任务个数,
+                    SUM (NUMBERSOFOVERDUETASK) 逾期任务个数,
+                    SUM (HOURSFORPLAN) 计划工时,
+                    SUM (HOURSOFFACT) 实际工时
+               FROM .DW_FACT_WORKLOAD
+           --WHERE DATEID&amp;gt; TO_NUMBER(TO_CHAR(SYSDATE -365,&#39;YYYYMMDD&#39;))
+           GROUP BY STAFFNAME);
+
+
+GRANT SELECT ON .V_WORKLOAD_ALL TO QUERY232;
+
+GRANT SELECT ON .V_WORKLOAD_ALL TO PUBLIC;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;7-工作状态视图&#34;&gt;7、工作状态视图&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;DROP VIEW .V_STAFF_WORKSTATUS_TODAY;
+
+/* Formatted on 2016/12/23 11:25:31 (QP5 v5.227.12220.39754) */
+CREATE OR REPLACE FORCE VIEW .V_STAFF_WORKSTATUS_TODAY
+(
+   &amp;quot;统计日期&amp;quot;,
+   &amp;quot;员工&amp;quot;,
+   &amp;quot;帐号&amp;quot;,
+   &amp;quot;部门&amp;quot;,
+   &amp;quot;部门编号&amp;quot;,
+   &amp;quot;待解决任务数&amp;quot;,
+   &amp;quot;正在解决任务数&amp;quot;,
+   &amp;quot;待解决的任务逾期天数合计&amp;quot;,
+   &amp;quot;正在解决的任务逾期天数合计&amp;quot;,
+   &amp;quot;待解决的任务点数合计&amp;quot;,
+   &amp;quot;待解决的任务工时合计&amp;quot;,
+   &amp;quot;正在解决的任务点数合计&amp;quot;,
+   &amp;quot;正在解决的任务工时合计&amp;quot;,
+   &amp;quot;正在解决的任务已花费工时合计&amp;quot;,
+   &amp;quot;正在解决的任务完成百分比&amp;quot;,
+   &amp;quot;工作饱和状态&amp;quot;,
+   &amp;quot;排序&amp;quot;
+)
+AS
+   SELECT 统计日期,
+          员工,
+          帐号,
+          部门,
+          部门编号,
+          待解决任务数,
+          正在解决任务数,
+          待解决的任务逾期天数合计,
+          正在解决的任务逾期天数合计,
+          待解决的任务点数合计,
+          待解决的任务工时合计,
+          正在解决的任务点数合计,
+          正在解决的任务工时合计,
+          正在解决的任务已花费工时合计,
+          正在解决的任务完成百分比,
+          NVL (b.msgtypename, 工作饱和状态) 工作饱和状态,
+          排序
+     FROM (SELECT TO_NUMBER (TO_CHAR (SYSDATE, &#39;YYYYMMDD&#39;)) 统计日期,
+                  员工,
+                  帐号,
+                  部门,
+                  部门编号,
+                  待解决任务数,
+                  正在解决任务数,
+                  待解决的任务逾期天数合计,
+                  正在解决的任务逾期天数合计,
+                  待解决的任务点数合计,
+                  NVL (待解决的任务工时合计, 0)
+                     待解决的任务工时合计,
+                  正在解决的任务点数合计,
+                  NVL (正在解决的任务工时合计, 0)
+                     正在解决的任务工时合计,
+                  正在解决的任务已花费工时合计,
+                  NVL (
+                     (CASE
+                         WHEN 正在解决的任务工时合计 = 0
+                         THEN
+                            0
+                         ELSE
+                            ROUND (
+                                 100
+                               * 正在解决的任务已花费工时合计
+                               / 正在解决的任务工时合计)
+                      END),
+                     0)
+                     正在解决的任务完成百分比,
+                  (CASE
+                      --WHEN 正在解决的任务工时合计&amp;lt;1 AND 最近的工作日志时间&amp;lt;1 THEN &#39;出差&#39;
+                      --WHEN 帐号 = &#39;caoj&#39;
+                      --THEN &#39;请假&#39;
+                      WHEN 帐号 = &#39;zhangxm&#39; OR 部门 = &#39;精飞&#39;
+                      THEN
+                         &#39;正常&#39;
+                      WHEN (   正在解决任务数 = 0
+                            OR 最近的工作日志时间 &amp;lt; 1)
+                      THEN
+                         &#39;闲&#39;
+                      WHEN     正在解决的任务工时合计 &amp;lt; 1
+                           AND 最近的工作日志时间 &amp;gt; 1
+                           AND 最近的工作日志时间 &amp;lt;= 2
+                      THEN
+                         &#39;较闲&#39;
+                      WHEN (    正在解决的任务工时合计 &amp;gt;= 1
+                            AND 正在解决的任务工时合计 &amp;lt;= 2)
+                      THEN
+                         &#39;正常&#39;
+                      WHEN       正在解决的任务逾期天数合计
+                               / 正在解决任务数 &amp;gt; 7
+                           AND 最近的工作日志时间 &amp;lt;= 8
+                      THEN
+                         &#39;忙?&#39;
+                      WHEN       正在解决的任务逾期天数合计
+                               / 正在解决任务数 &amp;gt; 7
+                           AND 最近的工作日志时间 &amp;gt; 8
+                      THEN
+                         &#39;忙&#39;
+                      WHEN     正在解决的任务工时合计 &amp;gt; 8
+                           AND 正在解决的任务工时合计 &amp;lt; 24
+                      THEN
+                         &#39;正常&#39;
+                      ELSE
+                         &#39;正常&#39;
+                   END)
+                     工作饱和状态,
+                  (CASE
+                      --WHEN 正在解决的任务工时合计&amp;lt;1 AND 最近的工作日志时间&amp;lt;1 THEN &#39;F&#39;
+                      WHEN 最近的工作日志时间 &amp;lt; 1
+                      THEN
+                         &#39;F&#39;
+                      WHEN     正在解决的任务工时合计 &amp;lt; 1
+                           AND 最近的工作日志时间 &amp;gt; 1
+                      THEN
+                         &#39;A&#39;
+                      WHEN (    正在解决的任务工时合计 &amp;gt; 0
+                            AND 正在解决的任务工时合计 &amp;lt;= 8)
+                      THEN
+                         &#39;B&#39;
+                      WHEN   正在解决的任务逾期天数合计
+                           / 正在解决任务数 &amp;gt; 7
+                      THEN
+                         &#39;D&#39;
+                      WHEN     正在解决的任务工时合计 &amp;gt; 8
+                           AND 正在解决的任务工时合计 &amp;lt; 24
+                      THEN
+                         &#39;C&#39;
+                      ELSE
+                         &#39;E&#39;
+                   END)
+                     排序
+             FROM (  SELECT assignee 员工,
+                            empno 帐号,
+                            depname 部门,
+                            depno 部门编号,
+                            SUM (CASE WHEN issuestatus = &#39;1&#39; THEN 1 ELSE 0 END)
+                               待解决任务数,
+                            SUM (CASE WHEN issuestatus = &#39;3&#39; THEN 1 ELSE 0 END)
+                               正在解决任务数,
+                            SUM (
+                               CASE
+                                  WHEN issuestatus = &#39;1&#39; AND dueoverdays &amp;lt; 0
+                                  THEN
+                                     ABS (dueoverdays)
+                                  ELSE
+                                     0
+                               END)
+                               待解决的任务逾期天数合计,
+                            SUM (
+                               CASE
+                                  WHEN issuestatus = &#39;3&#39; AND dueoverdays &amp;lt; 0
+                                  THEN
+                                     ABS (dueoverdays)
+                                  ELSE
+                                     0
+                               END)
+                               正在解决的任务逾期天数合计,
+                            SUM (
+                               CASE
+                                  WHEN issuestatus = &#39;1&#39; THEN NVL (workload, 0)
+                                  ELSE 0
+                               END)
+                               待解决的任务点数合计,
+                            SUM (
+                               CASE
+                                  WHEN issuestatus = &#39;1&#39; THEN workhours
+                                  ELSE 0
+                               END)
+                               待解决的任务工时合计,
+                            SUM (
+                               CASE
+                                  WHEN issuestatus = &#39;3&#39; THEN NVL (workload, 0)
+                                  ELSE 0
+                               END)
+                               正在解决的任务点数合计,
+                            SUM (
+                               CASE
+                                  WHEN issuestatus = &#39;3&#39; THEN workhours
+                                  ELSE 0
+                               END)
+                               正在解决的任务工时合计,
+                            SUM (
+                               CASE
+                                  WHEN issuestatus = &#39;3&#39;
+                                  THEN
+                                     NVL (花费工时, 0)
+                                  ELSE
+                                     0
+                               END)
+                               正在解决的任务已花费工时合计,
+                            AVG (NVL (tm, 0)) 最近的工作日志时间
+                       FROM (SELECT ID,
+                                    pkey,
+                                    gdsuser.empno,
+                                    gdsuser.depname,
+                                    gdsuser.depno,
+                                    gdsuser.NAME assignee,
+                                    project,
+                                    issuetype,
+                                    summary,
+                                    issuestatus,
+                                    created,
+                                    duedate,
+                                    NVL (ROUND ( (duedate - SYSDATE)), 0)
+                                       dueoverdays,
+                                    (SELECT numbervalue
+                                       FROM customfieldvalue
+                                      WHERE     customfieldvalue.issue =
+                                                   issue.ID
+                                            AND customfieldvalue.customfield =
+                                                   10050)
+                                       workload,
+                                    ROUND (timeoriginalestimate / 3600)
+                                       workhours,
+                                    (SELECT 花费工时
+                                       FROM (  SELECT issueid,
+                                                      author,
+                                                      ROUND (
+                                                         SUM (timeworked) / 3600)
+                                                         花费工时
+                                                 FROM worklog
+                                             GROUP BY issueid, author)
+                                      WHERE     issueid = ID
+                                            AND author = gdsuser.empno)
+                                       花费工时,
+                                    (SELECT tm
+                                       FROM (  SELECT author,
+                                                        ROUND (
+                                                             SUM (timeworked)
+                                                           / 3600)
+                                                      / COUNT (
+                                                           DISTINCT ROUND (
+                                                                       startdate,
+                                                                       &#39;DD&#39;))
+                                                         tm
+                                                 FROM worklog
+                                                WHERE (SYSDATE - updated) &amp;lt; 5
+                                             GROUP BY author)
+                                      WHERE author = gdsuser.empno)
+                                       tm
+                               FROM issue, v_gds_user_from_hrmis gdsuser
+                              WHERE     issue.assignee = gdsuser.empno
+                                    AND issue.project &amp;lt;&amp;gt; 10010
+                                    AND (   issue.issuestatus = &#39;1&#39;
+                                         OR issue.issuestatus = &#39;3&#39;
+                                         OR issue.issuestatus = &#39;4&#39;
+                                         OR issue.issuestatus = &#39;8&#39;))
+                   GROUP BY assignee,
+                            depname,
+                            depno,
+                            empno)
+            WHERE     &amp;quot;部门编号&amp;quot; &amp;lt;&amp;gt; &#39;1020&#39;
+                  AND &amp;quot;部门编号&amp;quot; &amp;lt;&amp;gt; &#39;1040&#39;
+                  AND &amp;quot;部门编号&amp;quot; &amp;lt;&amp;gt; &#39;10998&#39;
+                  AND &amp;quot;部门编号&amp;quot; &amp;lt;&amp;gt; &#39;10999&#39;
+           UNION
+           SELECT TO_NUMBER (TO_CHAR (SYSDATE, &#39;YYYYMMDD&#39;)) 统计日期,
+                  alluser.NAME,
+                  alluser.empno,
+                  alluser.depname,
+                  alluser.depno,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  &#39;闲&#39;,
+                  &#39;A&#39;
+             FROM v_gds_user_from_hrmis alluser
+            WHERE NOT EXISTS
+                         (SELECT assignee
+                            FROM issue
+                           WHERE     project &amp;lt;&amp;gt; 10010
+                                 AND (   issue.issuestatus = &#39;1&#39;
+                                      OR issue.issuestatus = &#39;3&#39;
+                                      OR issue.issuestatus = &#39;4&#39;
+                                      OR issue.issuestatus = &#39;8&#39;)
+                                 AND alluser.empno = assignee) --AND alluser.workertype = &#39;00000001&#39;
+                                                              --AND (alluser.stationlevel &amp;lt;&amp;gt; &#39;00000001&#39;);
+          ) a,
+          (  SELECT employeeno, MAX (msgtypename) msgtypename
+               FROM v_emp_out_stat
+           GROUP BY employeeno) b
+    WHERE     (a.帐号 IS NOT NULL)
+          AND a.帐号 = b.employeeno(+)
+          AND &amp;quot;部门编号&amp;quot; &amp;lt;&amp;gt; &#39;1020&#39;
+          AND &amp;quot;部门编号&amp;quot; &amp;lt;&amp;gt; &#39;1040&#39;
+          AND &amp;quot;部门编号&amp;quot; &amp;lt;&amp;gt; &#39;10998&#39;
+          AND &amp;quot;部门编号&amp;quot; &amp;lt;&amp;gt; &#39;10999&#39;
+
+/*  ########张永平备份于2011-12-20  在改版的基础上增加了根据公司oa显示员工外出状态#########
+SELECT TO_NUMBER(TO_CHAR(SYSDATE,&#39;YYYYMMDD&#39;)) 统计日期,员工,帐号,部门, 部门编号,
+待解决任务数,
+正在解决任务数,
+待解决的任务逾期天数合计,
+正在解决的任务逾期天数合计,
+待解决的任务点数合计,
+nvl(待解决的任务工时合计,0) 待解决的任务工时合计,
+正在解决的任务点数合计,
+nvl(正在解决的任务工时合计,0) 正在解决的任务工时合计,
+正在解决的任务已花费工时合计,
+nvl((CASE
+ WHEN 正在解决的任务工时合计=0 THEN 0
+ ELSE ROUND(100*正在解决的任务已花费工时合计/正在解决的任务工时合计) END),0) 正在解决的任务完成百分比,
+(CASE
+ --WHEN 正在解决的任务工时合计&amp;lt;1 AND 最近的工作日志时间&amp;lt;1 THEN &#39;出差&#39;
+ WHEN 帐号 =&#39;caoj&#39; THEN  &#39;请假&#39;
+ WHEN 最近的工作日志时间&amp;lt;1 THEN &#39;出差&#39;
+ WHEN 正在解决的任务工时合计&amp;lt;1 AND 最近的工作日志时间&amp;gt;1 THEN &#39;闲&#39;
+ WHEN (正在解决的任务工时合计&amp;gt;0 AND 正在解决的任务工时合计&amp;lt;=8) THEN &#39;较闲&#39;
+ WHEN 正在解决的任务逾期天数合计/正在解决任务数&amp;gt;7 THEN &#39;忙?&#39;
+ WHEN 正在解决的任务工时合计&amp;gt;8 AND 正在解决的任务工时合计&amp;lt;24 THEN &#39;正常&#39; ELSE &#39;忙&#39; END) 工作饱和状态,
+(CASE
+ --WHEN 正在解决的任务工时合计&amp;lt;1 AND 最近的工作日志时间&amp;lt;1 THEN &#39;F&#39;
+ WHEN 最近的工作日志时间&amp;lt;1 THEN &#39;F&#39;
+ WHEN 正在解决的任务工时合计&amp;lt;1 AND 最近的工作日志时间&amp;gt;1 THEN &#39;A&#39;
+ WHEN (正在解决的任务工时合计&amp;gt;0 AND 正在解决的任务工时合计&amp;lt;=8) THEN &#39;B&#39;
+ WHEN 正在解决的任务逾期天数合计/正在解决任务数&amp;gt;7 THEN &#39;D&#39;
+ WHEN 正在解决的任务工时合计&amp;gt;8 AND 正在解决的任务工时合计&amp;lt;24 THEN &#39;C&#39; ELSE &#39;E&#39; END) 排序
+FROM
+(
+SELECT assignee 员工,EMPNO 帐号,depname 部门,depno 部门编号,
+SUM( CASE WHEN ISSUESTATUS=&#39;1&#39; THEN 1 ELSE 0 END) 待解决任务数,
+SUM( CASE WHEN ISSUESTATUS=&#39;3&#39; THEN 1 ELSE 0 END) 正在解决任务数,
+SUM( CASE WHEN ISSUESTATUS=&#39;1&#39; AND dueOverDays&amp;lt;0 THEN ABS(dueOverDays) ELSE 0 END) 待解决的任务逾期天数合计,
+SUM( CASE WHEN ISSUESTATUS=&#39;3&#39; AND dueOverDays&amp;lt;0 THEN ABS(dueOverDays) ELSE 0 END) 正在解决的任务逾期天数合计,
+SUM( CASE WHEN ISSUESTATUS=&#39;1&#39; THEN NVL(workload,0) ELSE 0 END) 待解决的任务点数合计,
+SUM( CASE WHEN ISSUESTATUS=&#39;1&#39; THEN workHours ELSE 0 END) 待解决的任务工时合计,
+SUM( CASE WHEN ISSUESTATUS=&#39;3&#39; THEN NVL(workload,0) ELSE 0 END) 正在解决的任务点数合计,
+SUM( CASE WHEN ISSUESTATUS=&#39;3&#39; THEN workHours ELSE 0 END) 正在解决的任务工时合计,
+SUM( CASE WHEN ISSUESTATUS=&#39;3&#39; THEN NVL(花费工时,0) ELSE 0 END) 正在解决的任务已花费工时合计,
+SUM(NVL(tm,0)) 最近的工作日志时间
+FROM
+(
+   SELECT ID, pkey, gdsuser.EMPNO,gdsuser.depname,gdsuser.depno, gdsuser.NAME assignee , PROJECT,   ISSUETYPE, SUMMARY, ISSUESTATUS,created, duedate,
+       NVL(ROUND((duedate - SYSDATE)),0) dueOverDays ,
+    (SELECT numbervalue FROM CUSTOMFIELDVALUE  WHERE CUSTOMFIELDVALUE.issue=ISSUE.ID AND CUSTOMFIELDVALUE.CUSTOMFIELD=10050) workload ,
+    ROUND(timeoriginalestimate/3600) workHours,
+    (SELECT 花费工时 FROM (SELECT issueid,author,ROUND(SUM(timeworked)/3600) 花费工时 FROM WORKLOG GROUP BY issueid,author) WHERE issueid=ID AND author=gdsuser.EMPNO) 花费工时,
+ (SELECT tm FROM (SELECT author, ROUND(SUM(timeworked)/3600) tm FROM WORKLOG WHERE (SYSDATE -updated)&amp;lt;3 GROUP BY author) WHERE author=gdsuser.EMPNO) tm
+   FROM ISSUE,v_gds_user_from_hrmis gdsuser
+   WHERE  ISSUE.assignee = gdsuser.empno(+)
+         AND ISSUE.PROJECT&amp;lt;&amp;gt;10010 AND  (ISSUE.ISSUESTATUS=&#39;1&#39; OR ISSUE.ISSUESTATUS=&#39;3&#39;)
+      --AND gdsuser.workertype=&#39;00000001&#39;
+      --AND (gdsuser.stationlevel &amp;lt;&amp;gt;&#39;00000001&#39;)
+)
+GROUP BY assignee,depname,depno,EMPNO
+)
+UNION
+SELECT TO_NUMBER (TO_CHAR (SYSDATE, &#39;YYYYMMDD&#39;)) 统计日期, alluser.NAME,
+          alluser.empno, alluser.depname, alluser.depno, 0, 0, 0, 0, 0, 0, 0,
+          0, 0, 0, &#39;闲&#39;, &#39;A&#39;
+     FROM v_gds_user_from_hrmis alluser
+    WHERE  NOT EXISTS (
+             SELECT assignee
+               FROM issue
+              WHERE project &amp;lt;&amp;gt; 10010
+                AND (issue.issuestatus = &#39;1&#39;
+                     OR issue.issuestatus = &#39;3&#39;
+                    ) AND alluser.empno=assignee)
+      --AND alluser.workertype = &#39;00000001&#39;
+      --AND (alluser.stationlevel &amp;lt;&amp;gt; &#39;00000001&#39;);
+
+      */
+;
+
+
+GRANT SELECT ON .V_STAFF_WORKSTATUS_TODAY TO QUERY;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;8-最近30天工作量统计视图&#34;&gt;8、最近30天工作量统计视图&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;DROP VIEW .V_WORKLOAD_LAST30DAY;
+
+/* Formatted on 2016/12/23 11:29:11 (QP5 v5.227.12220.39754) */
+CREATE OR REPLACE FORCE VIEW .V_WORKLOAD_LAST30DAY
+(
+   &amp;quot;员工姓名&amp;quot;,
+   &amp;quot;简单页面数&amp;quot;,
+   &amp;quot;普通页面数&amp;quot;,
+   &amp;quot;复杂页面数&amp;quot;,
+   &amp;quot;简单接口数&amp;quot;,
+   &amp;quot;普通接口数&amp;quot;,
+   &amp;quot;复杂接口数&amp;quot;,
+   &amp;quot;任务个数&amp;quot;,
+   &amp;quot;逾期任务个数&amp;quot;,
+   &amp;quot;计划工时&amp;quot;,
+   &amp;quot;实际工时&amp;quot;,
+   &amp;quot;折算后编码工作点数&amp;quot;,
+   &amp;quot;其它工作点数&amp;quot;,
+   &amp;quot;公司最低&amp;quot;,
+   &amp;quot;公司最高&amp;quot;,
+   &amp;quot;公司平均&amp;quot;,
+   &amp;quot;A类BUG数&amp;quot;,
+   &amp;quot;B类BUG数&amp;quot;,
+   &amp;quot;C类BUG数&amp;quot;,
+   &amp;quot;D类BUG数&amp;quot;,
+   &amp;quot;E类BUG数&amp;quot;,
+   &amp;quot;应得点数&amp;quot;,
+   &amp;quot;扣除点数&amp;quot;,
+   &amp;quot;合计点数&amp;quot;,
+   &amp;quot;排名&amp;quot;
+)
+AS
+   SELECT 员工姓名,
+          简单页面数,
+          普通页面数,
+          复杂页面数,
+          简单接口数,
+          普通接口数,
+          复杂接口数,
+          任务个数,
+          逾期任务个数,
+          计划工时,
+          实际工时,
+            简单页面数 * 1
+          + 普通页面数 * 5
+          + 复杂页面数 * 15
+          + 简单接口数 * 1
+          + 普通接口数 * 4
+          + 复杂接口数 * 12
+             折算后编码工作点数,
+          任务点数 其它工作点数,
+          MIN (
+             (  任务点数
+              + 简单页面数 * 1
+              + 普通页面数 * 5
+              + 复杂页面数 * 15
+              + 简单接口数 * 1
+              + 普通接口数 * 4
+              + 复杂接口数 * 12))
+          OVER ()
+             公司最低,
+          MAX (
+             (  任务点数
+              + 简单页面数 * 1
+              + 普通页面数 * 5
+              + 复杂页面数 * 15
+              + 简单接口数 * 1
+              + 普通接口数 * 4
+              + 复杂接口数 * 12))
+          OVER ()
+             公司最高,
+          AVG (
+             (  任务点数
+              + 简单页面数 * 1
+              + 普通页面数 * 5
+              + 复杂页面数 * 15
+              + 简单接口数 * 1
+              + 普通接口数 * 4
+              + 复杂接口数 * 12))
+          OVER ()
+             公司平均,
+          NVL (A类BUG数, 0) A类BUG数,
+          NVL (B类BUG数, 0) B类BUG数,
+          NVL (C类BUG数, 0) C类BUG数,
+          NVL (D类BUG数, 0) D类BUG数,
+          NVL (E类BUG数, 0) E类BUG数,
+          (  任务点数
+           + 简单页面数 * 1
+           + 普通页面数 * 5
+           + 复杂页面数 * 15
+           + 简单接口数 * 1
+           + 普通接口数 * 4
+           + 复杂接口数 * 12)
+             应得点数,
+          (  NVL (A类BUG数, 0) * 10
+           + NVL (B类BUG数, 0) * 8
+           + NVL (C类BUG数, 0) * 6
+           + NVL (D类BUG数, 0) * 4
+           + NVL (E类BUG数, 0) * 0)
+             扣除点数,
+          (  任务点数
+           + 简单页面数 * 1
+           + 普通页面数 * 5
+           + 复杂页面数 * 15
+           + 简单接口数 * 1
+           + 普通接口数 * 4
+           + 复杂接口数 * 12
+           - NVL (A类BUG数, 0) * 10
+           - NVL (B类BUG数, 0) * 8
+           - NVL (C类BUG数, 0) * 6
+           - NVL (D类BUG数, 0) * 4
+           - NVL (E类BUG数, 0) * 0)
+             合计点数,
+          DENSE_RANK ()
+          OVER (
+             ORDER BY
+                (  任务点数
+                 + 简单页面数 * 1
+                 + 普通页面数 * 5
+                 + 复杂页面数 * 15
+                 + 简单接口数 * 1
+                 + 普通接口数 * 4
+                 + 复杂接口数 * 12
+                 - NVL (A类BUG数, 0) * 10
+                 - NVL (B类BUG数, 0) * 8
+                 - NVL (C类BUG数, 0) * 6
+                 - NVL (D类BUG数, 0) * 4
+                 - NVL (E类BUG数, 0) * 0) DESC)
+             排名
+     FROM (  SELECT STAFFNAME 员工姓名,
+                    SUM (POINTNUMBERSOFTASK) 任务点数,
+                    SUM (NUMBEROFPAGE1) 简单页面数,
+                    SUM (NUMBEROFPAGE2) 普通页面数,
+                    SUM (NUMBEROFPAGE3) 复杂页面数,
+                    SUM (UMBERSOFINTERFACE1) 简单接口数,
+                    SUM (UMBERSOFINTERFACE2) 普通接口数,
+                    SUM (UMBERSOFINTERFACE3) 复杂接口数,
+                    SUM (NUMBERSOFALLTASK) 任务个数,
+                    SUM (NUMBERSOFOVERDUETASK) 逾期任务个数,
+                    SUM (HOURSFORPLAN) 计划工时,
+                    SUM (HOURSOFFACT) 实际工时
+               FROM .DW_FACT_WORKLOAD, v_gds_user_from_hrmis gdsuser
+              WHERE     DW_FACT_WORKLOAD.STAFFNAME = gdsuser.NAME
+                    AND gdsuser.workertype = &#39;00000001&#39;
+                    AND (   gdsuser.stationlevel = &#39;00000003&#39;
+                         OR gdsuser.stationlevel = &#39;00000004&#39;)
+                    AND DW_FACT_WORKLOAD.DATEID &amp;gt;
+                           TO_NUMBER (TO_CHAR (SYSDATE - 30, &#39;YYYYMMDD&#39;))
+           GROUP BY STAFFNAME) aaa,
+          (  SELECT staffname,
+                    SUM (CASE WHEN bugtype = &#39;A类&#39; THEN bugnum ELSE 0 END)
+                       A类BUG数,
+                    SUM (CASE WHEN bugtype = &#39;B类&#39; THEN bugnum ELSE 0 END)
+                       B类BUG数,
+                    SUM (CASE WHEN bugtype = &#39;C类&#39; THEN bugnum ELSE 0 END)
+                       C类BUG数,
+                    SUM (CASE WHEN bugtype = &#39;D类&#39; THEN bugnum ELSE 0 END)
+                       D类BUG数,
+                    SUM (CASE WHEN bugtype = &#39;E类&#39; THEN bugnum ELSE 0 END)
+                       E类BUG数
+               FROM (  SELECT staffname, bugtype, SUM (bugnum) bugnum
+                         FROM .DW_FACT_BUG, v_gds_user_from_hrmis gdsuser
+                        WHERE     DW_FACT_BUG.staffname = gdsuser.NAME
+                              AND gdsuser.workertype = &#39;00000001&#39;
+                              AND (   gdsuser.stationlevel = &#39;00000003&#39;
+                                   OR gdsuser.stationlevel = &#39;00000004&#39;)
+                              AND DW_FACT_BUG.DATEID &amp;gt;
+                                     TO_NUMBER (
+                                        TO_CHAR (SYSDATE - 30, &#39;YYYYMMDD&#39;))
+                     GROUP BY STAFFNAME, bugtype)
+           GROUP BY STAFFNAME) bbb
+    WHERE aaa.员工姓名 = bbb.STAFFNAME(+);
+
+
+GRANT SELECT ON .V_WORKLOAD_LAST30DAY TO QUERY;
+
+GRANT SELECT ON .V_WORKLOAD_LAST30DAY TO PUBLIC;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;9-java存储过程-用来调用os命令&#34;&gt;9、java存储过程，用来调用os命令&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;DROP JAVA SOURCE JIRA.&amp;quot;OSCommand&amp;quot;;
+
+CREATE OR REPLACE AND RESOLVE JAVA SOURCE NAMED JIRA.&amp;quot;OSCommand&amp;quot; as import java.io.*;
+public class OSCommand{
+  public static String Run(String Command){
+     try{
+        Runtime.getRuntime().exec(new String(Command.getBytes(&amp;quot;GBK&amp;quot;),&amp;quot;ISO-8859-1&amp;quot;));
+        return(&amp;quot;0&amp;quot;);
+     }
+     catch (Exception e){
+        System.out.println(&amp;quot;Error running command: &amp;quot; + Command +
+                                 &amp;quot;\n&amp;quot; + e.getMessage());
+        return(e.getMessage());
+     }
+  }
+}
+
+/
+
+CREATE OR REPLACE FUNCTION JIRA.OSCommand_Run(Command IN STRING)                      
+RETURN VARCHAR2 IS                                                               
+LANGUAGE JAVA                                                                    
+NAME &#39;OSCommand.Run(java.lang.String) return int&#39;;
+/
+
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;10-计算日器的函数&#34;&gt;10、计算日器的函数&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;CREATE OR REPLACE FUNCTION JIRA.F_Getlunar_Date(i_SolarDay DATE) 
+RETURN DATE
+  -- 功能：计算阳历1900/01/31 - 2050/01/22间某一天对应的阴历是多少
+  -- 算法：在一张表中用10进制格式保存某个农历年每月大小,有无闰月,闰月大小信息
+  --           1.用12个2进制位来表示某个农历年每月的大小，大月记为1，否则为0
+  --           2.用低4位来表示闰月的月份，没有闰月记为0
+  --           3.用一个高位表示闰月的大小，闰月大记为0，闰月小或无闰月记为0
+  --           4.再将该2进制数转化为10进制，存入表中
+  --       农历2000年: 0 110010010110 0000 -&amp;gt; 0x0c960 -&amp;gt; 51552
+  --       农历2001年: 0 110110010101 0100 -&amp;gt; 0x0d954 -&amp;gt; 55636
+  --       采用查表的方式计算出农历日期
+  -- 作者：Angel_XJW 
+  -- 修改：1.
+  --       2.
+AS
+  v_OffSet         INT;
+  v_Lunar          INT;          -- 农历年是否含闰月,几月是闰月,闰月天数,其它月天数
+  v_YearDays       INT;          -- 农历年所含天数
+  v_MonthDays      INT;          -- 农历月所含天数
+  v_LeapMonthDays  INT;          -- 农历闰月所含天数
+  v_LeapMonth      INT;          -- 农历年闰哪个月 1-12 , 没闰传回 0
+  v_LeapFlag       INT;          -- 某农历月是否为闰月  1:是  0:不是
+  v_MonthNo        INT;          -- 某农历月所对应的2进制数 如农历3月: 001000000000 
+  i                INT;
+  j                INT; 
+  k                INT;
+
+  v_Year           INT;          -- i_SolarDay 对应的农历年
+  v_Month          INT;          -- i_SolarDay 对应的农历月
+  v_Day            INT;          -- i_SolarDay 对应的农历日
+  
+  o_OutputDate     VARCHAR2(25); -- 返回值  格式：农历 ****年 **(闰)月 **日
+  
+  e_ErrMsg         VARCHAR2(200);
+  e_ErrDate        EXCEPTION;
+BEGIN
+
+   --输入参数判断
+   IF i_SolarDay&amp;lt;TO_DATE(&#39;1900-01-31&#39;,&#39;YYYY-MM-DD&#39;) OR i_SolarDay&amp;gt;=TO_DATE(&#39;2050-01-23&#39;,&#39;YYYY-MM-DD&#39;) THEN
+     RAISE e_ErrDate;
+   END IF ;
+
+  -- i_SolarDay 到 1900-01-30(即农历1900-01-01的前一天) 的天数
+  v_OffSet := TRUNC(i_SolarDay, &#39;DD&#39;) - TO_DATE(&#39;1900-01-30&#39;, &#39;YYYY-MM-DD&#39;);
+
+  -- 确定农历年开始
+  i := 1900;
+  WHILE i &amp;lt; 2050 AND v_OffSet &amp;gt; 0 LOOP
+    v_YearDays := 348;    --  29*12 以每年12个农历月,每个农历月含29个农历日为基数
+    v_LeapMonthDays := 0;
+    
+    -- 取出农历年是否含闰月,几月是闰月,闰月天数,其它月天数
+    -- 如农历2001年: 0x0d954(16进制) -&amp;gt; 55636(10进制) -&amp;gt; 0 110110010101 0100(2进制)
+    -- 1,2,4,5,8,10,12月大, 3,6,7,9,11月小, 4月为闰月，闰月小
+    SELECT DataInt INTO v_Lunar FROM SOLARDATA WHERE YearId = i;
+
+    -- 传回农历年的总天数
+    j := 32768;            --   100000000000 0000 -&amp;gt; 32768
+                           -- 0 110110010101 0100 -&amp;gt; 55636(农历2001年)
+    -- 依次判断v_Lunar年个月是否为大月，是则加一天 
+    WHILE j &amp;gt; 8 LOOP       -- 闰月另行判断 8 -&amp;gt; 0 000000000000 1000    
+      IF BITAND(v_Lunar, j) + 0 &amp;gt; 0 THEN
+        v_YearDays := v_YearDays + 1;
+      END IF;
+      j := j/2;            -- 判断下一个月是否为大
+    END LOOP;
+
+    -- 传回农历年闰哪个月 1-12 , 没闰传回 0   15 -&amp;gt; 1 0000
+    v_LeapMonth := BITAND(v_Lunar, 15) + 0;
+
+    -- 传回农历年闰月的天数 ,加在年的总天数上
+    IF v_LeapMonth &amp;gt; 0 THEN
+      -- 判断闰月大小 65536 -&amp;gt; 1 000000000000 0000 
+      IF BITAND(v_Lunar, 65536)+0 &amp;gt; 0 THEN
+        v_LeapMonthDays := 30;
+      ELSE
+        v_LeapMonthDays := 29;
+      END IF;
+      v_YearDays := v_YearDays + v_LeapMonthDays;
+    END IF;
+
+    v_OffSet := v_OffSet - v_YearDays;
+    i := i + 1;
+  END LOOP;
+
+  IF v_OffSet &amp;lt;= 0 THEN
+    -- i_SolarDay 在所属农历年(即i年)中的第 v_OffSet 天 
+    v_OffSet := v_OffSet + v_YearDays;  
+    i := i - 1;
+  END IF;
+  -- 确定农历年结束
+  v_Year := i;
+
+  -- 确定农历月开始
+  i := 1;
+  SELECT DataInt INTO v_Lunar FROM SOLARDATA WHERE YearId = v_Year; 
+
+  -- 判断那个月是润月
+  -- 如农历2001年 (55636,15 -&amp;gt; 0 1101100101010100, 1111 -&amp;gt; 4) 即润4月,且闰月小
+  v_LeapMonth := BITAND(v_Lunar, 15) + 0; 
+  v_LeapFlag := 0;
+
+  WHILE i &amp;lt; 13 AND v_OffSet &amp;gt; 0 LOOP
+    -- 判断是否为闰月
+    v_MonthDays := 0;
+    IF (v_LeapMonth &amp;gt; 0 AND i = (v_LeapMonth + 1) AND v_LeapFlag = 0) THEN
+      -- 是闰月
+      i := i - 1;
+      k := i;                -- 保存是闰月的时i的值
+      v_LeapFlag := 1;
+      -- 传回农历年闰月的天数
+      IF BITAND(v_Lunar, 65536)+0 &amp;gt; 0 THEN
+        v_MonthDays := 30;
+      ELSE
+        v_MonthDays := 29;
+      END IF;
+      
+    ELSE
+      -- 不是闰月
+      j := 1;
+      v_MonthNo := 65536;
+      -- 计算 i 月对应的2进制数 如农历3月: 001000000000
+      WHILE j&amp;lt;= i LOOP
+        v_MonthNo := v_MonthNo/2;
+        j := j + 1;
+      END LOOP;
+      -- 计算农历 v_Year 年 i 月的天数
+      IF BITAND(v_Lunar, v_MonthNo)+0 &amp;gt; 0 THEN
+        v_MonthDays := 30;
+      ELSE
+        v_MonthDays := 29;
+      END IF;
+    END IF;
+
+    -- 解除闰月
+    IF v_LeapFlag = 1 AND i = v_LeapMonth +1 THEN
+      v_LeapFlag := 0;
+    END IF;
+    v_OffSet := v_OffSet - v_MonthDays;
+    i := i + 1;
+  END LOOP;
+
+  IF v_OffSet &amp;lt;= 0 THEN
+    -- i_SolarDay 在所属农历月(即i月)中的第 v_OffSet 天 
+    v_OffSet := v_OffSet + v_MonthDays;
+    i := i - 1;
+  END IF;
+
+  -- 确定农历月结束
+  v_Month := i;
+
+  -- 确定农历日结束
+  v_Day := v_OffSet;
+
+  -- 格式化返回值
+--   o_OutputDate := &#39;农历 &#39;||TO_CHAR(v_Year)||&#39;年 &#39;;
+--   IF k = i THEN
+--      o_OutputDate := o_OutputDate || LPAD(TO_CHAR(v_Month), 2, &#39;0&#39;)||&#39;(润)月 &#39;;
+--   ELSE
+--      o_OutputDate := o_OutputDate || LPAD(TO_CHAR(v_Month), 2, &#39;0&#39;)||&#39;月 &#39;;
+--   END IF;
+--   o_OutputDate := o_OutputDate || LPAD(TO_CHAR(v_Day), 2, &#39;0&#39;)||&#39;日&#39;;
+  o_OutputDate :=TO_CHAR(v_Year)||&#39;-&#39;|| LPAD(TO_CHAR(v_Month), 2, &#39;0&#39;)||&#39;-&#39;|| LPAD(TO_CHAR(v_Day), 2, &#39;0&#39;);
+  
+       BEGIN
+            RETURN TO_DATE(o_OutputDate,&#39;YYYY-MM-DD&#39;);
+       EXCEPTION
+          WHEN OTHERS THEN
+             RETURN TO_DATE(TO_CHAR(v_Year)||&#39;-&#39;|| LPAD(TO_CHAR(v_Month), 2, &#39;0&#39;)||&#39;-28&#39;,&#39;YYYY-MM-DD&#39;);
+       END;
+  
+ 
+  
+EXCEPTION
+  WHEN e_Errdate THEN
+    RETURN &#39;日期错误! 有效范围(阳历): 1900/01/31 - 2050/01/22&#39;;
+  WHEN OTHERS THEN
+    e_ErrMsg :=SUBSTR(SQLERRM,1,200);
+    RETURN e_ErrMsg;
+END;
+/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;11-md5加密函数&#34;&gt;11、MD5加密函数&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;CREATE OR REPLACE FUNCTION JIRA.Md5( input VARCHAR2 ) RETURN sys.dbms_obfuscation_toolkit.varchar2_checksum AS
+BEGIN 
+  RETURN utl_raw.cast_to_raw(dbms_obfuscation_toolkit.Md5(input_string=&amp;gt;utl_raw.cast_to_raw(input)));
+END;
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>使用豆瓣镜像站点加速pip安装python软件包的方法</title>

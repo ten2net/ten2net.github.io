@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Sublime Text3的介绍和使用  &middot; 学习之心</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="一款具有代码高亮、语法提示、自动完成且反应快速的编辑器软件，不仅具有华丽的界面，还支持插件扩展机制，用她来写代码，绝对是一种享受。相比于难于上手的Vim，浮肿沉重的Eclipse，VS，即便体积轻巧迅速启动的Editplus、Notepad&#43;&#43;，在SublimeText面前大略显失色，无疑这款性感无比的编辑器是Coding和Writing最佳的选择，没有之一。" />
+
+<meta name="keywords" content="工具, SublimeText, ">
+
+<link rel="author" href="http://plus.google.com/+ten2net@gmail.com">
+
+
+<meta property="og:title" content="Sublime Text3的介绍和使用  &middot; 学习之心 ">
+<meta property="og:site_name" content="学习之心"/>
+<meta property="og:url" content="https://ten2net.github.io/2016/12/23/sublime-text3%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8/" />
+<meta property="og:locale" content="zh-CN">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="一款具有代码高亮、语法提示、自动完成且反应快速的编辑器软件，不仅具有华丽的界面，还支持插件扩展机制，用她来写代码，绝对是一种享受。相比于难于上手的Vim，浮肿沉重的Eclipse，VS，即便体积轻巧迅速启动的Editplus、Notepad&#43;&#43;，在SublimeText面前大略显失色，无疑这款性感无比的编辑器是Coding和Writing最佳的选择，没有之一。"/>
+<meta property="og:article:published_time" content="2016-12-23T09:13:49&#43;08:00" />
+<meta property="og:article:modified_time" content="2016-12-23T09:13:49&#43;08:00" />
+
+  
+    
+<meta property="og:article:tag" content="工具">
+    
+<meta property="og:article:tag" content="SublimeText">
+    
+  
+
+  
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Sublime Text3的介绍和使用",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+ten2net@gmail.com?rel=author"
+    },
+    "datePublished": "2016-12-23",
+    "description": "一款具有代码高亮、语法提示、自动完成且反应快速的编辑器软件，不仅具有华丽的界面，还支持插件扩展机制，用她来写代码，绝对是一种享受。相比于难于上手的Vim，浮肿沉重的Eclipse，VS，即便体积轻巧迅速启动的Editplus、Notepad\x2b\x2b，在SublimeText面前大略显失色，无疑这款性感无比的编辑器是Coding和Writing最佳的选择，没有之一。",
+    "wordCount":  638 
+  }
+</script>
+
+
+
+<link rel="canonical" href="https://ten2net.github.io/2016/12/23/sublime-text3%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8/" />
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ten2net.github.io/touch-icon-144-precomposed.png">
+<link href="https://ten2net.github.io/favicon.png" rel="icon">
+
+<meta name="generator" content="Hugo 0.18" />
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link href='https://fonts.googleapis.com/css?family=Merriweather:300%7CRaleway%7COpen+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://ten2net.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://ten2net.github.io/css/style.css">
+<link rel="stylesheet" href="https://ten2net.github.io/css/highlight/default.css">
+
+  
+</head>
+<body>
+  <main id="main-wrapper" class="container main_wrapper has-sidebar">
+    <header id="main-header" class="container main_header">
+  <div class="container brand">
+  <div class="container title h1-like">
+  <a class="baselink" href="https://ten2net.github.io/">
+  学习之心
+
+</a>
+
+</div>
+
+  
+<div class="container topline">
+  
+  Digits Deepdetect
+
+
+</div>
+
+
+</div>
+
+  <nav class="container nav primary no-print">
+  
+
+<a class="homelink" href="https://ten2net.github.io/">首页</a>
+
+
+  
+<a href="https://ten2net.github.io/about">关于我</a>
+
+<a href="https://ten2net.github.io/post" title="显示文章列表">文章</a>
+
+<a href="https://ten2net.github.io/tags" title="显示标签列表">标签</a>
+
+
+</nav>
+
+<div class="container nav secondary no-print">
+  
+<a id="contact-link-email" class="contact_link" href="mailto:wangf@e-u.cn">
+  <span class="fa fa-envelope-square"></span><span>email</span></a>
+
+
+
+<a id="contact-link-github" class="contact_link" href="https://github.com/ten2net">
+  <span class="fa fa-github-square"></span><span>github</span></a>
+
+
+
+
+
+<a id="contact-link-linkedin" class="contact_link" href="https://www.linkedin.com/in/ten2net@163.com">
+  <span class="fa fa-linkedin-square"></span><span>linkedin</span></a>
+
+
+
+<a id="contact-link-googleplus" class="contact_link" href="https://plus.google.com/u/0/+ten2net@gmail.com">
+  <span class="fa fa-google-plus-square"></span><span>google+</span></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+  
+
+</header>
+
+
+<article id="main-content" class="container main_content single">
+  <header class="container hat">
+  <h1>Sublime Text3的介绍和使用
+</h1>
+
+  <div class="metas">
+<time datetime="2016-12-23">23 Dec, 2016</time>
+
+
+  
+    &middot; by wangf
+  
+  &middot; Read in about 3 min
+  &middot; (638 Words)
+  <br>
+  
+<a class="label" href="https://ten2net.github.io/tags/%E5%B7%A5%E5%85%B7">工具</a>
+
+<a class="label" href="https://ten2net.github.io/tags/sublimetext">SublimeText</a>
+
+
+
+</div>
+
+</header>
+
+  <div class="container content">
+  
+
+<h1 id="1-安装">1、安装</h1>
+
+<ul>
+<li>下载:<a href="https://download.sublimetext.com/Sublime%20Text%20Build%203126%20x64%20Setup.exe">https://download.sublimetext.com/Sublime%20Text%20Build%203126%20x64%20Setup.exe</a></li>
+<li>注册（Sublime Text 3 3126 注册码）
+<code>
+—– BEGIN LICENSE —–
+Michael Barnes
+Single User License
+EA7E-821385
+8A353C41 872A0D5C DF9B2950 AFF6F667
+C458EA6D 8EA3C286 98D1D650 131A97AB
+AA919AEC EF20E143 B361B1E7 4C8B7F04
+B085E65E 2F5F5360 8489D422 FB8FC1AA
+93F6323C FD7F7544 3F39C318 D95E6480
+FCCC7561 8A4A1741 68FA4223 ADCEDE07
+200C25BE DBBC4855 C4CFB774 C5EC138C
+0FEC1CEF D9DCECEC D3A5DAD1 01316C36
+—— END LICENSE ——
+</code>
+<code>
+—– BEGIN LICENSE —–
+Free Communities Consultoria em Informática Ltda
+Single User License
+EA7E-801302
+C154C122 4EFA4415 F1AAEBCC 315F3A7D
+2580735A 7955AA57 850ABD88 72A1DDD8
+8D2CE060 CF980C29 890D74F2 53131895
+281E324E 98EA1FEF 7FF69A12 17CA7784
+490862AF 833E133D FD22141D D8C89B94
+4C10A4D2 24693D70 AE37C18F 72EF0BE5
+1ED60704 651BC71F 16CA1B77 496A0B19
+463EDFF9 6BEB1861 CA5BAD96 89D0118E
+—— END LICENSE ——
+</code>
+<code>
+—– BEGIN LICENSE —–
+Nicolas Hennion
+Single User License
+EA7E-866075
+8A01AA83 1D668D24 4484AEBC 3B04512C
+827B0DE5 69E9B07A A39ACCC0 F95F5410
+729D5639 4C37CECB B2522FB3 8D37FDC1
+72899363 BBA441AC A5F47F08 6CD3B3FE
+CEFB3783 B2E1BA96 71AAF7B4 AFB61B1D
+0CC513E7 52FF2333 9F726D2C CDE53B4A
+810C0D4F E1F419A3 CDA0832B 8440565A
+35BF00F6 4CA9F869 ED10E245 469C233E
+—— END LICENSE ——
+</code>
+<code>
+—– BEGIN LICENSE —–
+Anthony Sansone
+Single User License
+EA7E-878563
+28B9A648 42B99D8A F2E3E9E0 16DE076E
+E218B3DC F3606379 C33C1526 E8B58964
+B2CB3F63 BDF901BE D31424D2 082891B5
+F7058694 55FA46D8 EFC11878 0868F093
+B17CAFE7 63A78881 86B78E38 0F146238
+BAE22DBB D4EC71A1 0EC2E701 C7F9C648
+5CF29CA3 1CB14285 19A46991 E9A98676
+14FD4777 2D8A0AB6 A444EE0D CA009B54
+—— END LICENSE ——
+</code>
+<code>
+—– BEGIN LICENSE —–
+Alexey Plutalov
+Single User License
+EA7E-860776
+3DC19CC1 134CDF23 504DC871 2DE5CE55
+585DC8A6 253BB0D9 637C87A2 D8D0BA85
+AAE574AD BA7D6DA9 2B9773F2 324C5DEF
+17830A4E FBCF9D1D 182406E9 F883EA87
+E585BBA1 2538C270 E2E857C2 194283CA
+7234FF9E D0392F93 1D16E021 F1914917
+63909E12 203C0169 3F08FFC8 86D06EA8
+73DDAEF0 AC559F30 A6A67947 B60104C6
+—— END LICENSE ——
+</code>
+<code>
+—– BEGIN LICENSE —–
+Peter Halliday
+Single User License
+EA7E-855988
+3997BFF0 2856413A 7A555954 67069B78
+06D8CE12 63EAF079 AD039757 79E16D13
+C555AD90 465CBE53 10F6DFC4 D3A3C611
+411106F8 0CFEB15F 0A7BB891 111F5ED2
+C6AA8429 77913528 FA6291A9 B88D4550
+F1D6AB13 BF9153BC 91B4DFFE D296CFE0
+C1D8EB22 13D5F14E 75A699EC 49EDDC23
+D89D0F9B D240B10A A3712467 09DE7870
+—— END LICENSE ——
+</code>
+<code>
+—– BEGIN LICENSE —–
+Fred Zirdung
+Single User License
+EA7E-844672
+6089C0EC 22936E1A 1EADEBE2 B8654BBA
+5C98FFA6 C0FD1599 0364779B 071C74FB
+EEFE9EAB 92B3D867 CD1B32FE D190269F
+6FC08F8F 8D24191D 32828465 942CE58E
+AECE5307 08B62229 D788560A 6E0AAC4B
+48A2D9EE 24FD8CAA 07BEBDF2 28EA86D4
+CCB96084 6C34CAD2 E8A04F39 3B5A3CBC
+3B668BB7 C94D0B4B 847D6D7F 4BC07375
+—— END LICENSE ——
+</code>
+<code>
+—– BEGIN LICENSE —–
+Wixel
+Single User License
+EA7E-848235
+103D2969 8700C7ED 8173CF61 537000C0
+EB3C7ECB 5E750F17 6B42B67C A190090B
+7669164F C6F371A8 5A1D88D5 BDD0DA70
+C065892B 7CC1BB2B 1C8B8C7C F08E7789
+7C2A5241 35F86328 4C8F70D9 C023D7C2
+11245C36 59A730DB 72BDB9A7 D5B20304
+90E90E72 9F08CA25 73F49C20 179D938E
+5BC8BEDA 13457A69 39E6265F 233767F9
+—— END LICENSE ——
+</code>
+<code>
+—– BEGIN LICENSE —–
+Daniel Russel
+Single User License
+EA7E-917420
+9327EC62 44020C2A 45172A68 12FE13F1
+1D22245B 680892EE F551F8EB C183D032
+8B4EDB4B 479CB7E4 07E42EDD A780021D
+56BADF42 AC05238B 023B47B1 EBA1B7DE
+6DF9A383 159F32AE 04EBE100 1278B1D2
+52E81B60 C68AA2E8 F84A20BE FE7990EB
+5D44E4B6 16369263 1DDAACBC 280FF19E
+86CF4319 0B8615A8 4FF0512E B123B8EC
+—— END LICENSE ——
+</code>
+<code>
+—– BEGIN LICENSE —–
+Peter Eriksson
+Single User License
+EA7E-890068
+8E107C71 3100D6FC 2AC805BF 9E627C77
+72E710D7 43392469 D06A2F5B F9304FBD
+F5AB4DB2 7A95F172 FE68E300 42745819
+E94AB2DF C1893094 ECABADC8 71FEE764
+20224821 3EABF931 745AF882 87AD0A4B
+33C6E377 0210D712 CD2B1178 82601542
+C7FD8098 F45D2824 BC7DFB38 F1EBD38A
+D7A3AFE0 96F938EA 2D90BD72 9E34CDF0
+—— END LICENSE ——
+</code>
+<code>
+—– BEGIN LICENSE —–
+Ryan Clark
+Single User License
+EA7E-812479
+2158A7DE B690A7A3 8EC04710 006A5EEB
+34E77CA3 9C82C81F 0DB6371B 79704E6F
+93F36655 B031503A 03257CCC 01B20F60
+D304FA8D B1B4F0AF 8A76C7BA 0FA94D55
+56D46BCE 5237A341 CD837F30 4D60772D
+349B1179 A996F826 90CDB73C 24D41245
+FD032C30 AD5E7241 4EAA66ED 167D91FB
+55896B16 EA125C81 F550AF6B A6820916
+—— END LICENSE ——
+</code></li>
+</ul>
+
+<h1 id="2-sublime-text-3安装插件">2、Sublime Text 3安装插件</h1>
+
+<p>Sublime Text的强大就是她拥有强大的可扩展性。您可根据自己的需要安装不同的插件；这使得她变的无比强大的同时又不失轻便。
+- 插件安装方式一：直接安装：
+    安装Sublime text 3插件很方便，可以直接下载安装包解压缩到Packages目录（菜单-&gt;preferences-&gt;packages）。
+- 插件安装方式二：使用Package Control组件安装：
+    按Ctrl+`调出console（注：安装有QQ输入法的这个快捷键会有冲突的，输入法属性设置-输入法管理-取消热键切换至QQ拼音）粘贴以下代码到底部命令行并回车：</p>
+
+<pre><code class="language-python">import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())
+</code></pre>
+
+<blockquote>
+<ul>
+<li>重启Sublime Text 3。如果在Perferences-&gt;package settings中看到package ontrol这一项，则安装成功。</li>
+<li>按下Ctrl+Shift+P调出命令面板输入install 调出 Install Package 选项并回车，然后在列表中选中要安装的插件。</li>
+<li>PS：国内使用SublimeText3，经常可能遇到无法安装可用插件问题，可remove掉Package Control重新安装下；如遇到连Package Control也无法安装，则可以在别处拷贝一份关于Package Control的文件－(Package Control.sublime-package)存放于Installed Packages目录之下即可。</li>
+</ul>
+</blockquote>
+
+<h2 id="2-1-markdownediting插件-sublime-text的markdown利器">2.1、MarkdownEditing插件：Sublime Text的Markdown利器</h2>
+
+<ul>
+<li>Github项目地址：SublimeText-Markdown/MarkdownEditing</li>
+<li>安装：如果Sublime安装了Package Control,直接Ctrl+Shift+P输入MarkdownEditing，搜索到点击即可自行安装，重启便可使用用。</li>
+<li>关于特性：</li>
+</ul>
+
+<blockquote>
+<p>MarkdownEditing 从视觉和便捷性上针对 Markdown 文档的编辑进行了一系列的优化。具体如下(Mac下)：
+安装后针对 md\mdown\mmd\txt 格式文件启用插件。颜色方案仿 Byword及iA writer。
+自动匹配星号（*）、下划线（_）及反引号（`），选中文本按下以上符号能自动在所选文本前后添加配对的符号，方便粗体、斜体和代码框的输入。
+直接输入配对的符号后按下退格键（backspace），则两个符号都会被删除；直接输入配对的符号后按下空格键，则会自动删除后一个。
+对“选中文字后输入左括号”这一动作进行了调整，以便插入markdown链接。
+拷贝一个链接，选中文本后按下 ⌘⌥V 会自动插入内联链接。
+拷贝一个链接，选中文本后按下 ⌘⌥R 会自动插入引用链接。
+⌘⌥K 插入链接；⌘⇧K 插入图片。
+⌘⇧B 和 ⌘⇧I 分别用于加粗体和斜体。
+⌘^1..6 对于选中的内容前加对应个数#,即对选中内容字体大小设置为h1~h6;
+⌘⇧6插入文档脚注并且跳转到它的定义；具体可参见:Footnotes;
+选中文本后按下 # 会自动在文本前后进行配对，可重复按下来定义标题级别。</p>
+</blockquote>
+
+<h2 id="2-2-markdown-preview插件-预览md">2.2、Markdown Preview插件：预览MD</h2>
+
+<p>Markdown Preview较常用的功能是preview in browser和Export HTML in Sublime Text，前者可以在浏览器看到预览效果，后者可将markdown保存为html文件。
+preview inbrowser据称是实时的，但是实践上还是需要在st保存，然后浏览器刷新才能看到新的效果，
+好在markdown写得多的话也不需要每敲一行看一次效果。</p>
+
+<ul>
+<li><p>markdown preview默认没有快捷键，我们可以自己为preview in browser设置快捷键。
+&gt;
+方法是在Preferences -&gt; Key Bindings User打开的文件的中括号中添加以下代码(可在Key Bindings Default找到格式)：</p>
+
+<pre><code class="language-js">{ &quot;keys&quot;: [&quot;alt+m&quot;], &quot;command&quot;: &quot;markdown_preview_select&quot;, &quot;args&quot;: {&quot;target&quot;: &quot;browser&quot;} }
+</code></pre>
+
+<blockquote>
+</blockquote></li>
+
+<li><p>随时alt+m，即可预览</p></li>
+</ul>
+
+</div>
+
+
+  <footer class="container">
+  <div class="container navigation no-print">
+  <h2>Navigation</h2>
+  
+  
+
+    
+    <a class="prev" href="https://ten2net.github.io/2016/12/23/%E6%9B%BE%E7%BB%8F%E5%86%99%E8%BF%87%E7%9A%84%E6%AF%94%E8%BE%83%E5%A5%BD%E7%9A%84sql/" title="曾经写过的比较好的SQL">
+      Previous
+    </a>
+    
+
+    
+
+  
+
+
+</div>
+
+  <div class="container comments">
+  <h2>Comments</h2>
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//ten2net.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+</footer>
+
+</article>
+      <footer id="main-footer" class="container main_footer">
+  
+
+  <div class="container nav foot no-print">
+  
+<a href="http://www.e-u.cn">我的公司</a>
+
+
+  <a class="toplink" href="#">back to top</a>
+
+</div>
+
+  <div class="container credits">
+  
+<div class="container footline">
+  
+  制作 <i class='fa fa-heart'>ten2net</i>
+
+
+</div>
+
+
+  
+<div class="container copyright">
+  
+  &copy; 2017 ten2net 西安长城数字软件有限公司.
+
+
+</div>
+
+
+</div>
+
+</footer>
+
+    </main>
+    
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//ten2net.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+<script src="https://ten2net.github.io/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'Your Google Analytics tracking code', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+    
+  </body>
+</html>
+
