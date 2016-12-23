@@ -1441,26 +1441,26 @@ BEGIN
     IF yestdayIsHoliday = &#39;否&#39; THEN
             FOR c1_rec IN c1 LOOP
                BEGIN
-                    conn := utl_smtp.open_connection(&#39;mail.e-u.cn&#39;);
-                    utl_smtp.EHLO(conn, &#39;mail.e-u.cn&#39;); 
+                    conn := utl_smtp.open_connection(&#39;mail.pppddd.cn&#39;);
+                    utl_smtp.EHLO(conn, &#39;mail.pppddd.cn&#39;); 
 
                     --utl_smtp.command(conn, &#39;AUTH LOGIN&#39;);
                     --utl_smtp.command(conn, username);
                     --utl_smtp.command(conn, Demo_Base64.encode(utl_raw.cast_to_raw(PASSWORD)));
                     
-                    utl_smtp.mail(conn, username||&#39;@e-u.cn&#39;);
-                    V_ACCT:=c1_rec.&amp;quot;帐号&amp;quot;||&#39;@e-u.cn&#39;;
+                    utl_smtp.mail(conn, username||&#39;@pppddd.cn&#39;);
+                    V_ACCT:=c1_rec.&amp;quot;帐号&amp;quot;||&#39;@pppddd.cn&#39;;
                     utl_smtp.rcpt(conn,V_ACCT );    
         
                     utl_smtp.open_data(conn);
-                    send_header(&#39;From&#39;,username||&#39;@e-u.cn&#39;);
-                    send_header(&#39;To&#39;,c1_rec.&amp;quot;帐号&amp;quot;||&#39;@e-u.cn&#39;);
-                    --send_header(&#39;To&#39;,&#39;wangf@e-u.cn&#39;);
+                    send_header(&#39;From&#39;,username||&#39;@pppddd.cn&#39;);
+                    send_header(&#39;To&#39;,c1_rec.&amp;quot;帐号&amp;quot;||&#39;@pppddd.cn&#39;);
+                    --send_header(&#39;To&#39;,&#39;wangf@pppddd.cn&#39;);
                     send_header(&#39;Subject&#39;,&#39;任务平台提醒：&#39;||c1_rec.&amp;quot;姓名&amp;quot;||&#39;，您前一个工作日（&#39;||TO_CHAR(SYSDATE -1,&#39;YYYY-MM-DD&#39;)||&#39;)忘了填写工作日志或填的不正确。&#39;);
                     send_header(&#39;Content-type&#39;,&#39;text/html; charset=gbk&#39;);
                     mesg :=&#39;&#39;|| mesg_body0 ||c1_rec.&amp;quot;姓名&amp;quot;||&#39;: &#39; || crlf || &#39;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;您好。&#39;||&#39;您昨天（&#39;||TO_CHAR(SYSDATE -1,&#39;YYYY-MM-DD&#39;)||&#39;)忘了填写工作日志或填的不正确（少于4小时或多于12小时）。&#39;||crlf;
                     mesg :=mesg|| &#39;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;请尽快补填!长城数字软件全体员工感谢您的支持与理解。&#39;||crlf;
-                    mesg :=mesg|| &#39;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;lt;a href=http://mail.e-u.cn:8880 target=_blank&amp;gt;进入任务平台填写工作日志&amp;lt;/a&amp;gt;&#39;;
+                    mesg :=mesg|| &#39;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;lt;a href=http://mail.pppddd.cn:8880 target=_blank&amp;gt;进入任务平台填写工作日志&amp;lt;/a&amp;gt;&#39;;
                     mesg :=mesg|| mesg_body1|| &#39;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp; 卜海峰 &amp;amp;nbsp;&#39;||TO_CHAR(SYSDATE ,&#39;YYYY-MM-DD&#39;)||mesg_body2;
             
                     utl_smtp.write_raw_data(conn, utl_raw.cast_to_raw(utl_tcp.CRLF||mesg));
@@ -1487,22 +1487,22 @@ BEGIN
             END LOOP;   
             --给管理人员发送日志填写有问题的人员名单
                 conn := utl_smtp.open_connection(&#39;mail.eu3434.cn&#39;);
-                utl_smtp.EHLO(conn, &#39;mail.e-u.cn&#39;);
+                utl_smtp.EHLO(conn, &#39;mail.pppddd.cn&#39;);
                 --utl_smtp.command(conn, &#39;AUTH LOGIN&#39;);
                 --utl_smtp.command(conn, demo_base64.encode(utl_raw.cast_to_raw(username)));
                 --utl_smtp.command(conn, demo_base64.encode(utl_raw.cast_to_raw(password)));
                 
-                utl_smtp.mail(conn, username||&#39;@e-u.cn&#39;);
-                utl_smtp.rcpt(conn, &#39;m1@e-u.cn&#39;); 
-                utl_smtp.rcpt(conn, &#39;m2@e-u.cn&#39;); 
-                utl_smtp.rcpt(conn, &#39;m3@e-u.cn&#39;);    
-                utl_smtp.rcpt(conn, &#39;m4@e-u.cn&#39;);                 
+                utl_smtp.mail(conn, username||&#39;@pppddd.cn&#39;);
+                utl_smtp.rcpt(conn, &#39;m1@pppddd.cn&#39;); 
+                utl_smtp.rcpt(conn, &#39;m2@pppddd.cn&#39;); 
+                utl_smtp.rcpt(conn, &#39;m3@pppddd.cn&#39;);    
+                utl_smtp.rcpt(conn, &#39;m4@pppddd.cn&#39;);                 
                 utl_smtp.open_data(conn);
-                send_header(&#39;From&#39;,username||&#39;@e-u.cn&#39;);
-                send_header(&#39;To&#39;,&#39;m1@e-u.cn&#39;);
-                send_header(&#39;To&#39;,&#39;m2@e-u.cn&#39;);
-                send_header(&#39;To&#39;,&#39;m3@e-u.cn&#39;);
-                send_header(&#39;To&#39;,&#39;m4@e-u.cn&#39;);                
+                send_header(&#39;From&#39;,username||&#39;@pppddd.cn&#39;);
+                send_header(&#39;To&#39;,&#39;m1@pppddd.cn&#39;);
+                send_header(&#39;To&#39;,&#39;m2@pppddd.cn&#39;);
+                send_header(&#39;To&#39;,&#39;m3@pppddd.cn&#39;);
+                send_header(&#39;To&#39;,&#39;m4@pppddd.cn&#39;);                
                 send_header(&#39;Subject&#39;,&#39;任务平台提醒：&#39;||&#39;前一个工作日（&#39;||TO_CHAR(SYSDATE -1,&#39;YYYY-MM-DD&#39;)||&#39;)忘了填写工作日志或填的不正确（少于4小时或多于12小时）的员工名单,请督促其尽快补填。&#39;);
                 send_header(&#39;Content-type&#39;,&#39;text/html; charset=gbk&#39;);
                 V_NO_WORKLOG_NAMELIST := V_NO_WORKLOG_NAMELIST ||&#39;&amp;lt;BR/&amp;gt;&amp;lt;BR/&amp;gt;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;lt;FONT COLOR=RED&amp;gt;注：如果有不用再提醒的用户，请告诉管理员！&amp;lt;/FONT&amp;gt;&#39;;
@@ -2528,6 +2528,362 @@ END Pr_asasa_Stat_Xml_Gen;
 /
 
 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;15-ldap&#34;&gt;15、LDAP&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;CREATE OR REPLACE PROCEDURE RBAC.PR_SYNC_USERINFO_TO_LDAP
+as
+ ldap_host            VARCHAR2(256);
+ ldap_port            PLS_INTEGER;
+ ldap_user            VARCHAR2(256);
+ ldap_passwd          VARCHAR2(256);
+ ldap_base            VARCHAR2(256);
+  ldap_role_base        VARCHAR2(256);
+ mailDomain           VarChar2(256);
+ retval               PLS_INTEGER;
+ my_session           DBMS_LDAP.session;
+ subscriber_handle    DBMS_LDAP_UTL.HANDLE;
+--  sub_type             PLS_INTEGER;
+--  subscriber_id        VARCHAR2(2000);
+--  my_pset_coll         DBMS_LDAP_UTL.PROPERTY_SET_COLLECTION;
+--  my_property_names    DBMS_LDAP.STRING_COLLECTION;
+--  my_property_values   DBMS_LDAP.STRING_COLLECTION;
+--  user_handle          DBMS_LDAP_UTL.HANDLE;
+--  user_id              VARCHAR2(2000);
+--  user_type            PLS_INTEGER;
+--  user_password        VARCHAR2(2000);
+--  my_mod_pset          DBMS_LDAP_UTL.MOD_PROPERTY_SET;
+--  my_attrs             DBMS_LDAP.STRING_COLLECTION;
+--  user_dn              VARCHAR2(256);
+ 
+CURSOR cur_users IS
+       --FROM RBAC数据库
+SELECT ACCOUNTID, PASSWORD, DISABLED,ISADM, REALNAME, RESERVEMAIL
+       FROM RBAC_USER  where substr(ACCOUNTID,9,2) in (&#39;10&#39;,&#39;11&#39;)  ; 
+       --FROM 教务数据库
+       --SELECT LOGINID ACCOUNTID, PASSWORD, ISACTIVE DISABLED,USERNAME REALNAME, EMALLADDRESS RESERVEMAIL FROM XNJW.USERS WHERE ROWNUM&amp;lt;21;   
+CURSOR cur_userRoles IS SELECT RBACUSER, ROLENAME FROM V_USER_ALL_ROLE  where substr(RBACUSER,9,2) in (&#39;10&#39;,&#39;11&#39;)  ; 
+
+CURSOR cur_roles IS SELECT ROLENAME,ROLEDESCRIPTION FROM RBAC_ROLE ;  
+ 
+LDAP_DN VarChar2(256);
+LDAP_DN_USER_TEMP VarChar2(256);
+LDAP_DN_ROLE_TEMP VarChar2(256);
+
+LDAP_Array DBMS_LDAP.MOD_ARRAY;
+
+LDAP_Vals DBMS_LDAP.STRING_COLLECTION;
+LDAP_Vals_Int DBMS_LDAP.STRING_COLLECTION;
+
+LDAP_ModArray DBMS_LDAP.MOD_ARRAY;
+LDAP_Modval DBMS_LDAP.STRING_COLLECTION;
+
+ SOURCE_ChAR_SET VARCHAR2(256);
+ DEST_ChAR_SET VARCHAR2(256);
+ 
+BEGIN
+ -- 请根据LDAP SERVER的环境定制下列属性---------------
+ 
+ ldap_host  := &#39;192.168.200.12&#39; ;
+ ldap_port  := &#39;389&#39;;
+ ldap_user  := &#39;cn=Manager,dc=example,dc=com&#39;;
+ ldap_passwd:= &#39;secret&#39;;
+ ldap_base  := &#39;ou=people,dc=example,dc=com&#39;;
+ ldap_role_base  := &#39;ou=roles,dc=example,dc=com&#39;; 
+ mailDomain := &#39;example.com&#39;;
+ 
+ SOURCE_CHAR_SET := &#39;UTF8&#39;;
+ DEST_CHAR_SET := &#39;ZHS16CGB231280&#39;;  
+  
+ -----------------------------------------------------
+ DBMS_LDAP.USE_EXCEPTION := TRUE;
+
+ DBMS_OUTPUT.PUT(&#39;连接到 &#39; || ldap_host || &#39; ...&#39;);
+ my_session := DBMS_LDAP.init(ldap_host,ldap_port);
+ DBMS_OUTPUT.PUT_LINE(&#39;: 已连接.&#39;);
+
+ DBMS_OUTPUT.PUT(&#39;绑定到目录as &#39; || ldap_user || &#39; ... &#39;);
+ retval := DBMS_LDAP.simple_bind_s(my_session,
+                                   ldap_user,
+                                   ldap_passwd);
+ DBMS_OUTPUT.PUT_LINE(&#39;成功&#39;);        
+ 
+ 
+ ----------------------------------BEGIN ADD ROLES  
+ FOR CURA in cur_roles LOOP
+ BEGIN
+        LDAP_DN :=&#39;cn=&#39;|| CURA.ROLENAME || &#39;,&#39; || ldap_role_base;
+        
+             BEGIN
+                retval := DBMS_LDAP.delete_s(my_session,LDAP_DN);  
+            EXCEPTION
+                 WHEN OTHERS THEN
+                      DBMS_OUTPUT.PUT_LINE(&#39;要删除的角色: [&#39;|| CONVERT(LDAP_DN,DEST_CHAR_SET,SOURCE_CHAR_SET) || &#39;]本来就不存在.&#39;); 
+            END;    
+
+           LDAP_Array := DBMS_LDAP.create_mod_array(40);
+           LDAP_Vals.delete;
+
+
+           
+           LDAP_Vals(1) := CONVERT(CURA.ROLENAME,SOURCE_CHAR_SET,DEST_CHAR_SET);
+           DBMS_LDAP.populate_mod_array(LDAP_Array,DBMS_LDAP.MOD_ADD,&#39;cn&#39;,LDAP_Vals);
+           LDAP_Vals.delete;
+           LDAP_Vals(1) := CONVERT(NVL(CURA.ROLEDESCRIPTION,CURA.ROLENAME||&#39;角色&#39;),SOURCE_CHAR_SET,DEST_CHAR_SET);
+           DBMS_LDAP.populate_mod_array(LDAP_Array,DBMS_LDAP.MOD_ADD,&#39;description&#39;,LDAP_Vals);
+
+           LDAP_Vals.delete;
+           LDAP_Vals(1) := &#39;top&#39;;
+           LDAP_Vals(2) := &#39;organizationalRole&#39;;
+           DBMS_LDAP.populate_mod_array(LDAP_Array,DBMS_LDAP.MOD_ADD,&#39;objectclass&#39;,LDAP_Vals);
+    
+        
+           DBMS_OUTPUT.PUT(RPAD(&#39;添加角色: [&#39;|| CONVERT(LDAP_DN,DEST_CHAR_SET,SOURCE_CHAR_SET) || &#39;]&#39;,50,&#39; &#39;));
+           BEGIN
+                retval := DBMS_LDAP.add_s(my_session,LDAP_DN,LDAP_Array);
+           EXCEPTION
+                 WHEN OTHERS THEN
+                     -- retval := DBMS_LDAP.delete_s(my_session,LDAP_DN); --若出错，则先删除，再增加   
+                     -- retval := DBMS_LDAP.add_s(my_session,LDAP_DN,LDAP_Array);
+                     retval := DBMS_LDAP.modify_s(my_session,LDAP_DN,LDAP_Array);
+                    
+           END;
+           DBMS_OUTPUT.PUT_LINE(&#39;: 成功.&#39;);   
+ EXCEPTION
+    WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT(RPAD(&#39;错误代码 &#39;,10,&#39; &#39;) || TO_CHAR(SQLCODE));
+    DBMS_OUTPUT.PUT_LINE(&#39; 错误信息 : &#39; ||SUBSTR(SQLERRM,1,instr(SQLERRM,&#39;:&#39;,-1))||CONVERT(SUBSTR(SQLERRM, instr(SQLERRM,&#39;:&#39;,-1) +1),DEST_CHAR_SET,SOURCE_CHAR_SET));
+ END;
+ END LOOP;
+ 
+  
+ ------------------------------------END ADD ROLES                                     
+---------------------------------------
+ 
+ FOR CURA in cur_users LOOP
+ BEGIN
+        LDAP_DN :=&#39;uid=&#39;|| CURA.ACCOUNTID || &#39;,&#39; || ldap_base;
+
+        --如果用户状态为锁定(&#39;1&#39;)    则删除该用户 －－
+        IF CURA.DISABLED =&#39;1&#39; THEN
+            BEGIN
+                retval := DBMS_LDAP.delete_s(my_session,LDAP_DN);  
+            EXCEPTION
+                 WHEN OTHERS THEN
+                      DBMS_OUTPUT.PUT_LINE(&#39;要删除的用户: [&#39;|| CONVERT(LDAP_DN,DEST_CHAR_SET,SOURCE_CHAR_SET) || &#39;]本来就不存在.&#39;); 
+            END;        
+        ELSE    
+--          BEGIN
+--              retval := DBMS_LDAP.compare_s(my_session,LDAP_DN,&#39;userPassword&#39;,CURA.PASSWORD); 
+--          EXCEPTION
+--               WHEN OTHERS THEN
+--                    DBMS_OUTPUT.PUT_LINE(&#39;比较用户: [&#39;|| CONVERT(LDAP_DN,DEST_CHAR_SET,SOURCE_CHAR_SET) || &#39;]的的密码时出错.&#39;); 
+--         END; 
+--          --判断用户的密码是否被修改过 
+--         IF retval IS NOT NULL THEN
+--          IF not (retval = dbms_ldap.COMPARE_TRUE) THEN
+--             DBMS_OUTPUT.PUT_LINE(&#39;用户: [&#39;|| CONVERT(LDAP_DN,DEST_CHAR_SET,SOURCE_CHAR_SET) || &#39;]的密码被修改过!!!&#39;);
+--           END IF;
+--         END IF;      
+           
+                
+           LDAP_Array := DBMS_LDAP.create_mod_array(40);
+
+           
+           
+           LDAP_Vals.delete;
+           LDAP_Vals(1) := &#39;top&#39;;
+           LDAP_Vals(2) := &#39;person&#39;;
+           LDAP_Vals(3) := &#39;organizationalPerson&#39;;
+           LDAP_Vals(4) := &#39;inetOrgPerson&#39;;
+           LDAP_Vals(5) := &#39;eduPerson&#39;;
+           DBMS_LDAP.populate_mod_array(LDAP_Array,DBMS_LDAP.MOD_ADD,&#39;objectclass&#39;,LDAP_Vals);
+           
+           LDAP_Vals.delete;
+           LDAP_Vals(1) := CONVERT(NVL(CURA.REALNAME,&#39;用户&#39;||CURA.ACCOUNTID),SOURCE_CHAR_SET,DEST_CHAR_SET);
+           DBMS_LDAP.populate_mod_array(LDAP_Array,DBMS_LDAP.MOD_ADD,&#39;cn&#39;,LDAP_Vals);
+           
+           LDAP_Vals.delete;
+           LDAP_Vals(1) := CONVERT(NVL(CURA.REALNAME,&#39;用户&#39;||CURA.ACCOUNTID),SOURCE_CHAR_SET,DEST_CHAR_SET);
+           DBMS_LDAP.populate_mod_array(LDAP_Array,DBMS_LDAP.MOD_ADD,&#39;sn&#39;,LDAP_Vals);
+           
+           LDAP_Vals.delete;
+           LDAP_Vals(1) := CURA.ACCOUNTID;
+           DBMS_LDAP.populate_mod_array(LDAP_Array,DBMS_LDAP.MOD_ADD,&#39;uid&#39;,LDAP_Vals);         
+           
+           LDAP_Vals.delete;
+           LDAP_Vals(1) := CURA.PASSWORD;
+           DBMS_LDAP.populate_mod_array(LDAP_Array,DBMS_LDAP.MOD_ADD,&#39;userpassword&#39;,LDAP_Vals);
+           
+           LDAP_Vals.delete;
+           LDAP_Vals(1) := NVL(CURA.RESERVEMAIL,CURA.ACCOUNTID ||&#39;@&#39;||mailDomain);
+           DBMS_LDAP.populate_mod_array(LDAP_Array,DBMS_LDAP.MOD_ADD,&#39;mail&#39;,LDAP_Vals);
+        
+        
+--         LDAP_Vals.delete;
+--         LDAP_Vals(1) := &#39;本科生&#39;;
+--         DBMS_LDAP.populate_mod_array(LDAP_Array,DBMS_LDAP.MOD_ADD,&#39;eduPersonAffiliation&#39;,LDAP_Vals);     
+--         LDAP_Vals.delete;
+--         
+--         LDAP_Vals(1) := &#39;本科生&#39;;
+--         DBMS_LDAP.populate_mod_array(LDAP_Array,DBMS_LDAP.MOD_ADD,&#39;eduPersonPrimaryAffiliation&#39;,LDAP_Vals);
+--         
+--         LDAP_Vals.delete;
+--         LDAP_Vals(1) := CURA.ACCOUNTID || &#39;的昵称&#39;;
+--         DBMS_LDAP.populate_mod_array(LDAP_Array,DBMS_LDAP.MOD_ADD,&#39;eduPersonNickname&#39;,LDAP_Vals);
+--         
+--         LDAP_Vals.delete;
+--         LDAP_Vals(1) := CURA.ACCOUNTID;
+--         DBMS_LDAP.populate_mod_array(LDAP_Array,DBMS_LDAP.MOD_ADD,&#39;eduPersonPrincipalName&#39;,LDAP_Vals);
+--      
+           
+--         LDAP_Vals.delete;
+--         LDAP_Vals(1) := CURA.ACCOUNTID || &#39;的显示名&#39;;
+--         DBMS_LDAP.populate_mod_array(LDAP_Array,DBMS_LDAP.MOD_ADD,&#39;displayName&#39;,LDAP_Vals);                     
+--                             
+--         LDAP_Vals.delete;
+--         LDAP_Vals(1) := CURA.ACCOUNTID || &#39;的givenName&#39;;
+--         DBMS_LDAP.populate_mod_array(LDAP_Array,DBMS_LDAP.MOD_ADD,&#39;givenName&#39;,LDAP_Vals);    
+--  
+--         LDAP_Vals.delete;
+--         LDAP_Vals(1) := &#39;zh_CN&#39;;
+--         DBMS_LDAP.populate_mod_array(LDAP_Array,DBMS_LDAP.MOD_ADD,&#39;preferredLanguage&#39;,LDAP_Vals);           
+--                                 
+--      
+        
+           DBMS_OUTPUT.PUT(RPAD(&#39;添加用户: [&#39;|| CONVERT(LDAP_DN,DEST_CHAR_SET,SOURCE_CHAR_SET) || &#39;]&#39;,50,&#39; &#39;));
+           BEGIN
+                retval := DBMS_LDAP.add_s(my_session,LDAP_DN,LDAP_Array);
+           EXCEPTION
+                 WHEN OTHERS THEN
+                      --retval := DBMS_LDAP.delete_s(my_session,LDAP_DN); --若出错，则先删除，再增加   
+                      --retval := DBMS_LDAP.add_s(my_session,LDAP_DN,LDAP_Array);
+                      retval := DBMS_LDAP.modify_s(my_session,LDAP_DN,LDAP_Array);  --若出错，则修改 
+           END;
+           DBMS_OUTPUT.PUT_LINE(&#39;: 成功.&#39;);   
+           
+        END IF;     
+ EXCEPTION
+    WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT(RPAD(&#39;错误代码 &#39;,10,&#39; &#39;) || TO_CHAR(SQLCODE));
+    DBMS_OUTPUT.PUT_LINE(&#39; 错误信息 : &#39; ||SUBSTR(SQLERRM,1,instr(SQLERRM,&#39;:&#39;,-1))||CONVERT(SUBSTR(SQLERRM, instr(SQLERRM,&#39;:&#39;,-1) +1),DEST_CHAR_SET,SOURCE_CHAR_SET));
+ END;
+ END LOOP;
+ 
+ 
+ ---绑定用户角色
+ FOR CURA in cur_userRoles LOOP
+ BEGIN
+        LDAP_DN_ROLE_TEMP :=&#39;cn=&#39;|| CURA.ROLENAME || &#39;,&#39; || ldap_role_base;
+        LDAP_DN_USER_TEMP :=&#39;uid=&#39;|| CURA.RBACUSER || &#39;,&#39; || ldap_base;
+        
+        LDAP_Array := DBMS_LDAP.create_mod_array(14);
+        LDAP_Vals.delete;
+        LDAP_Vals(1) := LDAP_DN_USER_TEMP;
+        DBMS_LDAP.populate_mod_array(LDAP_Array,DBMS_LDAP.MOD_ADD,&#39;roleOccupant&#39;,LDAP_Vals);
+        BEGIN
+            retval := DBMS_LDAP.modify_s(my_session,LDAP_DN_ROLE_TEMP,LDAP_Array);
+        EXCEPTION
+                 WHEN OTHERS THEN
+                      --retval := DBMS_LDAP.delete_s(my_session,LDAP_DN); --若出错，则先删除，再增加   
+                      --retval := DBMS_LDAP.add_s(my_session,LDAP_DN,LDAP_Array);
+                      null;
+        END;
+        DBMS_OUTPUT.PUT_LINE(&#39;: 成功.&#39;);  
+ EXCEPTION
+    WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT(RPAD(&#39;错误代码 &#39;,10,&#39; &#39;) || TO_CHAR(SQLCODE));
+    DBMS_OUTPUT.PUT_LINE(&#39; 错误信息 : &#39; ||SUBSTR(SQLERRM,1,instr(SQLERRM,&#39;:&#39;,-1))||CONVERT(SUBSTR(SQLERRM, instr(SQLERRM,&#39;:&#39;,-1) +1),DEST_CHAR_SET,SOURCE_CHAR_SET));
+ END;
+ END LOOP;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+           
+           
+ --断开与lDAP的绑定----------------
+ retval := DBMS_LDAP.unbind_s(my_session);
+ DBMS_OUTPUT.PUT_LINE(&#39;操作目录服务成功 .. 正常结束&#39;);
+ EXCEPTION
+    WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE(&#39; 错误代码 : &#39; || TO_CHAR(SQLCODE));
+    DBMS_OUTPUT.PUT_LINE(&#39; 错误信息 : &#39; ||SUBSTR(SQLERRM,1,instr(SQLERRM,&#39;:&#39;,-1))||CONVERT(SUBSTR(SQLERRM, instr(SQLERRM,&#39;:&#39;,-1) +1),DEST_CHAR_SET,SOURCE_CHAR_SET));
+    DBMS_OUTPUT.PUT_LINE(&#39; 系统异常退出......&#39;);
+END PR_SYNC_USERINFO_TO_LDAP;
+/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;16-send-mail&#34;&gt;16、send mail&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;CREATE OR REPLACE PROCEDURE RBAC.send_mail(sender varchar2,receiver varchar2,subject varchar2,contact varchar2) is
+conn utl_smtp.connection;
+username varchar2(256) := &#39;webmaster&#39;;
+password varchar2(256) := &#39;webmaster&#39;;
+procedure send_header(name IN varchar2, header in varchar2) as
+data varchar2(4000);
+begin
+data := name || &#39;:&#39; || header || utl_tcp.crlf;
+utl_smtp.write_raw_data(conn, utl_raw.cast_to_raw(data));
+end; 
+
+
+begin
+
+--  BEGIN
+--       SELECT PARMVALUE INTO smtpHost FROM SYSTEMCONFIG  WHERE PARMNAME=&#39;SMTPHOST&#39;;
+--       EXCEPTION
+--           WHEN others THEN smtpHost:=&#39;mail.pppddd.cn&#39;;
+--  END;
+--  BEGIN
+--       SELECT PARMVALUE INTO username FROM SYSTEMCONFIG  WHERE PARMNAME=&#39;DEFAULT_SENT_USER_EMAIL&#39;;
+--       EXCEPTION
+--           WHEN others THEN username:=&#39;webmaster&#39;;
+--  END;
+--  BEGIN
+--       SELECT PARMVALUE INTO password FROM SYSTEMCONFIG  WHERE PARMNAME=&#39;DEFAULT_SENT_USER_EMAIL&#39;;
+--       EXCEPTION
+--           WHEN others THEN password:=&#39;webmaster&#39;;
+--  END;
+
+conn := utl_smtp.open_connection(&#39;mail.pppddd.cn&#39;);
+utl_smtp.EHLO(conn, &#39;mail.pppddd.cn&#39;);
+--utl_smtp.command(conn, &#39;AUTH LOGIN&#39;);
+--utl_smtp.command(conn, demo_base64.encode(utl_raw.cast_to_raw(username)));
+--utl_smtp.command(conn, demo_base64.encode(utl_raw.cast_to_raw(password)));
+
+utl_smtp.mail(conn, sender);
+utl_smtp.rcpt(conn, sender);
+utl_smtp.open_data(conn);
+
+send_header(&#39;From&#39;,sender);
+send_header(&#39;To&#39;,receiver);
+send_header(&#39;Subject&#39;,subject);
+send_header(&#39;Content-type&#39;,&#39;text/plain; charset=gbk&#39;);
+
+utl_smtp.write_raw_data(conn, utl_raw.cast_to_raw(utl_tcp.CRLF||contact));
+utl_smtp.close_data(conn);
+utl_smtp.quit(conn);
+
+exception 
+when utl_smtp.transient_error or utl_smtp.permanent_error then 
+begin
+utl_smtp.quit(conn);
+exception
+when utl_smtp.transient_error or utl_smtp.permanent_error then
+null; 
+end;
+when others then
+raise_application_error(-20000,
+&#39;Failed to send mail due to the following error: &#39; || sqlerrm);
+end;
+/
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
