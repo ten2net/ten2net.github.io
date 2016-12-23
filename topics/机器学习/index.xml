@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>机器学习 on 学习之心</title>
+    <link>https://ten2net.github.io/topics/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.xml</link>
+    <description>Recent content in 机器学习 on 学习之心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>wangf@e-u.cn (wangf)</managingEditor>
+    <webMaster>wangf@e-u.cn (wangf)</webMaster>
+    <copyright>(c) 2017 ten2net 西安长城数字软件有限公司.</copyright>
+    <atom:link href="https://ten2net.github.io/topics/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>深度学习库Keras快速入门笔记</title>
+      <link>https://ten2net.github.io/2016/12/22/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%BA%93keras%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Thu, 22 Dec 2016 11:15:53 +0800</pubDate>
+      <author>wangf@e-u.cn (wangf)</author>
+      <guid>https://ten2net.github.io/2016/12/22/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%BA%93keras%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</guid>
+      <description>
+
+&lt;h1 id=&#34;如何开始&#34;&gt;如何开始&lt;/h1&gt;
+
+&lt;h2 id=&#34;1-光标移动到下面的-import-keras-cell中&#34;&gt;1、光标移动到下面的 import keras   Cell中；&lt;/h2&gt;
+
+&lt;h2 id=&#34;2-shift-enter或点击上面的运行按钮-类似播放&#34;&gt;2、Shift+Enter或点击上面的运行按钮（类似播放）&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;  出现Using Theano backend.那么Keras就已经成功安装了
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import keras
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;#查看mnist数据集
+%matplotlib inline
+from keras.datasets import mnist
+from matplotlib import pyplot as plt
+# load data
+(X_train, y_train), (X_test, y_test) = mnist.load_data(&amp;quot;/notebook/datasets/mnist.pkl&amp;quot;)
+# create a grid of 3x3 images
+for i in range(0, 9):
+    plt.subplot(330 + 1 + i)
+    plt.imshow(X_train[i], cmap=plt.get_cmap(&#39;gray&#39;))
+# show the plot
+plt.show()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;%matplotlib inline
+from matplotlib import pyplot as plt
+
+from keras.models import Sequential
+from keras.layers import Dense,Dropout
+from keras.models import model_from_json
+import numpy
+import os
+# 为了多次执行再现结果，这只一个固定的随机数   fix random seed for reproducibility
+seed = 7
+numpy.random.seed(seed)
+# 加载数据集 load pima indians dataset
+dataset = numpy.loadtxt(&amp;quot;pima-indians-diabetes.csv&amp;quot;, delimiter=&amp;quot;,&amp;quot;)
+# 分开数据集为输入和输出两部分  split into input (X) and output (Y) variables
+X = dataset[:,0:8]
+Y = dataset[:,8]
+
+print (X.shape,Y.shape)
+print (Y)
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;(768, 8) (768,)
+[ 1.  0.  1.  0.  1.  0.  1.  0.  1.  1.  0.  1.  0.  1.  1.  1.  1.  1.
+  0.  1.  0.  0.  1.  1.  1.  1.  1.  0.  0.  0.  0.  1.  0.  0.  0.  0.
+  0.  1.  1.  1.  0.  0.  0.  1.  0.  1.  0.  0.  1.  0.  0.  0.  0.  1.
+  0.  0.  1.  0.  0.  0.  0.  1.  0.  0.  1.  0.  1.  0.  0.  0.  1.  0.
+  1.  0.  0.  0.  0.  0.  1.  0.  0.  0.  0.  0.  1.  0.  0.  0.  1.  0.
+  0.  0.  0.  1.  0.  0.  0.  0.  0.  1.  1.  0.  0.  0.  0.  0.  0.  0.
+  0.  1.  1.  1.  0.  0.  1.  1.  1.  0.  0.  0.  1.  0.  0.  0.  1.  1.
+  0.  0.  1.  1.  1.  1.  1.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  1.
+  0.  0.  0.  0.  0.  0.  0.  0.  1.  0.  1.  1.  0.  0.  0.  1.  0.  0.
+  0.  0.  1.  1.  0.  0.  0.  0.  1.  1.  0.  0.  0.  1.  0.  1.  0.  1.
+  0.  0.  0.  0.  0.  1.  1.  1.  1.  1.  0.  0.  1.  1.  0.  1.  0.  1.
+  1.  1.  0.  0.  0.  0.  0.  0.  1.  1.  0.  1.  0.  0.  0.  1.  1.  1.
+  1.  0.  1.  1.  1.  1.  0.  0.  0.  0.  0.  1.  0.  0.  1.  1.  0.  0.
+  0.  1.  1.  1.  1.  0.  0.  0.  1.  1.  0.  1.  0.  0.  0.  0.  0.  0.
+  0.  0.  1.  1.  0.  0.  0.  1.  0.  1.  0.  0.  1.  0.  1.  0.  0.  1.
+  1.  0.  0.  0.  0.  0.  1.  0.  0.  0.  1.  0.  0.  1.  1.  0.  0.  1.
+  0.  0.  0.  1.  1.  1.  0.  0.  1.  0.  1.  0.  1.  1.  0.  1.  0.  0.
+  1.  0.  1.  1.  0.  0.  1.  0.  1.  0.  0.  1.  0.  1.  0.  1.  1.  1.
+  0.  0.  1.  0.  1.  0.  0.  0.  1.  0.  0.  0.  0.  1.  1.  1.  0.  0.
+  0.  0.  0.  0.  0.  0.  0.  1.  0.  0.  0.  0.  0.  1.  1.  1.  0.  1.
+  1.  0.  0.  1.  0.  0.  1.  0.  0.  1.  1.  0.  0.  0.  0.  1.  0.  0.
+  1.  0.  0.  0.  0.  0.  0.  0.  1.  1.  1.  0.  0.  1.  0.  0.  1.  0.
+  0.  1.  0.  1.  1.  0.  1.  0.  1.  0.  1.  0.  1.  1.  0.  0.  0.  0.
+  1.  1.  0.  1.  0.  1.  0.  0.  0.  0.  1.  1.  0.  1.  0.  1.  0.  0.
+  0.  0.  0.  1.  0.  0.  0.  0.  1.  0.  0.  1.  1.  1.  0.  0.  1.  0.
+  0.  1.  0.  0.  0.  1.  0.  0.  1.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+  1.  0.  0.  0.  0.  0.  0.  0.  1.  0.  0.  0.  1.  0.  0.  0.  1.  1.
+  0.  0.  0.  0.  0.  0.  0.  1.  0.  0.  0.  0.  1.  0.  0.  0.  1.  0.
+  0.  0.  1.  0.  0.  0.  1.  0.  0.  0.  0.  1.  1.  0.  0.  0.  0.  0.
+  0.  1.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  1.  0.  0.  0.  1.
+  1.  1.  1.  0.  0.  1.  1.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+  0.  0.  1.  1.  0.  0.  0.  0.  0.  0.  0.  1.  0.  0.  0.  0.  0.  0.
+  0.  1.  0.  1.  1.  0.  0.  0.  1.  0.  1.  0.  1.  0.  1.  0.  1.  0.
+  0.  1.  0.  0.  1.  0.  0.  0.  0.  1.  1.  0.  1.  0.  0.  0.  0.  1.
+  1.  0.  1.  0.  0.  0.  1.  1.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+  1.  0.  0.  0.  0.  1.  0.  0.  1.  0.  0.  0.  1.  0.  0.  0.  1.  1.
+  1.  0.  0.  0.  0.  0.  0.  1.  0.  0.  0.  1.  0.  1.  1.  1.  1.  0.
+  1.  1.  0.  0.  0.  0.  0.  0.  0.  1.  1.  0.  1.  0.  0.  1.  0.  1.
+  0.  0.  0.  0.  0.  1.  0.  1.  0.  1.  0.  1.  1.  0.  0.  0.  0.  1.
+  1.  0.  0.  0.  1.  0.  1.  1.  0.  0.  1.  0.  0.  1.  1.  0.  0.  1.
+  0.  0.  1.  0.  0.  0.  0.  0.  0.  0.  1.  1.  1.  0.  0.  0.  0.  0.
+  0.  1.  1.  0.  0.  1.  0.  0.  1.  0.  1.  1.  1.  0.  0.  1.  1.  1.
+  0.  1.  0.  1.  0.  1.  0.  0.  0.  0.  1.  0.]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;%matplotlib inline
+from matplotlib import pyplot as plt
+
+from keras.models import Sequential
+from keras.layers import Dense,Dropout
+from keras.models import model_from_json
+import numpy
+import os
+# 为了多次执行再现结果，这只一个固定的随机数   fix random seed for reproducibility
+seed = 7
+numpy.random.seed(seed)
+# 加载数据集 load pima indians dataset
+dataset = numpy.loadtxt(&amp;quot;pima-indians-diabetes.csv&amp;quot;, delimiter=&amp;quot;,&amp;quot;)
+# 分开数据集为输入和输出两部分  split into input (X) and output (Y) variables
+X = dataset[:,0:8]
+Y = dataset[:,8]
+
+# 创建模型 create model
+model = Sequential()
+model.add(Dense(12, input_dim=8, init=&#39;uniform&#39;, activation=&#39;relu&#39;))
+model.add(Dense(8, init=&#39;uniform&#39;, activation=&#39;relu&#39;))
+model.add(Dense(1, init=&#39;uniform&#39;, activation=&#39;sigmoid&#39;))
+# 编译模型 Compile model
+model.compile(loss=&#39;binary_crossentropy&#39;, optimizer=&#39;adam&#39;, metrics=[&#39;accuracy&#39;])
+# 训练模型  Fit the model
+history= model.fit(X, Y,validation_split=0.25, nb_epoch=300, batch_size=10, verbose=0)
+
+# 评估模型 evaluate the model
+scores = model.evaluate(X, Y, verbose=0)
+print(&amp;quot;%s: %.2f%%&amp;quot; % (model.metrics_names[1], scores[1]*100))
+ 
+# 保存模型 serialize model to JSON
+model_json = model.to_json()
+with open(&amp;quot;./models/diabetes-model.json&amp;quot;, &amp;quot;w&amp;quot;) as json_file:
+    json_file.write(model_json)
+# 保存权重 serialize weights to HDF5
+model.save_weights(&amp;quot;./models/diabetes-model.h5&amp;quot;)
+print(&amp;quot;Saved model to disk&amp;quot;)
+
+#训练过程可视化
+# list all data in history
+print(history.history.keys())
+# summarize history for accuracy
+plt.plot(history.history[&#39;acc&#39;])
+plt.plot(history.history[&#39;val_acc&#39;])
+plt.title(&#39;model accuracy&#39;)
+plt.ylabel(&#39;accuracy&#39;)
+plt.xlabel(&#39;epoch&#39;)
+plt.legend([&#39;train&#39;, &#39;test&#39;], loc=&#39;upper left&#39;)
+plt.show()
+# summarize history for loss
+plt.plot(history.history[&#39;loss&#39;])
+plt.plot(history.history[&#39;val_loss&#39;])
+plt.title(&#39;model loss&#39;)
+plt.ylabel(&#39;loss&#39;)
+plt.xlabel(&#39;epoch&#39;)
+plt.legend([&#39;train&#39;, &#39;test&#39;], loc=&#39;upper left&#39;)
+plt.show()
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;acc: 80.08%
+Saved model to disk
+dict_keys([&#39;val_acc&#39;, &#39;val_loss&#39;, &#39;loss&#39;, &#39;acc&#39;])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ten2net.github.io/post/index-readme_files/index-readme_4_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ten2net.github.io/post/index-readme_files/index-readme_4_2.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;使用正则化和dropout&#34;&gt;使用正则化和Dropout&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;%matplotlib inline
+from matplotlib import pyplot as plt
+
+from keras.models import Sequential
+from keras.layers import Dense,Dropout,Activation
+from keras.models import model_from_json
+import numpy
+import os
+#正则化
+# import BatchNormalization
+from keras.layers.normalization import BatchNormalization
+
+# 为了多次执行再现结果，这只一个固定的随机数   fix random seed for reproducibility
+seed = 7
+numpy.random.seed(seed)
+# 加载数据集 load pima indians dataset
+dataset = numpy.loadtxt(&amp;quot;pima-indians-diabetes.csv&amp;quot;, delimiter=&amp;quot;,&amp;quot;)
+# 分开数据集为输入和输出两部分  split into input (X) and output (Y) variables
+X = dataset[:,0:8]
+Y = dataset[:,8]
+
+# 创建模型 create model
+model = Sequential()
+model.add(Dense(12, input_dim=8, init=&#39;uniform&#39;))
+model.add(BatchNormalization())
+model.add(Activation(&#39;relu&#39;))
+model.add(Dropout(0.5))
+
+model.add(Dense(8, init=&#39;uniform&#39;))
+model.add(BatchNormalization())
+model.add(Activation(&#39;relu&#39;))
+model.add(Dropout(0.5))
+
+model.add(Dense(1, init=&#39;uniform&#39;))
+model.add(BatchNormalization())
+model.add(Activation(&#39;sigmoid&#39;))
+
+# 编译模型 Compile model
+model.compile(loss=&#39;binary_crossentropy&#39;, optimizer=&#39;adam&#39;, metrics=[&#39;accuracy&#39;])
+# 训练模型  Fit the model
+history= model.fit(X, Y,validation_split=0.25, nb_epoch=300, batch_size=10, verbose=0)
+
+# 评估模型 evaluate the model
+scores = model.evaluate(X, Y, verbose=0)
+print(&amp;quot;%s: %.2f%%&amp;quot; % (model.metrics_names[1], scores[1]*100))
+ 
+# 保存模型 serialize model to JSON
+model_json = model.to_json()
+with open(&amp;quot;./models/diabetes-model.json&amp;quot;, &amp;quot;w&amp;quot;) as json_file:
+    json_file.write(model_json)
+# 保存权重 serialize weights to HDF5
+model.save_weights(&amp;quot;./models/diabetes-model.h5&amp;quot;)
+print(&amp;quot;Saved model to disk&amp;quot;)
+
+#训练过程可视化
+# list all data in history
+print(history.history.keys())
+# summarize history for accuracy
+plt.plot(history.history[&#39;acc&#39;])
+plt.plot(history.history[&#39;val_acc&#39;])
+plt.title(&#39;model accuracy&#39;)
+plt.ylabel(&#39;accuracy&#39;)
+plt.xlabel(&#39;epoch&#39;)
+plt.legend([&#39;train&#39;, &#39;test&#39;], loc=&#39;upper left&#39;)
+plt.show()
+# summarize history for loss
+plt.plot(history.history[&#39;loss&#39;])
+plt.plot(history.history[&#39;val_loss&#39;])
+plt.title(&#39;model loss&#39;)
+plt.ylabel(&#39;loss&#39;)
+plt.xlabel(&#39;epoch&#39;)
+plt.legend([&#39;train&#39;, &#39;test&#39;], loc=&#39;upper left&#39;)
+plt.show()
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;acc: 76.69%
+Saved model to disk
+dict_keys([&#39;val_acc&#39;, &#39;val_loss&#39;, &#39;loss&#39;, &#39;acc&#39;])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ten2net.github.io/post/index-readme_files/index-readme_6_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ten2net.github.io/post/index-readme_files/index-readme_6_2.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;使用sgd优化器&#34;&gt;使用SGD优化器&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;%matplotlib inline
+from matplotlib import pyplot as plt
+
+from keras.models import Sequential
+from keras.optimizers import SGD
+from keras.layers import Dense,Dropout,Activation
+from keras.models import model_from_json
+import numpy
+import os
+#正则化
+# import BatchNormalization
+from keras.layers.normalization import BatchNormalization
+
+# 为了多次执行再现结果，这只一个固定的随机数   fix random seed for reproducibility
+seed = 7
+numpy.random.seed(seed)
+# 加载数据集 load pima indians dataset
+dataset = numpy.loadtxt(&amp;quot;pima-indians-diabetes.csv&amp;quot;, delimiter=&amp;quot;,&amp;quot;)
+# 分开数据集为输入和输出两部分  split into input (X) and output (Y) variables
+X = dataset[:,0:8]
+Y = dataset[:,8]
+
+# 创建模型 create model
+model = Sequential()
+model.add(Dense(12, input_dim=8, init=&#39;uniform&#39;))
+model.add(BatchNormalization())
+model.add(Activation(&#39;relu&#39;))
+model.add(Dropout(0.5))
+
+model.add(Dense(8, init=&#39;uniform&#39;))
+model.add(BatchNormalization())
+model.add(Activation(&#39;relu&#39;))
+model.add(Dropout(0.5))
+
+model.add(Dense(1, init=&#39;uniform&#39;))
+model.add(BatchNormalization())
+model.add(Activation(&#39;sigmoid&#39;))
+
+# 编译模型 Compile model
+sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
+model.compile(loss=&#39;binary_crossentropy&#39;, optimizer=sgd, metrics=[&#39;accuracy&#39;])
+# 训练模型  Fit the model
+history= model.fit(X, Y,validation_split=0.25, nb_epoch=300, batch_size=10, verbose=0)
+
+# 评估模型 evaluate the model
+scores = model.evaluate(X, Y, verbose=0)
+print(&amp;quot;%s: %.2f%%&amp;quot; % (model.metrics_names[1], scores[1]*100))
+ 
+# 保存模型 serialize model to JSON
+model_json = model.to_json()
+with open(&amp;quot;./models/diabetes-model.json&amp;quot;, &amp;quot;w&amp;quot;) as json_file:
+    json_file.write(model_json)
+# 保存权重 serialize weights to HDF5
+model.save_weights(&amp;quot;./models/diabetes-model.h5&amp;quot;)
+print(&amp;quot;Saved model to disk&amp;quot;)
+
+#训练过程可视化
+# list all data in history
+print(history.history.keys())
+# summarize history for accuracy
+plt.plot(history.history[&#39;acc&#39;])
+plt.plot(history.history[&#39;val_acc&#39;])
+plt.title(&#39;model accuracy&#39;)
+plt.ylabel(&#39;accuracy&#39;)
+plt.xlabel(&#39;epoch&#39;)
+plt.legend([&#39;train&#39;, &#39;test&#39;], loc=&#39;upper left&#39;)
+plt.show()
+# summarize history for loss
+plt.plot(history.history[&#39;loss&#39;])
+plt.plot(history.history[&#39;val_loss&#39;])
+plt.title(&#39;model loss&#39;)
+plt.ylabel(&#39;loss&#39;)
+plt.xlabel(&#39;epoch&#39;)
+plt.legend([&#39;train&#39;, &#39;test&#39;], loc=&#39;upper left&#39;)
+plt.show()
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;acc: 76.69%
+Saved model to disk
+dict_keys([&#39;val_acc&#39;, &#39;val_loss&#39;, &#39;loss&#39;, &#39;acc&#39;])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ten2net.github.io/post/index-readme_files/index-readme_8_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ten2net.github.io/post/index-readme_files/index-readme_8_2.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;%matplotlib inline
+from matplotlib import pyplot as plt
+from keras.callbacks import EarlyStopping,ModelCheckpoint
+from keras.models import Sequential
+from keras.layers import Dense,Dropout
+from keras.models import model_from_json
+import numpy as np
+import os
+# 为了多次执行再现结果，这只一个固定的随机数   fix random seed for reproducibility
+seed = 7
+np.random.seed(seed)
+# 加载数据集 load pima indians dataset
+dataset = numpy.loadtxt(&amp;quot;pima-indians-diabetes.csv&amp;quot;, delimiter=&amp;quot;,&amp;quot;)
+# 分开数据集为输入和输出两部分  split into input (X) and output (Y) variables
+X = dataset[:,0:8]
+Y = dataset[:,8]
+
+# 创建模型 create model
+model = Sequential()
+model.add(Dense(12, input_dim=8, init=&#39;uniform&#39;, activation=&#39;relu&#39;))
+model.add(Dense(8, init=&#39;uniform&#39;, activation=&#39;relu&#39;))
+model.add(Dense(1, init=&#39;uniform&#39;, activation=&#39;sigmoid&#39;))
+# 编译模型 Compile model
+model.compile(loss=&#39;binary_crossentropy&#39;, optimizer=&#39;adam&#39;, metrics=[&#39;accuracy&#39;])
+
+#--早停 和检查点-callback---
+filepath=&amp;quot;./temp/diabetes-weights-improvement-{epoch:02d}-{val_acc:.2f}.hdf5&amp;quot;
+checkpoint = ModelCheckpoint(filepath, monitor=&#39;val_acc&#39;, verbose=1, save_best_only=True, mode=&#39;max&#39;)
+checkpoint2=ModelCheckpoint(&amp;quot;./temp/diabetes-weights.{epoch:02d}-{val_loss:.2f}.h5&amp;quot;, monitor=&#39;val_loss&#39;, verbose=0, save_best_only=False, mode=&#39;auto&#39;)
+#当监测值不再改善时，该回调函数将中止训练
+   # patience：当early stop被激活（如发现loss相比上一个epoch训练没有下降），
+    # 则经过patience个epoch后停止训练。
+estop = EarlyStopping(monitor=&#39;val_loss&#39;, patience=5, verbose=0, mode=&#39;auto&#39;)
+#--------------------------------------
+
+# 训练模型  Fit the model
+history= model.fit(X, Y,validation_split=0.5, nb_epoch=150, batch_size=10, verbose=0,callbacks=[checkpoint,checkpoint2,estop])
+
+# 评估模型 evaluate the model
+scores = model.evaluate(X, Y, verbose=0)
+print(&amp;quot;%s: %.2f%%&amp;quot; % (model.metrics_names[1], scores[1]*100))
+ 
+# 保存模型 serialize model to JSON
+model_json = model.to_json()
+with open(&amp;quot;./models/diabetes-model.json&amp;quot;, &amp;quot;w&amp;quot;) as json_file:
+    json_file.write(model_json)
+# 保存权重 serialize weights to HDF5
+model.save_weights(&amp;quot;./models/diabetes-model.h5&amp;quot;)
+print(&amp;quot;Saved model to disk&amp;quot;)
+
+#训练过程可视化
+# list all data in history
+print(history.history.keys())
+# summarize history for accuracy
+plt.plot(history.history[&#39;acc&#39;])
+plt.plot(history.history[&#39;val_acc&#39;])
+plt.title(&#39;model accuracy&#39;)
+plt.ylabel(&#39;accuracy&#39;)
+plt.xlabel(&#39;epoch&#39;)
+plt.legend([&#39;train&#39;, &#39;test&#39;], loc=&#39;upper left&#39;)
+plt.show()
+# summarize history for loss
+plt.plot(history.history[&#39;loss&#39;])
+plt.plot(history.history[&#39;val_loss&#39;])
+plt.title(&#39;model loss&#39;)
+plt.ylabel(&#39;loss&#39;)
+plt.xlabel(&#39;epoch&#39;)
+plt.legend([&#39;train&#39;, &#39;test&#39;], loc=&#39;upper left&#39;)
+plt.show()
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;Epoch 00000: val_acc improved from -inf to 0.68490, saving model to ./temp/diabetes-weights-improvement-00-0.68.hdf5
+Epoch 00001: val_acc did not improve
+Epoch 00002: val_acc did not improve
+Epoch 00003: val_acc did not improve
+Epoch 00004: val_acc did not improve
+Epoch 00005: val_acc did not improve
+Epoch 00006: val_acc improved from 0.68490 to 0.69010, saving model to ./temp/diabetes-weights-improvement-06-0.69.hdf5
+Epoch 00007: val_acc did not improve
+Epoch 00008: val_acc did not improve
+Epoch 00009: val_acc did not improve
+Epoch 00010: val_acc did not improve
+Epoch 00011: val_acc improved from 0.69010 to 0.69010, saving model to ./temp/diabetes-weights-improvement-11-0.69.hdf5
+Epoch 00012: val_acc did not improve
+Epoch 00013: val_acc did not improve
+Epoch 00014: val_acc did not improve
+Epoch 00015: val_acc did not improve
+Epoch 00016: val_acc did not improve
+Epoch 00017: val_acc did not improve
+Epoch 00018: val_acc did not improve
+Epoch 00019: val_acc did not improve
+Epoch 00020: val_acc did not improve
+Epoch 00021: val_acc did not improve
+Epoch 00022: val_acc did not improve
+Epoch 00023: val_acc did not improve
+Epoch 00024: val_acc did not improve
+Epoch 00025: val_acc did not improve
+Epoch 00026: val_acc did not improve
+Epoch 00027: val_acc did not improve
+Epoch 00028: val_acc did not improve
+Epoch 00029: val_acc did not improve
+Epoch 00030: val_acc did not improve
+Epoch 00031: val_acc did not improve
+acc: 69.01%
+Saved model to disk
+dict_keys([&#39;val_acc&#39;, &#39;val_loss&#39;, &#39;loss&#39;, &#39;acc&#39;])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ten2net.github.io/post/index-readme_files/index-readme_9_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ten2net.github.io/post/index-readme_files/index-readme_9_2.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;loss, accuracy = model.evaluate(X_test,Y_test, verbose=0)
+predicted_classes = model.predict_classes(X_test)
+correct_classified_indices = np.nonzero(predicted_classes == y_test)[0]
+incorrect_classified_indices = np.nonzero(predicted_classes != y_test)[0]
+correct_classified_indices
+array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 14, 15, 16])
+incorrect_classified_indices
+array([ 0, 13])
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>使用digits进行finetune</title>
+      <link>https://ten2net.github.io/2016/12/21/%E4%BD%BF%E7%94%A8digits%E8%BF%9B%E8%A1%8Cfinetune/</link>
+      <pubDate>Wed, 21 Dec 2016 17:45:00 +0800</pubDate>
+      <author>wangf@e-u.cn (wangf)</author>
+      <guid>https://ten2net.github.io/2016/12/21/%E4%BD%BF%E7%94%A8digits%E8%BF%9B%E8%A1%8Cfinetune/</guid>
+      <description>
+
+&lt;h1 id=&#34;一-下载model参数&#34;&gt;一、下载model参数&lt;/h1&gt;
+
+&lt;p&gt;可以直接在浏览器里输入地址下载，也可以运行脚本文件下载。下载地址为：&lt;a href=&#34;http://dl.caffe.berkeleyvision.org/bvlc_reference_caffenet.caffemodel&#34;&gt;http://dl.caffe.berkeleyvision.org/bvlc_reference_caffenet.caffemodel&lt;/a&gt;
+文件名称为：bvlc_reference_caffenet.caffemodel，文件大小为230M左右，为了代码的统一，将这个caffemodel文件下载到caffe根目录下的 models/bvlc_reference_caffenet/ 文件夹下面。也可以运行脚本文件进行下载：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# sudo ./scripts/download_model_binary.py models/bvlc_reference_caffenet
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;二-准备数据&#34;&gt;二、准备数据&lt;/h1&gt;
+
+&lt;p&gt;将训练数据放在一个文件夹内。比如我在当前用户根目录下创建了一个data文件夹，专门用来存放数据，因此我的训练图片路径为：/home/xxx/data/re/train
+打开浏览器，运行digits，新建一个classification dataset,设置如下图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ten2net.github.io/post/images/digits/image001.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;下面图片格式选为jpg, 为dataset取一个名字，就开始转换吧。结果如图：&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ten2net.github.io/post/images/digits/image003.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;三-设置model&#34;&gt;三、设置model&lt;/h1&gt;
+
+&lt;p&gt;回到digits根目录，新建一个classification model， 选中你的dataset, 开始设置最重要的network.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ten2net.github.io/post/images/digits/image005.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;caffenet的网络配置文件，放在 caffe/models/bvlc_reference_caffenet/ 这个文件夹里面，名字叫train_val.prototxt。打开这个文件，将里面的内容复制到上图的Custom Network文本框里，然后进行修改，主要修改这几个地方：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;1-修改train阶段的data层为&#34;&gt;1、修改train阶段的data层为：&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;layer {
+  name: &amp;quot;data&amp;quot;
+  type: &amp;quot;Data&amp;quot;
+  top: &amp;quot;data&amp;quot;
+  top: &amp;quot;label&amp;quot;
+  include {
+    phase: TRAIN
+  }
+  transform_param {
+    mirror: true
+    crop_size: 227
+  }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;即把均值文件（mean_file)、数据源文件(source)、批次大小(batch_size)和数据源格式（backend)这四项都删除了。因为这四项系统会根据dataset和页面左边“solver options&amp;raquo;的设置自动生成。如果想用原始数据训练，可以不用crop_size，即图像数据不会crop,按照原始图像大小训练。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;2-修改test阶段的data层-和上面一样-也是删除那些项&#34;&gt;2、修改test阶段的data层：和上面一样，也是删除那些项。&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;layer {
+  name: &amp;quot;data&amp;quot;
+  type: &amp;quot;Data&amp;quot;
+  top: &amp;quot;data&amp;quot;
+  top: &amp;quot;label&amp;quot;
+  include {
+    phase: TEST
+  }
+  transform_param {
+    mirror: false
+    crop_size: 227
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;3-修改最后一个全连接层-fc8&#34;&gt;3、修改最后一个全连接层（fc8)：&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;layer {
+  name: &amp;quot;fc8-re&amp;quot;               #原来为&amp;quot;fc8&amp;quot;
+  type: &amp;quot;InnerProduct&amp;quot;
+  bottom: &amp;quot;fc7&amp;quot;
+  top: &amp;quot;fc8&amp;quot;
+  param {
+    lr_mult: 1.0
+    decay_mult: 1.0
+  }
+  param {
+    lr_mult: 2.0
+    decay_mult: 0.0
+  }
+  inner_product_param {
+    num_output: 5        #原来为&amp;quot;1000&amp;quot;
+    weight_filler {
+      type: &amp;quot;gaussian&amp;quot;
+      std: 0.01
+    }
+    bias_filler {
+      type: &amp;quot;constant&amp;quot;
+      value: 0.0
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;看注释的地方，就只有两个地方修改，其它不变。&lt;/li&gt;
+&lt;li&gt;设置好后，就可以开始微调了(fine tuning).&lt;/li&gt;
+&lt;li&gt;训练结果就是一个新的model，可以用来单张图片和多张图片测试。在此，将别人训练好的model用到我们自己的图片分类上，整个微调过程就是这样了。如果你不用digits，而直接用命令操作，那就更简单，只需要修改一个train_val.prototxt的配置文件就可以了，其它都是一样的操作。&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;【注意】新版digits的网络结构是针对所有网络的，即包括的训练的网络结构，测试的网络结构和验证的网络结构，即在一个.prototxt 中包含了train/val/deploy 所有的结构。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;如果使用新版digits，除了上面数据层和最后一个全连接层的改动外，还有以下3处：&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;（1）修改accuracy层，删除原来phase: TEST修改为stage: &amp;laquo;val&amp;raquo;，下图的-表示删除，+表示增加，后面的均是这样表示。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;layer {
+name: &amp;quot;accuracy&amp;quot;
+     type: &amp;quot;Accuracy&amp;quot;
+     bottom: &amp;quot;output&amp;quot;
+     bottom: &amp;quot;label&amp;quot;
+     top: &amp;quot;accuracy&amp;quot;
+-     include {
+-         phase: TEST
+-     }
++    include { stage: &amp;quot;val&amp;quot; }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;（2）修改loss层，增加exclude { stage: &amp;laquo;deploy&amp;raquo; }，表示loss只在训练和验证中计算，测试时不计算。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;layer {
+       name: &amp;quot;loss&amp;quot;
+       type: &amp;quot;SoftmaxWithLoss&amp;quot;
+       bottom: &amp;quot;output&amp;quot;
+       bottom: &amp;quot;label&amp;quot;
+       top: &amp;quot;loss&amp;quot;
++     exclude { stage: &amp;quot;deploy&amp;quot; }
++}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;（3）增加softmax层，该层不在训练和验证中计算，只在测试时计算。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;+ layer {
++      name: &amp;quot;softmax&amp;quot;
++      type: &amp;quot;Softmax&amp;quot;
++      bottom: &amp;quot;output&amp;quot;
++      top: &amp;quot;softmax&amp;quot;
++         include { stage: &amp;quot;deploy&amp;quot; }
++}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>工具 on 学习之心</title>
+    <link>https://ten2net.github.io/topics/%E5%B7%A5%E5%85%B7/index.xml</link>
+    <description>Recent content in 工具 on 学习之心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>wangf@e-u.cn (wangf)</managingEditor>
+    <webMaster>wangf@e-u.cn (wangf)</webMaster>
+    <copyright>(c) 2017 ten2net 西安长城数字软件有限公司.</copyright>
+    <atom:link href="https://ten2net.github.io/topics/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Sublime Text3的介绍和使用</title>
+      <link>https://ten2net.github.io/2016/12/23/sublime-text3%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Fri, 23 Dec 2016 09:13:49 +0800</pubDate>
+      <author>wangf@e-u.cn (wangf)</author>
+      <guid>https://ten2net.github.io/2016/12/23/sublime-text3%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8/</guid>
+      <description>
+
+&lt;h1 id=&#34;1-安装&#34;&gt;1、安装&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;下载:&lt;a href=&#34;https://download.sublimetext.com/Sublime%20Text%20Build%203126%20x64%20Setup.exe&#34;&gt;https://download.sublimetext.com/Sublime%20Text%20Build%203126%20x64%20Setup.exe&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;注册（Sublime Text 3 3126 注册码）
+&lt;code&gt;
+—– BEGIN LICENSE —–
+Michael Barnes
+Single User License
+EA7E-821385
+8A353C41 872A0D5C DF9B2950 AFF6F667
+C458EA6D 8EA3C286 98D1D650 131A97AB
+AA919AEC EF20E143 B361B1E7 4C8B7F04
+B085E65E 2F5F5360 8489D422 FB8FC1AA
+93F6323C FD7F7544 3F39C318 D95E6480
+FCCC7561 8A4A1741 68FA4223 ADCEDE07
+200C25BE DBBC4855 C4CFB774 C5EC138C
+0FEC1CEF D9DCECEC D3A5DAD1 01316C36
+—— END LICENSE ——
+&lt;/code&gt;
+&lt;code&gt;
+—– BEGIN LICENSE —–
+Free Communities Consultoria em Informática Ltda
+Single User License
+EA7E-801302
+C154C122 4EFA4415 F1AAEBCC 315F3A7D
+2580735A 7955AA57 850ABD88 72A1DDD8
+8D2CE060 CF980C29 890D74F2 53131895
+281E324E 98EA1FEF 7FF69A12 17CA7784
+490862AF 833E133D FD22141D D8C89B94
+4C10A4D2 24693D70 AE37C18F 72EF0BE5
+1ED60704 651BC71F 16CA1B77 496A0B19
+463EDFF9 6BEB1861 CA5BAD96 89D0118E
+—— END LICENSE ——
+&lt;/code&gt;
+&lt;code&gt;
+—– BEGIN LICENSE —–
+Nicolas Hennion
+Single User License
+EA7E-866075
+8A01AA83 1D668D24 4484AEBC 3B04512C
+827B0DE5 69E9B07A A39ACCC0 F95F5410
+729D5639 4C37CECB B2522FB3 8D37FDC1
+72899363 BBA441AC A5F47F08 6CD3B3FE
+CEFB3783 B2E1BA96 71AAF7B4 AFB61B1D
+0CC513E7 52FF2333 9F726D2C CDE53B4A
+810C0D4F E1F419A3 CDA0832B 8440565A
+35BF00F6 4CA9F869 ED10E245 469C233E
+—— END LICENSE ——
+&lt;/code&gt;
+&lt;code&gt;
+—– BEGIN LICENSE —–
+Anthony Sansone
+Single User License
+EA7E-878563
+28B9A648 42B99D8A F2E3E9E0 16DE076E
+E218B3DC F3606379 C33C1526 E8B58964
+B2CB3F63 BDF901BE D31424D2 082891B5
+F7058694 55FA46D8 EFC11878 0868F093
+B17CAFE7 63A78881 86B78E38 0F146238
+BAE22DBB D4EC71A1 0EC2E701 C7F9C648
+5CF29CA3 1CB14285 19A46991 E9A98676
+14FD4777 2D8A0AB6 A444EE0D CA009B54
+—— END LICENSE ——
+&lt;/code&gt;
+&lt;code&gt;
+—– BEGIN LICENSE —–
+Alexey Plutalov
+Single User License
+EA7E-860776
+3DC19CC1 134CDF23 504DC871 2DE5CE55
+585DC8A6 253BB0D9 637C87A2 D8D0BA85
+AAE574AD BA7D6DA9 2B9773F2 324C5DEF
+17830A4E FBCF9D1D 182406E9 F883EA87
+E585BBA1 2538C270 E2E857C2 194283CA
+7234FF9E D0392F93 1D16E021 F1914917
+63909E12 203C0169 3F08FFC8 86D06EA8
+73DDAEF0 AC559F30 A6A67947 B60104C6
+—— END LICENSE ——
+&lt;/code&gt;
+&lt;code&gt;
+—– BEGIN LICENSE —–
+Peter Halliday
+Single User License
+EA7E-855988
+3997BFF0 2856413A 7A555954 67069B78
+06D8CE12 63EAF079 AD039757 79E16D13
+C555AD90 465CBE53 10F6DFC4 D3A3C611
+411106F8 0CFEB15F 0A7BB891 111F5ED2
+C6AA8429 77913528 FA6291A9 B88D4550
+F1D6AB13 BF9153BC 91B4DFFE D296CFE0
+C1D8EB22 13D5F14E 75A699EC 49EDDC23
+D89D0F9B D240B10A A3712467 09DE7870
+—— END LICENSE ——
+&lt;/code&gt;
+&lt;code&gt;
+—– BEGIN LICENSE —–
+Fred Zirdung
+Single User License
+EA7E-844672
+6089C0EC 22936E1A 1EADEBE2 B8654BBA
+5C98FFA6 C0FD1599 0364779B 071C74FB
+EEFE9EAB 92B3D867 CD1B32FE D190269F
+6FC08F8F 8D24191D 32828465 942CE58E
+AECE5307 08B62229 D788560A 6E0AAC4B
+48A2D9EE 24FD8CAA 07BEBDF2 28EA86D4
+CCB96084 6C34CAD2 E8A04F39 3B5A3CBC
+3B668BB7 C94D0B4B 847D6D7F 4BC07375
+—— END LICENSE ——
+&lt;/code&gt;
+&lt;code&gt;
+—– BEGIN LICENSE —–
+Wixel
+Single User License
+EA7E-848235
+103D2969 8700C7ED 8173CF61 537000C0
+EB3C7ECB 5E750F17 6B42B67C A190090B
+7669164F C6F371A8 5A1D88D5 BDD0DA70
+C065892B 7CC1BB2B 1C8B8C7C F08E7789
+7C2A5241 35F86328 4C8F70D9 C023D7C2
+11245C36 59A730DB 72BDB9A7 D5B20304
+90E90E72 9F08CA25 73F49C20 179D938E
+5BC8BEDA 13457A69 39E6265F 233767F9
+—— END LICENSE ——
+&lt;/code&gt;
+&lt;code&gt;
+—– BEGIN LICENSE —–
+Daniel Russel
+Single User License
+EA7E-917420
+9327EC62 44020C2A 45172A68 12FE13F1
+1D22245B 680892EE F551F8EB C183D032
+8B4EDB4B 479CB7E4 07E42EDD A780021D
+56BADF42 AC05238B 023B47B1 EBA1B7DE
+6DF9A383 159F32AE 04EBE100 1278B1D2
+52E81B60 C68AA2E8 F84A20BE FE7990EB
+5D44E4B6 16369263 1DDAACBC 280FF19E
+86CF4319 0B8615A8 4FF0512E B123B8EC
+—— END LICENSE ——
+&lt;/code&gt;
+&lt;code&gt;
+—– BEGIN LICENSE —–
+Peter Eriksson
+Single User License
+EA7E-890068
+8E107C71 3100D6FC 2AC805BF 9E627C77
+72E710D7 43392469 D06A2F5B F9304FBD
+F5AB4DB2 7A95F172 FE68E300 42745819
+E94AB2DF C1893094 ECABADC8 71FEE764
+20224821 3EABF931 745AF882 87AD0A4B
+33C6E377 0210D712 CD2B1178 82601542
+C7FD8098 F45D2824 BC7DFB38 F1EBD38A
+D7A3AFE0 96F938EA 2D90BD72 9E34CDF0
+—— END LICENSE ——
+&lt;/code&gt;
+&lt;code&gt;
+—– BEGIN LICENSE —–
+Ryan Clark
+Single User License
+EA7E-812479
+2158A7DE B690A7A3 8EC04710 006A5EEB
+34E77CA3 9C82C81F 0DB6371B 79704E6F
+93F36655 B031503A 03257CCC 01B20F60
+D304FA8D B1B4F0AF 8A76C7BA 0FA94D55
+56D46BCE 5237A341 CD837F30 4D60772D
+349B1179 A996F826 90CDB73C 24D41245
+FD032C30 AD5E7241 4EAA66ED 167D91FB
+55896B16 EA125C81 F550AF6B A6820916
+—— END LICENSE ——
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;2-sublime-text-3安装插件&#34;&gt;2、Sublime Text 3安装插件&lt;/h1&gt;
+
+&lt;p&gt;Sublime Text的强大就是她拥有强大的可扩展性。您可根据自己的需要安装不同的插件；这使得她变的无比强大的同时又不失轻便。
+- 插件安装方式一：直接安装：
+    安装Sublime text 3插件很方便，可以直接下载安装包解压缩到Packages目录（菜单-&amp;gt;preferences-&amp;gt;packages）。
+- 插件安装方式二：使用Package Control组件安装：
+    按Ctrl+`调出console（注：安装有QQ输入法的这个快捷键会有冲突的，输入法属性设置-输入法管理-取消热键切换至QQ拼音）粘贴以下代码到底部命令行并回车：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import urllib.request,os; pf = &#39;Package Control.sublime-package&#39;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), &#39;wb&#39;).write(urllib.request.urlopen( &#39;http://sublime.wbond.net/&#39; + pf.replace(&#39; &#39;,&#39;%20&#39;)).read())
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;重启Sublime Text 3。如果在Perferences-&amp;gt;package settings中看到package ontrol这一项，则安装成功。&lt;/li&gt;
+&lt;li&gt;按下Ctrl+Shift+P调出命令面板输入install 调出 Install Package 选项并回车，然后在列表中选中要安装的插件。&lt;/li&gt;
+&lt;li&gt;PS：国内使用SublimeText3，经常可能遇到无法安装可用插件问题，可remove掉Package Control重新安装下；如遇到连Package Control也无法安装，则可以在别处拷贝一份关于Package Control的文件－(Package Control.sublime-package)存放于Installed Packages目录之下即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;2-1-markdownediting插件-sublime-text的markdown利器&#34;&gt;2.1、MarkdownEditing插件：Sublime Text的Markdown利器&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Github项目地址：SublimeText-Markdown/MarkdownEditing&lt;/li&gt;
+&lt;li&gt;安装：如果Sublime安装了Package Control,直接Ctrl+Shift+P输入MarkdownEditing，搜索到点击即可自行安装，重启便可使用用。&lt;/li&gt;
+&lt;li&gt;关于特性：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;MarkdownEditing 从视觉和便捷性上针对 Markdown 文档的编辑进行了一系列的优化。具体如下(Mac下)：
+安装后针对 md\mdown\mmd\txt 格式文件启用插件。颜色方案仿 Byword及iA writer。
+自动匹配星号（*）、下划线（_）及反引号（`），选中文本按下以上符号能自动在所选文本前后添加配对的符号，方便粗体、斜体和代码框的输入。
+直接输入配对的符号后按下退格键（backspace），则两个符号都会被删除；直接输入配对的符号后按下空格键，则会自动删除后一个。
+对“选中文字后输入左括号”这一动作进行了调整，以便插入markdown链接。
+拷贝一个链接，选中文本后按下 ⌘⌥V 会自动插入内联链接。
+拷贝一个链接，选中文本后按下 ⌘⌥R 会自动插入引用链接。
+⌘⌥K 插入链接；⌘⇧K 插入图片。
+⌘⇧B 和 ⌘⇧I 分别用于加粗体和斜体。
+⌘^1..6 对于选中的内容前加对应个数#,即对选中内容字体大小设置为h1~h6;
+⌘⇧6插入文档脚注并且跳转到它的定义；具体可参见:Footnotes;
+选中文本后按下 # 会自动在文本前后进行配对，可重复按下来定义标题级别。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;2-2-markdown-preview插件-预览md&#34;&gt;2.2、Markdown Preview插件：预览MD&lt;/h2&gt;
+
+&lt;p&gt;Markdown Preview较常用的功能是preview in browser和Export HTML in Sublime Text，前者可以在浏览器看到预览效果，后者可将markdown保存为html文件。
+preview inbrowser据称是实时的，但是实践上还是需要在st保存，然后浏览器刷新才能看到新的效果，
+好在markdown写得多的话也不需要每敲一行看一次效果。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;markdown preview默认没有快捷键，我们可以自己为preview in browser设置快捷键。
+&amp;gt;
+方法是在Preferences -&amp;gt; Key Bindings User打开的文件的中括号中添加以下代码(可在Key Bindings Default找到格式)：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;{ &amp;quot;keys&amp;quot;: [&amp;quot;alt+m&amp;quot;], &amp;quot;command&amp;quot;: &amp;quot;markdown_preview_select&amp;quot;, &amp;quot;args&amp;quot;: {&amp;quot;target&amp;quot;: &amp;quot;browser&amp;quot;} }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;随时alt+m，即可预览&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>使用豆瓣镜像站点加速pip安装python软件包的方法</title>
+      <link>https://ten2net.github.io/2016/12/22/%E4%BD%BF%E7%94%A8%E8%B1%86%E7%93%A3%E9%95%9C%E5%83%8F%E7%AB%99%E7%82%B9%E5%8A%A0%E9%80%9Fpip%E5%AE%89%E8%A3%85python%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Thu, 22 Dec 2016 13:55:34 +0800</pubDate>
+      <author>wangf@e-u.cn (wangf)</author>
+      <guid>https://ten2net.github.io/2016/12/22/%E4%BD%BF%E7%94%A8%E8%B1%86%E7%93%A3%E9%95%9C%E5%83%8F%E7%AB%99%E7%82%B9%E5%8A%A0%E9%80%9Fpip%E5%AE%89%E8%A3%85python%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <description>
+
+&lt;h3 id=&#34;1-创建一个pip-ini文本文件-windows下放到-pip-目录下-linux下放到-pip-目录下&#34;&gt;1、创建一个pip.ini文本文件，windows下放到~\pip\目录下，Linux下放到~/.pip/目录下&lt;/h3&gt;
+
+&lt;h3 id=&#34;2-修改文件内容如下&#34;&gt;2、修改文件内容如下：&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;[global] 
+timeout = 6000
+index-url = https://pypi.douban.com/simple
+[install]
+use-mirrors = true
+mirrors = http://e.pypi.python.org
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>使用http://tool.chinaz.com/dns查找加速github.com访问速度的方法</title>
+      <link>https://ten2net.github.io/2016/12/22/%E4%BD%BF%E7%94%A8http/tool.chinaz.com/dns%E6%9F%A5%E6%89%BE%E5%8A%A0%E9%80%9Fgithub.com%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Thu, 22 Dec 2016 13:41:05 +0800</pubDate>
+      <author>wangf@e-u.cn (wangf)</author>
+      <guid>https://ten2net.github.io/2016/12/22/%E4%BD%BF%E7%94%A8http/tool.chinaz.com/dns%E6%9F%A5%E6%89%BE%E5%8A%A0%E9%80%9Fgithub.com%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <description>
+
+&lt;h1 id=&#34;为什么慢-github的cdn被某墙屏了&#34;&gt;为什么慢？github的CDN被某墙屏了。&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;有vpn服务的可以直接使用vpn，没有vpn的，可以绕过dns解析，在本地直接绑定host。方法如下：&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;打开dns查询工具网站：&lt;a href=&#34;http://tool.chinaz.com/dns&#34;&gt;http://tool.chinaz.com/dns&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;查询域名解析如下：
+……&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;选取一个TTL值最小的ip，直接绑定到hosts文件便可解决，比如我选取第一个ip，绑定域名如下
+&lt;code&gt;103.245.222.133 assets-cdn.github.com&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;多刷几下，访问速度就一切正常了&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;域名映射：（主要是第一个）&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;103.245.222.249 github.global.ssl.fastly.net
+103.245.222.133 assets-cdn.github.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;瞬间从打死也就20K提速到100K左右，最高能达到200多K，低时也有50K。（具体速度和个人网络环境有关，反正快了好几倍）&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;以下来源于网络：&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;github.com 上有两种源码获取方式，一是 git clone，一是直接下载 master.zip，后者明显速度快于前者，可以考虑；&lt;/li&gt;
+&lt;li&gt;1）用 proxychains 这类透明代理，间接走系统中运行的代理工具中转；&lt;/li&gt;
+&lt;li&gt;2）用 git 内置代理，直接走系统中运行的代理工具中转，比如，你的 SS 本地端口是 1080，那么可以如下方式走代理&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;git config --global http.proxy socks5://127.0.0.1:1080
+git config --global https.proxy socks5://127.0.0.1:1080
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;也可以如下方式停走代理&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git config --global http.proxy &amp;quot;&amp;quot;
+git config --global https.proxy &amp;quot;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;也可以试试这个站点&#34;&gt;也可以试试这个站点&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://asm.ca.com/zh_cn/ping.php&#34;&gt;https://asm.ca.com/zh_cn/ping.php&lt;/a&gt;
+  例如：为了加速github访问速度，我修改我的hosts文件如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;151.101.56.133 ten2net.github.io
+23.235.33.133 github.io
+192.30.253.112 github.com
+192.30.253.113 github.com
+151.101.56.133 assets-cdn.github.com
+151.101.56.249 github.global.ssl.fastly.net
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>使用Pandoc工具转换ms word文件为Markdown格式</title>
+      <link>https://ten2net.github.io/2016/12/22/%E4%BD%BF%E7%94%A8pandoc%E5%B7%A5%E5%85%B7%E8%BD%AC%E6%8D%A2ms-word%E6%96%87%E4%BB%B6%E4%B8%BAmarkdown%E6%A0%BC%E5%BC%8F/</link>
+      <pubDate>Thu, 22 Dec 2016 12:59:30 +0800</pubDate>
+      <author>wangf@e-u.cn (wangf)</author>
+      <guid>https://ten2net.github.io/2016/12/22/%E4%BD%BF%E7%94%A8pandoc%E5%B7%A5%E5%85%B7%E8%BD%AC%E6%8D%A2ms-word%E6%96%87%E4%BB%B6%E4%B8%BAmarkdown%E6%A0%BC%E5%BC%8F/</guid>
+      <description>
+
+&lt;h1 id=&#34;markdown-pandoc-最佳写作拍档&#34;&gt;Markdown+Pandoc 最佳写作拍档&lt;/h1&gt;
+
+&lt;h3 id=&#34;我们为什么写作&#34;&gt;我们为什么写作？&lt;/h3&gt;
+
+&lt;p&gt;自从人们开始写作，写作便是记录、抒发、批判、反省的好工具。从石板上的刻印到笔墨纸砚，再到如今的信息时代。从静态的个人主页到托管博客，从个人博客到微博，从wordpress到jekyll。无数投入写作中的人们写作的目的大同，写作的方式越简单越好，这样才能让我们专注于写作而不是为其他格式所困扰。另外现在智能终端快速普及，文件格式的多平台使用也成为了写作的一大问题。&lt;/p&gt;
+
+&lt;p&gt;为了更好的写作,今天介绍的 Markdown &amp;amp; Pandoc 便能提供完美的辅助。&lt;/p&gt;
+
+&lt;h3 id=&#34;markdown的用法&#34;&gt;Markdown的用法&lt;/h3&gt;
+
+&lt;h4 id=&#34;1-markdown是什么&#34;&gt;1 .Markdown是什么?&lt;/h4&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Markdown 是一种轻量级标记语言，创始人为John Gruber和Aaron Swartz。它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。 &lt;a href=&#34;https://zh.wikipedia.org/wiki/Markdown&#34;&gt;[1]&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&#34;2-为什么要用markdown&#34;&gt;2 .为什么要用Markdown?&lt;/h4&gt;
+
+&lt;p&gt;windows下常用的编辑工具是word,mac上常用的编辑工具是page,linux上常用的编辑工具就是vim了，一份文章编辑完后为了要在不同平台中保存完整的模样时就必需同时准备多种文本格式的文件，这是多么痛苦的一件事。我们写作的初衷是为了写作呀，反而被这些格式烦恼。所以我们要用Markdown,它让你关注内容，格式怎么显示不是要你在写得时候关注的。而在写Markdown时你只需要用一个纯文本的方式进行，不用担心平台与格式的困扰。&lt;/p&gt;
+
+&lt;h4 id=&#34;3-markdown的语法&#34;&gt;3 .Markdown的语法&lt;/h4&gt;
+
+&lt;p&gt;Markdown 的语法全由一些符号所组成，这些符号经过精挑细选，其作用一目了然。比如：在文字两旁加上星号，看起来就像*强调*。Markdown 的列表看起来，嗯，就是列表。Markdown 的区块引用看起来就真的像是引用一段文字，就像你曾在电子邮件中见过的那样。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;最常用格式&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; 空一行（两个回车）分段
+ 行末加两个或多个空格才是真正的换行，否则正常的一个回车就像在 HTML 代码中一样，被当作空格处理
+ 插入链接：  [链接文字](url) 
+ 图片跟链接很像，在前面加个叹号：![alt 文字](图片 URL)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;列表&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* 无序(没有编号的)列表中的一项
+* 一个子项，要以一个制表符或者4个空格缩进
+* 无序列表中的另一个项
+1. 有序(排好序，有编号的)列表中的一项
+2. 有序列表中的另一个项
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;标题&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# 一级标题
+
+#### 四级标题
+
+一级标题
+===================
+
+二级标题
+--------------------
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;代码可以采取两种方法：&lt;/p&gt;
+
+&lt;p&gt;一是用（`）将代码包起来&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;夹杂着`一些代码`的文字内容,
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;二是在代码块前面加上4个空格或者一个TAB&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    import random
+
+    class CardGame(object):
+        &amp;quot;&amp;quot;&amp;quot; a sample python class &amp;quot;&amp;quot;&amp;quot;
+        NB_CARDS = 32
+        def __init__(self, cards=5):
+            self.cards = random.sample(range(self.NB_CARDS), 5)
+            print &#39;ready to play&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;代码高亮可以由github提供的js实现&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;分割线&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;要生成水平分割线，可以在单独一行里输入3个或以上的短横线、星号或者下划线实现。短横线和星号之间可以输入任意空格。以下每一行都产生一条水平分割线。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;===========
+************
+_ _ _ _ _
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Markdown的常用语法差不多就是这些了，详细的介绍请参考&lt;a href=&#34;http://wowubuntu.com/markdown/&#34;&gt;Markdowm 语法说明&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;4-markdown的常用编辑工具&#34;&gt;4 .Markdown的常用编辑工具&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mac等平台下推荐&lt;a href=&#34;http://mouapp.com/&#34;&gt;Mou&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Windows平台推荐&lt;a href=&#34;http://markdownpad.com/&#34;&gt;MarkdownPad&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.sublimetext.com/&#34;&gt;Sublime Text&lt;/a&gt;编辑器是我的最爱，并且它是跨平台的，结合&lt;a href=&#34;https://github.com/revolunet/sublimetext-markdown-preview&#34;&gt;Markdown preview&lt;/a&gt;插件能更好的编辑&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/adam-p/markdown-here&#34;&gt;markdown-here&lt;/a&gt;借助Chrome插件，将gmail、Evernote、Hotmail等写作窗口变为Markdown在线写作窗口&lt;/li&gt;
+&lt;li&gt;web版推荐国人&lt;a href=&#34;http://jser.me/&#34;&gt;草依山&lt;/a&gt;写的&lt;a href=&#34;http://mahua.jser.me&#34;&gt;MaHua&lt;/a&gt;,支持vim快捷键和多种主题。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Markdown越来越流行，不是因为它复杂，而是因为它足够简单。尝试过MD后就能体会到单纯的写作带来的快乐，一般Markdown文件保存格式都是以md、mdownx现实。为了文档的分享,多平台的使用，需要对MD进行格式转化。这是就更体现了它的方便之处，它是本身是一个结构标记语言，能对多种格式文档进行转换，这里介绍一款强大的格式转换工具 &lt;strong&gt;Pandoc&lt;/strong&gt; 。&lt;/p&gt;
+
+&lt;h3 id=&#34;pandoc-格式转换的瑞士军刀&#34;&gt;Pandoc 格式转换的瑞士军刀&lt;/h3&gt;
+
+&lt;h4 id=&#34;1-pandoc的介绍&#34;&gt;1 .Pandoc的介绍&lt;/h4&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Pandoc是一个用于从一种标记格式转换为另一种的Haskell库，它的功能是在多种常见的标记语言进行相互转换。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;其中包括 Markdown, reStructuredText, Textilte, HTML, PDF,LaTeX 等。利用它，你可以用简单的 Markdown 语法生成pdf文档，还可以写 Beamer 演示文稿。更强大的是，它还能将以上提到的这些语言所写文件转换成 xdoc 文档。下面这张图展示了 Pandoc 让人吃惊 的功能集，不愧为文件转换中的瑞士军刀：&lt;/p&gt;
+
+&lt;h4 id=&#34;2-pandoc的用法&#34;&gt;2 .Pandoc的用法&lt;/h4&gt;
+
+&lt;h5 id=&#34;2-1-web版pandoc&#34;&gt;2.1 Web版Pandoc&lt;/h5&gt;
+
+&lt;p&gt;首先我们可以看下Pandoc的官网 &lt;a href=&#34;http://johnmacfarlane.net/pandoc/&#34;&gt;http://johnmacfarlane.net/pandoc/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;在介绍中我们知道Pandoc支持linux,Mac OS,Win多平台，还有简易的web版提供我们在线转换格式。打开web版 &lt;a href=&#34;http://johnmacfarlane.net/pandoc/try&#34;&gt;http://johnmacfarlane.net/pandoc/try&lt;/a&gt;,便可以进行简单的格式转换了。不过网页版的反应速度不是很快，不适合大型文件的格式转换，一两篇文章还是可以的。&lt;/p&gt;
+
+&lt;h5 id=&#34;2-2-linux版pandoc&#34;&gt;2.2 Linux版Pandoc&lt;/h5&gt;
+
+&lt;p&gt;就我自己用的ubuntu下安装Pandoc,还算是非常简单的。以下是ubuntu下的使用步骤:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install pandoc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如果apt-get安装的pandoc功能不齐全，可以如官网上一样先安装cable,再安装pandoc:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install cabal-install
+cabal update
+cabal install pandoc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后就可以尝试着用一下了：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pandoc demo.md -o demo.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这样便可以简单的将demo的markdown文件转换成html文档了。另外还可以强制格式转换如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pandoc demo.txt -o demo.html -f markdown -t html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上面的代码便是将demo.txt中的文档以markdown的格式转换成html并存入demo.html中了。&lt;/p&gt;
+
+&lt;p&gt;最关键的 &lt;strong&gt;PDF文件&lt;/strong&gt; 到了，PDF文档能在不同平台保持一致的表现，是许多文档传输的首选。在转换PDF之前,还需要安装一个texlive的包：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; sodu apt-get install texlive
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后便可以自如的转换PDF文件了：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pandoc demo.md -o demo.pdf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;英文文件转换状况良好，中文字体问题请参考&lt;a href=&#34;http://www.openfoundry.org/tw/foss-programs/8814-pandoc-&#34;&gt;Pandoc 用命令行转换标记语言&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Markdown与Pandoc的用法也就说到这了，无疑它们搭配起来会让写作变得更加简单专注，这也就是我们的初衷。另外在写作中多结合Git,将文档推到GitHub上会是很好的尝试。&lt;/p&gt;
+
+&lt;h5 id=&#34;参考文档&#34;&gt;参考文档&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.yangzhiping.com/tech/r-markdown-knitr.html&#34;&gt;Markdown写作浅谈&lt;/a&gt; , 阳志平&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://yanping.me/cn/blog/2012/03/13/pandoc/&#34;&gt;黑魔法利器pandoc&lt;/a&gt; , 雁起平沙&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.openfoundry.org/tw/foss-programs/8814-pandoc-&#34;&gt;Pandoc 用命令行转换标记语言&lt;/a&gt; , 林雪凡&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://johnmacfarlane.net/pandoc&#34;&gt;Pandoc 官网&lt;/a&gt; , John MacFarlane&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wowubuntu.com/markdown/&#34;&gt;Markdown 语法说明&lt;/a&gt; , riku&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;tag&lt;/code&gt;: markdown,pandoc&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;author&lt;/code&gt;：lv&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>使用jupyter nbconvert转换jupyter notebook笔记为Markdown格式</title>
+      <link>https://ten2net.github.io/2016/12/22/%E4%BD%BF%E7%94%A8jupyter-nbconvert%E8%BD%AC%E6%8D%A2jupyter-notebook%E7%AC%94%E8%AE%B0%E4%B8%BAmarkdown%E6%A0%BC%E5%BC%8F/</link>
+      <pubDate>Thu, 22 Dec 2016 12:59:11 +0800</pubDate>
+      <author>wangf@e-u.cn (wangf)</author>
+      <guid>https://ten2net.github.io/2016/12/22/%E4%BD%BF%E7%94%A8jupyter-nbconvert%E8%BD%AC%E6%8D%A2jupyter-notebook%E7%AC%94%E8%AE%B0%E4%B8%BAmarkdown%E6%A0%BC%E5%BC%8F/</guid>
+      <description>
+
+&lt;h1 id=&#34;nbconvert&#34;&gt;nbconvert&lt;/h1&gt;
+
+&lt;h3 id=&#34;jupyter-notebook-conversion&#34;&gt;Jupyter Notebook Conversion&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://groups.google.com/forum/#!forum/jupyter&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/-Google%20Group-lightgrey.svg&#34; alt=&#34;Google Group&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://travis-ci.org/jupyter/nbconvert&#34;&gt;&lt;img src=&#34;https://travis-ci.org/jupyter/nbconvert.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://nbconvert.readthedocs.io/en/latest/?badge=latest&#34;&gt;&lt;img src=&#34;https://readthedocs.org/projects/nbconvert/badge/?version=latest&#34; alt=&#34;Documentation Status&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;http://nbconvert.readthedocs.io/en/stable/?badge=stable&#34;&gt;&lt;img src=&#34;https://readthedocs.org/projects/nbconvert/badge/?version=stable&#34; alt=&#34;Documentation Status&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://codecov.io/github/jupyter/nbconvert?branch=master&#34;&gt;&lt;img src=&#34;https://codecov.io/github/jupyter/nbconvert/coverage.svg?branch=master&#34; alt=&#34;codecov.io&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;用法&#34;&gt;用法&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;    $ jupyter nbconvert --to &amp;lt;output format&amp;gt; &amp;lt;input notebook&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;其中：&lt;output format&gt;`可以是下面几种：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;-* HTML
+-* LaTeX
+-* PDF
+-* Reveal JS
+-* Markdown (md)
+-* ReStructured Text (rst)
+-* executable script&lt;/p&gt;
+
+&lt;h3 id=&#34;例子-convert-a-notebook-to-html&#34;&gt;例子: Convert a notebook to HTML&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;    $ jupyter nbconvert --to html mynotebook.ipynb
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This command creates an HTML output file named &lt;code&gt;mynotebook.html&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;资源&#34;&gt;资源&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://nbconvert.readthedocs.io/en/latest/&#34;&gt;Documentation for Jupyter nbconvert&lt;/a&gt;
+[&lt;a href=&#34;https://media.readthedocs.org/pdf/nbconvert/latest/nbconvert.pdf&#34;&gt;PDF&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jupyter/nbconvert-examples&#34;&gt;nbconvert examples on GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jupyter/nbconvert/issues&#34;&gt;Issues&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://groups.google.com/forum/#!forum/jupyter&#34;&gt;Technical support - Jupyter Google Group&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jupyter.org&#34;&gt;Project Jupyter website&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jupyter.readthedocs.io/en/latest/index.html&#34;&gt;Documentation for Project Jupyter&lt;/a&gt;
+[&lt;a href=&#34;https://media.readthedocs.org/pdf/jupyter/latest/jupyter.pdf&#34;&gt;PDF&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>我的docker笔记</title>
+      <link>https://ten2net.github.io/2016/12/22/%E6%88%91%E7%9A%84docker%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Thu, 22 Dec 2016 11:15:53 +0800</pubDate>
+      <author>wangf@e-u.cn (wangf)</author>
+      <guid>https://ten2net.github.io/2016/12/22/%E6%88%91%E7%9A%84docker%E7%AC%94%E8%AE%B0/</guid>
+      <description>
+
+&lt;h1 id=&#34;1-docker命令基础练习&#34;&gt;1 Docker命令基础练习&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;docker info
+docker images
+docker ps
+docker version
+docker run hello-world
+docker pull busybox
+docker exec -it busybox /bin/bash
+
+docker run -d -p 80:80 --name webserver nginx
+docker run -it alpine env
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;2-dockerfile使用范例&#34;&gt;2 Dockerfile使用范例&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;FROM tomcat
+ADD helloworld.war /usr/local/tomcat/webapps/
+EXPOSE 8080
+CMD [&amp;quot;catalina.sh&amp;quot;, &amp;quot;run&amp;quot;]
+
+
+docker build -t mytomcat .
+docker run -d -p 9280:8080 mytomcat2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;3-使用-docker-7-个命令部署一个-mesos-集群&#34;&gt;3 使用 Docker， 7 个命令部署一个 Mesos 集群&lt;/h1&gt;
+
+&lt;p&gt;参考：&lt;a href=&#34;https://segmentfault.com/a/1190000002531072&#34;&gt;https://segmentfault.com/a/1190000002531072&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+第一步：或者 Docker 服务器的 IP 并导出到环境变量。我们将在随后的 Docker 命令中不断地使用这个 IP。
+set HOST_IP=10.11.31.7
+第二步：启动 ZooKeeper 容器
+docker run -d -p 2181:2181 -p 2888:2888 -p 3888:3888 garland/zookeeper
+第三步：启动 Mesos Master
+docker run --net=&amp;quot;host&amp;quot; -p 5050:5050 -e &amp;quot;MESOS_HOSTNAME=${HOST_IP}&amp;quot; -e &amp;quot;MESOS_IP=${HOST_IP}&amp;quot; -e &amp;quot;MESOS_ZK=zk://${HOST_IP}:2181/mesos&amp;quot; -e &amp;quot;MESOS_PORT=5050&amp;quot; -e &amp;quot;MESOS_LOG_DIR=/var/log/mesos&amp;quot; -e &amp;quot;MESOS_QUORUM=1&amp;quot; -e &amp;quot;MESOS_REGISTRY=in_memory&amp;quot; -e &amp;quot;MESOS_WORK_DIR=/var/lib/mesos&amp;quot; -d garland/mesosphere-docker-mesos-master
+第四步：启动 Marathon
+docker run -d -p 8180:8180 garland/mesosphere-docker-marathon --master zk://${HOST_IP}:2181/mesos --zk zk://${HOST_IP}:2181/marathon
+第五步：在一个容器中启动 Mesos Slave
+docker run -d --name mesos_slave_1 --entrypoint=&amp;quot;mesos-slave&amp;quot; -e &amp;quot;MESOS_MASTER=zk://${HOST_IP}:2181/mesos&amp;quot; -e &amp;quot;MESOS_LOG_DIR=/var/log/mesos&amp;quot; -e &amp;quot;MESOS_LOGGING_LEVEL=INFO&amp;quot; garland/mesosphere-docker-mesos-master:latest
+第六步：进入 Mesos 的 webpage
+http://${HOST_IP}:5050
+第七步：进入 Marathon 的 webpage 启动一个任务
+http://${HOST_IP}:8080
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;4-使用docker-加速器&#34;&gt;4 使用Docker 加速器&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;echo &amp;quot;DOCKER_OPTS=\&amp;quot;\$DOCKER_OPTS --registry-mirror=https://z5sa40yd.mirror.aliyuncs.com\&amp;quot;&amp;quot; | sudo tee -a /etc/default/docker sudo service docker restart
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;阿里云-我的专属加速器地址：&lt;a href=&#34;https://z5sa40yd.mirror.aliyuncs.com&#34;&gt;https://z5sa40yd.mirror.aliyuncs.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;这个命令的用法忘记了&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;docker-machine create --virtualbox-no-vtx-check --engine-registry-mirror=https://z5sa40yd.mirror.aliyuncs.com -d virtualbox default
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;5-ui-for-docker-可视化管理docker的工具&#34;&gt;5 ui-for-docker，可视化管理Docker的工具&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Quickstart ：&lt;a href=&#34;https://github.com/kevana/ui-for-docker&#34;&gt;https://github.com/kevana/ui-for-docker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt; docker run -d -p 9000:9000 --privileged -v /var/run/docker.sock:/var/run/docker.sock uifd/ui-for-docker
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Open your browser to http://&lt;your Host IP&gt;:9000&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;6-docker-run-命令的常用选项说明&#34;&gt;6 Docker Run 命令的常用选项说明&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;你的Container会在你结束命令之后自动退出，使用以下的命令选项可以将容器保持在激活状态：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;-i 即使在没有附着的情况下依然保持STDIN处于开启
+-t 分配一个伪TTY控制台&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;所以run命令就变成了：
+&lt;code&gt;
+docker run -it -d shykes/pybuilder bin/bash
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Docker Exec 命令可以执行正在运行的Docker容器中的Shell命令&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;如果希望能够附着到一个已经存在的容器中，则利用exec命令：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;docker exec -it CONTAINER_ID bash
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;7-常见的docker命令行命令进行详细介绍&#34;&gt;7 常见的Docker命令行命令进行详细介绍&lt;/h1&gt;
+
+&lt;h2 id=&#34;7-1-与容器-container-相关的命令&#34;&gt;7.1 与容器（Container）相关的命令&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;docker create 会创建一个容器但是不会立刻启动&lt;/li&gt;
+&lt;li&gt;docker run 会创建并且启动某个容器&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;如果只是希望有一个暂时性的容器，可以使用 docker run &amp;ndash;rm 将会在容器运行完毕之后删除该容器。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;如果希望在打开某个容器之后能够与其进行交互, docker run -t -i  会创建一个TTY控制台。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;docker stop 会关闭某个容器&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;docker start 会启动某个容器&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;docker restart 会重新启动某个容器&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;docker rm 会删除某个容器&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;如果希望能够移除所有与该容器相关的Volume，可以使用-v参数： docker rm -v.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;docker kill 会发送SIGKILL信号量到某个容器&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;docker attach 会附着到某个正在运行的容器&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;docker wait 会阻塞直到某个容器关闭&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;7-2-与镜像-image-相关的命令&#34;&gt;7.2 与镜像（Image）相关的命令&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;docker images 会展示所有的镜像&lt;/li&gt;
+&lt;li&gt;docker import 会从原始码中创建镜像&lt;/li&gt;
+&lt;li&gt;docker build 会从某个Dockfile中创建镜像&lt;/li&gt;
+&lt;li&gt;docker commit 会从某个Container中创建镜像&lt;/li&gt;
+&lt;li&gt;docker rmi 会移除某个镜像&lt;/li&gt;
+&lt;li&gt;docker load 以STDIN的方式从某个tar包中加载镜像&lt;/li&gt;
+&lt;li&gt;docker save 以STDOUT的方式将镜像存入到某个tar包中&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;7-3-查看docker容器状态信息的命令&#34;&gt;7.3 查看Docker容器状态信息的命令&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;docker ps 会列举出所有正在运行的容器&lt;/li&gt;
+&lt;li&gt;docker ps -a 会展示出所有正在运行的和已经停止的容器&lt;/li&gt;
+&lt;li&gt;docker logs 从某个容器中获取log日志&lt;/li&gt;
+&lt;li&gt;docker inspect 检测关于某个容器的详细信息&lt;/li&gt;
+&lt;li&gt;docker events 从某个容器中获取所有的事件&lt;/li&gt;
+&lt;li&gt;docker port 获取某个容器的全部的开放端口&lt;/li&gt;
+&lt;li&gt;docker top 展示某个容器中运行的全部的进程&lt;/li&gt;
+&lt;li&gt;docker stats 展示某个容器中的资源的使用情况的统计信息&lt;/li&gt;
+&lt;li&gt;docker diff 展示容器中文件的变化情况&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;7-4-查看docker镜像-image-状态信息的命令&#34;&gt;7.4 查看Docker镜像（Image）状态信息的命令&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;docker history 展示镜像的全部历史信息&lt;/li&gt;
+&lt;li&gt;docker tag 为某个容器设置标签&lt;/li&gt;
+&lt;li&gt;Import&amp;amp;Export&lt;/li&gt;
+&lt;li&gt;docker cp 在容器与本地文件系统之间进行文件复制&lt;/li&gt;
+&lt;li&gt;docker export 将某个容器中的文件系统的内容输出到某个tar文件中&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;8-实验machine-learning-过程中练习的命令&#34;&gt;8 实验Machine Learning 过程中练习的命令&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;docker run  ermaker/keras&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;docker run -d -p 8888:8888 -e KERAS_BACKEND=tensorflow ermaker/keras-jupyter&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;docker run -d -p 8888:8888 &amp;ndash;name keraslearning  &amp;ndash;restart=always  -v /notebook:/notebook ermaker/keras-jupyter&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;docker run -d -p 8888:8888 &amp;ndash;name keraslearning   &amp;ndash;restart=always -v E:/python-dev-home:/notebook ermaker/keras-jupyter&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;docker run -d -p 8888:8888 &amp;ndash;name keraslearning &amp;ndash;restart=always -v E:/python-dev-home:/notebook ermaker/keras-jupyter&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;nvidia-docker run  -d -p 5001:5000 -v /dataOne:/opt &amp;ndash;name digits &amp;ndash;restart=always  kaixhin/cuda-digits:8.0&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;9-其它常用命令&#34;&gt;9 其它常用命令&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;    # 像Docker官方的hello world例子一样，拉取一个叫busybox的镜像
+    docker pull busybox
+    
+    #进入容器bash
+    docker exec -i keraslearning bash
+
+    # 查看本地已经有哪些镜像
+    # 我们可以看到busybox
+    docker images
+
+    # 现在让我们来修改下busybox镜像的容器
+    # 这次，我们创建一个文件夹
+    docker run busybox mkdir /home/test
+
+
+    #从容器keraslearning中复制/notebook目录到当前目录
+    docker cp keraslearning:/notebook .
+
+    #从当前目录复制test子目录到容器keraslearning中/notebook目录下
+    docker cp test keraslearning:/notebook
+
+    # 让我们再看看我们有哪些镜像了。
+    # 注意每条命令执行后容器都会停止
+    # 可以看到有一个busybox容器
+    docker ps -a
+
+    # 现在，可以提交修改了。
+    # 提交后会看到一个新的镜像busybox-1
+    #  &amp;lt;CONTAINER ID&amp;gt; 是刚刚修改容器后得到的ID
+    docker commit &amp;lt;CONTAINER ID&amp;gt; busybox-1
+
+    # 再看看我们有哪些镜像。
+    # 我们现在同时有busybox和busybox-1镜像了。
+    docker images
+
+    # 我们执行以下命令，看看这两个镜像有什么不同
+    docker run busybox [ -d /home/test ] &amp;amp;&amp;amp; echo &#39;Directory found&#39; || echo &#39;Directory not found&#39;
+    docker run busybox-1 [ -d /home/test ] &amp;amp;&amp;amp; echo &#39;Directory found&#39; || echo &#39;Directory not found&#39;
+
+
+    # 查看所有的容器
+    docker ps -a
+
+    # 删除它们
+    docker rm &amp;lt;CONTAINER ID&amp;gt;
+
+    # 查看所有的镜像
+    docker images
+
+    # 删除它们
+    docker rmi busybox-1
+    docker rmi busybox
+
+    注：可以使用 docker rm $(docker ps -q -a) 一次性删除所有的容器，docker rmi $(docker images -q) 一次性删除所有的镜像。
+
+    #导出容器
+    docker export &amp;lt;CONTAINER ID&amp;gt; -o containers/export123.tar
+
+    #导出镜像
+    docker save -o gds-keras-jupyter.tar gds/keraslearning
+
+    #快照容器的当前状态为一个镜像
+    docker commit 0d8facbc75e2 gds/keraslearning
+
+
+    现在我们创建了两个Tar文件，让我们来看看它们是什么。首先做一下小清理——把所有的容器和镜像都删除：
+
+    # 查看所有的容器
+    sudo docker ps -a
+
+    # 删除它们
+    sudo docker rm &amp;lt;CONTAINER ID&amp;gt;
+
+    # 查看所有的镜像
+    sudo docker images
+
+    # 删除它们
+    sudo docker rmi busybox-1
+    sudo docker rmi busybox
+    注：可以使用 docker rm $(docker ps -q -a) 一次性删除所有的容器，docker rmi $(docker images -q) 一次性删除所有的镜像。
+
+    现在开始导入刚刚导出的容器：
+
+    # 导入export.tar文件
+    cat /home/export.tar | sudo docker import - busybox-1-export:latest
+
+    # 查看镜像
+    sudo docker images
+
+    # 检查是否导入成功，就是启动一个新容器，检查里面是否存在/home/test目录（是存在的）
+    sudo docker run busybox-1-export [ -d /home/test ] &amp;amp;&amp;amp; echo &#39;Directory found&#39; || echo &#39;Directory not found&#39;
+    使用类似的步骤导入镜像：
+
+    # 导入save.tar文件
+    docker load &amp;lt; /home/save.tar
+    docker load -i /home/save.tar
+
+    # 查看镜像
+    sudo docker images
+
+    # 检查是否导入成功，就是启动一个新容器，检查里面是否存在/home/test目录（是存在的）
+    sudo docker run busybox-1 [ -d /home/test ] &amp;amp;&amp;amp; echo &#39;Directory found&#39; || echo &#39;Directory not found&#39;
+    那，它们之间到底存在什么不同呢？我们发现导出后的版本会比原来的版本稍微小一些。那是因为导出后，会丢失历史和元数据。执行下面的命令就知道了：
+
+    # 显示镜像的所有层(layer)
+    sudo docker images --tree
+     执行命令，显示下面的内容。正你看到的，导出后再导入(exported-imported)的镜像会丢失所有的历史，而保存后再加载（saveed-loaded）的镜像没有丢失历史和层(layer)。这意味着使用导出后再导入的方式，你将无法回滚到之前的层(layer)，同时，使用保存后再加载的方式持久化整个镜像，就可以做到层回滚（可以执行docker tag &amp;lt;LAYER ID&amp;gt; &amp;lt;IMAGE NAME&amp;gt;来回滚之前的层）。
+
+    sudo docker images --tree
+    ├─f502877df6a1 Virtual Size: 2.489 MB Tags: busybox-1-export:latest
+    └─511136ea3c5a Virtual Size: 0 B
+      └─bf747efa0e2f Virtual Size: 0 B
+        └─48e5f45168b9 Virtual Size: 2.489 MB
+          └─769b9341d937 Virtual Size: 2.489 MB
+            └─227516d93162 Virtual Size: 2.489 MB Tags: busybox-1:latest
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Opencv在Ubuntu上的安装过程</title>
+      <link>https://ten2net.github.io/2016/12/21/opencv%E5%9C%A8ubuntu%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B/</link>
+      <pubDate>Wed, 21 Dec 2016 09:52:09 +0800</pubDate>
+      <author>wangf@e-u.cn (wangf)</author>
+      <guid>https://ten2net.github.io/2016/12/21/opencv%E5%9C%A8ubuntu%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B/</guid>
+      <description>
+
+&lt;h1 id=&#34;一-阅读-https-www-raben-com-content-opencv-installation-ubuntu-1204&#34;&gt;一、&lt;a href=&#34;https://www.raben.com/content/opencv-installation-ubuntu-1204&#34;&gt;阅读&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h1 id=&#34;二-安装依赖&#34;&gt;二、安装依赖&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;To install OpenCV 2.4.2 or 2.4.3 on the Ubuntu 12.04 operating system, first install a developer environment to build OpenCV.
+apt-get -y install build-essential cmake pkg-config&lt;/li&gt;
+&lt;li&gt;Install Image I/O libraries
+apt-get -y install libjpeg62-dev
+apt-get -y install libtiff4-dev libjasper-dev&lt;/li&gt;
+&lt;li&gt;Install the GTK dev library
+apt-get -y install  libgtk2.0-dev&lt;/li&gt;
+&lt;li&gt;Install Video I/O libraries
+apt-get -y install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev&lt;/li&gt;
+&lt;li&gt;Optional - install support for Firewire video cameras
+apt-get -y install libdc1394-22-dev&lt;/li&gt;
+&lt;li&gt;Optional - install video streaming libraries
+apt-get -y install libxine-dev libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev&lt;/li&gt;
+&lt;li&gt;Optional - install the Python development environment and the Python Numerical library
+apt-get -y install python-dev python-numpy&lt;/li&gt;
+&lt;li&gt;Optional - install the parallel code processing library (the Intel tbb library)
+apt-get -y install libtbb-dev&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Optional - install the Qt dev library
+apt-get -y install libqt4-dev&lt;/p&gt;
+
+&lt;h1 id=&#34;三-安装opencv&#34;&gt;三、安装opencv&lt;/h1&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;wget &lt;a href=&#34;https://sourceforge.net/projects/opencvlibrary/files/opencv-unix/2.4.13/opencv-2.4.13.zip&#34;&gt;https://sourceforge.net/projects/opencvlibrary/files/opencv-unix/2.4.13/opencv-2.4.13.zip&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;unzip opencv-2.4.13.zip&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;cd opencv-2.4.13&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;#（可选，若出现list_filterout错误）修改samples/gpu/CMakeLists.txt 文件的106、109、110、111、112五行代码如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;	 if(NOT HAVE_OPENGL)
+	 #   list_filterout(install_list &amp;quot;.*opengl.cpp&amp;quot;)
+	  endif()
+	  if(NOT HAVE_CUDA)
+	 #   list_filterout(install_list &amp;quot;.*opticalflow_nvidia_api.cpp&amp;quot;)
+	 #   list_filterout(install_list &amp;quot;.*cascadeclassifier_nvidia_api.cpp&amp;quot;)
+	 #   list_filterout(install_list &amp;quot;.*driver_api_multi.cpp&amp;quot;)
+	 #   list_filterout(install_list &amp;quot;.*driver_api_stereo_multi.cpp&amp;quot;)
+	  endif()
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;mkdir build&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;cd build&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local  -D WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D WITH_V4L=ON -D WITH_FFMPEG=OFF    -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON     -D BUILD_EXAMPLES=OFF -D WITH_QT=OFF -D WITH_OPENGL=OFF ..&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;make&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;make install&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;四-问题&#34;&gt;四、问题&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;### 解决1394问题
+ln /dev/null /dev/raw1394
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;五-测试&#34;&gt;五、测试&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;python&lt;/li&gt;
+&lt;li&gt;&amp;gt;&amp;gt;&amp;gt;import cv2&lt;/li&gt;
+&lt;li&gt;不报错即表示安装成功&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;附：安装gnome后出现中文乱码的问题
+  apt-get install gnome-language-selector
+  然后在Xterm中执行
+  #gnome-language-selector&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
