@@ -334,7 +334,7 @@ BEGIN
                                     ) dateid,
                           issue.ID issue,
                           (SELECT NAME
-                             FROM v_gds_user_from_hrmis
+                             FROM v_gds_user_from_asasa
                             WHERE empno = stringvalue) bugcreator,
                           &#39;D类&#39; bugtype
                      FROM (SELECT *
@@ -381,7 +381,7 @@ BEGIN
                                     ) dateid,
                           customfieldvalue.issue,
                           (SELECT NAME
-                             FROM v_gds_user_from_hrmis
+                             FROM v_gds_user_from_asasa
                             WHERE empno = stringvalue) bugcreator,
                           (SELECT stringvalue
                              FROM customfieldvalue
@@ -1645,7 +1645,7 @@ AS
                                              GROUP BY author)
                                       WHERE author = gdsuser.empno)
                                        tm
-                               FROM issue, v_gds_user_from_hrmis gdsuser
+                               FROM issue, v_gds_user_from_asasa gdsuser
                               WHERE     issue.assignee = gdsuser.empno
                                     AND issue.project &amp;lt;&amp;gt; 10010
                                     AND (   issue.issuestatus = &#39;1&#39;
@@ -1678,7 +1678,7 @@ AS
                   0,
                   &#39;闲&#39;,
                   &#39;A&#39;
-             FROM v_gds_user_from_hrmis alluser
+             FROM v_gds_user_from_asasa alluser
             WHERE NOT EXISTS
                          (SELECT assignee
                             FROM issue
@@ -1750,7 +1750,7 @@ FROM
     ROUND(timeoriginalestimate/3600) workHours,
     (SELECT 花费工时 FROM (SELECT issueid,author,ROUND(SUM(timeworked)/3600) 花费工时 FROM WORKLOG GROUP BY issueid,author) WHERE issueid=ID AND author=gdsuser.EMPNO) 花费工时,
  (SELECT tm FROM (SELECT author, ROUND(SUM(timeworked)/3600) tm FROM WORKLOG WHERE (SYSDATE -updated)&amp;lt;3 GROUP BY author) WHERE author=gdsuser.EMPNO) tm
-   FROM ISSUE,v_gds_user_from_hrmis gdsuser
+   FROM ISSUE,v_gds_user_from_asasa gdsuser
    WHERE  ISSUE.assignee = gdsuser.empno(+)
          AND ISSUE.PROJECT&amp;lt;&amp;gt;10010 AND  (ISSUE.ISSUESTATUS=&#39;1&#39; OR ISSUE.ISSUESTATUS=&#39;3&#39;)
       --AND gdsuser.workertype=&#39;00000001&#39;
@@ -1762,7 +1762,7 @@ UNION
 SELECT TO_NUMBER (TO_CHAR (SYSDATE, &#39;YYYYMMDD&#39;)) 统计日期, alluser.NAME,
           alluser.empno, alluser.depname, alluser.depno, 0, 0, 0, 0, 0, 0, 0,
           0, 0, 0, &#39;闲&#39;, &#39;A&#39;
-     FROM v_gds_user_from_hrmis alluser
+     FROM v_gds_user_from_asasa alluser
     WHERE  NOT EXISTS (
              SELECT assignee
                FROM issue
@@ -1924,7 +1924,7 @@ AS
                     SUM (NUMBERSOFOVERDUETASK) 逾期任务个数,
                     SUM (HOURSFORPLAN) 计划工时,
                     SUM (HOURSOFFACT) 实际工时
-               FROM .DW_FACT_WORKLOAD, v_gds_user_from_hrmis gdsuser
+               FROM .DW_FACT_WORKLOAD, v_gds_user_from_asasa gdsuser
               WHERE     DW_FACT_WORKLOAD.STAFFNAME = gdsuser.NAME
                     AND gdsuser.workertype = &#39;00000001&#39;
                     AND (   gdsuser.stationlevel = &#39;00000003&#39;
@@ -1944,7 +1944,7 @@ AS
                     SUM (CASE WHEN bugtype = &#39;E类&#39; THEN bugnum ELSE 0 END)
                        E类BUG数
                FROM (  SELECT staffname, bugtype, SUM (bugnum) bugnum
-                         FROM .DW_FACT_BUG, v_gds_user_from_hrmis gdsuser
+                         FROM .DW_FACT_BUG, v_gds_user_from_asasa gdsuser
                         WHERE     DW_FACT_BUG.staffname = gdsuser.NAME
                               AND gdsuser.workertype = &#39;00000001&#39;
                               AND (   gdsuser.stationlevel = &#39;00000003&#39;
@@ -2194,6 +2194,94 @@ CREATE PUBLIC DATABASE LINK &amp;quot;QUERYFORSHARE.US.ORACLE.COM&amp;quot;
  CONNECT TO QUERY
  IDENTIFIED BY &amp;lt;PWD&amp;gt;
  USING &#39;(DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = 192.100.2.2)(PORT = 1521)) ) (CONNECT_DATA = (SERVICE_NAME = testrep) ) )&#39;;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;13-创建目录&#34;&gt;13、创建目录&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;DROP DIRECTORY WORK_DIR;
+
+CREATE OR REPLACE DIRECTORY 
+WORK_DIR AS 
+&#39;C:\ADE\aime_rf\oracle/work&#39;;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;14-ftp&#34;&gt;14、FTP&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;CREATE OR REPLACE PROCEDURE asasa.Pr_Ftp(aCommandString VARCHAR2) AS LANGUAGE JAVA NAME &#39;GDSOSCommand.exec(java.lang.String)&#39;;
+/
+---
+
+CREATE OR REPLACE PROCEDURE asasa.Pr_asasa_Stat_Xml_Gen IS
+/******************************************************************************
+利用job来调度该存储过程将人事系统的统计数据生成为xml文件
+作者：王峰
+编写时间：2008-11-21
+******************************************************************************/
+     workload_file_30 VARCHAR2(128) :=&#39;D:\gds_asasa_xml_data\gds_asasa_stat_data.xml&#39;;
+     currentTJLX VARCHAR2(128);
+     CURSOR cur_tjlx IS  SELECT DISTINCT &amp;quot;统计类型&amp;quot; FROM v_stat_staff_data;
+     CURSOR cur IS  SELECT &amp;quot;统计类型&amp;quot;, &amp;quot;指标项&amp;quot;, 人数,   &amp;quot;占比&amp;quot; FROM v_stat_staff_data WHERE 统计类型=currentTJLX  ORDER BY &amp;quot;统计类型&amp;quot;, &amp;quot;占比&amp;quot; DESC;
+     personRow cur%ROWTYPE;      --获取游标的行变量
+     doc xmlDom.DOMDocument := xmldom.newDOMDocument;        -- 创建文档对象
+     main_node xmlDom.DOMNode := xmldom.makeNode(doc);       -- 获得文档节点
+     root_elmt xmlDom.DOMElement:= xmldom.createElement(doc, &#39;西安长城数字软件有限公司人事统计数据&#39;);   -- 创建根元素
+     --==================================================
+     --以下定义元素
+     person_elmt xmlDom.DOMElement;      --定义PERSON元素
+     summary_elmt xmlDom.DOMElement;      --定义summary元素
+     details_elmt xmlDom.DOMElement;      --定义details元素
+     --==================================================
+     --以下定义节点
+     root_node xmlDom.DOMNode;   --定义统计数据节点
+     person_node xmlDom.DOMNode;   --定义PERSON节点
+     summary_node xmlDom.DOMNode;   --定义summary节点
+     details_node xmlDom.DOMNode;   --定义details节点
+     temp_node xmlDom.DOMNode;
+BEGIN
+     -- 向文档节点加入根节点:&amp;lt;统计数据&amp;gt;&amp;lt;/统计数据&amp;gt;
+     root_node := xmldom.appendChild(main_node, xmldom.makeNode(root_elmt));
+     FOR cur_tjlx_loop IN cur_tjlx LOOP
+       currentTJLX:=cur_tjlx_loop.统计类型;
+       --===========================================================================--
+       --创建统计类型节点
+       --===========================================================================--
+       details_elmt := xmldom.createElement(doc,&#39;统计方式&#39; ); --创建统计数据
+       details_node := xmldom.appendChild(root_node, xmldom.makeNode(details_elmt));
+       xmlDom.SETATTRIBUTE(details_elmt,&#39;名称&#39;,currentTJLX);
+       --===========================================================================--  
+       --创建各统计类别下的统计指标项 
+       --===========================================================================--              
+         --打开游标
+         OPEN cur ;
+         --遍历游标
+         LOOP
+           FETCH cur INTO personRow;
+           EXIT WHEN cur%NOTFOUND;
+           --===========================================================================--
+           person_elmt := xmldom.createElement(doc, &#39;分类&#39;); --创建分类元素
+           person_node := xmldom.appendChild(details_node, xmldom.makeNode(person_elmt));
+           --===========================================================================--
+           --向PERSON节点加入属性下列属性
+            xmlDom.SETATTRIBUTE(person_elmt,&#39;分类名称&#39;,personRow.指标项);
+            xmlDom.SETATTRIBUTE(person_elmt,&#39;人数&#39;,personRow.人数);
+            xmlDom.SETATTRIBUTE(person_elmt,&#39;占比&#39;,personRow.占比);
+           --===========================================================================--
+         END LOOP;
+         CLOSE cur;
+     END LOOP;   
+     --写入硬盘
+     xmlDom.writeToFile(doc,workload_file_30,&#39;UTF-8&#39;);
+     --发送文件到web服务器中
+     Pr_Ftp ( &#39;ftp -s:D:\gds_asasa_xml_data\autoftp.conf&#39; );
+   EXCEPTION
+    WHEN OTHERS THEN
+      -- DBMS_OUTPUT.PUT_LINE(SQLERRM);
+      RAISE;
+END Pr_asasa_Stat_Xml_Gen;
+/
+
 
 &lt;/code&gt;&lt;/pre&gt;
 </description>
