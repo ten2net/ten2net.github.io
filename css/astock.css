@@ -8,16 +8,8 @@
   --va-sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;
   --va-mono:"SFMono-Regular","JetBrains Mono","Consolas","Liberation Mono",monospace;
 }
-/* 系统偏好深色时才切暗色（不再是默认） */
-@media (prefers-color-scheme: dark){
-  :root{
-    --va-bg:#0f1115; --va-fg:#e6e8eb; --va-card:#171a1f; --va-muted:#1c2026;
-    --va-muted-fg:#a3a9b3; --va-border:#2a3038; --va-primary:#ff7a45;
-    --va-danger:#f05a5d; --va-success:#2bb673; --va-warning:#e0a63a;
-    --va-shadow:none;
-  }
-}
-html{background:var(--va-bg)}
+/* 全站固定亮色：不跟随系统深色偏好 */
+html{color-scheme:light}
 body{margin:0;background:var(--va-bg);color:var(--va-fg);font-family:var(--va-sans);font-size:15px;line-height:1.75}
 .main_wrapper.has-sidebar{padding-left:0!important;max-width:1040px;margin:0 auto}
 .va-header{padding:26px 20px 14px;border-bottom:1px solid var(--va-border);margin-bottom:22px}
