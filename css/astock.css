@@ -405,3 +405,42 @@ article.post .post-body,.post-body p,.post-body li,.post-body td,
   :root:not([data-theme="light"]) .up{color:#ff7a7d!important}
   :root:not([data-theme="light"]) .down{color:#43cc8a!important}
 }
+
+
+/* ============================================================
+   文章页加宽：CleanWhite 默认是 8/12 栏 + 2/12 侧栏，表格挤成一团
+   正文放到 10/12（大屏），目录侧栏让位；表格允许列内换行、按内容对齐
+   ============================================================ */
+@media (min-width:1200px){
+  .post-container{width:83.3333%!important;margin-left:8.3333%!important;float:none;max-width:1040px}
+  .catalog-container{display:none!important}
+  /* 首页列表也放宽一点，别和正文宽度差太远 */
+  .post-preview{max-width:1040px;margin-left:auto;margin-right:auto}
+}
+@media (min-width:768px) and (max-width:1199px){
+  .post-container{width:91.6667%!important;margin-left:4.1667%!important;float:none}
+  .catalog-container{display:none!important}
+}
+
+/* 复盘卡片：表格不再强制单行，允许换行；非数字列左对齐 */
+.va-table{width:100%;table-layout:auto}
+.va-table th,.va-table td{white-space:normal;word-break:break-word}
+.va-table th{white-space:nowrap}
+.va-table td.va-num,.va-table td.va-cell,.va-table td.va-spark,
+.va-table th.va-num,.va-table th.va-cell,.va-table th.va-spark{white-space:nowrap}
+.va-table td.va-tier,.va-table th:first-child{text-align:left}
+.va-table td.va-num.mono,.va-table td.va-num{text-align:right}
+/* 「最近几天怎么走的」：日期列窄、首列宽，条形不撑破 */
+.va-table td.va-spark{min-width:56px;padding:8px 6px}
+.va-table td.va-spark .va-bar{width:100%;max-width:72px}
+.va-table-wrap{overflow-x:auto}
+
+
+/* 宽屏再放宽：正文容器吃满可用宽度（上限 1180px），表头与长文本列不吃亏 */
+@media (min-width:1200px){
+  .post-container{width:91.6667%!important;margin-left:4.1667%!important;max-width:1180px}
+  article>.container{max-width:1240px;margin-left:auto;margin-right:auto}
+}
+/* 首列（日期/指数/行业名）宽一点，数字列不缩，条形列足够宽 */
+.va-table th:first-child,.va-table td:first-child{min-width:118px}
+.va-table th:nth-child(2),.va-table td:nth-child(2){min-width:64px}
