@@ -165,3 +165,24 @@ body{margin:0;background:var(--va-bg);color:var(--va-fg);font-family:var(--va-sa
 .va-dist-row em{width:78px;flex:0 0 78px;color:var(--va-muted-fg);font-style:normal;font-family:var(--va-mono);font-size:12.5px}
 .va-dist-row .va-bar{flex:1;width:auto;height:10px}
 .va-dist-row b{width:52px;text-align:right;font-family:var(--va-mono);font-size:13.5px;font-variant-numeric:tabular-nums}
+
+
+/* ---- 功能卡片：图标 + 标题 + 说明，整卡可点 ---- */
+.va-feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:9px;margin:0 0 14px}
+.va-feat{position:relative;display:block;padding:12px 13px 26px;border:1px solid var(--va-border);
+  border-radius:8px;background:var(--va-muted);text-decoration:none!important;
+  transition:border-color .15s,background .15s,transform .15s}
+.va-feat:hover{border-color:var(--va-primary);background:rgba(194,65,12,.06);transform:translateY(-1px)}
+.va-feat-icon{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;
+  border-radius:7px;background:var(--va-primary);color:#fff;font-size:15px;line-height:1;font-weight:600;
+  margin-bottom:8px}
+.va-feat-body{display:block}
+.va-feat-body b{display:block;color:var(--va-fg);font-size:14.5px;font-weight:600;line-height:1.35;margin-bottom:4px}
+.va-feat-body em{display:block;color:var(--va-muted-fg);font-size:12.5px;font-style:normal;line-height:1.6}
+.va-feat-go{position:absolute;right:12px;bottom:9px;color:var(--va-primary);font-size:11.5px;
+  font-weight:600;opacity:0;transition:opacity .15s}
+.va-feat:hover .va-feat-go{opacity:1}
+@media (max-width:640px){
+  .va-feat-grid{grid-template-columns:1fr}
+  .va-feat-go{opacity:1}
+}
