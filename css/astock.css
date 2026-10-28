@@ -157,3 +157,11 @@ body{margin:0;background:var(--va-bg);color:var(--va-fg);font-family:var(--va-sa
   .va-table{font-size:14px}
   .va-table th,.va-table td{padding:8px 9px}
 }
+
+
+/* ---- 涨跌分布 23 档 ---- */
+.va-dist{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:2px 18px}
+.va-dist-row{display:flex;align-items:center;gap:10px;font-size:14px;padding:1px 0}
+.va-dist-row em{width:78px;flex:0 0 78px;color:var(--va-muted-fg);font-style:normal;font-family:var(--va-mono);font-size:12.5px}
+.va-dist-row .va-bar{flex:1;width:auto;height:10px}
+.va-dist-row b{width:52px;text-align:right;font-family:var(--va-mono);font-size:13.5px;font-variant-numeric:tabular-nums}
