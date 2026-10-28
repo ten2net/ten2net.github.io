@@ -10,7 +10,7 @@
 }
 /* 全站固定亮色：不跟随系统深色偏好 */
 html{color-scheme:light}
-body{margin:0;background:var(--va-bg);color:var(--va-fg);font-family:var(--va-sans);font-size:15px;line-height:1.75}
+body{margin:0;background:var(--va-bg);color:var(--va-fg);font-family:var(--va-sans);font-size:16.5px;line-height:1.85}
 .main_wrapper.has-sidebar{padding-left:0!important;max-width:1040px;margin:0 auto}
 .va-header{padding:26px 20px 14px;border-bottom:1px solid var(--va-border);margin-bottom:22px}
 .va-brand{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
@@ -28,19 +28,19 @@ body{margin:0;background:var(--va-bg);color:var(--va-fg);font-family:var(--va-sa
 .va-tag:hover{border-color:var(--va-primary);color:var(--va-primary)}
 .va-panel{background:var(--va-card);border:1px solid var(--va-border);border-radius:var(--va-radius);padding:16px 18px;margin:0 0 16px;box-shadow:var(--va-shadow)}
 .va-panel.va-lead{border-left:3px solid var(--va-primary)}
-.va-leadline{font-size:16px;line-height:1.8;margin-bottom:14px}
+.va-leadline{font-size:18px;line-height:1.85;margin-bottom:16px}
 .va-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}
 .va-stat{background:var(--va-muted);border:1px solid var(--va-border);border-radius:var(--va-radius);padding:10px 12px}
-.va-stat-k{font-size:11px;color:var(--va-muted-fg);margin:0}
-.va-stat-v{font-family:var(--va-mono);font-size:20px;font-weight:700;margin:2px 0 0;font-variant-numeric:tabular-nums}
-.va-stat-s{font-size:11px;color:var(--va-muted-fg);margin:3px 0 0;line-height:1.5}
+.va-stat-k{font-size:13px;color:var(--va-muted-fg);margin:0;letter-spacing:.02em}
+.va-stat-v{font-family:var(--va-mono);font-size:30px;line-height:1.25;font-weight:700;margin:4px 0 0;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.va-stat-s{font-size:12.5px;color:var(--va-muted-fg);margin:5px 0 0;line-height:1.6}
 .va-sec{margin:0 0 18px}
 .va-sec-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;border-bottom:1px solid var(--va-border);padding-bottom:8px;margin:0 0 10px}
 .va-sec-h h2{font-size:16px;font-weight:600;margin:0;display:flex;align-items:center;gap:7px}
 .va-sec-h h2::before{content:"";display:inline-block;width:3px;height:15px;background:var(--va-primary);border-radius:2px}
 .va-sec-h span{font-size:12px;color:var(--va-muted-fg)}
 .va-note{border:1px solid rgba(168,111,0,.30);background:rgba(227,160,8,.10);color:var(--va-warning);border-radius:var(--va-radius);padding:8px 12px;font-size:12px;margin:0 0 14px}
-.post-content p{margin:0 0 12px}
+.post-content p{margin:0 0 14px;font-size:16.5px}
 .post-content h3,.post-content h2{font-size:14px;margin:18px 0 8px;color:var(--va-fg)}
 .post-content h2:first-child,.post-content h3:first-child{margin-top:0}
 .post-content strong{color:var(--va-fg)}
@@ -75,7 +75,7 @@ body{margin:0;background:var(--va-bg);color:var(--va-fg);font-family:var(--va-sa
 }
 
 /* 正文来自 Hugo 的 markdown 渲染，类名与主题前缀分开：后渲染的后代不继承前缀 */
-.post-content p{margin:0 0 12px}
+.post-content p{margin:0 0 14px;font-size:16.5px}
 .post-content h2,.post-content h3,.post-content h4{font-size:14px;margin:18px 0 8px;color:var(--va-fg)}
 .post-content h2:first-child,.post-content h3:first-child{margin-top:0}
 .post-content h3{font-size:13px;color:var(--va-muted-fg)}
@@ -93,3 +93,67 @@ body{margin:0;background:var(--va-bg);color:var(--va-fg);font-family:var(--va-sa
 .post-detail>summary:hover{color:var(--va-primary)}
 .post-detail .post-content{margin-top:8px;color:var(--va-muted-fg);font-size:13px}
 .va-foot-note{color:var(--va-muted-fg);font-size:12px;margin:0 0 18px}
+
+
+/* ---- 涨红跌绿（A 股口径）：数字与箭头都用这套 ---- */
+.up{color:var(--va-danger)!important}
+.down{color:var(--va-success)!important}
+.flat{color:inherit}
+.va-arrow{font-size:.7em;vertical-align:.08em;margin-left:2px}
+.va-mini{color:var(--va-muted-fg);font-size:13px;margin:0 0 10px}
+.va-mini.warn{color:var(--va-warning)}
+.va-gap{color:var(--va-muted-fg);font-size:14px;margin:0}
+.va-grid-wide{grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+
+/* ---- 表格：等宽数字、右侧对齐、行悬浮 ---- */
+.va-table-wrap{overflow-x:auto;margin:4px 0 10px;border:1px solid var(--va-border);border-radius:var(--va-radius)}
+.va-table{width:100%;border-collapse:collapse;font-size:15px;background:var(--va-card)}
+.va-table th{background:var(--va-muted);color:var(--va-muted-fg);font-weight:600;font-size:13.5px;
+  text-align:left;padding:10px 12px;white-space:nowrap;border-bottom:1px solid var(--va-border)}
+.va-table td{padding:10px 12px;border-bottom:1px solid var(--va-border);vertical-align:middle;white-space:nowrap}
+.va-table tbody tr:last-child td{border-bottom:0}
+.va-table tbody tr:hover{background:var(--va-muted)}
+.va-tier{font-weight:600;font-size:15.5px}
+.va-num{text-align:right;font-variant-numeric:tabular-nums}
+.va-num.mono{font-family:var(--va-mono)}
+.va-mono{font-family:var(--va-mono)}
+.va-mono.dim{color:var(--va-muted-fg);font-size:12.5px;font-weight:400}
+.va-table-note{color:var(--va-muted-fg);font-size:12.5px;line-height:1.6;margin:0 0 14px}
+
+/* ---- 反馈矩阵：热力格子 ---- */
+.va-cell{position:relative;text-align:center;font-family:var(--va-mono);font-weight:700;font-size:16.5px;min-width:64px}
+.va-cell-bar{position:absolute;left:6px;bottom:4px;height:3px;border-radius:2px;background:currentColor;opacity:.55}
+
+/* ---- 条形：晋级率 / 相对量 ---- */
+.va-bar{display:inline-block;width:88px;height:9px;background:var(--va-muted);border-radius:5px;overflow:hidden;vertical-align:middle}
+.va-bar i{display:block;height:100%;border-radius:5px;background:var(--va-muted-fg)}
+.va-bar-up i{background:var(--va-danger)}
+.va-bar-down i{background:var(--va-success)}
+
+/* ---- 梯队柱：板位家数 ---- */
+.va-ladder{display:flex;align-items:flex-end;gap:14px;height:150px;padding:10px 6px 0;
+  border-bottom:1px solid var(--va-border);margin:0 0 12px}
+.va-col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;gap:4px}
+.va-col-bar{display:block;width:100%;max-width:56px;border-radius:6px 6px 0 0;background:var(--va-primary);opacity:.85;min-height:4px}
+.va-col.gap .va-col-bar{background:repeating-linear-gradient(45deg,var(--va-border),var(--va-border) 4px,transparent 4px,transparent 8px);opacity:1}
+.va-col-n{font-family:var(--va-mono);font-weight:700;font-size:17px}
+.va-col.gap .va-col-n{color:var(--va-muted-fg)}
+.va-col-x{font-size:12.5px;color:var(--va-muted-fg);padding-bottom:6px}
+
+/* ---- 走势：迷你条 + 数值，最后一天高亮 ---- */
+.va-spark{text-align:center;min-width:52px}
+.va-spark .va-bar{width:100%;height:6px;margin-bottom:4px}
+.va-spark-n{font-family:var(--va-mono);font-size:13.5px;color:var(--va-muted-fg);display:block}
+.va-spark.last{background:rgba(194,65,12,.06)}
+.va-spark.last .va-spark-n{color:var(--va-fg);font-weight:700}
+
+/* ---- 状态胶囊 ---- */
+.va-pill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12.5px;border:1px solid currentColor}
+.va-pill.up{background:rgba(200,42,46,.08)}
+.va-pill.down{background:rgba(13,122,71,.08)}
+
+@media (max-width:640px){
+  .va-stat-v{font-size:25px}
+  .va-table{font-size:14px}
+  .va-table th,.va-table td{padding:8px 9px}
+}
