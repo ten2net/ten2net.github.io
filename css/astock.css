@@ -444,3 +444,14 @@ article.post .post-body,.post-body p,.post-body li,.post-body td,
 /* 首列（日期/指数/行业名）宽一点，数字列不缩，条形列足够宽 */
 .va-table th:first-child,.va-table td:first-child{min-width:118px}
 .va-table th:nth-child(2),.va-table td:nth-child(2){min-width:64px}
+
+
+/* ---- 表格按列对齐：_table(align=...) 生成的类 ---- */
+.va-table th.va-al-left,.va-table td.va-al-left{text-align:left}
+.va-table th.va-al-right,.va-table td.va-al-right{text-align:right}
+.va-table th.va-al-center,.va-table td.va-al-center{text-align:center}
+/* 文字列一律左对齐（个股、题材、行业、说明），别被数字列的右对齐带偏 */
+.va-table td:not(.va-num):not(.va-cell):not(.va-spark){text-align:left}
+.va-table td.va-num{text-align:right}
+/* 首封时间用等宽字体，时分秒对齐好看 */
+.va-table td.va-al-center{font-variant-numeric:tabular-nums}
