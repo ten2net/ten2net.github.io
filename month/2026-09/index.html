@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026-09 复盘</title>
+<meta name="description" content="共 1 篇">
+<meta property="og:title" content="2026-09 复盘">
+<link rel="icon" href="/favicon.png">
+<link rel="stylesheet" href="https://ten2net.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://ten2net.github.io/css/style.css">
+<link rel="stylesheet" href="https://ten2net.github.io/css/highlight/default.css">
+<style>
+.astock-note{background:#f6f7f9;border-left:4px solid #2053ab;padding:.6rem 1rem;color:#424242;font-size:.95em}
+.astock-cards{margin:1rem 0}
+.astock-cards p{margin:.2rem 0 .6rem}
+.astock-cards small{color:#757575}
+.astock-tools{margin-top:1.5rem;color:#757575;font-size:.9em}
+.main_content .content blockquote{border-left:4px solid #e0e0e0;margin:1rem 0;padding:.2rem 1rem;color:#616161}
+</style>
+</head>
+<body>
+<main id="main-wrapper" class="container main_wrapper has-sidebar">
+
+<header id="main-header" class="container main_header">
+<div class="container brand">
+  <div class="container title h1-like"><a class="baselink" href="https://ten2net.github.io/">学习之心</a></div>
+</div>
+<nav class="container nav primary no-print">
+  <a class="homelink" href="https://ten2net.github.io/">首页</a>
+  <a href="https://ten2net.github.io/reviews/">复盘</a>
+  <a href="https://ten2net.github.io/reviews/all/">全部文章</a>
+  <a href="https://ten2net.github.io/astock-feed.xml" title="订阅每日复盘">订阅</a>
+  <a href="https://ten2net.github.io/about">关于我</a>
+</nav>
+</header>
+
+
+<section id="main-content" class="container main_content homepage">
+  <header class="container header">
+  <h1>2026-09 复盘</h1>
+  <span>共 1 篇</span>
+</header>
+
+<article class="container content summary">
+  <div class="container hat">
+  <h2><a href="https://ten2net.github.io/2026/09/23/2026-09-23%20%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98%20%C2%B7%20%E6%83%85%E7%BB%AA%E6%A1%A3%E4%BD%8D%E9%80%80%E6%BD%AE/">2026-09-23 每日复盘 · 情绪档位退潮</a></h2>
+  <time datetime="2026-09-23">2026 年 9 月 23 日</time>
+</div>
+  <p class="container content">本日情绪档位判为退潮。赚钱效应中位数处近期低分位，最高连板层级较前一交易日回落，炸板率抬升，跌超比例家数处近期高分位，情绪周期连续转弱。但连板溢价样本翻红且全市场板位连续，局部高位仍有承接，并非全面冰点。成交额榜缺失，不能判断板块相对活跃。</p>
+  <div class="container readlink">
+  <a href="https://ten2net.github.io/2026/09/23/2026-09-23%20%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98%20%C2%B7%20%E6%83%85%E7%BB%AA%E6%A1%A3%E4%BD%8D%E9%80%80%E6%BD%AE/">Read more &rarr;</a>
+</div>
+</article>
+</section>
+
+<footer id="main-footer" class="container main_footer">
+  <div class="container nav foot no-print">
+    <a href="#top" class="toplink">back to top</a>
+  </div>
+  <div class="container credits">
+    <div class="container footline">制作 <i class="fa fa-heart">ten2net</i></div>
+    <div class="container copyright">本页由 揽宝投研 自动生成 · 揽宝投研 只客观呈现公开数据与榜单，不推荐个股、不预测涨跌、不构成投资建议。模型输出可能出错，请沿证据链自行核实并独立决策，风险自担。</div>
+  </div>
+</footer>
+</main>
+<script>(function(){
+  var box=document.getElementById('astock-post-md'); if(!box) return;
+  var host=box.parentNode; host.removeChild(box);
+  var esc=function(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');};
+  var inline=function(s){
+    s=esc(s);
+    s=s.replace(/[*][*]([^*]+)[*][*]/g,'<strong>$1</strong>');
+    s=s.replace(/`([^`]+)`/g,'<code>$1</code>');
+    return s;
+  };
+  var lines=box.value.split(/\r?\n/),html=[],inDet=false,buf=[];
+  var flush=function(){ if(buf.length){ html.push('<p>'+buf.join('<br>')+'</p>'); buf=[]; } };
+  for(var i=0;i<lines.length;i++){
+    var raw=lines[i],s=raw.trim();
+    if(!s){ flush(); continue; }
+    if(/^<details>$/i.test(s)){ flush(); inDet=true; html.push('<details>'); continue; }
+    if(s.length>10 && s.slice(0,10).toLowerCase()==='<'+'/details' && s.slice(-1)==='>'){ flush(); inDet=false; html.push('</details>'); continue; }
+    var sm=s.length>18 && s.slice(0,9)==='<summary>' && s.slice(-10)==='<'+'/summary>' ? [0,s.slice(9,-10)] : null;
+    if(sm){ flush(); html.push('<summary>'+inline(sm[1])+'</summary>'); continue; }
+    var h=s.match(/^(#{1,6})\s+(.*)$/);
+    if(h){ flush(); html.push('<h3>'+inline(h[2])+'</h3>'); continue; }
+    var q=s.match(/^&gt;\s?(.*)$/)||s.match(/^>\s?(.*)$/);
+    if(q){ flush(); html.push('<blockquote>'+inline(q[1])+'</blockquote>'); continue; }
+    buf.push(inline(s));
+  }
+  flush();
+  host.innerHTML=html.join('\n');
+})();
+</script>
+</body>
+</html>
