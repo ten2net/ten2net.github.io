@@ -40,16 +40,6 @@ body{margin:0;background:var(--va-bg);color:var(--va-fg);font-family:var(--va-sa
 .va-sec-h h2::before{content:"";display:inline-block;width:3px;height:15px;background:var(--va-primary);border-radius:2px}
 .va-sec-h span{font-size:12px;color:var(--va-muted-fg)}
 .va-note{border:1px solid rgba(168,111,0,.30);background:rgba(227,160,8,.10);color:var(--va-warning);border-radius:var(--va-radius);padding:8px 12px;font-size:12px;margin:0 0 14px}
-.post-content p{margin:0 0 14px;font-size:16.5px}
-.post-content h3,.post-content h2{font-size:14px;margin:18px 0 8px;color:var(--va-fg)}
-.post-content h2:first-child,.post-content h3:first-child{margin-top:0}
-.post-content strong{color:var(--va-fg)}
-.post-content ul,.post-content ol{padding-left:20px;margin:8px 0}
-.post-content li{margin:3px 0}
-.post-content blockquote{border-left:3px solid var(--va-border);margin:12px 0;padding:2px 12px;color:var(--va-muted-fg)}
-.post-content code{font-family:var(--va-mono);font-size:12px;background:var(--va-muted);border-radius:4px;padding:1px 5px}
-.post-content pre{background:var(--va-muted);border:1px solid var(--va-border);border-radius:var(--va-radius);padding:12px;overflow-x:auto;font-size:12px;line-height:1.6}
-.post-content pre code{background:none;padding:0}
 .post-detail{margin-top:14px}
 .post-detail>summary{cursor:pointer;color:var(--va-muted-fg);font-size:13px;padding:8px 0;border-top:1px dashed var(--va-border)}
 .post-detail>summary:hover{color:var(--va-primary)}
@@ -75,17 +65,6 @@ body{margin:0;background:var(--va-bg);color:var(--va-fg);font-family:var(--va-sa
 }
 
 /* 正文来自 Hugo 的 markdown 渲染，类名与主题前缀分开：后渲染的后代不继承前缀 */
-.post-content p{margin:0 0 14px;font-size:16.5px}
-.post-content h2,.post-content h3,.post-content h4{font-size:14px;margin:18px 0 8px;color:var(--va-fg)}
-.post-content h2:first-child,.post-content h3:first-child{margin-top:0}
-.post-content h3{font-size:13px;color:var(--va-muted-fg)}
-.post-content strong{color:var(--va-fg)}
-.post-content ul,.post-content ol{padding-left:20px;margin:8px 0}
-.post-content li{margin:3px 0}
-.post-content blockquote{border-left:3px solid var(--va-border);margin:0 0 12px;padding:2px 12px;color:var(--va-muted-fg)}
-.post-content code{font-family:var(--va-mono);font-size:12px;background:var(--va-muted);border-radius:4px;padding:1px 5px}
-.post-content pre{background:var(--va-muted);border:1px solid var(--va-border);border-radius:var(--va-radius);padding:12px;overflow-x:auto;font-size:12px;line-height:1.6}
-.post-content pre code{background:none;padding:0}
 .post-content table{width:100%;border-collapse:collapse;font-size:13px}
 .post-content th,.post-content td{border-bottom:1px solid var(--va-border);padding:6px 8px;text-align:left}
 .post-detail{margin-top:16px;border-top:1px dashed var(--va-border);padding-top:6px}
@@ -186,3 +165,38 @@ body{margin:0;background:var(--va-bg);color:var(--va-fg);font-family:var(--va-sa
   .va-feat-grid{grid-template-columns:1fr}
   .va-feat-go{opacity:1}
 }
+
+
+/* ============================================================
+   中文排版：标题加粗、段落首行缩进两字、段落之间留空行
+   缩进只用 text-indent —— 不写全角空格，复制出去也不会带一堆看不见的字符
+   ============================================================ */
+.post-content{font-size:16.5px;line-height:1.9;color:var(--va-fg);letter-spacing:.01em}
+.post-content p{margin:0 0 1.15em;text-indent:2em;text-align:justify}
+/* 段首不是「段」的元素不缩进：卡片、列表、引用、代码、表格、标题 */
+.post-content p:has(+ ul),.post-content p:has(+ ol){text-indent:2em}
+.post-content .va-grid p,.post-content .va-dist-row em,.post-content .va-mini,
+.post-content .va-leadline,.post-content blockquote p,.post-content li p{text-indent:0}
+.post-content h2,.post-content h3,.post-content h4{
+  font-weight:700;color:var(--va-fg);letter-spacing:.02em;text-indent:0;
+  margin:1.6em 0 .7em;line-height:1.45}
+.post-content h2{font-size:19px;padding-bottom:.35em;border-bottom:1px solid var(--va-border)}
+.post-content h3{font-size:16.5px}
+.post-content h4{font-size:15.5px;color:var(--va-muted-fg)}
+.post-content > :first-child,.post-content h2:first-child,.post-content h3:first-child{margin-top:0}
+.post-content strong,.post-content b{font-weight:700;color:var(--va-fg)}
+.post-content ul,.post-content ol{padding-left:2em;margin:.6em 0 1.15em}
+.post-content li{margin:.35em 0;line-height:1.8}
+.post-content li::marker{color:var(--va-primary)}
+.post-content blockquote{
+  margin:1.2em 0;padding:.6em 1.1em;border-left:3px solid var(--va-border);
+  background:var(--va-muted);border-radius:0 6px 6px 0;color:var(--va-muted-fg)}
+.post-content blockquote p{margin:.3em 0}
+.post-content code{font-family:var(--va-mono);font-size:.85em;background:var(--va-muted);
+  border-radius:4px;padding:1px 5px;text-indent:0}
+.post-content pre{background:var(--va-muted);border:1px solid var(--va-border);border-radius:var(--va-radius);
+  padding:12px 14px;overflow-x:auto;font-size:13px;line-height:1.65;margin:1em 0}
+.post-content pre code{background:none;padding:0;font-size:13px}
+.post-content table{text-indent:0}
+/* 移动端缩进略收，避免长句换行后只剩两三个字 */
+@media (max-width:640px){.post-content{font-size:16px;line-height:1.85}.post-content h2{font-size:18px}}
