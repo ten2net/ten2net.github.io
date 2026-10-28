@@ -176,7 +176,9 @@ body{margin:0;background:var(--va-bg);color:var(--va-fg);font-family:var(--va-sa
 /* 段首不是「段」的元素不缩进：卡片、列表、引用、代码、表格、标题 */
 .post-content p:has(+ ul),.post-content p:has(+ ol){text-indent:2em}
 .post-content .va-grid p,.post-content .va-dist-row em,.post-content .va-mini,
-.post-content .va-leadline,.post-content blockquote p,.post-content li p{text-indent:0}
+.post-content .va-leadline,.post-content blockquote p,.post-content li p,
+.post-content .va-stat p,.post-content .va-note p,.post-content .va-promo p,
+.post-content .va-feat em,.post-content .va-feat b{text-indent:0}
 .post-content h2,.post-content h3,.post-content h4{
   font-weight:700;color:var(--va-fg);letter-spacing:.02em;text-indent:0;
   margin:1.6em 0 .7em;line-height:1.45}
