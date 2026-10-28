@@ -1,6 +1,7 @@
 {
   "generated_by": "揽宝投研",
   "files": [
+    "404.html",
     "css/astock.css",
     "index.html",
     "index.xml",
@@ -14,12 +15,10 @@
     "post/2026-10-27-每日复盘/index.html",
     "post/index.html",
     "post/index.xml",
-    "post/page/1/index.html",
     "robots.txt",
     "sitemap.xml",
     "tags/index.html",
-    "tags/index.xml",
     "tags/每日复盘/index.html",
-    "tags/每日复盘/index.xml"
+    "tags/每日复盘/page/1/index.html"
   ]
 }

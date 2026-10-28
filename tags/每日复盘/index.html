@@ -1,48 +1,739 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-cn">
 <head>
-<meta charset="utf-8">
-<meta name="HandheldFriendly" content="True">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>每日复盘 · A 股每日复盘</title>
-<meta name="description" content="公开数据 &#43; 程序计算 &#43; 模型解读：每日 A 股复盘文章，每个数字都可回溯到落盘依据">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta property="og:title" content="每日复盘">
-<meta property="og:url" content="https://ten2net.github.io/tags/%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/">
-<meta name="theme-color" content="#f7f8fa">
-<link rel="canonical" href="https://ten2net.github.io/tags/%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/">
-<link href="https://ten2net.github.io/tags/%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/index.xml" rel="alternate" type="application/rss+xml" title="A 股每日复盘">
-<link rel="icon" href="/favicon.png">
-<link rel="stylesheet" href="/css/astock.css">
+    
+    <script>
+    (function() {
+        
+        
+        const autoTheme = false;
+        if (autoTheme) {
+            document.documentElement.setAttribute('data-auto-theme', 'true');
+        }
+
+        const theme = localStorage.getItem('cleanwhite-theme') ||
+                      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+    })();
+    </script>
+
+    
+    <meta property="og:site_name" content="A 股每日复盘">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://ten2net.github.io//img/home-bg.jpg">
+    <meta property="twitter:image" content="https://ten2net.github.io//img/home-bg.jpg" />
+    
+
+    
+    <meta name="title" content="" />
+    <meta property="og:title" content="" />
+    <meta property="twitter:title" content="" />
+    
+
+    
+    <meta name="description" content="公开数据 &#43; 程序计算 &#43; 模型解读：每日 A 股复盘，每个数字都可回溯到落盘依据。">
+    <meta property="og:description" content="公开数据 &#43; 程序计算 &#43; 模型解读：每日 A 股复盘，每个数字都可回溯到落盘依据。" />
+    <meta property="twitter:description" content="公开数据 &#43; 程序计算 &#43; 模型解读：每日 A 股复盘，每个数字都可回溯到落盘依据。" />
+    
+
+    <meta property="og:url" content="https://ten2net.github.io/tags/%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/" />
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="A股,每日复盘,涨停,连板,情绪周期,复盘报告,揽宝投研">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>每日复盘 | A 股每日复盘 | 揽宝投研</title>
+
+    <link rel="canonical" href="/tags/%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/">
+
+    
+
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.css">
+
+    
+    <link rel="stylesheet" href="/css/theme-variables.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.min.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+    
+    <link rel="stylesheet" href="https://ten2net.github.io/css/astock.css">
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
 </head>
-<body>
-<main id="main-wrapper" class="container main_wrapper has-sidebar">
 
-<header class="va-header">
-  <div class="va-brand">
-    <a href="https://ten2net.github.io/">A 股每日复盘</a>
-    <span>公开数据 &#43; 程序计算 &#43; 模型解读：每日 A 股复盘文章，每个数字都可回溯到落盘依据</span>
-  </div>
-  <nav class="va-nav">
-    <a class="" href="https://ten2net.github.io/">首页</a>
-    <a href="/post/">复盘</a><a href="/tags/">标签</a>
-  </nav>
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">A 股每日复盘</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">All Posts</a>
+                    </li>
+                    
+                        
+                    
+
+		    
+                        <li><a href="/post//">复盘</a></li>
+                    
+                        <li><a href="/tags//">标签</a></li>
+                    
+                        <li><a href="https://a.luckybrother.cc/first-board/">V1 版</a></li>
+                    
+                        <li><a href="https://a2.luckybrother.cc/watch/">V2 版</a></li>
+                    
+		            <li>
+                        <a href="/search"><i class="fa fa-search"></i></a>
+		           </li>
+                    
+		            <li>
+                        <a href="#" id="theme-toggle" title="Toggle dark mode" style="opacity: 0;">
+                            <i class="fa fa-moon"></i>
+                            <i class="fa fa-sun" style="display: none;"></i>
+                        </a>
+		           </li>
+                    <script>
+                    (function() {
+                        
+                        var theme = localStorage.getItem('cleanwhite-theme') ||
+                                      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                        var toggleBtn = document.getElementById('theme-toggle');
+                        if (toggleBtn) {
+                            var moonIcon = toggleBtn.querySelector('.fa-moon');
+                            var sunIcon = toggleBtn.querySelector('.fa-sun');
+
+                            if (theme === 'dark') {
+                                if (moonIcon) moonIcon.style.display = 'none';
+                                if (sunIcon) sunIcon.style.display = 'inline';
+                                toggleBtn.setAttribute('title', 'Switch to light mode');
+                            } else {
+                                if (moonIcon) moonIcon.style.display = 'inline';
+                                if (sunIcon) sunIcon.style.display = 'none';
+                                toggleBtn.setAttribute('title', 'Switch to dark mode');
+                            }
+
+                            
+                            requestAnimationFrame(function() {
+                                toggleBtn.style.transition = 'opacity 0.2s ease';
+                                toggleBtn.style.opacity = '1';
+                            });
+                        }
+                    })();
+                    </script>
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        var navLinks = document.querySelectorAll('.navbar-collapse a');
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                if ($navbar.className.indexOf('in') > 0) {
+                    
+                    $navbar.className = " ";
+                    setTimeout(function(){
+                        if($navbar.className.indexOf('in') < 0) {
+                            $collapse.style.height = "0px"
+                        }
+                    },400)
+                }
+            });
+        });
+    });
+</script>
+
+
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class="site-heading">
+                    <h1>A 股每日复盘 </h1>
+                    
+		    <span class="subheading">公开数据与程序计算，复盘每一个交易日</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
 
-<div class="va-wrap">
 
-<div class="va-sec">
-  <div class="va-sec-h"><h2>每日复盘</h2><span>共 7 个</span></div>
-  <div class="va-panel">
-  <a class="va-tag" href="/post/2026-10-27-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/" style="margin:3px 4px 3px 0">2026-10-27 每日复盘 · 情绪档位退潮（0）</a><a class="va-tag" href="/post/2026-10-26-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/" style="margin:3px 4px 3px 0">2026-10-26 每日复盘 · 情绪档位退潮（0）</a><a class="va-tag" href="/post/2026-10-22-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/" style="margin:3px 4px 3px 0">2026-10-22 每日复盘 · 情绪档位退潮（0）</a><a class="va-tag" href="/post/2026-10-21-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/" style="margin:3px 4px 3px 0">2026-10-21 每日复盘 · 情绪档位修复（0）</a><a class="va-tag" href="/post/2026-10-20-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/" style="margin:3px 4px 3px 0">2026-10-20 每日复盘 · 情绪档位修复（0）</a><a class="va-tag" href="/post/2026-10-19-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/" style="margin:3px 4px 3px 0">2026-10-19 每日复盘 · 情绪档位退潮（0）</a><a class="va-tag" href="/post/2026-09-23-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/" style="margin:3px 4px 3px 0">2026-09-23 每日复盘 · 情绪档位退潮（0）</a>
-  </div>
+
+  
+<div data-pagefind-ignore="all" class="container">
+    <div class="row">
+        
+        
+   	    <div class="
+            col-lg-8 col-lg-offset-1
+            col-md-8 col-md-offset-1
+            col-sm-12
+            col-xs-12
+            post-container
+        ">
+            
+<div data-pagefind-ignore="all">
+
+<div class="post-preview">
+    <a href="https://ten2net.github.io/post/2026-10-27-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/">
+        <h2 class="post-title">
+            2026-10-27 每日复盘 · 情绪档位退潮
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            当日情绪为退潮。涨停家数较前一交易日下降，炸板率转冷，赚钱效应中位数回落，连板溢价中位数为负，全市场宽度极弱且下跌家数远多于上涨，多个读数共同转冷并支撑退潮；但最高连板高度上升构成反证，材料未提供统一核对前不把首板晋级回升当修复确认。
+        
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by A 股每日复盘 on Tuesday, October 27, 2026
+        
+        
+    
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="https://ten2net.github.io/post/2026-10-26-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/">
+        <h2 class="post-title">
+            2026-10-26 每日复盘 · 情绪档位退潮
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            今日取退潮：增量接力不足，首板向上晋级比例与最高梯度转冷，炸板比例抬升，涨停家数减少；但昨日高位连板样本今日仍强，赚钱效应中位为正且处近期偏高位置，全市场下跌多于上涨，未至极端亏钱。本判断仅基于今日涨停池与派生样本。
+        
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by A 股每日复盘 on Monday, October 26, 2026
+        
+        
+    
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="https://ten2net.github.io/post/2026-10-22-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/">
+        <h2 class="post-title">
+            2026-10-22 每日复盘 · 情绪档位退潮
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            复盘日跌停样本较多，前一交易日涨停样本普遍转跌，连板样本整体下跌；题材上人形机器人标注扩散中、羊字辈维持，数据中心液冷为当日新出现分支，呈现高标独活与整体退潮同在。
+        
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by A 股每日复盘 on Thursday, October 22, 2026
+        
+        
+    
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="https://ten2net.github.io/post/2026-10-21-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/">
+        <h2 class="post-title">
+            2026-10-21 每日复盘 · 情绪档位修复
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            短线赚钱效应偏强，但家数略降、高度未升且宽度偏弱，情绪判断为修复；不同涨跌幅样本分开读。
+        
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by A 股每日复盘 on Wednesday, October 21, 2026
+        
+        
+    
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="https://ten2net.github.io/post/2026-10-20-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/">
+        <h2 class="post-title">
+            2026-10-20 每日复盘 · 情绪档位修复
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            全市场宽度向好、上涨占比偏高，成交活跃；最高连板高度较上日抬升，赚钱效应中位数转强，深跌收敛、跌停少量；但炸板率仍处近期偏高分位、封板有分歧，头部题材集中度低，整体表现为修复。
+        
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by A 股每日复盘 on Tuesday, October 20, 2026
+        
+        
+    
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="https://ten2net.github.io/post/2026-10-19-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/">
+        <h2 class="post-title">
+            2026-10-19 每日复盘 · 情绪档位退潮
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            当日涨停样本规模与最高板位较前一交易日收缩转冷，跌停与深跌样本偏多，派生情绪周期处窗口低位且转弱；虽有炸板率与赚钱效应中位数转热，但高位梯队降温与亏钱效应未消，整体归为退潮。
+        
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by A 股每日复盘 on Monday, October 19, 2026
+        
+        
+    
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="https://ten2net.github.io/post/2026-09-23-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/">
+        <h2 class="post-title">
+            2026-09-23 每日复盘 · 情绪档位退潮
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            本日情绪档位判为退潮。赚钱效应中位数处近期低分位，最高连板层级较前一交易日回落，炸板率抬升，跌超比例家数处近期高分位，情绪周期连续转弱。但连板溢价样本翻红且全市场板位连续，局部高位仍有承接，并非全面冰点。成交额榜缺失，不能判断板块相对活跃。
+        
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by A 股每日复盘 on Wednesday, September 23, 2026
+        
+        
+    
+    </p>
+
+</div>
+<hr>
+
 </div>
 
+            
+
+
+
+       	</div>
+        
+
+<div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+    
+	
+    <section class="visible-md visible-lg">
+	
+        <div class="short-about">
+            
+            <a href="/about">
+               <img src="/img/avatar.png" alt="avatar" style="cursor: pointer" />
+            </a>
+            
+            
+                <p>揽宝投研：A 股短线复盘与跟踪工作台。本页的复盘文章由它生成后自动发布。</p>
+            
+           
+           <ul class="list-inline">
+               
+               
+               
+               
+               
+               
+               
+               <li>
+                   <a target="_blank" href="https://github.com/ten2net/vibe-astock">
+                       <span class="fa-stack fa-lg">
+                           <i class="fas fa-circle fa-stack-2x"></i>
+                           <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                       </span>
+                   </a>
+               </li>
+               
+               
+               
+               
+               
+               
+            
+            
+               
+               
+               
+               
+                </ul>
+            </div>
+    </section>
+	
+    
+    
+    
+    
+    <section>
+        <hr class="hidden-sm hidden-xs">
+        <h5>FEATURED TAGS</h5>
+        <div class="tags">
+            
+            
+               
+                    <a href="/tags/%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98" title="每日复盘">
+                        每日复盘
+                    </a>
+               
+            
+        </div>
+    </section>
+    
+
+    
+    
+    
+    
+    <section>
+        <hr class="hidden-sm hidden-xs">
+        <h5>LAST POSTS</h5>
+        <ul>
+        
+            <li><a href="/post/2026-10-27-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/">2026-10-27 每日复盘 · 情绪档位退潮</a></li>
+        
+            <li><a href="/post/2026-10-26-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/">2026-10-26 每日复盘 · 情绪档位退潮</a></li>
+        
+            <li><a href="/post/2026-10-22-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/">2026-10-22 每日复盘 · 情绪档位退潮</a></li>
+        
+            <li><a href="/post/2026-10-21-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/">2026-10-21 每日复盘 · 情绪档位修复</a></li>
+        
+            <li><a href="/post/2026-10-20-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/">2026-10-20 每日复盘 · 情绪档位修复</a></li>
+        
+        </ul>
+    </section>
+    
 </div>
-<footer class="va-foot">
-  <div>揽宝投研 只客观呈现公开数据与榜单，不推荐个股、不预测涨跌、不构成投资建议。模型输出可能出错，请沿证据链自行核实并独立决策，风险自担。 · <a href="https://a.luckybrother.cc/" rel="noopener">揽宝投研</a></div>
+
+	</div>
+</div>
+
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/ten2net/vibe-astock">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+                   <li>
+                       <a href='' rel="alternate" type="application/rss+xml" title="A 股每日复盘" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+            
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; A 股每日复盘 2026
+                    
+                </p>
+            </div>
+        </div>
+    </div>
 </footer>
 
-</main>
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    (function() {
+        function updateTagcloudColors() {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const startColor = isDark ? '#808080' : '#bbbbee';
+            if($('#tag_cloud').length !== 0 && $.fn.tagcloud) {
+                $.fn.tagcloud.defaults = {
+                    color: {start: startColor, end: '#0085a1'},
+                };
+                $('#tag_cloud a').tagcloud();
+            }
+        }
+
+        
+        $(document).ready(function() {
+            updateTagcloudColors();
+        });
+
+        
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.attributeName === 'data-theme') {
+                    updateTagcloudColors();
+                }
+            });
+        });
+
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['data-theme']
+        });
+    })();
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<script src="/js/theme-toggle.js"></script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow" title="' + t + '">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+
 </body>
 </html>
