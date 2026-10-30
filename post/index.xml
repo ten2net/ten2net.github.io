@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Wed, 28 Oct 2026 18:50:00 +0800</lastBuildDate>
+			<lastBuildDate>Thu, 29 Oct 2026 09:22:00 +0800</lastBuildDate>
 		
 			<atom:link href="https://ten2net.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>2026-10-29 每日复盘 · 情绪档位退潮</title>
+				<link>https://ten2net.github.io/post/2026-10-29-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</link>
+				<pubDate>Thu, 29 Oct 2026 09:22:00 +0800</pubDate>
+				<guid>https://ten2net.github.io/post/2026-10-29-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</guid>
+				<description>今日盘面偏弱，涨停家数较前一交易日减少，最高梯队回落但仍维持高位梯队；市场宽度跌远多于涨，昨日涨停样本普遍转弱且跌停不少，赚钱效应中位与深跌家数处近期偏冷分位。连板内部有溢价，但只属少数高位样本内部，不构成整体修复。</description>
+			</item>
 			<item>
 				<title>2026-10-28 每日复盘 · 情绪档位修复</title>
 				<link>https://ten2net.github.io/post/2026-10-28-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</link>
@@ -26,13 +33,6 @@
 				<pubDate>Tue, 27 Oct 2026 22:39:00 +0800</pubDate>
 				<guid>https://ten2net.github.io/post/2026-10-27-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</guid>
 				<description>当日情绪为退潮。涨停家数较前一交易日下降，炸板率转冷，赚钱效应中位数回落，连板溢价中位数为负，全市场宽度极弱且下跌家数远多于上涨，多个读数共同转冷并支撑退潮；但最高连板高度上升构成反证，材料未提供统一核对前不把首板晋级回升当修复确认。</description>
-			</item>
-			<item>
-				<title>2026-10-26 每日复盘 · 情绪档位退潮</title>
-				<link>https://ten2net.github.io/post/2026-10-26-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</link>
-				<pubDate>Mon, 26 Oct 2026 08:21:00 +0800</pubDate>
-				<guid>https://ten2net.github.io/post/2026-10-26-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</guid>
-				<description>今日取退潮：增量接力不足，首板向上晋级比例与最高梯度转冷，炸板比例抬升，涨停家数减少；但昨日高位连板样本今日仍强，赚钱效应中位为正且处近期偏高位置，全市场下跌多于上涨，未至极端亏钱。本判断仅基于今日涨停池与派生样本。</description>
 			</item>
 	</channel>
 </rss>
