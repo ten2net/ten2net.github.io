@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Mon, 02 Nov 2026 18:58:00 +0800</lastBuildDate>
+			<lastBuildDate>Tue, 03 Nov 2026 18:52:00 +0800</lastBuildDate>
 		
 			<atom:link href="https://ten2net.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>2026-11-03 每日复盘 · 情绪档位退潮</title>
+				<link>https://ten2net.github.io/post/2026-11-03-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</link>
+				<pubDate>Tue, 03 Nov 2026 18:52:00 +0800</pubDate>
+				<guid>https://ten2net.github.io/post/2026-11-03-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</guid>
+				<description>复盘日盘面定性为退潮：涨停池较对照交易日明显收缩，最高连板高度下降，炸板率升至偏高分位，深跌家数由无到有增加，情绪周期在近期区间低位且当日转弱；全市场宽度下跌样本多于上涨，跌停家数出现。依据只在已统计涨停池与沪深剔除北交所样本口径内成立，不代表全市场无其他现象。</description>
+			</item>
 			<item>
 				<title>2026-11-02 每日复盘 · 情绪档位发酵</title>
 				<link>https://ten2net.github.io/post/2026-11-02-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</link>
@@ -26,13 +33,6 @@
 				<pubDate>Fri, 30 Oct 2026 23:55:00 +0800</pubDate>
 				<guid>https://ten2net.github.io/post/2026-10-30-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</guid>
 				<description>当日较上个交易日出现局部修复:涨停样本家数、最高连板高度与首板晋级读数均回升,赚钱效应中位数改善但仍未脱离偏弱区间;同时上个交易日涨停样本在当日仍大面积深跌跌停,全市场下跌家数远多于上涨家数、跌停家数高,炸板率仍偏高,连板溢价中位数深跌,属于样本修复而非全市场转强。</description>
-			</item>
-			<item>
-				<title>2026-10-29 每日复盘 · 情绪档位退潮</title>
-				<link>https://ten2net.github.io/post/2026-10-29-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</link>
-				<pubDate>Thu, 29 Oct 2026 09:22:00 +0800</pubDate>
-				<guid>https://ten2net.github.io/post/2026-10-29-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</guid>
-				<description>今日盘面偏弱，涨停家数较前一交易日减少，最高梯队回落但仍维持高位梯队；市场宽度跌远多于涨，昨日涨停样本普遍转弱且跌停不少，赚钱效应中位与深跌家数处近期偏冷分位。连板内部有溢价，但只属少数高位样本内部，不构成整体修复。</description>
 			</item>
 	</channel>
 </rss>
