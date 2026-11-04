@@ -143,17 +143,81 @@
       transition: color 0.2s, border-color 0.2s;
     }
     .back a:hover { color: var(--accent); border-color: var(--accent); }
+      /* Banner */
+    .banner {
+      position: relative; overflow: hidden;
+      background:
+        radial-gradient(900px 320px at 75% -30%, rgba(78,201,164,0.14), transparent 60%),
+        radial-gradient(700px 300px at 15% 130%, rgba(88,166,255,0.10), transparent 60%),
+        linear-gradient(180deg, #10151d 0%, #0d1117 100%);
+      border-bottom: 1px solid var(--border);
+    }
+    .banner::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(139,152,171,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(139,152,171,0.06) 1px, transparent 1px);
+      background-size: 44px 44px;
+      -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0.9), transparent 95%);
+      mask-image: linear-gradient(180deg, rgba(0,0,0,0.9), transparent 95%);
+    }
+    .banner-inner {
+      position: relative; max-width: 980px; margin: 0 auto;
+      padding: 58px 24px 66px;
+      display: flex; align-items: center; gap: 36px; flex-wrap: wrap;
+    }
+    .coin {
+      width: 148px; height: 148px; flex-shrink: 0; border-radius: 50%;
+      filter: drop-shadow(0 14px 34px rgba(201,162,39,0.32));
+      animation: coin-float 5.5s ease-in-out infinite;
+    }
+    @keyframes coin-float {
+      0%, 100% { transform: translateY(0) rotate(-4deg); }
+      50% { transform: translateY(-9px) rotate(3deg); }
+    }
+    .banner h1 { margin: 0; font-size: 40px; font-weight: 900; letter-spacing: 0.02em; }
+    .banner h1 .dot { color: var(--accent); }
+    .slogan {
+      margin: 10px 0 6px; font-size: 24px; font-weight: 900; letter-spacing: 0.08em;
+      background: linear-gradient(90deg, #f0d78c, #4ec9a4);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .banner .sub { margin: 0; color: var(--muted); font-size: 14.5px; }
+    .banner .sub b { color: var(--text); font-weight: 500; }
+    .kbars { display: flex; align-items: flex-end; gap: 7px; height: 74px; margin-left: auto; }
+    .kbars i { width: 14px; border-radius: 3px 3px 0 0; display: block; opacity: 0.9; }
+    .kbars .u { background: linear-gradient(180deg, var(--red), #7a2d29); }
+    .kbars .d { background: linear-gradient(180deg, #3fb950, #1d5c38); }
+    @media (max-width: 720px) { .kbars { display: none; } .banner h1 { font-size: 30px; } .slogan { font-size: 19px; } }
   </style>
 </head>
 <body>
+<header class="banner">
+  <div class="banner-inner">
+    <img class="coin" src="/img/avatar.png" alt="揽宝硬币徽章">
+    <div>
+      <h1>揽宝<span class="dot"> · </span>ten2net</h1>
+      <p class="slogan">以数据为锚 · 以纪律为帆</p>
+      <p class="sub"><b>Disciplines over predictions</b> —— A 股量化投研与 AI Agent 工程化笔记</p>
+    </div>
+    <div class="kbars" aria-hidden="true">
+      <i class="u" style="height:46%"></i>
+      <i class="d" style="height:30%"></i>
+      <i class="u" style="height:58%"></i>
+      <i class="u" style="height:72%"></i>
+      <i class="d" style="height:40%"></i>
+      <i class="d" style="height:22%"></i>
+      <i class="u" style="height:52%"></i>
+      <i class="u" style="height:88%"></i>
+      <i class="d" style="height:64%"></i>
+      <i class="u" style="height:34%"></i>
+      <i class="d" style="height:48%"></i>
+      <i class="u" style="height:66%"></i>
+    </div>
+  </div>
+</header>
 <div class="wrap">
 
-  <div class="hero">
-    <div class="avatar">t2n</div>
-    <div>
-      <h1>ten2net<span class="dot">.</span></h1>
-      <p class="tagline">大数据 / 机器学习工程出身，如今把精力放在 <b>A 股量化投研与 AI Agent 的工程化</b>上——相信市场里真正可复利的，是数据、流程与纪律。</p>
-    </div>
   </div>
 
   <div class="ticker">
