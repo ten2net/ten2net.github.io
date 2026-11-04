@@ -1,72 +1,261 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
 <head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.18" />
-
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>关于我 &middot; ten2net</title>
+  <link rel="stylesheet" href="/css/poole.css">
+  <link rel="stylesheet" href="/css/hyde.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --panel: #161b22;
+      --panel-2: #1c2330;
+      --border: #2a3140;
+      --text: #d5dce6;
+      --muted: #8b98ab;
+      --accent: #4ec9a4;
+      --accent-2: #58a6ff;
+      --red: #e5534b;
+      --gold: #d8a657;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(1200px 500px at 80% -10%, rgba(88,166,255,0.08), transparent 60%),
+        radial-gradient(900px 400px at 10% 110%, rgba(78,201,164,0.07), transparent 60%),
+        var(--bg);
+      color: var(--text);
+      font-family: "Noto Sans SC", -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.75;
+    }
+    code, .mono { font-family: "JetBrains Mono", Consolas, monospace; }
 
-  
-  <title>个人介绍 &middot; 机器学习</title>
-  
+    .wrap { max-width: 980px; margin: 0 auto; padding: 48px 24px 80px; }
 
-  
-  <link rel="stylesheet" href="http://ten2net.github.io/css/poole.css">
-  <link rel="stylesheet" href="http://ten2net.github.io/css/syntax.css">
-  <link rel="stylesheet" href="http://ten2net.github.io/css/hyde.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+    .hero { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; margin-bottom: 8px; }
+    .avatar {
+      width: 92px; height: 92px; border-radius: 24px; flex-shrink: 0;
+      background: linear-gradient(135deg, #1f6feb22, #4ec9a422), var(--panel);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 40px; font-weight: 900; color: var(--accent);
+      font-family: "JetBrains Mono", monospace;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+    .hero h1 { margin: 0; font-size: 34px; font-weight: 900; letter-spacing: 0.02em; }
+    .hero h1 .dot { color: var(--accent); }
+    .hero .tagline { margin: 6px 0 0; color: var(--muted); font-size: 15.5px; }
+    .hero .tagline b { color: var(--text); font-weight: 500; }
 
-  
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
+    .ticker {
+      margin: 26px 0 0; padding: 10px 16px;
+      border: 1px solid var(--border); border-radius: 12px;
+      background: linear-gradient(90deg, rgba(78,201,164,0.05), rgba(88,166,255,0.05));
+      font-family: "JetBrains Mono", monospace; font-size: 12.5px; color: var(--muted);
+      display: flex; gap: 18px; flex-wrap: wrap; overflow: hidden;
+    }
+    .ticker span { white-space: nowrap; }
+    .up { color: var(--red); } .down { color: #3fb950; } .k { color: var(--accent-2); }
 
-  
-  <link href="" rel="alternate" type="application/rss+xml" title="机器学习" />
+    section { margin-top: 44px; }
+    h2 {
+      font-size: 13px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--accent); margin: 0 0 18px; display: flex; align-items: center; gap: 12px;
+    }
+    h2::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--border), transparent); }
+
+    .card {
+      background: linear-gradient(180deg, var(--panel-2), var(--panel));
+      border: 1px solid var(--border); border-radius: 16px;
+      padding: 22px 24px; margin-bottom: 16px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .card:hover { border-color: #3d4b61; transform: translateY(-2px); }
+    .card h3 { margin: 0 0 8px; font-size: 16.5px; font-weight: 700; }
+    .card p { margin: 0; color: var(--muted); font-size: 14.5px; }
+    .card p b { color: var(--text); font-weight: 500; }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip {
+      padding: 7px 14px; border-radius: 999px; font-size: 13.5px;
+      border: 1px solid var(--border); background: var(--panel);
+      display: inline-flex; align-items: center; gap: 7px;
+    }
+    .chip i { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
+    .chip .c1 { background: var(--accent); } .chip .c2 { background: var(--accent-2); }
+    .chip .c3 { background: var(--gold); } .chip .c4 { background: #bc8cff; }
+    .chip .c5 { background: var(--red); }
+    .chip b { font-weight: 500; color: var(--text); }
+    .chip span { color: var(--muted); font-size: 12px; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+    .proj {
+      background: linear-gradient(180deg, var(--panel-2), var(--panel));
+      border: 1px solid var(--border); border-radius: 16px; padding: 20px 22px;
+      transition: border-color 0.2s, transform 0.2s;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .proj:hover { border-color: #3d4b61; transform: translateY(-2px); }
+    .proj .name { font-weight: 700; font-size: 15.5px; display: flex; align-items: center; gap: 8px; }
+    .proj .name .badge {
+      font-size: 10.5px; font-weight: 600; padding: 2px 8px; border-radius: 999px;
+      background: rgba(78,201,164,0.12); color: var(--accent);
+      font-family: "JetBrains Mono", monospace;
+    }
+    .proj .name .badge.blue { background: rgba(88,166,255,0.12); color: var(--accent-2); }
+    .proj .name .badge.gold { background: rgba(216,166,87,0.12); color: var(--gold); }
+    .proj .desc { color: var(--muted); font-size: 13.5px; }
+    .proj .stack { font-family: "JetBrains Mono", monospace; font-size: 11.5px; color: #6e7b91; }
+
+    .timeline { border-left: 2px solid var(--border); margin-left: 6px; padding-left: 24px; }
+    .tl-item { position: relative; padding-bottom: 22px; }
+    .tl-item:last-child { padding-bottom: 0; }
+    .tl-item::before {
+      content: ""; position: absolute; left: -31px; top: 7px;
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--bg); border: 2px solid var(--accent);
+    }
+    .tl-item .when { font-family: "JetBrains Mono", monospace; font-size: 12px; color: var(--accent); }
+    .tl-item .what { font-size: 14.5px; margin-top: 2px; }
+    .tl-item .what b { font-weight: 700; }
+    .tl-item .what span { color: var(--muted); }
+
+    .quote {
+      border-left: 3px solid var(--accent); padding: 6px 0 6px 18px; margin: 0;
+      color: var(--muted); font-size: 14.5px;
+    }
+    .quote b { color: var(--text); font-weight: 500; }
+    .links { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 14px; }
+    .links a {
+      color: var(--accent-2); text-decoration: none; font-size: 13.5px;
+      border-bottom: 1px dashed #3d4b61; padding-bottom: 2px;
+    }
+    .links a:hover { color: var(--accent); border-color: var(--accent); }
+    .back { margin-top: 56px; text-align: center; }
+    .back a {
+      color: var(--muted); text-decoration: none; font-size: 13px;
+      border: 1px solid var(--border); padding: 8px 22px; border-radius: 999px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .back a:hover { color: var(--accent); border-color: var(--accent); }
+  </style>
 </head>
+<body>
+<div class="wrap">
 
-	<body class=" ">
-		<div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <a href="http://ten2net.github.io/"><h1>机器学习</h1></a>
-      <p class="lead">
-      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+  <div class="hero">
+    <div class="avatar">t2n</div>
+    <div>
+      <h1>ten2net<span class="dot">.</span></h1>
+      <p class="tagline">大数据 / 机器学习工程出身，如今把精力放在 <b>A 股量化投研与 AI Agent 的工程化</b>上——相信市场里真正可复利的，是数据、流程与纪律。</p>
+    </div>
+  </div>
+
+  <div class="ticker">
+    <span><span class="k">research</span> 因子挖掘 · 回测框架 · 组合优化</span>
+    <span><span class="k">agents</span> LLM 多智能体投研工作流</span>
+    <span><span class="k">infra</span> 数据管道 · 自部署 · 可视化</span>
+    <span class="up">▲ disciplines over predictions</span>
+  </div>
+
+  <section>
+    <h2>我在做什么</h2>
+    <div class="card">
+      <p>从大数据与机器学习工程起步，近几年的主线是<b>把 LLM 与传统量化方法嫁接到 A 股投研流程</b>里：
+      用 Qlib 跑因子与模型研究，用强化学习探索择时与仓位，用多智能体（TradingAgents 风格）做盘后复盘与观点对抗；
+      同时给自己搭了一整套<b>自部署的投研基础设施</b>——行情数据管道、ETF 全景热力图、筛选器与回测流水线。
+      这个博客会沉淀这些实践中的笔记与思考。</p>
+    </div>
+    <div class="grid">
+      <div class="proj">
+        <div class="name"><span class="badge">FAVORITE</span> A 股 ETF 热力图</div>
+        <div class="desc">Canvas 树图实时呈现沪深全部场内 ETF 的涨跌与资金分布，悬停穿透到重仓成分股。数据管道 + 前端可视化的完整自部署实践。</div>
+        <div class="stack">Next.js · TypeScript · Canvas 2D · Docker · Cloudflare Tunnel</div>
+      </div>
+      <div class="proj">
+        <div class="name"><span class="badge blue">RESEARCH</span> Qlib 量化研究</div>
+        <div class="desc">基于微软 Qlib 搭建 A 股因子挖掘与模型训练流水线：Alpha158/360 起步，LightGBM/Transformer 对照，滚动回测检验。</div>
+        <div class="stack">Python · Qlib · LightGBM · PyTorch</div>
+      </div>
+      <div class="proj">
+        <div class="name"><span class="badge blue">RESEARCH</span> RL × LLM 择时</div>
+        <div class="desc">强化学习做仓位与择时决策，LLM 负责事件解读与特征语义化，探索两者在非平稳市场里的互补边界。</div>
+        <div class="stack">Python · Gymnasium · RL · LLM</div>
+      </div>
+      <div class="proj">
+        <div class="name"><span class="badge gold">EXPERIMENT</span> TradingAgents 多智能体复盘</div>
+        <div class="desc">多角色 Agent（基本面 / 技术面 / 风控 / 交易员）对同一标的做结构化辩论与结论聚合，验证 LLM 观点的稳定性与偏差。</div>
+        <div class="stack">Python · LLM Agents · A 股数据</div>
+      </div>
+      <div class="proj">
+        <div class="name"><span class="badge">TOOLING</span> 选股与筛选工具链</div>
+        <div class="desc">股票 / ETF 筛选器与自动化数据源，把「每天手工看盘」变成「每天定时产出结构化结论」。</div>
+        <div class="stack">Python · DuckDB · 定时任务</div>
+      </div>
+      <div class="proj">
+        <div class="name"><span class="badge">INFRA</span> 投研基础设施</div>
+        <div class="desc">行情快照管道、自部署与内网穿透、监控与健康检查——让每一个研究想法都能低成本跑起来。</div>
+        <div class="stack">Docker Compose · nginx · Cloudflare · GitHub Actions</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>技术偏好</h2>
+    <div class="chips">
+      <div class="chip"><i class="c1"></i><b>Python</b><span>量化研究主力</span></div>
+      <div class="chip"><i class="c2"></i><b>TypeScript</b><span>数据可视化与 Web</span></div>
+      <div class="chip"><i class="c3"></i><b>Qlib</b><span>因子与模型框架</span></div>
+      <div class="chip"><i class="c4"></i><b>LLM Agents</b><span>投研工作流编排</span></div>
+      <div class="chip"><i class="c5"></i><b>RL</b><span>择时与仓位探索</span></div>
+      <div class="chip"><i class="c1"></i><b>DuckDB / 大数据</b><span>本地优先的数据栈</span></div>
+      <div class="chip"><i class="c2"></i><b>Docker</b><span>一切服务容器化</span></div>
+      <div class="chip"><i class="c3"></i><b>Canvas / D3</b><span>行情可视化</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>一路走来</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="when">早期</div>
+        <div class="what"><b>大数据与机器学习工程</b> <span>—— 企业级数据平台、离线计算与模型服务化，练下了数据管道与工程化功底。</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="when">并行支线</div>
+        <div class="what"><b>VR &amp; AR / 虚拟战场环境生成</b> <span>—— 三维仿真与实时渲染，对「把复杂系统画出来」这件事上了瘾。</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="when">现在</div>
+        <div class="what"><b>AI 驱动的 A 股量化投研</b> <span>—— 自建数据与回测设施，Qlib 做研究、RL 做决策、LLM 做解读，长期主义地迭代。</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>投研观</h2>
+    <div class="card">
+      <p class="quote">
+        模型与 Agent 产出的只是<b>假设</b>，回测与风控才把它变成<b>可执行的判断</b>；
+        与其预测明天涨跌，不如持续打磨<b>数据质量、验证流程与纪律</b>——这三样才是策略生命周期里真正可复利的资产。
       </p>
     </div>
+  </section>
 
-    <ul class="sidebar-nav">
-      <li><a href="/">Home</a> </li>
-      
-    </ul>
+  <section>
+    <h2>找到我</h2>
+    <div class="links">
+      <a href="https://github.com/ten2net" target="_blank" rel="noopener">GitHub · ten2net</a>
+      <a href="/">← 返回博客首页</a>
+    </div>
+  </section>
 
-    <p>&copy; 2016. All rights reserved. </p>
-  </div>
+  <div class="back"><a href="/">Back to Home</a></div>
 </div>
-
-
-		<div class="content container">
-			<div class="post">
-			 	<h1>个人介绍</h1>
-			  <span class="post-date">Wed, Dec 21, 2016</span>
-			      
-
-<h1 id="基本信息">基本信息</h1>
-
-<blockquote>
-<ul>
-<li>网名：ten2net  性别：男</li>
-<li>出生日期：1968-10-31</li>
-<li>公司：西安长城数字软件有限公司</li>
-<li>技术领域：大数据 机器学习 VR&amp;AR 虚拟战场环境生成</li>
-</ul>
-</blockquote>
-
-			</div>
-
-			
-		</div>
-
-  </body>
+</body>
 </html>
