@@ -616,13 +616,15 @@ article>.container{max-width:1240px;margin:0 auto}
 
 /* ---- 站点品牌字：「揽宝.复盘」艺术化 ---- */
 .brand-mark{
+  -webkit-text-fill-color:transparent;text-shadow:none;
   background:linear-gradient(115deg,#c2410c 0%,#e11d48 55%,#a86f00 100%);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
+  -webkit-background-clip:text;background-clip:text;color:transparent!important;
   font-weight:800;letter-spacing:.03em;
 }
 .brand-mark .brand-dot{
+  -webkit-text-fill-color:transparent;text-shadow:none;
   font-style:normal;font-weight:800;position:relative;top:-.06em;
-  padding:0 .02em;color:transparent;
+  padding:0 .02em;color:transparent!important;
   background:linear-gradient(180deg,#e11d48,#c2410c);
   -webkit-background-clip:text;background-clip:text;
 }
