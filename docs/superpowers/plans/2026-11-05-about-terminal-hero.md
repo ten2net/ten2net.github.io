@@ -1,0 +1,587 @@
+# About 页终端 Hero 重设计 实现计划
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+
+**Goal:** 将 `about/index.html` 重写为「终端 Hero + 常规内容」的现代极客风页面，支持明暗双主题与轻交互。
+
+**Architecture:** 单文件自包含页面：内联 CSS（CSS 变量双主题）+ 原生 JS（打字机 / IntersectionObserver 渐入 / 主题切换）。无框架、无构建、无外部 JS 依赖，符合仓库纯静态架构。文案全部沿用现有版本，仅按命令语义重排版块。
+
+**Tech Stack:** HTML5、CSS（自定义属性、grid、animation）、原生 JavaScript、Google Fonts（Noto Sans SC + JetBrains Mono）。
+
+**Spec:** `docs/superpowers/specs/2026-11-05-about-page-redesign-design.md`
+
+**测试说明:** 仓库无自动化测试设施（AGENTS.md 明确验证方式为本地静态预览 + 链接检查）。本计划用「Python 引用完整性检查脚本 + http.server + curl」做自动化兜底，人工浏览器核对项列为清单。JS 全部为渐进增强：禁用 JS 时页面内容完整可读。
+
+---
+
+### Task 1: 整体重写 about/index.html
+
+**Files:**
+- Modify: `about/index.html`（整体替换，当前为 16112 字节的旧版深色卡片页）
+
+- [ ] **Step 1: 用以下内容整体替换 `about/index.html`**
+
+```html
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN" data-theme="dark">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>关于我 &middot; ten2net</title>
+  <meta name="description" content="揽宝 · ten2net —— A 股量化投研与 AI Agent 工程化笔记。以数据为锚，以纪律为帆。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('about-theme');
+        if (t !== 'light' && t !== 'dark') {
+          t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) { }
+    })();
+  </script>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --panel: #161b22;
+      --panel-2: #1c2330;
+      --border: #2a3140;
+      --text: #d5dce6;
+      --muted: #8b98ab;
+      --green: #3fb950;
+      --accent: #4ec9a4;
+      --blue: #58a6ff;
+      --up: #e5534b;
+      --down: #3fb950;
+      --gold: #d8a657;
+      --purple: #bc8cff;
+      --term-bg: #0a0e13;
+      --term-border: #21262e;
+      --titlebar: #161b22;
+      --glow-blue: rgba(88, 166, 255, 0.08);
+      --glow-green: rgba(78, 201, 164, 0.07);
+      --shadow: rgba(0, 0, 0, 0.45);
+    }
+    [data-theme="light"] {
+      --bg: #f6f8fa;
+      --panel: #ffffff;
+      --panel-2: #eef1f4;
+      --border: #d0d7de;
+      --text: #1f2328;
+      --muted: #59636e;
+      --green: #1a7f37;
+      --accent: #0f7b6c;
+      --blue: #0969da;
+      --up: #cf222e;
+      --down: #1a7f37;
+      --gold: #9a6700;
+      --purple: #8250df;
+      --term-bg: #ffffff;
+      --term-border: #d0d7de;
+      --titlebar: #f0f2f5;
+      --glow-blue: rgba(9, 105, 218, 0.06);
+      --glow-green: rgba(15, 123, 108, 0.06);
+      --shadow: rgba(80, 90, 110, 0.25);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(1200px 500px at 80% -10%, var(--glow-blue), transparent 60%),
+        radial-gradient(900px 400px at 10% 110%, var(--glow-green), transparent 60%),
+        var(--bg);
+      color: var(--text);
+      font-family: "Noto Sans SC", -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.75;
+      transition: background-color .3s, color .3s;
+    }
+    code, .mono { font-family: "JetBrains Mono", Consolas, monospace; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 48px 24px 80px; }
+
+    /* 主题切换按钮 */
+    #theme-toggle {
+      position: fixed; top: 14px; right: 14px; z-index: 50;
+      width: 38px; height: 38px; border-radius: 50%;
+      border: 1px solid var(--border); background: var(--panel); color: var(--text);
+      font-size: 16px; cursor: pointer; line-height: 1;
+      box-shadow: 0 4px 16px var(--shadow);
+      transition: border-color .2s, color .2s;
+    }
+    #theme-toggle:hover { border-color: var(--green); color: var(--green); }
+
+    /* Hero：终端窗口 */
+    .hero { position: relative; margin: 40px 0 8px; }
+    .coin {
+      position: absolute; top: -32px; left: -14px; z-index: 2;
+      width: 92px; height: 92px; border-radius: 50%;
+      filter: drop-shadow(0 10px 24px rgba(201, 162, 39, 0.32));
+      animation: coin-float 5.5s ease-in-out infinite;
+    }
+    @keyframes coin-float {
+      0%, 100% { transform: translateY(0) rotate(-4deg); }
+      50% { transform: translateY(-8px) rotate(3deg); }
+    }
+    .term {
+      background: var(--term-bg);
+      border: 1px solid var(--term-border);
+      border-radius: 14px; overflow: hidden;
+      box-shadow: 0 20px 60px var(--shadow);
+    }
+    .term-bar {
+      display: flex; align-items: center; gap: 8px;
+      background: var(--titlebar); border-bottom: 1px solid var(--term-border);
+      padding: 10px 14px;
+    }
+    .tdot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+    .tdot.r { background: #ff5f57; } .tdot.y { background: #febc2e; } .tdot.g { background: #28c840; }
+    .term-title {
+      margin-left: 8px;
+      font-family: "JetBrains Mono", monospace; font-size: 12px; color: var(--muted);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .term-body {
+      padding: 20px 22px;
+      font-family: "JetBrains Mono", monospace; font-size: 14.5px; line-height: 2.05;
+      min-height: 208px;
+    }
+    .tline { white-space: pre-wrap; word-break: break-word; }
+    .ps1 { color: var(--green); font-weight: 600; }
+    .tline.out { padding-left: 18px; }
+    .dim { color: var(--muted); }
+    .cursor {
+      display: inline-block; width: 9px; height: 17px;
+      background: var(--green); vertical-align: -3px;
+      animation: blink 1.1s steps(1) infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+    .term-status {
+      display: flex; align-items: center; gap: 16px;
+      border-top: 1px solid var(--term-border);
+      padding: 8px 14px; background: var(--titlebar);
+    }
+    .kbars { display: flex; align-items: flex-end; gap: 4px; height: 26px; }
+    .kbars i { width: 7px; border-radius: 2px 2px 0 0; display: block; opacity: .9; }
+    .kbars .u { background: linear-gradient(180deg, var(--up), transparent); }
+    .kbars .d { background: linear-gradient(180deg, var(--down), transparent); }
+    .st-info { margin-left: auto; font-family: "JetBrains Mono", monospace; font-size: 11px; color: var(--muted); white-space: nowrap; }
+    .st-info .up { color: var(--up); }
+
+    /* Ticker 状态条 */
+    .ticker {
+      margin: 26px 0 0; padding: 10px 16px;
+      border: 1px solid var(--border); border-radius: 12px;
+      background: linear-gradient(90deg, rgba(78, 201, 164, 0.05), rgba(88, 166, 255, 0.05));
+      font-family: "JetBrains Mono", monospace; font-size: 12.5px; color: var(--muted);
+      display: flex; gap: 18px; flex-wrap: wrap; overflow: hidden;
+    }
+    .ticker span { white-space: nowrap; }
+    .ticker .k { color: var(--blue); }
+    .ticker .up { color: var(--up); }
+
+    /* 版块标题：终端提示符 */
+    section { margin-top: 44px; }
+    .prompt {
+      font-family: "JetBrains Mono", monospace; font-size: 14.5px; font-weight: 600;
+      color: var(--muted); margin: 0 0 18px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .prompt .ps1 { color: var(--green); }
+    .prompt .pcmd { color: var(--text); }
+    .prompt::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--border), transparent); }
+
+    /* 卡片 */
+    .card {
+      background: linear-gradient(180deg, var(--panel-2), var(--panel));
+      border: 1px solid var(--border); border-radius: 16px;
+      padding: 22px 24px; margin-bottom: 16px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .card:hover { border-color: var(--green); transform: translateY(-2px); }
+    .card p { margin: 0; color: var(--muted); font-size: 14.5px; }
+    .card p b { color: var(--text); font-weight: 500; }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip {
+      padding: 7px 14px; border-radius: 999px; font-size: 13.5px;
+      border: 1px solid var(--border); background: var(--panel);
+      display: inline-flex; align-items: center; gap: 7px;
+      transition: border-color 0.2s;
+    }
+    .chip:hover { border-color: var(--green); }
+    .chip i { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
+    .chip .c1 { background: var(--green); } .chip .c2 { background: var(--blue); }
+    .chip .c3 { background: var(--gold); } .chip .c4 { background: var(--purple); }
+    .chip .c5 { background: var(--up); }
+    .chip b { font-weight: 500; color: var(--text); }
+    .chip span { color: var(--muted); font-size: 12px; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+    .proj {
+      background: linear-gradient(180deg, var(--panel-2), var(--panel));
+      border: 1px solid var(--border); border-radius: 16px; padding: 20px 22px;
+      transition: border-color 0.2s, transform 0.2s;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .proj:hover { border-color: var(--green); transform: translateY(-2px); }
+    .proj .name { font-weight: 700; font-size: 15.5px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .proj .name .badge {
+      font-family: "JetBrains Mono", monospace; font-size: 11px; font-weight: 600;
+      padding: 2px 7px; border-radius: 6px; letter-spacing: .04em;
+    }
+    .badge.b-g { background: rgba(63, 185, 80, 0.14); color: var(--green); }
+    .badge.b-b { background: rgba(88, 166, 255, 0.15); color: var(--blue); }
+    .badge.b-gold { background: rgba(216, 166, 87, 0.16); color: var(--gold); }
+    .proj .desc { color: var(--muted); font-size: 13.5px; }
+    .proj .stack { font-family: "JetBrains Mono", monospace; font-size: 11.5px; color: var(--muted); opacity: .8; }
+
+    /* 时间线 */
+    .timeline { border-left: 2px solid var(--border); margin-left: 6px; padding-left: 24px; }
+    .tl-item { position: relative; padding-bottom: 22px; }
+    .tl-item:last-child { padding-bottom: 0; }
+    .tl-item::before {
+      content: ""; position: absolute; left: -31px; top: 7px;
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--bg); border: 2px solid var(--green);
+    }
+    .tl-item .when { font-family: "JetBrains Mono", monospace; font-size: 12px; color: var(--green); }
+    .tl-item .what { font-size: 14.5px; margin-top: 2px; }
+    .tl-item .what b { font-weight: 700; }
+    .tl-item .what span { color: var(--muted); }
+
+    /* 投研观 */
+    .quote {
+      border-left: 3px solid var(--green); padding: 6px 0 6px 18px; margin: 0;
+      color: var(--muted); font-size: 14.5px;
+    }
+    .quote b { color: var(--text); font-weight: 500; }
+
+    /* 链接与返回 */
+    .links { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 14px; }
+    .links a {
+      color: var(--blue); text-decoration: none; font-size: 13.5px;
+      border-bottom: 1px dashed var(--border); padding-bottom: 2px;
+      font-family: "JetBrains Mono", monospace;
+    }
+    .links a:hover { color: var(--green); border-color: var(--green); }
+    .back { margin-top: 56px; text-align: center; }
+    .back a {
+      color: var(--muted); text-decoration: none; font-size: 13px;
+      border: 1px solid var(--border); padding: 8px 22px; border-radius: 999px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .back a:hover { color: var(--green); border-color: var(--green); }
+
+    /* 滚动渐入 */
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    /* 响应式 */
+    @media (max-width: 720px) {
+      .coin { width: 64px; height: 64px; top: -20px; left: -6px; }
+      .term-body { font-size: 13px; padding: 16px; min-height: 0; }
+      .st-info { display: none; }
+      .ticker { gap: 12px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .coin, .cursor { animation: none; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <button id="theme-toggle" type="button" aria-label="切换明暗主题" title="切换明暗主题">☾</button>
+  <div class="wrap">
+
+    <header class="hero">
+      <img class="coin" src="/img/avatar.png" alt="揽宝硬币徽章">
+      <div class="term">
+        <div class="term-bar">
+          <span class="tdot r"></span><span class="tdot y"></span><span class="tdot g"></span>
+          <span class="term-title">guest@ten2net: ~/about</span>
+        </div>
+        <div class="term-body">
+          <div class="tline"><span class="ps1">$</span> <span class="type">ssh guest@ten2net.lab</span></div>
+          <div class="tline"><span class="ps1">$</span> <span class="type">whoami</span></div>
+          <div class="tline out">揽宝 · ten2net —— A 股量化投研 × AI Agent 工程化</div>
+          <div class="tline"><span class="ps1">$</span> <span class="type">cat motto.txt</span></div>
+          <div class="tline out">以数据为锚 · 以纪律为帆 <span class="dim">(Disciplines over predictions)</span></div>
+          <div class="tline"><span class="ps1">$</span> <span class="cursor"></span></div>
+        </div>
+        <div class="term-status">
+          <div class="kbars" aria-hidden="true">
+            <i class="u" style="height:46%"></i><i class="d" style="height:30%"></i>
+            <i class="u" style="height:58%"></i><i class="u" style="height:72%"></i>
+            <i class="d" style="height:40%"></i><i class="d" style="height:22%"></i>
+            <i class="u" style="height:52%"></i><i class="u" style="height:88%"></i>
+            <i class="d" style="height:64%"></i><i class="u" style="height:34%"></i>
+            <i class="d" style="height:48%"></i><i class="u" style="height:66%"></i>
+          </div>
+          <span class="st-info">zsh · utf-8 · <span class="up">▲</span> disciplines over predictions</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="ticker">
+      <span><span class="k">research</span> 因子挖掘 · 回测框架 · 组合优化</span>
+      <span><span class="k">agents</span> LLM 多智能体投研工作流</span>
+      <span><span class="k">infra</span> 数据管道 · 自部署 · 可视化</span>
+      <span class="up">▲ disciplines over predictions</span>
+    </div>
+
+    <section class="reveal">
+      <h2 class="prompt"><span class="ps1">$</span> <span class="pcmd">cat ./now.md</span></h2>
+      <div class="card">
+        <p>从大数据与机器学习工程起步，近几年的主线是<b>把 LLM 与传统量化方法嫁接到 A 股投研流程</b>里：
+        用 Qlib 跑因子与模型研究，用强化学习探索择时与仓位，用多智能体（TradingAgents 风格）做盘后复盘与观点对抗；
+        同时给自己搭了一整套<b>自部署的投研基础设施</b>——行情数据管道、ETF 全景热力图、筛选器与回测流水线。
+        这个博客会沉淀这些实践中的笔记与思考。</p>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2 class="prompt"><span class="ps1">$</span> <span class="pcmd">ls ~/projects/</span></h2>
+      <div class="grid">
+        <div class="proj">
+          <div class="name"><span class="badge b-g">[FAVORITE]</span> A 股 ETF 热力图</div>
+          <div class="desc">Canvas 树图实时呈现沪深全部场内 ETF 的涨跌与资金分布，悬停穿透到重仓成分股。数据管道 + 前端可视化的完整自部署实践。</div>
+          <div class="stack">Next.js · TypeScript · Canvas 2D · Docker · Cloudflare Tunnel</div>
+        </div>
+        <div class="proj">
+          <div class="name"><span class="badge b-b">[RESEARCH]</span> Qlib 量化研究</div>
+          <div class="desc">基于微软 Qlib 搭建 A 股因子挖掘与模型训练流水线：Alpha158/360 起步，LightGBM/Transformer 对照，滚动回测检验。</div>
+          <div class="stack">Python · Qlib · LightGBM · PyTorch</div>
+        </div>
+        <div class="proj">
+          <div class="name"><span class="badge b-b">[RESEARCH]</span> RL × LLM 择时</div>
+          <div class="desc">强化学习做仓位与择时决策，LLM 负责事件解读与特征语义化，探索两者在非平稳市场里的互补边界。</div>
+          <div class="stack">Python · Gymnasium · RL · LLM</div>
+        </div>
+        <div class="proj">
+          <div class="name"><span class="badge b-gold">[EXPERIMENT]</span> TradingAgents 多智能体复盘</div>
+          <div class="desc">多角色 Agent（基本面 / 技术面 / 风控 / 交易员）对同一标的做结构化辩论与结论聚合，验证 LLM 观点的稳定性与偏差。</div>
+          <div class="stack">Python · LLM Agents · A 股数据</div>
+        </div>
+        <div class="proj">
+          <div class="name"><span class="badge b-g">[TOOLING]</span> 选股与筛选工具链</div>
+          <div class="desc">股票 / ETF 筛选器与自动化数据源，把「每天手工看盘」变成「每天定时产出结构化结论」。</div>
+          <div class="stack">Python · DuckDB · 定时任务</div>
+        </div>
+        <div class="proj">
+          <div class="name"><span class="badge b-g">[INFRA]</span> 投研基础设施</div>
+          <div class="desc">行情快照管道、自部署与内网穿透、监控与健康检查——让每一个研究想法都能低成本跑起来。</div>
+          <div class="stack">Docker Compose · nginx · Cloudflare · GitHub Actions</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2 class="prompt"><span class="ps1">$</span> <span class="pcmd">cat stack.config</span></h2>
+      <div class="chips">
+        <div class="chip"><i class="c1"></i><b>Python</b><span>量化研究主力</span></div>
+        <div class="chip"><i class="c2"></i><b>TypeScript</b><span>数据可视化与 Web</span></div>
+        <div class="chip"><i class="c3"></i><b>Qlib</b><span>因子与模型框架</span></div>
+        <div class="chip"><i class="c4"></i><b>LLM Agents</b><span>投研工作流编排</span></div>
+        <div class="chip"><i class="c5"></i><b>RL</b><span>择时与仓位探索</span></div>
+        <div class="chip"><i class="c1"></i><b>DuckDB / 大数据</b><span>本地优先的数据栈</span></div>
+        <div class="chip"><i class="c2"></i><b>Docker</b><span>一切服务容器化</span></div>
+        <div class="chip"><i class="c3"></i><b>Canvas / D3</b><span>行情可视化</span></div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2 class="prompt"><span class="ps1">$</span> <span class="pcmd">history | tail -3</span></h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="when">早期</div>
+          <div class="what"><b>大数据与机器学习工程</b> <span>—— 企业级数据平台、离线计算与模型服务化，练下了数据管道与工程化功底。</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="when">并行支线</div>
+          <div class="what"><b>VR &amp; AR / 虚拟战场环境生成</b> <span>—— 三维仿真与实时渲染，对「把复杂系统画出来」这件事上了瘾。</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="when">现在</div>
+          <div class="what"><b>AI 驱动的 A 股量化投研</b> <span>—— 自建数据与回测设施，Qlib 做研究、RL 做决策、LLM 做解读，长期主义地迭代。</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2 class="prompt"><span class="ps1">$</span> <span class="pcmd">cat beliefs.md</span></h2>
+      <div class="card">
+        <p class="quote">
+          模型与 Agent 产出的只是<b>假设</b>，回测与风控才把它变成<b>可执行的判断</b>；
+          与其预测明天涨跌，不如持续打磨<b>数据质量、验证流程与纪律</b>——这三样才是策略生命周期里真正可复利的资产。
+        </p>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2 class="prompt"><span class="ps1">$</span> <span class="pcmd">open links</span></h2>
+      <div class="links">
+        <a href="https://github.com/ten2net" target="_blank" rel="noopener">github.com/ten2net</a>
+        <a href="/">← 返回博客首页</a>
+      </div>
+    </section>
+
+    <div class="back"><a href="/">Back to Home</a></div>
+  </div>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+
+      /* 主题切换 */
+      var btn = document.getElementById('theme-toggle');
+      function syncIcon() {
+        btn.textContent = root.getAttribute('data-theme') === 'light' ? '☀' : '☾';
+      }
+      btn.addEventListener('click', function () {
+        var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('about-theme', next); } catch (e) { }
+        syncIcon();
+      });
+      syncIcon();
+
+      /* 滚动渐入 */
+      var revs = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          for (var i = 0; i < entries.length; i++) {
+            if (entries[i].isIntersecting) {
+              entries[i].target.classList.add('in');
+              io.unobserve(entries[i].target);
+            }
+          }
+        }, { threshold: 0.12 });
+        for (var j = 0; j < revs.length; j++) { io.observe(revs[j]); }
+      } else {
+        for (var k = 0; k < revs.length; k++) { revs[k].classList.add('in'); }
+      }
+
+      /* Hero 打字机（尊重 prefers-reduced-motion；失败时保留原文） */
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduced) { return; }
+      var cmds = document.querySelectorAll('.type');
+      var idx = 0;
+      function typeNext() {
+        if (idx >= cmds.length) { return; }
+        var el = cmds[idx];
+        var full = el.textContent;
+        el.textContent = '';
+        var pos = 0;
+        var timer = setInterval(function () {
+          pos++;
+          el.textContent = full.slice(0, pos);
+          if (pos >= full.length) {
+            clearInterval(timer);
+            idx++;
+            setTimeout(typeNext, 240);
+          }
+        }, 42);
+      }
+      typeNext();
+    })();
+  </script>
+</body>
+</html>
+```
+
+- [ ] **Step 2: 校验文件大小与结构**
+
+Run:
+```bash
+wc -c about/index.html && grep -c 'class="reveal"' about/index.html && grep -c 'class="type"' about/index.html
+```
+Expected: 文件约 18–20 KB；`reveal` 出现 6 次；`type` 出现 3 次。
+
+---
+
+### Task 2: 自动化静态验证
+
+**Files:**
+- Test: 临时脚本（用完即删，不提交）
+
+- [ ] **Step 1: 运行本地引用完整性检查**
+
+Run:
+```bash
+python3 - <<'EOF'
+from html.parser import HTMLParser
+import os
+src = open('about/index.html', encoding='utf-8').read()
+class P(HTMLParser):
+    def __init__(self):
+        super().__init__(); self.refs = []; self.err = None
+    def handle_starttag(self, tag, attrs):
+        d = dict(attrs)
+        for k in ('src', 'href'):
+            v = d.get(k, '')
+            if v.startswith('/') and not v.startswith('//'):
+                self.refs.append(v.split('#')[0])
+p = P(); p.feed(src)
+missing = [r for r in sorted(set(p.refs)) if not os.path.exists(r.lstrip('/'))]
+print('local refs:', sorted(set(p.refs)))
+assert not missing, 'MISSING: %s' % missing
+for needle in ['guest@ten2net: ~/about', 'data-theme', 'theme-toggle',
+               'id="theme-toggle"', '揽宝 · ten2net', '以数据为锚',
+               'TradingAgents', 'Qlib 量化研究', 'github.com/ten2net']:
+    assert needle in src, 'MISSING CONTENT: %s' % needle
+print('OK: all local refs exist, key content present')
+EOF
+```
+Expected: 打印 `local refs: ['/img/avatar.png']`（fonts 为 https 外链不参与检查）和 `OK: all local refs exist, key content present`，退出码 0。
+
+- [ ] **Step 2: http.server 冒烟测试**
+
+Run:
+```bash
+python3 -m http.server 8123 --bind 127.0.0.1 >/dev/null 2>&1 &
+SRV=$!; sleep 1
+echo "about: $(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8123/about/)"
+echo "avatar: $(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8123/img/avatar.png)"
+kill $SRV
+```
+Expected: 两行均为 `200`。
+
+---
+
+### Task 3: 人工浏览器核对 + 提交
+
+**Files:**
+- Modify: `about/index.html`（核对无误后提交）
+
+- [ ] **Step 1: 人工核对清单**（`python3 -m http.server 8000` 后浏览器打开 `http://localhost:8000/about/`）
+
+逐项确认：
+1. 首屏终端窗口渲染正常：标题栏三点 + `guest@ten2net: ~/about`，硬币徽章浮在窗口左上角。
+2. 打字机依次输出 `ssh guest@ten2net.lab` → `whoami` → `cat motto.txt` 三条命令，只播一遍，最后光标闪烁。
+3. 终端底部状态条显示 K 线柱与 `zsh · utf-8 · ▲ disciplines over predictions`。
+4. 向下滚动，六个版块（now.md / projects / stack.config / history / beliefs.md / links）依次淡入。
+5. 右上角切换按钮：点击后整页切换为浅色「白纸终端」配色，终端窗口为浅底深字；刷新后选择保持（localStorage 生效）。
+6. 系统主题切换（或 DevTools 模拟 `prefers-color-scheme`）时，首次访问（清除 localStorage 后）跟随系统。
+7. 浅色主题下全部文字、卡片、时间线、chips 可读，accent 颜色保留。
+8. 窄屏（<720px，DevTools 设备模式）：徽章缩小、状态条文字隐藏、无横向滚动。
+9. 点击 GitHub 链接新开标签页；「返回博客首页」回到 `/`。
+10. DevTools Console 无报错。
+
+- [ ] **Step 2: 提交**
+
+```bash
+git status
+git add about/index.html
+git commit -m "about 页重设计：终端 Hero + 明暗双主题极客风"
+```
+Expected: `git status` 除 `about/index.html` 外无未预期的文件；提交成功。
+
+---
+
+## Self-Review 记录
+
+- **Spec 覆盖**：终端 Hero（Task 1 hero 块）✓；内容重排六版块（Task 1 sections，文案逐字保留）✓；明暗双主题（CSS 变量 + data-theme + 切换按钮 + localStorage + prefers-color-scheme）✓；轻交互（打字机/光标/渐入/hover）✓；渐进增强降级 ✓；验证（Task 2 自动化 + Task 3 人工清单）✓。
+- **占位符扫描**：无 TBD/TODO，所有代码完整给出。
+- **一致性**：JS 中 `about-theme`、`data-theme`、`theme-toggle`、`type`/`reveal` class 与 HTML/CSS 一致；badge class `b-g/b-b/b-gold` 在 CSS 与 HTML 中一致。
