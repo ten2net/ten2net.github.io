@@ -2,6 +2,7 @@
   "generated_by": "揽宝投研",
   "files": [
     "404.html",
+    "atom.xml",
     "css/astock.css",
     "css/bootstrap.css",
     "css/bootstrap.min.css",
@@ -88,6 +89,7 @@
     "post/index.html",
     "post/index.xml",
     "robots.txt",
+    "rss.xml",
     "sitemap.xml",
     "tags/index.html",
     "tags/每日复盘/index.html",
