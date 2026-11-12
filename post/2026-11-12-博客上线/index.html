@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <script>
+    (function() {
+        
+        
+        const autoTheme = false;
+        if (autoTheme) {
+            document.documentElement.setAttribute('data-auto-theme', 'true');
+        }
+
+        const theme = localStorage.getItem('cleanwhite-theme') ||
+                      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+    })();
+    </script>
+
+    <meta property="og:site_name" content="揽宝.复盘">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:image" content="https://ten2net.github.io/img/home-bg.jpg">
+    <meta property="twitter:image" content="https://ten2net.github.io/img/home-bg.jpg" />
+    <meta name="title" content="揽宝.复盘 正式上线：把每个交易日的复盘留在这里" />
+    <meta property="og:title" content="揽宝.复盘 正式上线：把每个交易日的复盘留在这里" />
+    <meta property="twitter:title" content="揽宝.复盘 正式上线：把每个交易日的复盘留在这里" />
+    <meta name="description" content="揽宝.复盘 是 A 股短线复盘工作台「揽宝投研」的公开窗口。每个交易日收盘后，程序把当天已核对的复盘产物写成一篇带图表的文章，自动发布在这里：涨跌分布、连板梯队、资金与题材、龙虎榜、两融和指数位置，数字由程序算、每个都能回溯到依据。">
+    <meta property="og:description" content="揽宝.复盘 是 A 股短线复盘工作台「揽宝投研」的公开窗口。每个交易日收盘后，程序把当天已核对的复盘产物写成一篇带图表的文章，自动发布在这里：涨跌分布、连板梯队、资金与题材、龙虎榜、两融和指数位置，数字由程序算、每个都能回溯到依据。" />
+    <meta property="twitter:description" content="揽宝.复盘 是 A 股短线复盘工作台「揽宝投研」的公开窗口。每个交易日收盘后，程序把当天已核对的复盘产物写成一篇带图表的文章，自动发布在这里：涨跌分布、连板梯队、资金与题材、龙虎榜、两融和指数位置，数字由程序算、每个都能回溯到依据。" />
+    <meta property="og:url" content="https://ten2net.github.io/post/2026-11-12-%E5%8D%9A%E5%AE%A2%E4%B8%8A%E7%BA%BF/" />
+    <meta property="twitter:card" content="summary_large_image" /><meta property="article:published_time" content="2026-11-12T09:00:00+08:00">
+    <meta property="article:modified_time" content="2026-11-12T09:00:00+08:00"><meta property="article:tag" content="公告">
+    
+
+    <meta name="keyword"  content="A股,每日复盘,涨停,连板,情绪周期,复盘报告,揽宝投研">
+    <link rel="shortcut icon" href="/img/favicon.ico"><title>揽宝.复盘 正式上线：把每个交易日的复盘留在这里 | 揽宝.复盘</title>
+
+    <link rel="canonical" href="/post/2026-11-12-%E5%8D%9A%E5%AE%A2%E4%B8%8A%E7%BA%BF/">
+
+    
+    <link rel="alternate" type="application/rss+xml" title="揽宝.复盘 (RSS)" href="https://ten2net.github.io/rss.xml">
+    <link rel="alternate" type="application/atom+xml" title="揽宝.复盘 (Atom)" href="https://ten2net.github.io/atom.xml">
+    <link rel="alternate" type="application/rss+xml" title="揽宝.复盘 (RSS, 默认)" href="https://ten2net.github.io/index.xml">
+
+    
+
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.css">
+
+    
+    <link rel="stylesheet" href="/css/theme-variables.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.min.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+    
+    <link rel="stylesheet" href="https://ten2net.github.io/css/astock.css">
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://ten2net.github.io/img/home-bg.jpg"},"name":"揽宝.复盘","url":"https://ten2net.github.io/"},"dateModified":"2026-11-12T09:00:00+08:00","datePublished":"2026-11-12T09:00:00+08:00","description":"揽宝.复盘 是 A 股短线复盘工作台「揽宝投研」的公开窗口。每个交易日收盘后，程序把当天已核对的复盘产物写成一篇带图表的文章，自动发布在这里：涨跌分布、连板梯队、资金与题材、龙虎榜、两融和指数位置，数字由程序算、每个都能回溯到依据。","headline":"揽宝.复盘 正式上线：把每个交易日的复盘留在这里","image":"https://ten2net.github.io/img/home-bg.jpg","inLanguage":"zh-CN","keywords":"公告","mainEntityOfPage":{"@id":"https://ten2net.github.io/post/2026-11-12-%E5%8D%9A%E5%AE%A2%E4%B8%8A%E7%BA%BF/","@type":"WebPage"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://ten2net.github.io/img/home-bg.jpg"},"name":"揽宝.复盘","url":"https://ten2net.github.io/"},"url":"https://ten2net.github.io/post/2026-11-12-%E5%8D%9A%E5%AE%A2%E4%B8%8A%E7%BA%BF/"}</script>
+</head>
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"><span class="brand-mark">揽宝<i class="brand-dot">.</i>复盘</span></a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">All Posts</a>
+                    </li>
+                    
+                        
+                    
+
+		    
+                        <li><a href="https://www.luckybrother.cc/">市场热力图</a></li>
+                    
+                        <li><a href="https://etf.luckybrother.cc/">ETF热力图</a></li>
+                    
+                        <li><a href="https://q.luckybrother.cc/">LGBM量化</a></li>
+                    
+                        <li><a href="/post/">复盘</a></li>
+                    
+                        <li><a href="/tags/">标签</a></li>
+                    
+                        <li><a href="https://a.luckybrother.cc/first-board">揽宝投研v1</a></li>
+                    
+                        <li><a href="https://a2.luckybrother.cc/watch">揽宝投研v2</a></li>
+                    
+                        <li><a href="/about/">我是谁</a></li>
+                    
+		            <li>
+                        <a href="/search"><i class="fa fa-search"></i></a>
+		           </li>
+                    
+		            <li>
+                        <a href="#" id="theme-toggle" title="Toggle dark mode" style="opacity: 0;">
+                            <i class="fa fa-moon"></i>
+                            <i class="fa fa-sun" style="display: none;"></i>
+                        </a>
+		           </li>
+                    <script>
+                    (function() {
+                        
+                        var theme = localStorage.getItem('cleanwhite-theme') ||
+                                      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                        var toggleBtn = document.getElementById('theme-toggle');
+                        if (toggleBtn) {
+                            var moonIcon = toggleBtn.querySelector('.fa-moon');
+                            var sunIcon = toggleBtn.querySelector('.fa-sun');
+
+                            if (theme === 'dark') {
+                                if (moonIcon) moonIcon.style.display = 'none';
+                                if (sunIcon) sunIcon.style.display = 'inline';
+                                toggleBtn.setAttribute('title', 'Switch to light mode');
+                            } else {
+                                if (moonIcon) moonIcon.style.display = 'inline';
+                                if (sunIcon) sunIcon.style.display = 'none';
+                                toggleBtn.setAttribute('title', 'Switch to dark mode');
+                            }
+
+                            
+                            requestAnimationFrame(function() {
+                                toggleBtn.style.transition = 'opacity 0.2s ease';
+                                toggleBtn.style.opacity = '1';
+                            });
+                        }
+                    })();
+                    </script>
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        var navLinks = document.querySelectorAll('.navbar-collapse a');
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                if ($navbar.className.indexOf('in') > 0) {
+                    
+                    $navbar.className = " ";
+                    setTimeout(function(){
+                        if($navbar.className.indexOf('in') < 0) {
+                            $collapse.style.height = "0px"
+                        }
+                    },400)
+                }
+            });
+        });
+    });
+</script>
+
+
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class="site-heading">
+                    <h1><span class="brand-mark">揽宝<i class="brand-dot">.</i>复盘</span> </h1>
+                    
+		    <span class="subheading">公开数据与程序计算，复盘每一个交易日</span>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="va-risk" role="note">
+    <span class="va-risk-badge">风险提示</span>
+    本博客相关内容只是用来观察市场情绪，不构成投资建议；仅用于研究学习，提高市场认知能力。相关个股内容绝非推荐买卖！
+</div>
+
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+            
+            <div class="
+            col-lg-8 col-lg-offset-1
+            col-md-8 col-md-offset-1
+            col-sm-12
+            col-xs-12
+            post-container">
+            
+                <section class="va-panel va-lead"><p class="va-leadline">从今天起，每个交易日的复盘有了一个固定的公开地址：<a href="https://ten2net.github.io/">揽宝.复盘</a>。它不预测明天，只把今天收盘后能核对清楚的事实、读数和口径，一篇一篇留在这里。</p></section>
+<h2 id="这个博客是什么">这个博客是什么</h2>
+<p>「揽宝.复盘」是 <a href="https://github.com/ten2net/vibe-astock">揽宝投研</a>（Vibe AStock）的公开窗口。</p>
+<p>揽宝投研是一个跑在自己电脑上的 A 股短线复盘与跟踪工作台：盘中看持仓、自选和异动，收盘后把当天的盘面数据整理成一份复盘，写下明天要验证的条件，下一个交易日收盘再自动对账。这些工作本来都只存在本机。博客做的事情很单纯——<strong>把其中「已经核对完、可以公开」的那部分，转写成一篇可读的文章，发布出来</strong>。</p>
+<p>所以这里不是行情站，也不是观点号。它是一份按交易日归档的公开复盘记录。</p>
+<h2 id="每天会看到什么">每天会看到什么</h2>
+<p>收盘后程序自动生成一篇文章，从当日已落盘的复盘产物转写，大致包含这些部分：</p>
+<ul>
+<li><strong>市场全貌</strong>：涨跌分布（按涨跌幅分档）、市场广度（涨跌家数、大涨大跌、成交额、涨停跌停）、较前一交易日的变化；</li>
+<li><strong>短线结构</strong>：昨日强势股反馈、赚钱效应与亏钱效应、晋级率、连板天梯与梯队结构、炸板与封板质量、涨停分档；</li>
+<li><strong>资金与题材</strong>：主力资金流向、申万行业净流入流出、题材结构与事件树、最近几天的轮动、当日事件串；</li>
+<li><strong>跟踪与位置</strong>：龙虎榜游资、龙头跟踪、两融余额与近 20 日走势、主要指数的 5/20/60/250 日涨跌与均线位置、隔夜外围；</li>
+<li><strong>汇总与依据</strong>：一段汇总研判，以及每个数字对应的证据出处与口径说明。</li>
+</ul>
+<p>文章里大量是图表和数据卡，不是为了好看，是为了让「分布」「结构」「分位」这类说法能被直接看见，而不是只给一个结论。每篇还会配一张当天的心情卡片图，用作分享时的头图。</p>
+<h2 id="三条口径">三条口径</h2>
+<p>这个博客刻意守住几条线，写在这里方便读者判断该怎么用它：</p>
+<section class="va-panel post-content">
+<p><b>一、数字由程序算。</b>行情、统计、分档和对照都来自本机确定性计算，不靠模型生成。文章里的每个数字都挂着资料期和证据编号，能回溯到落盘依据；取不到的写进缺口，不拿 0 或估计值顶上。</p>
+<p><b>二、AI 只负责解读。</b>模型的作用是解释材料、对照观点、整理待验证条件，不拥有数据、也不改数字。引用在发布前会再核对一遍。</p>
+<p><b>三、不越界。</b>情绪档位和周期是分析框架，不是客观事实；涨停样本是市场现象统计，不是策略回测。这里不提供投资决策、买卖建议或仓位指令。</p>
+</section>
+<p class="va-foot-note">揽宝投研 只客观呈现公开数据与榜单，不推荐个股、不预测涨跌、不构成投资建议。模型输出可能出错，请沿证据链自行核实并独立决策，风险自担。</p>
+<h2 id="怎么读怎么订阅">怎么读、怎么订阅</h2>
+<ul>
+<li><strong>按天翻</strong>：<a href="/post/">复盘归档</a> 里按日期排列，<a href="/tags/">标签页</a> 可以按主题聚合；</li>
+<li><strong>订阅更新</strong>：提供三个源，选一个加到阅读器即可 —— <a href="/rss.xml">RSS</a>、<a href="/atom.xml">Atom</a>，以及兼容老地址的 <a href="/index.xml">index.xml</a>；</li>
+<li><strong>分享</strong>：文章带 Open Graph 头图与结构化数据，转发时能直接看到当天的情绪档位卡片；</li>
+<li><strong>源码</strong>：博客由揽宝投研的发布管道自动写入与构建，站点源和生成逻辑都在<a href="https://github.com/ten2net/vibe-astock">开源仓库</a>里，主题基于 Clean White 定制。</li>
+</ul>
+<h2 id="上线说明">上线说明</h2>
+<p>目前归档从 2026 年 9 月 23 日开始，每个交易日一篇；遇到数据没取全、口径对不上或没通过公开前检查的日子，宁可缺一篇，也不写一篇看起来完整但站不住的复盘。文章里的「主要指数与隔夜外围」是取数时刻的快照，不是复盘日收盘价，正文里已单独标注。</p>
+<p>这个项目从一开始就偏向「把本机算清楚的东西如实摊开」，而不是把它包装成结论。博客只是把这件事放到一个固定、可订阅、可回看的地方。往后每个交易日，这里会多一篇；写得对不对，欢迎对照证据链自己核。</p>
+<p class="va-mini">公开数据、程序计算与模型解读都可能出错，引用存在不代表推论正确，历史结果不代表未来表现。投资有风险，使用者应自行核实并承担决策责任，同时遵守各数据源的使用条款。</p>
+
+            
+
+            
+
+<style>
+   
+  .va-sponsor { margin: 36px 0 24px; padding: 22px 18px; border: 1px solid var(--va-border, #e4e6ea); border-radius: var(--va-radius, 8px); text-align: center; }
+  .va-sponsor-title { font-size: 18px; font-weight: 600; line-height: 1.7; color: var(--va-fg, #16171a); margin: 0 0 8px; }
+  .va-sponsor-desc { font-size: 16px; line-height: 1.85; color: var(--va-muted-fg, #5b606a); margin: 0 0 20px; }
+  .va-sponsor-codes { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; }
+  .va-sponsor-code { flex: 0 1 200px; max-width: 200px; }
+  .va-sponsor-code img { width: 100%; height: auto; display: block; border: 1px solid var(--va-border, #e4e6ea); border-radius: 6px; }
+  .va-sponsor-code b { display: block; font-size: 16px; font-weight: 600; margin-top: 10px; }
+  .va-sponsor-note { font-size: 13.5px; line-height: 1.7; color: var(--va-muted-fg, #5b606a); margin: 20px 0 0; }
+  @media (max-width: 480px) { .va-sponsor-code { flex-basis: 42%; } }
+</style>
+<section class="va-sponsor" aria-label="支持本项目">
+  <p class="va-sponsor-title">如果这篇复盘帮到你，可以请作者喝杯咖啡</p>
+  <p class="va-sponsor-desc">纯自愿，不影响任何功能：本项目完全开源、免费，也没有付费版或解锁内容。</p>
+  <div class="va-sponsor-codes">
+    <div class="va-sponsor-code">
+      <img src="/img/sponsor/alipay-qr.png" alt="支付宝赞赏收款码" loading="lazy">
+      <b>支付宝</b>
+    </div>
+    <div class="va-sponsor-code">
+      <img src="/img/sponsor/wechat-qr.png" alt="微信赞赏收款码" loading="lazy">
+      <b>微信</b>
+    </div>
+  </div>
+  <p class="va-sponsor-note">赞赏只是对已公开内容的鼓励，不构成任何服务承诺、技术支持约定或投资相关往来。本工具不提供投资决策、买卖建议或仓位指令。</p>
+</section>
+
+
+
+            
+
+
+
+
+            
+            </div>
+            
+            
+
+<div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+    
+	
+    <section class="visible-md visible-lg">
+	
+        <div class="short-about">
+            
+            <a href="/about">
+               <img src="/img/avatar.png" alt="avatar" style="cursor: pointer" width="80" height="80" />
+            </a>
+            
+            
+                <p>揽宝投研：A 股短线复盘与跟踪工作台。本页的复盘文章由它生成后自动发布。</p>
+            
+           
+           <ul class="list-inline">
+               
+               
+               
+               
+               
+               
+               
+               <li>
+                   <a target="_blank" href="https://github.com/ten2net/vibe-astock">
+                       <span class="fa-stack fa-lg">
+                           <i class="fas fa-circle fa-stack-2x"></i>
+                           <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                       </span>
+                   </a>
+               </li>
+               
+               
+               
+               
+               
+               
+            
+            
+               
+               
+               
+               
+                </ul>
+            </div>
+    </section>
+	
+    
+    
+    
+    
+    <section>
+        <hr class="hidden-sm hidden-xs">
+        <h5>FEATURED TAGS</h5>
+        <div class="tags">
+            
+            
+               
+            
+               
+                    <a href="/tags/%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98" title="每日复盘">
+                        每日复盘
+                    </a>
+               
+            
+        </div>
+    </section>
+    
+
+    
+    
+    
+    
+    <section>
+        <hr class="hidden-sm hidden-xs">
+        <h5>LAST POSTS</h5>
+        <ul>
+        
+            <li><a href="/post/2026-11-12-%E5%8D%9A%E5%AE%A2%E4%B8%8A%E7%BA%BF/">揽宝.复盘 正式上线：把每个交易日的复盘留在这里</a></li>
+        
+            <li><a href="/post/2026-11-11-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/">2026-11-11 每日复盘 · 情绪档位发酵</a></li>
+        
+            <li><a href="/post/2026-11-10-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/">2026-11-10 每日复盘 · 情绪档位修复</a></li>
+        
+            <li><a href="/post/2026-11-09-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/">2026-11-09 每日复盘 · 情绪档位修复</a></li>
+        
+            <li><a href="/post/2026-11-06-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/">2026-11-06 每日复盘 · 情绪档位退潮</a></li>
+        
+        </ul>
+    </section>
+    
+</div>
+
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/ten2net/vibe-astock">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+                   <li>
+                       <a href='' rel="alternate" type="application/rss+xml" title="揽宝.复盘" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+            
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; 揽宝.复盘 2026
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    (function() {
+        function updateTagcloudColors() {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const startColor = isDark ? '#808080' : '#bbbbee';
+            if($('#tag_cloud').length !== 0 && $.fn.tagcloud) {
+                $.fn.tagcloud.defaults = {
+                    color: {start: startColor, end: '#0085a1'},
+                };
+                $('#tag_cloud a').tagcloud();
+            }
+        }
+
+        
+        $(document).ready(function() {
+            updateTagcloudColors();
+        });
+
+        
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.attributeName === 'data-theme') {
+                    updateTagcloudColors();
+                }
+            });
+        });
+
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['data-theme']
+        });
+    })();
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<script src="/js/theme-toggle.js"></script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow" title="' + t + '">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
