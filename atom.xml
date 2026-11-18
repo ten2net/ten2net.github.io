@@ -3,10 +3,18 @@
   <id>https://ten2net.github.io/</id>
   <title>揽宝.复盘</title>
   <subtitle>公开数据 &#43; 程序计算 &#43; 模型解读：每日 A 股复盘，每个数字都可回溯到落盘依据。</subtitle>
-  <updated>2026-11-17T20:58:00+08:00</updated>
+  <updated>2026-11-18T19:38:00+08:00</updated>
   <link rel="self" type="application/atom+xml" href="https://ten2net.github.io/atom.xml" />
   <link rel="alternate" type="text/html" href="https://ten2net.github.io/" />
   <generator uri="https://gohugo.io/" version="hugo">Hugo</generator>
+  <entry>
+    <id>https://ten2net.github.io/post/2026-11-18-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</id>
+    <title>2026-11-18 每日复盘 · 情绪档位修复</title>
+    <link rel="alternate" type="text/html" href="https://ten2net.github.io/post/2026-11-18-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/" />
+    <published>2026-11-18T19:38:00+08:00</published>
+    <updated>2026-11-18T19:38:00+08:00</updated>
+    <summary type="html">盘面呈现分化修复：涨停池样本较前日回升，昨日涨停样本反馈改善，高位样本抬升；但市场宽度偏弱，连板样本反馈仍弱，封板分歧未消。</summary><category term="每日复盘" />
+  </entry>
   <entry>
     <id>https://ten2net.github.io/post/2026-11-17-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</id>
     <title>2026-11-17 每日复盘 · 情绪档位冰点</title>
@@ -22,14 +30,6 @@
     <published>2026-11-16T19:58:00+08:00</published>
     <updated>2026-11-16T19:58:00+08:00</updated>
     <summary type="html">沪深样本跌多涨少，昨日涨停样本中位表现仍弱，涨停池处近期偏冷位置；低位晋级改善只支持局部转暖，暂定为冰点。</summary><category term="每日复盘" />
-  </entry>
-  <entry>
-    <id>https://ten2net.github.io/post/2026-11-13-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</id>
-    <title>2026-11-13 每日复盘 · 情绪档位退潮</title>
-    <link rel="alternate" type="text/html" href="https://ten2net.github.io/post/2026-11-13-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/" />
-    <published>2026-11-13T18:07:00+08:00</published>
-    <updated>2026-11-13T18:07:00+08:00</updated>
-    <summary type="html">判退潮：赚钱效应中位转冷、最高连板下移，涨停池跨日持平且成员不同；昨日涨停样本深跌与跌停扩散，沪市深市宽度偏弱。派生读数仍处窗口低位，当日回升只作反证线索，低点间隔与回升属不同概念。</summary><category term="每日复盘" />
   </entry>
   <entry>
     <id>https://ten2net.github.io/post/2026-11-12-%E5%8D%9A%E5%AE%A2%E4%B8%8A%E7%BA%BF/</id>
