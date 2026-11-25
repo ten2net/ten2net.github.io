@@ -3,10 +3,18 @@
   <id>https://ten2net.github.io/</id>
   <title>揽宝.复盘</title>
   <subtitle>公开数据 &#43; 程序计算 &#43; 模型解读：每日 A 股复盘，每个数字都可回溯到落盘依据。</subtitle>
-  <updated>2026-11-24T19:38:00+08:00</updated>
+  <updated>2026-11-25T19:45:00+08:00</updated>
   <link rel="self" type="application/atom+xml" href="https://ten2net.github.io/atom.xml" />
   <link rel="alternate" type="text/html" href="https://ten2net.github.io/" />
   <generator uri="https://gohugo.io/" version="hugo">Hugo</generator>
+  <entry>
+    <id>https://ten2net.github.io/post/2026-11-25-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</id>
+    <title>2026-11-25 每日复盘 · 情绪档位退潮</title>
+    <link rel="alternate" type="text/html" href="https://ten2net.github.io/post/2026-11-25-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/" />
+    <published>2026-11-25T19:45:00+08:00</published>
+    <updated>2026-11-25T19:45:00+08:00</updated>
+    <summary type="html">昨日涨停样本亏钱效应显著,沪深上涨覆盖面窄,高位梯队与医药、零售局部分支并存,定档退潮,局部强势不构成修复证明。</summary><category term="每日复盘" />
+  </entry>
   <entry>
     <id>https://ten2net.github.io/post/2026-11-24-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</id>
     <title>2026-11-24 每日复盘 · 情绪档位退潮</title>
@@ -22,14 +30,6 @@
     <published>2026-11-23T19:38:00+08:00</published>
     <updated>2026-11-23T19:38:00+08:00</updated>
     <summary type="html">涨停池扩张、昨日涨停样本反馈偏强、炸板读数偏低，全市场上涨占优；高位梯队下方有档位缺口，回封与尾盘封住样本并存，整体偏热但并非没有分歧。</summary><category term="每日复盘" />
-  </entry>
-  <entry>
-    <id>https://ten2net.github.io/post/2026-11-20-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</id>
-    <title>2026-11-20 每日复盘 · 情绪档位退潮</title>
-    <link rel="alternate" type="text/html" href="https://ten2net.github.io/post/2026-11-20-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/" />
-    <published>2026-11-20T19:38:00+08:00</published>
-    <updated>2026-11-20T19:38:00+08:00</updated>
-    <summary type="html">退潮为主：全市场下跌面很宽，昨日涨停样本反馈偏冷、晋级稀疏；封板改善只限所给样本，不能外推为全市场转强。</summary><category term="每日复盘" />
   </entry>
   <entry>
     <id>https://ten2net.github.io/post/2026-11-12-%E5%8D%9A%E5%AE%A2%E4%B8%8A%E7%BA%BF/</id>

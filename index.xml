@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Tue, 24 Nov 2026 19:38:00 +0800</lastBuildDate>
+			<lastBuildDate>Wed, 25 Nov 2026 19:45:00 +0800</lastBuildDate>
 		
 			<atom:link href="https://ten2net.github.io/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>2026-11-25 每日复盘 · 情绪档位退潮</title>
+				<link>https://ten2net.github.io/post/2026-11-25-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</link>
+				<pubDate>Wed, 25 Nov 2026 19:45:00 +0800</pubDate>
+				<guid>https://ten2net.github.io/post/2026-11-25-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</guid>
+				<description>昨日涨停样本亏钱效应显著,沪深上涨覆盖面窄,高位梯队与医药、零售局部分支并存,定档退潮,局部强势不构成修复证明。</description>
+			</item>
 			<item>
 				<title>2026-11-24 每日复盘 · 情绪档位退潮</title>
 				<link>https://ten2net.github.io/post/2026-11-24-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</link>
@@ -26,13 +33,6 @@
 				<pubDate>Mon, 23 Nov 2026 19:38:00 +0800</pubDate>
 				<guid>https://ten2net.github.io/post/2026-11-23-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</guid>
 				<description>涨停池扩张、昨日涨停样本反馈偏强、炸板读数偏低，全市场上涨占优；高位梯队下方有档位缺口，回封与尾盘封住样本并存，整体偏热但并非没有分歧。</description>
-			</item>
-			<item>
-				<title>2026-11-20 每日复盘 · 情绪档位退潮</title>
-				<link>https://ten2net.github.io/post/2026-11-20-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</link>
-				<pubDate>Fri, 20 Nov 2026 19:38:00 +0800</pubDate>
-				<guid>https://ten2net.github.io/post/2026-11-20-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</guid>
-				<description>退潮为主：全市场下跌面很宽，昨日涨停样本反馈偏冷、晋级稀疏；封板改善只限所给样本，不能外推为全市场转强。</description>
 			</item>
 			<item>
 				<title>揽宝.复盘 正式上线：把每个交易日的复盘留在这里</title>
