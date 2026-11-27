@@ -245,6 +245,25 @@
     }
     .quote b { color: var(--text); font-weight: 500; }
 
+    /* 公众号引流 */
+    .follow {
+      display: flex; align-items: center; gap: 28px; flex-wrap: wrap;
+      background: linear-gradient(135deg, rgba(78, 201, 164, 0.08), rgba(88, 166, 255, 0.06));
+      border: 1px solid var(--border); border-radius: 16px; padding: 24px 26px;
+    }
+    .follow-qr {
+      width: 140px; height: 140px; flex-shrink: 0; object-fit: contain;
+      background: #fff; border-radius: 12px; padding: 6px;
+      box-shadow: 0 8px 24px var(--shadow);
+    }
+    .follow-text { flex: 1 1 260px; min-width: 220px; }
+    .follow-text h3 { margin: 0 0 8px; font-size: 18px; font-weight: 700; color: var(--text); }
+    .follow-text p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.9; }
+    .follow-text .follow-tag {
+      display: inline-block; margin-top: 10px; font-family: "JetBrains Mono", monospace;
+      font-size: 12px; color: var(--green); letter-spacing: .05em;
+    }
+
     /* 链接与返回 */
     .links { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 14px; }
     .links a {
@@ -274,6 +293,8 @@
       .term-body { font-size: 13px; padding: 16px; min-height: 0; }
       .st-info { display: none; }
       .ticker { gap: 12px; }
+      .follow { gap: 18px; padding: 20px; }
+      .follow-qr { width: 120px; height: 120px; }
     }
     @media (prefers-reduced-motion: reduce) {
       .coin, .cursor { animation: none; }
@@ -418,6 +439,22 @@
       <div class="links">
         <a href="https://github.com/ten2net" target="_blank" rel="noopener">github.com/ten2net</a>
         <a href="/">← 返回博客首页</a>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2 class="prompt"><span class="ps1">$</span> <span class="pcmd">subscribe --channel 揽宝投研</span></h2>
+      <div class="follow">
+        <img class="follow-qr" src="/img/lanbao.png" alt="揽宝投研公众号二维码">
+        <div class="follow-text">
+          <h3>关注「揽宝投研」公众号</h3>
+          <p>
+            如果这些复盘与投研笔记对你有一点点帮助，欢迎扫描左侧二维码关注<b>揽宝投研</b>。
+            每个交易日的盘后复盘、因子研究与量化实践会第一时间推送到这里，
+            比博客更新更及时，也方便在手机上随时翻看。
+          </p>
+          <span class="follow-tag">// 每个交易日，用数据给情绪定个档</span>
+        </div>
       </div>
     </section>
 
