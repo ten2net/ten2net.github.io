@@ -3,13 +3,21 @@
   <id>https://ten2net.github.io/</id>
   <title>揽宝.复盘</title>
   <subtitle>公开数据 &#43; 程序计算 &#43; 模型解读：每日 A 股复盘，每个数字都可回溯到落盘依据。</subtitle>
-  <updated>2026-11-26T19:44:00+08:00</updated>
+  <updated>2026-11-27T17:00:00+08:00</updated>
   <link rel="self" type="application/atom+xml" href="https://ten2net.github.io/atom.xml" />
   <link rel="alternate" type="text/html" href="https://ten2net.github.io/" />
   <generator uri="https://gohugo.io/" version="hugo">Hugo</generator>
   <entry>
+    <id>https://ten2net.github.io/post/2026-11-27-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</id>
+    <title>11月27日A股复盘：普涨亢奋，别追高</title>
+    <link rel="alternate" type="text/html" href="https://ten2net.github.io/post/2026-11-27-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/" />
+    <published>2026-11-27T17:00:00+08:00</published>
+    <updated>2026-11-27T17:00:00+08:00</updated>
+    <summary type="html">涨停池扩容、封板失败收敛、晋级抬升，昨日涨停样本反馈偏强，全市场宽度很广；热度证据集中在样本与当日横截面，不能当连续趋势或全市场收益。</summary><category term="每日复盘" />
+  </entry>
+  <entry>
     <id>https://ten2net.github.io/post/2026-11-26-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</id>
-    <title>11月26日A股复盘：普跌发酵，看信号</title>
+    <title>11月26日A股复盘：普跌却发酵，看信号</title>
     <link rel="alternate" type="text/html" href="https://ten2net.github.io/post/2026-11-26-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/" />
     <published>2026-11-26T19:44:00+08:00</published>
     <updated>2026-11-26T19:44:00+08:00</updated>
@@ -158,13 +166,5 @@
     <published>2026-11-03T18:52:00+08:00</published>
     <updated>2026-11-03T18:52:00+08:00</updated>
     <summary type="html">复盘日盘面定性为退潮：涨停池较对照交易日明显收缩，最高连板高度下降，炸板率升至偏高分位，深跌家数由无到有增加，情绪周期在近期区间低位且当日转弱；全市场宽度下跌样本多于上涨，跌停家数出现。依据只在已统计涨停池与沪深剔除北交所样本口径内成立，不代表全市场无其他现象。</summary><category term="每日复盘" />
-  </entry>
-  <entry>
-    <id>https://ten2net.github.io/post/2026-11-02-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/</id>
-    <title>11月2日个股普涨：热度在上，让信号说话</title>
-    <link rel="alternate" type="text/html" href="https://ten2net.github.io/post/2026-11-02-%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98/" />
-    <published>2026-11-02T18:58:00+08:00</published>
-    <updated>2026-11-02T18:58:00+08:00</updated>
-    <summary type="html">所给沪深样本上涨家数明显多于下跌，涨停池读数偏热，昨日涨停样本未见大幅下挫而全市场仍有跌停，故判为发酵。活跃归因以业绩增长相关分支和短剧内容相关分支居前；短剧内容相关分支只标为当日新出现，跨日同标签延续证据缺失，不能判断新发酵或延续，只能称当日分支。源站编辑归因非公司确认且不含北交所，不外推全市场。</summary><category term="每日复盘" />
   </entry>
 </feed>
